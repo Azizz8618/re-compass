@@ -1,0 +1,152 @@
+шифр 419900зс5^
+лен 40(2048-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program predtgen(output, BDVECT, BDERRN);
+(* PREDTGEN - minimal Pascal-Monitor 15.1 port of the TPREDT/ЯМД code
+   generator.  Symbolic COMPASS operators are dispatched to the existing
+   COMTUP entries TPCMPL1/TPCMPP1/TPCMPIN1 with the same BDVECT slots as
+   tests/kompas_suite.b6. *)
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+  PicT = record
+    nc,nm,na,smes,ssdmo:integer;
+    m: array[0..383] of integer;
+    l: array[0..383] of integer
+  end;
+var BDVECT: TBDVec; BDERRN:integer;
+    m,n: array[1..4] of integer;
+    i,num,r,newkey:integer;
+    opname:alfa;
+    p:@PicT;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPL1(j:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+function APIC:@PicT; external;
+const
+  kKey = 8; kData = 11; kLen = 13; kNum = 22; kR = 24;
+  kEx = 29;
+function Code(op:integer):integer;
+begin
+  Code := op + kEx*256
+end;
+procedure Trace(s:alfa; w:integer);
+begin
+  writeln('GEN ',s,' => PCMPIN1(',w,')')
+end;
+procedure GenKey(k:alfa);
+begin
+  BDVECT[kKey].a := k
+end;
+procedure GenLiteral(k:alfa);
+var w:word;
+begin
+  w.a := k;
+  TPCMPL1(w.i)
+end;
+procedure GenData(var d:integer; len:integer);
+begin
+  TPCMP1I(d,kData);
+  BDVECT[kLen].i := len
+end;
+procedure GenOp(s:alfa; op:integer);
+var w:integer;
+begin
+  w := Code(op);
+  Trace(s,w);
+  TPCMPIN1(w)
+end;
+procedure GenBdPrelude;
+begin
+  TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+  TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896)
+end;
+procedure GenBdGet(var number:integer; var res:integer);
+begin
+  TPCMP1I(number,kNum);
+  TPCMP1I(res,kR);
+  GenBdPrelude;
+  Trace('BDGET ',7514);
+  TPCMPIN1(7514)
+end;
+procedure GenBdPut(var newk:integer);
+begin
+  TPCMP1I(newk,kR);
+  GenBdPrelude;
+  Trace('BDPUT ',7513);
+  TPCMPIN1(7513)
+end;
+BEGIN
+  i := 1270000c; PASACD(i); PASSETAR(270000c);
+  i := 1270001c; newd('bdkey ',i); opend('bdkey ');
+  m[1]:=111111; m[2]:=222222; m[3]:=333333; m[4]:=444444;
+  putd('kbd001',m);
+  m[1]:=11; m[2]:=22; m[3]:=33; m[4]:=44;
+  putd('kbd002',m);
+  m[1]:=555; m[2]:=666; m[3]:=777; m[4]:=888;
+  putd('kbd003',m);
+  SSBF5;
+  writeln('T01 EXN=',EXN);
+  n[1]:=7; n[2]:=8; n[3]:=9; n[4]:=10;
+  GenKey('kbd004'); GenData(n[1],41c);
+  GenOp('PLACE ',1);
+  writeln('T02 EXN=',EXN);
+  GenOp('FIRST ',4);
+  writeln('T03 FIRST EXN=',EXN,' S31=',BDVECT[31].a);
+  GenOp('NEXT  ',12);
+  writeln('T03 NEXT EXN=',EXN,' S31=',BDVECT[31].a);
+  GenOp('NEXT  ',12);
+  writeln('T03 NEXT EXN=',EXN,' S31=',BDVECT[31].a);
+  GenKey('kbd003');
+  GenOp('BYKEY ',2);
+  writeln('T04 FIND EXN=',EXN);
+  GenOp('PREV  ',13);
+  writeln('T05 PREV EXN=',EXN);
+  m[1]:=-1; m[2]:=-1; m[3]:=-1; m[4]:=-1;
+  GenKey('kbd002'); GenData(m[1],4);
+  GenOp('GET   ',16);
+  writeln('T06 GET=',m[1],m[2],m[3],m[4]);
+  writeln('T06 ITLEN=',ITLEN,' EXN=',EXN);
+  m[1]:=101; m[2]:=202; m[3]:=303; m[4]:=404;
+  GenKey('kbd002'); GenData(m[1],41c);
+  GenOp('MODIF ',15);
+  writeln('T07 REPLACE EXN=',EXN);
+  GenKey('kbd001');
+  GenOp('BYKEY ',2);
+  num:=0; r:=-1;
+  GenBdGet(num,r);
+  writeln('T08 BDKEY R=',r,' EXN=',EXN);
+  newkey:=10000c;
+  GenBdPut(newkey);
+  writeln('T09 S29=',BDVECT[29].i oct,' EXN=',EXN);
+  GenLiteral('LIT   ');
+  writeln('T10 LITERAL EXN=',EXN);
+  p := APIC;
+  writeln('T10 PIC NC=',p@.nc,' NA=',p@.na);
+  GenOp('LAST  ',11);
+  writeln('T11 LAST EXN=',EXN,' S31=',BDVECT[31].a);
+  GenOp('REMOVE',7);
+  writeln('T12 REMOVE EXN=',EXN);
+  GenOp('INSERT',6);
+  writeln('T13 INSERT EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

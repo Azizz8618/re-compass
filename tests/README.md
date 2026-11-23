@@ -94,4 +94,6 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `servis_build.b6` и `servis_ops.b6` - сборка модуля `src/servis.pas` и тест из 11 операторов SERVIS с эталоном `servis_ops.expected.txt`. Подробности: `docs/SERVIS-PORT.md`.
 
+`servis_build4.b6` и `servis_ops4.b6` - расширенный тест этапа 4: 11 областей, дубли, журналы, ADMIN/ADA, эталон `servis_ops4.expected.txt`. Подробности: `docs/SERVIS-STAGE4.md`.
+
 Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`, `docs/DISK-2348.md`.

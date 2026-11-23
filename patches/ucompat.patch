@@ -1,0 +1,69 @@
+--- a/UCOMPAS.PAS
++++ b/UCOMPAS.PAS
+@@ -85,2 +85,2 @@
+- TPCMPAD1 (KnotNumber);
++ TPCMP1I(KnotNumber, 40);
+-TPCMPAD1 (Number);
++TPCMP1I(Number, 41);
+@@ -103,2 +103,2 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 22);
+-TPCMPAD1 (R);
++TPCMP1I(R, 24);
+@@ -121,2 +121,2 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 42);
+-TPCMPAD1 (Key);
++TPCMP1I(Key, 43);
+@@ -137,1 +137,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 44);
+@@ -150,2 +150,2 @@
+-    BEGIN TPCMPAD1 (Number);
++    BEGIN TPCMP1I(Number, 45);
+-TPCMPAD1 (Key);
++TPCMP1I(Key, 46);
+@@ -162,1 +162,1 @@
+-    BEGIN TPCMPAD1 (Number);
++    BEGIN TPCMP1I(Number, 47);
+@@ -174,1 +174,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 48);
+@@ -187,1 +187,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 49);
+@@ -201,1 +201,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 50);
+@@ -215,1 +215,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 51);
+@@ -229,1 +229,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 52);
+@@ -243,1 +243,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 53);
+@@ -267,1 +267,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 54);
+@@ -281,2 +281,2 @@
+- BEGIN TPCMPAD1 (Key);
++ BEGIN TPCMP1P(Key, 55);
+-TPCMPAD1 (Number);
++TPCMP1I(Number, 56);
+@@ -299,1 +299,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 57);
+@@ -313,1 +313,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 58);
+@@ -328,1 +328,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 59);
+@@ -344,1 +344,1 @@
+- BEGIN TPCMPAD1 (Number);
++ BEGIN TPCMP1I(Number, 60);
+@@ -377,1 +377,1 @@
+-  TPCMPAD1 (SchemeSpace);
++  TPCMP1P(SchemeSpace, 61);

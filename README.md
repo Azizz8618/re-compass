@@ -64,6 +64,8 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/COMTUP-IMPLEMENTATION.md` - рабочий модуль `src/comtup.pas`, 18 входов, COMMON и `*BDERRN*`.
 - `docs/CGETBDKEY-TEST.md` - критерии и результат интеграционного теста `CGetBdKey`.
 - `docs/CALLER-PATCHES.md` - список правок вызовов в `UCOMPAS`/`TSSPPR`.
+- `docs/PIC-BYTE-STREAM.md` - разбор старшего байта PIC-слов и байтового потока команд.
+- `patches/` - минимальные патчи для `UCOMPAS`, `UNPIC`, `TSSPPR`.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

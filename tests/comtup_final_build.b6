@@ -28,6 +28,7 @@ const
   cNext = 04c;
   cFind = 11c;
   cBdKeyGet = 352453c;  (* MARS op53: BDVECT[20] := BDVECT[29] *)
+  cBdKeyPut = 243553c;  (* MARS op53: BDVECT[29] := BDVECT[20] *)
   sBdKeyRes = 24;       (* slot with address of CGetBdKey result R *)
   sBdKeyTmp = 20;       (* scratch slot used by op53 *)
 type
@@ -228,6 +229,12 @@ begin
     pasbd;
     rp := BDVECT[sBdKeyRes].p;
     rp@ := BDVECT[sBdKeyTmp].i
+  end;
+  if j = 7513 then begin
+    rp := BDVECT[sBdKeyRes].p;
+    BDVECT[sBdKeyTmp].i := rp@;
+    BDVECT[3].i := cBdKeyPut;
+    pasbd
   end
   _);
 end;

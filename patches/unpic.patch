@@ -1,0 +1,5 @@
+--- a/UNPIC.PAS
++++ b/UNPIC.PAS
+@@ -159,1 +159,1 @@
+-    BEGIN TPCMPAD1 (jj);
++    BEGIN TPCMP1I(jj, 62);

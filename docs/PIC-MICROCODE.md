@@ -35,7 +35,7 @@ W(low,high) := (word(high) shl 8) or low;
 | 19456 | (0, 76) | `CReplaceElement` | op76 `mgel` |
 | 16896 | (0, 66) | `CGetBdKey`, `CPutBdKey` | op66 `mgfal` |
 | 17152 | (0, 67) | поиск и включение | op67 `mgtrue` |
-| 512 | (0, 2) | те же процедуры | op2 «найти по ключу» |
+| 512 | (0, 2) | те же процедуры | не op2, а `ADRF=2` предыдущей `varlo` (`PIC-BYTE-STREAM.md`) |
 | 7439 | (15, 29) | `CReplaceElement`, `CReplace` | op15 + `ex` |
 | 7514 | (90, 29) | `CGetBdKey` | op90 + `ex` |
 | 7513 | (89, 29) | `CPutBdKey`, `CGetKnotByKey` | op89 + `ex` |

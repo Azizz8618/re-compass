@@ -1,0 +1,84 @@
+--- a/TSSPPR.PAS
++++ b/TSSPPR.PAS
+@@ -216,1 +216,1 @@
+-    BEGIN TPCMPAD1 (SIMOPI.I);
++    BEGIN TPCMP1I(SIMOPI.I, 63);
+@@ -267,4 +267,4 @@
+-   BEGIN TPCMPAD1 (VarNames[1]);
++   BEGIN TPCMP1A(VarNames[1], 64);
+-TPCMPAD1 (parep[1]);
++TPCMP1I(parep[1], 65);
+-TPCMPAD1 (padli[1]);
++TPCMP1I(padli[1], 66);
+-TPCMPAD1 (FElFlag);
++TPCMP1B(FElFlag, 67);
+@@ -272,1 +272,1 @@
+-TPCMPAD1 (dlic);
++TPCMP1I(dlic, 68);
+@@ -402,5 +402,5 @@
+-       BEGIN TPCMPAD1 (mname);
++       BEGIN TPCMP1A(mname, 69);
+-TPCMPAD1 (trnum);
++TPCMP1I(trnum, 70);
+-TPCMPAD1 (numpar);
++TPCMP1I(numpar, 71);
+-TPCMPAD1 (MParsRep[csh]);
++TPCMP1I(MParsRep[csh], 72);
+-TPCMPAD1 (MParsDli[csh]);
++TPCMP1I(MParsDli[csh], 73);
+@@ -621,1 +621,1 @@
+-  BEGIN TPCMPAD1 (ROCH.CXCXTL);
++  BEGIN TPCMP1I(ROCH.CXCXTL, 74);
+@@ -630,1 +630,1 @@
+-  BEGIN TPCMPAD1 (ROCH.XBOCT.INT[1]);
++  BEGIN TPCMP1I(ROCH.XBOCT.INT[1], 75);
+@@ -649,1 +649,1 @@
+-  BEGIN TPCMPAD1 (ROCH.XBOCT.INT[KONNAB]);
++  BEGIN TPCMP1I(ROCH.XBOCT.INT[KONNAB], 76);
+@@ -667,1 +667,1 @@
+-  BEGIN TPCMPAD1 (ROCH.XBOCT.INT[KONNAB]);
++  BEGIN TPCMP1I(ROCH.XBOCT.INT[KONNAB], 77);
+@@ -677,1 +677,1 @@
+-  BEGIN TPCMPAD1 (ROCH.XBOCT.INT[KONNAB]);
++  BEGIN TPCMP1I(ROCH.XBOCT.INT[KONNAB], 78);
+@@ -687,1 +687,1 @@
+-  BEGIN TPCMPAD1 (ROCH.XBOCT.INT[KONNAB]);
++  BEGIN TPCMP1I(ROCH.XBOCT.INT[KONNAB], 79);
+@@ -697,1 +697,1 @@
+-  BEGIN TPCMPAD1 (TABCX.INT[1]);
++  BEGIN TPCMP1I(TABCX.INT[1], 80);
+@@ -714,1 +714,1 @@
+-  BEGIN TPCMPAD1 (TABCX.INT[KONNAB]);
++  BEGIN TPCMP1I(TABCX.INT[KONNAB], 81);
+@@ -729,1 +729,1 @@
+-  BEGIN TPCMPAD1 (TABCX.INT[KONNAB]);
++  BEGIN TPCMP1I(TABCX.INT[KONNAB], 82);
+@@ -762,1 +762,1 @@
+-     BEGIN TPCMPAD1 (FElFlag);
++     BEGIN TPCMP1B(FElFlag, 83);
+@@ -786,2 +786,2 @@
+-     BEGIN TPCMPAD1 (ReCo);
++     BEGIN TPCMP1I(ReCo, 84);
+-TPCMPAD1 (FElFlag);
++TPCMP1B(FElFlag, 85);
+@@ -823,1 +823,1 @@
+-     BEGIN TPCMPAD1 (dlic);
++     BEGIN TPCMP1I(dlic, 86);
+@@ -836,1 +836,1 @@
+-         BEGIN TPCMPAD1 (nm);
++         BEGIN TPCMP1A(nm, 87);
+@@ -849,1 +849,1 @@
+-             BEGIN TPCMPAD1 (MethOwner);
++             BEGIN TPCMP1I(MethOwner, 88);
+@@ -875,1 +875,1 @@
+-     BEGIN TPCMPAD1 (dlic);
++     BEGIN TPCMP1I(dlic, 89);
+@@ -886,1 +886,1 @@
+-         BEGIN TPCMPAD1 (nm);
++         BEGIN TPCMP1A(nm, 90);
+@@ -899,1 +899,1 @@
+-             BEGIN TPCMPAD1 (MethOwner);
++             BEGIN TPCMP1I(MethOwner, 91);
+@@ -963,1 +963,1 @@
+-TPCMPAD1 (SI    );
++TPCMP1P(SI, 92);

@@ -1,0 +1,11 @@
+tag	exit	BDERRN	EXN	E06	КОНТРОЛЬ	ЗАПРЕЩ	PC0
+final_len_1000	0	5	0	0	0	0	no
+final_len_1023	0	5	0	0	0	0	no
+final_len_1024	0	5	0	0	0	0	no
+final_len_1025	0	5	0	1	0	0	no
+final_len_1026	0	5	0	1	0	0	no
+final_len_1750	0	5	0	1	0	0	no
+final_newd_1024	0	2,5	0	0	0	0	no
+final_newd_1025	0	6,5	0	1	0	0	no
+final_newd_1026	0	6,5	0	1	0	0	no
+final_newd_1750	0	6,5	0	1	0	0	no

@@ -29,6 +29,7 @@
 | `parse_words.py` | разбор листинга в 48-битные слова БЭСМ-6 |
 | `re-mars-limit-1024.patch` | патч дефекта `BDBUF[DBLEN-1]`: при `DBLEN > E11` переход на диагностику `06 ПЕРЕПОЛНЕНА` |
 | `DEFECT.md` | описание дефекта и обоснование патча |
+| `apply_inplace_patch.py`, `inplace-patch.asm` | рабочий патч на 4 слова в зоне 0657 без сдвига адресов: `apply_inplace_patch.py <pristine-dump> <output-dump>`, затем записать дамп в рабочую копию 2348 |
 
 Порядок: скопировать образы в `tools/mars/images/`, задать `BESM6_PATH` на эту копию, запустить `compile_fixed.sh`, затем `parse_words.py` и `compile_to_zone.sh`. `ПЕЧМАК` в задании обязателен: без него листинг не печатает слова, сгенерированные макросами.
 

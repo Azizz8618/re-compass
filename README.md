@@ -77,6 +77,8 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/GOLD-SERVIS-RUN.md` - прогон подлинной SERVIS-деки из `gold/`.
 - `docs/MARS-DIAGNOSTICS.md` - устранение ошибки LU КОБЛЫ и диагностики МАРС.
 - `docs/MARS-CORE-LIMITS.md` - почему ядро МАРС не выделяет 1750 зон одним вызовом.
+- `docs/MARS-PATCHED-KERNEL.md` - исправление дефекта `BDBUF` патчем на 4 слова.
+- `docs/PASSPORT-SWEEP.md` - перебор 31 паспорта, почему `ЗMП` не МС «Дубна».
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

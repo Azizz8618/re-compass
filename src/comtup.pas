@@ -20,8 +20,10 @@ const
   cFind = 11c;
   cBdKeyGet = 352453c;  (* MARS op53: BDVECT[20] := BDVECT[29] *)
   cBdKeyPut = 243553c;  (* MARS op53: BDVECT[29] := BDVECT[20] *)
+  cBdKeyWrite = 2454c;  (* MARS op54: mem[BDVECT[arg]] := BDVECT[10] *)
   sBdKeyRes = 24;       (* slot with address of CGetBdKey result R *)
   sBdKeyTmp = 20;       (* scratch slot used by op53 *)
+  sBdKeyAddr = 30;    (* slot: address of current entry key word *)
 type
   TPath = packed array [1..40] of char;
   PicT = record
@@ -135,8 +137,7 @@ end;
 var i,j:integer;
 begin
   _(
-  (* PASCOMPL 15.1: plain "= 0" is miscompiled here; "+ 0" is required. *)
-  if BDVECT[36].i + 0 = 0 then begin
+  if BDVECT[36].i = 0 then begin
     for j := 0 to 167 do BDVECT[j].i := 0;
     i := 1270000c;
     PASACD(i);
@@ -226,6 +227,11 @@ begin
     rp := BDVECT[sBdKeyRes].p;
     BDVECT[sBdKeyTmp].i := rp@;
     BDVECT[3].i := cBdKeyPut;
+    pasbd;
+    (* op53 changes only the descriptor; write it to catalog *)
+    BDVECT[sBdKeyTmp].i := BDVECT[sBdKeyAddr].i + 1c;
+    BDVECT[10].i := rp@;
+    BDVECT[3].i := cBdKeyWrite;
     pasbd
   end
   _);

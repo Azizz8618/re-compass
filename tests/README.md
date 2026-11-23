@@ -102,6 +102,8 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `deck04-schema-am.b6` и `deck10-schema-zat.b6` - схемы 4 и 10 через расширенный `src/ttc15_ext.pas`; `deck05-fortran-startup.b6` - Fortran-стартап с заглушками. Эталоны - одноимённые `.expected.txt` и файлы в `gold/output/`.
 
+`tsspr-linked-ucompas.b6` - линковка `TSSPPR` с `COMTUP` (2570) и `UCOMPAS` (3350), `ОТСУТСТВУЕТ=0`; исходник `src/tsspr-linked.pas`. Сборка библиотек в одной копии диска обязательна: `comtup_final_build.b6`, затем `ucompas_build.b6`, без восстановления между ними. Подробности: `docs/TSS-W1-LINKAGE.md`.
+
 `gold_servis.b6` и `gold_servis_other.b6` - адаптированные подлинные SERVIS-операторы из `gold/`, с эталонами. `gold_servis.b6` создаёт 17 областей первой дека `\ПPOCTPAHCTBA HИCA`. Подробности: `docs/GOLD-SERVIS-RUN.md`.
 
 `predtgen.b6` и `predtgen.expected.txt` - порт предтранслятора ЯМД: 13 операций (PLACE, FIRST, NEXT, BYKEY, PREV, GET, MODIF, LAST, REMOVE, INSERT, BDGET/BDPUT), `EXN=0`. Подробности: `docs/PREDT-PORT.md`.

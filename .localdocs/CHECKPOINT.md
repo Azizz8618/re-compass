@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `5566d1e`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `5566d1e`.
+- HEAD: `a9f4785`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `a9f4785`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -45,12 +45,17 @@
 
 ## In progress
 
-По плану `docs/REPRODUCE-SEVEROV-ALL.md` запущены 4 субагента (scratch):
+Все предыдущие субагенты завершены и интегрированы (`5566d1e`, затем план `a9f4785`).
 
-1. MAD-деки 3/8/9 целиком (`ses_df5a50972ffeAQjB43r8eey1jm`)
-2. Схемы 4/10 (`ses_df5a5096fffes3PwatdUlBeFXl`)
-3. Fortran-стартап, дека 5 (`ses_df5a50969ffe1xsNT7JLuREfCO`)
-4. Цепочка TSS для 18 программ (`ses_df5a50967ffe6Ub2Dm0bQpjYri`)
+По плану `docs/TSS-PORT-PLAN.md` запущено 5 субагентов (scratch, без правки репозитория):
+
+1. W1 линковка 14 входов COMTUP (`ses_df58c4b47ffeQ9XapOE0UY2I24`)
+2. W2 замена GUI-заглушек (`ses_df58c4b46ffeCRMLOJpIULb945`)
+3. W3 порт TSSDML и `DML(TRUE)` (`ses_df58c4b46ffdUsWptUS36kt9Aw`)
+4. W4 таблица PIC-слотов (`ses_df58c4b46ffcuWe0GyWW5ink3O`)
+5. W5a подготовка 18 дек и инструмента извлечения (`ses_df58c4b45ffenTTddzO5WwCdGR`)
+
+Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w4-pic`, `tss-w5-prep` в `~/.local/share/vifm/Trash/`. Каждый с резервными копиями дисков и md5-манифестом. После W1-W4 - финальный прогон 18 программ (W5b).
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

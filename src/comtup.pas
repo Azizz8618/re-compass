@@ -128,14 +128,18 @@ begin
 end;
 (* === 11 procedures really called by upper layers === *)
 (*=e+*)procedure SSBF5;
-(* FACT: reset state. HYPOTHESIS: KOBLA on LU 52. *)
+(* FACT: PASSETAR leaves the area info word in BDVECT[36].
+   A second PASACD after newd/opend overwrites the area descriptor
+   and traps in PASBDI: cold init runs once per process. *)
 var i,j:integer;
 begin
   _(
-  for j := 0 to 167 do BDVECT[j].i := 0;
-  i := 1270000c;
-  PASACD(i);
-  PASSETAR(270000c);
+  if BDVECT[36].i = 0 then begin
+    for j := 0 to 167 do BDVECT[j].i := 0;
+    i := 1270000c;
+    PASACD(i);
+    PASSETAR(270000c)
+  end;
   pasbdi;
   BDVECT[3].i := 0
   _);

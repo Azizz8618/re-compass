@@ -23,6 +23,11 @@ check:
 	python3 -m py_compile tools/are_decode.py
 	python3 -m py_compile tools/are_to_mars.py
 	python3 -m py_compile tools/are_to_mars_multi.py
+	python3 -m py_compile tools/mars/parse_words.py
+	python3 -m py_compile tools/severov/mkfront.py
+	python3 -m py_compile tools/severov/extract_gold.py
+	python3 -m py_compile tools/severov/genmad_make_deck.py
+	python3 -m py_compile tools/severov/ttc_make_deck.py
 	@printf 'синтаксис скриптов: OK\n'
 
 mars-check:

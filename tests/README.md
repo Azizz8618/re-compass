@@ -86,4 +86,6 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `kompas_suite.b6` проверяет 10 операций через внешние точки `COMTUP`: инициализацию, `CPlace`, `CFindFirst/Next/ByKey/Preceding`, `CGetKnot`, `CReplace`, `CGetBdKey`, `CPutBdKey`, `ITLEN`. Эталон `kompas_suite.expected.txt` байтово стабилен. Запуск: `bash tools/run_kompas_suite.sh` (скрипт сам собирает `COMTUP` на рабочей копии 2348). Подробности: `docs/KOMPAS-SUITE.md`.
 
+`aremars.b6` - импорт области `ZPROC.ARE` в МАРС: 13 ключей, `PUTD`, затем `FIND`/`GETD` с пословным сравнением. Эталон `aremars.expected.txt`, ключи `aremars_keys.json`. Генератор деки: `tools/are_to_mars.py`. Подробности: `docs/ARE-DATA.md`.
+
 Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`, `docs/DISK-2348.md`.

@@ -135,7 +135,8 @@ end;
 var i,j:integer;
 begin
   _(
-  if BDVECT[36].i = 0 then begin
+  (* PASCOMPL 15.1: plain "= 0" is miscompiled here; "+ 0" is required. *)
+  if BDVECT[36].i + 0 = 0 then begin
     for j := 0 to 167 do BDVECT[j].i := 0;
     i := 1270000c;
     PASACD(i);

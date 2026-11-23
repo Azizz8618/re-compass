@@ -1,0 +1,229 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program aremars(output, BDVECT, BDERRN);
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+var BDVECT: TBDVec; BDERRN:integer;
+  m:array[1..4] of integer; k:alfa; i,j:integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbd; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+function find(a:alfa):alfa;
+begin
+  BDVECT[8].a := a;
+  BDVECT[3].i := 11c;
+  pasbd;
+  find := BDVECT[31].a
+end;
+begin
+  if BDVECT[36].i + 0 = 0 then begin
+    for j := 0 to 167 do BDVECT[j].i := 0;
+    i := 1270000c; PASACD(i);
+    PASSETAR(270000c)
+  end;
+  writeln('INIT EX=',EXN);
+  i := 1270001c;
+  newd('ZPROC ', i);
+  opend('ZPROC ');
+  writeln('OPEN EX=',EXN);
+  m[1]:=8; m[2]:=0; m[3]:=4; m[4]:=2043;
+  putd('ZP0008', m);
+  m[1]:=16; m[2]:=9; m[3]:=24; m[4]:=2019;
+  putd('ZP0016', m);
+  m[1]:=24; m[2]:=0; m[3]:=52; m[4]:=1967;
+  putd('ZP0024', m);
+  m[1]:=32; m[2]:=9; m[3]:=24; m[4]:=1943;
+  putd('ZP0032', m);
+  m[1]:=40; m[2]:=9; m[3]:=24; m[4]:=1919;
+  putd('ZP0040', m);
+  m[1]:=48; m[2]:=9; m[3]:=24; m[4]:=1895;
+  putd('ZP0048', m);
+  m[1]:=56; m[2]:=9; m[3]:=24; m[4]:=1871;
+  putd('ZP0056', m);
+  m[1]:=64; m[2]:=9; m[3]:=24; m[4]:=1847;
+  putd('ZP0064', m);
+  m[1]:=72; m[2]:=9; m[3]:=24; m[4]:=1823;
+  putd('ZP0072', m);
+  m[1]:=80; m[2]:=0; m[3]:=70; m[4]:=1705;
+  putd('ZP0080', m);
+  m[1]:=88; m[2]:=9; m[3]:=24; m[4]:=1799;
+  putd('ZP0088', m);
+  m[1]:=96; m[2]:=9; m[3]:=24; m[4]:=1775;
+  putd('ZP0096', m);
+  m[1]:=0; m[2]:=48; m[3]:=1; m[4]:=40;
+  putd('ZP0000', m);
+  writeln('PUTD EX=',EXN);
+  k := find('ZP0008');
+  getd('ZP0008', m);
+  j := 0;
+  if k <> 'ZP0008' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if m[2] <> 0 then j := 1;
+  if m[3] <> 4 then j := 1;
+  if m[4] <> 2043 then j := 1;
+  if j = 0 then writeln('ZP0008 OK')
+  else writeln('ZP0008 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0016');
+  getd('ZP0016', m);
+  j := 0;
+  if k <> 'ZP0016' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 2019 then j := 1;
+  if j = 0 then writeln('ZP0016 OK')
+  else writeln('ZP0016 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0024');
+  getd('ZP0024', m);
+  j := 0;
+  if k <> 'ZP0024' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if m[2] <> 0 then j := 1;
+  if m[3] <> 52 then j := 1;
+  if m[4] <> 1967 then j := 1;
+  if j = 0 then writeln('ZP0024 OK')
+  else writeln('ZP0024 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0032');
+  getd('ZP0032', m);
+  j := 0;
+  if k <> 'ZP0032' then j := 1;
+  if m[1] <> 32 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1943 then j := 1;
+  if j = 0 then writeln('ZP0032 OK')
+  else writeln('ZP0032 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0040');
+  getd('ZP0040', m);
+  j := 0;
+  if k <> 'ZP0040' then j := 1;
+  if m[1] <> 40 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1919 then j := 1;
+  if j = 0 then writeln('ZP0040 OK')
+  else writeln('ZP0040 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0048');
+  getd('ZP0048', m);
+  j := 0;
+  if k <> 'ZP0048' then j := 1;
+  if m[1] <> 48 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1895 then j := 1;
+  if j = 0 then writeln('ZP0048 OK')
+  else writeln('ZP0048 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0056');
+  getd('ZP0056', m);
+  j := 0;
+  if k <> 'ZP0056' then j := 1;
+  if m[1] <> 56 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1871 then j := 1;
+  if j = 0 then writeln('ZP0056 OK')
+  else writeln('ZP0056 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0064');
+  getd('ZP0064', m);
+  j := 0;
+  if k <> 'ZP0064' then j := 1;
+  if m[1] <> 64 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1847 then j := 1;
+  if j = 0 then writeln('ZP0064 OK')
+  else writeln('ZP0064 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0072');
+  getd('ZP0072', m);
+  j := 0;
+  if k <> 'ZP0072' then j := 1;
+  if m[1] <> 72 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1823 then j := 1;
+  if j = 0 then writeln('ZP0072 OK')
+  else writeln('ZP0072 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0080');
+  getd('ZP0080', m);
+  j := 0;
+  if k <> 'ZP0080' then j := 1;
+  if m[1] <> 80 then j := 1;
+  if m[2] <> 0 then j := 1;
+  if m[3] <> 70 then j := 1;
+  if m[4] <> 1705 then j := 1;
+  if j = 0 then writeln('ZP0080 OK')
+  else writeln('ZP0080 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0088');
+  getd('ZP0088', m);
+  j := 0;
+  if k <> 'ZP0088' then j := 1;
+  if m[1] <> 88 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1799 then j := 1;
+  if j = 0 then writeln('ZP0088 OK')
+  else writeln('ZP0088 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0096');
+  getd('ZP0096', m);
+  j := 0;
+  if k <> 'ZP0096' then j := 1;
+  if m[1] <> 96 then j := 1;
+  if m[2] <> 9 then j := 1;
+  if m[3] <> 24 then j := 1;
+  if m[4] <> 1775 then j := 1;
+  if j = 0 then writeln('ZP0096 OK')
+  else writeln('ZP0096 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  k := find('ZP0000');
+  getd('ZP0000', m);
+  j := 0;
+  if k <> 'ZP0000' then j := 1;
+  if m[1] <> 0 then j := 1;
+  if m[2] <> 48 then j := 1;
+  if m[3] <> 1 then j := 1;
+  if m[4] <> 40 then j := 1;
+  if j = 0 then writeln('ZP0000 OK')
+  else writeln('ZP0000 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],m[2],m[3],m[4]);
+  writeln('FINAL EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

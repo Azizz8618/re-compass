@@ -20,6 +20,7 @@ check:
 	bash -n tools/mars_check.sh
 	bash -n tools/run_smoke.sh
 	bash -n tools/run_kompas_suite.sh
+	python3 -m py_compile tools/are_decode.py
 	@printf 'синтаксис скриптов: OK\n'
 
 mars-check:

@@ -1,0 +1,5394 @@
+﻿?.ИПC
+? .ПP
+ШИФP 410900 ЗMП^ЛEH 31(1C)^
+OЗY 32^
+EEB1A3
+*NAME ПPOCTPAHCTBA HИCA
+*CMP
+*SERVIS
+OЧИCTИ ZPROC;
+?*OБЛACTЬ ПP-HИC:ДЛИHA 1750 HAПP 47 HAЧAЛO 0 BИД ПPOCTP,
+
+  OБЛACTЬ CXE-CK:ДЛИHA 4 BAPИAHT SSCXEM,
+  OБЛACTЬ ЖYP-CK:ДЛИHA 34 BИД ЖYPHAЛ,
+  OБЛACTЬ ИHД-CK:ДЛИHA 40 PEЖИM 0,
+  OБЛACTЬ ДAH-CK:ДЛИHA 40 PEЖИM 0,
+
+  OБЛACTЬ CXE-AM:ДЛИHA 4 BAPИAHT SSCXEM,
+  OБЛACTЬ ЖYP-AM:ДЛИHA 34 BИД ЖYPHAЛ,
+  OБЛACTЬ ИHД-AM:ДЛИHA 40 PEЖИM 0,
+  OБЛACTЬ ДAH-AM:ДЛИHA 40 PEЖИM 0,
+
+  OБЛACTЬ CXE-ПЛ:ДЛИHA 4 BAPИAHT SSCXEM,
+  OБЛACTЬ ЖYP-ПЛ:ДЛИHA 34 BИД ЖYPHAЛ,
+  OБЛACTЬ ИHД-ПЛ:ДЛИHA 40 PEЖИM 0,
+  OБЛACTЬ ДAH-ПЛ:ДЛИHA 40 PEЖИM 0,
+*
+ПPOCTP ПP-HИC;COЗДAT
+  OБЛACTЬ CX-AM0:ДЛИHA 2 BAPИAHT SSCXEM,
+  OБЛACTЬ ЖY-AM0:ДЛИHA 6 BИД ЖYPHAЛ,
+  OБЛACTЬ ИH-AM0:ДЛИHA 14 PEЖИM 0,
+  OБЛACTЬ ДA-AM0:ДЛИHA 14 PEЖИM 0;
+
+B OБЛACTЬ ПP-HИC.ПPOCTP;
+?*
+BOCCTA
+  ИHД-CK,ДAH-CK,
+  ИHД-AM,ДAH-AM,
+  ИHД-ПЛ,ДAH-ПЛ;
+*
+KOHEЦ.
+*END F
+? .CKCX
+ШИФP 410900 ЗMП^ЛEH 31(1C)^
+OЗY 32^
+TPA 33^
+EEB1A3
+*NAME
+*CMP:CXEMA CKЛAДA
+*TC
+ЗAMEHИ CXEMA CX-CK0:PEЖИM 0;
+OБЛACTЬ ДA-CK0;
+
+TИП CTPOKA CИMBOЛ 84;
+TИП ИHBHOM ЦEЛOE PAЗMEP 99999000;
+
+ЗAПИCЬ SYSTEM:
+              ЭЛ PEЖИMЫ ЦEЛOE,?*XPAHИMЫE ФЛAГИ CИCTEMЫ*
+              ЭЛ XPAHИM ЦEЛOE,?*KAKИE ФЛAГИ XPAHИM*
+              ЭЛ ГOД    ЦEЛOE PAЗMEP 99,?*ГOД PAЗPAБOTKИ*
+              ЭЛ ДATЗП  ЦEЛOE PAЗMEP 100000,?*ДATA ЗAПИCИ ДAHHЫX*
+              ЭЛ BPEЗП  ЦEЛOE PAЗMEP 10000,?*BPEMЯ ЗAПИCИ ДAHHЫX*
+              ЭЛ ДATЧИC ЦEЛOE PAЗMEP 100000,?*ДAT.ЧИCTKИ OTД.ПO CKЛAДY*
+              ЭЛ ПAPCИC CИMBOЛ 6,?*ПAPOЛЬ HA BXOД B CИCTEMHЫЙ БЛOK*
+              ЭЛ ПAPOЛЬ CИMBOЛ 6;?*ПAPOЛЬ HA PEЖИM AДMИHИCTPATOPA*
+
+ЗAПИCЬ OTДEЛ:           ?*OTДEЛ HИCA*
+              ЭЛ HAЗB   CИMBOЛ 6;
+
+ЗAПИCЬ BEЩЬ:            ?*OCH.ЗAПИCЬ B YЧETE MATEPИAЛOB*
+              ЭЛ HAЗB   CTPOKA KOHCИM,
+              ЭЛ HOMEP  ИHBHOM,
+              ЭЛ EД     CИMBOЛ 6,?*EД.ИЗMEPEHИЯ*
+              ЭЛ ЦEHA   ДEЙCTB PAЗMEP 99900,
+              ЭЛ OCTAT  ДEЙCTB PAЗMEP 99999000,
+              ЭЛ ПPИXOД ДEЙCTB PAЗMEP 99999000,
+              ЭЛ PACXOД ДEЙCTB PAЗMEP 99999000;
+
+ЗAПИCЬ BЗЯЛ:            ?*CBЯЗKA CYMMA-BEЩЬ (CKOЛЬKO OTДEЛ BЗЯЛ*
+              ЭЛ KOЛИЧ  ДEЙCTB PAЗMEP 99999000;?*ДAHHOГO MATEPИAЛA)*
+
+ЗAПИCЬ MATEP:           ?*BИД MATEPИAЛA*
+              ЭЛ HAЗB   CTPOKA KOHCИM,
+              ЭЛ HAЧ    ИHBHOM,?*HAЧ.HOMEP BИДA*
+              ЭЛ KOH    ИHBHOM;?*KOH.HOMEP BИДA*
+
+ЗAПИCЬ CYMMA:           ?*CBЯЗKA OTДEЛ-MATEP (HA KAKYЮ CYMMY Y OTДEЛA*
+              ЭЛ ЦEHA   ДEЙCTB PAЗMEP 99999900;?*ДAHHOГO BИДA MATEP)*
+
+
+     OБЛACT   BP-CK0;
+     ЗAПИCЬ   SS---M;
+     ЗAПИCЬ   SYS--O;
+     HAБOP    BPEMEH:
+BЛAДEЛ   SYS--O,   ЧЛEH     SS---M,
+ИCKЛЮЧ   ДOПYCK,
+BKЛЮЧE   BPYЧHY,
+YПOPЯД   ПPOИЗB;
+
+
+
+HAБOP SY-BEЩ:?*MATEPИAЛЫ*
+             ЧЛEH BEЩЬ,    ПPИBЯЗ ИH-CK0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-HAЗ:?*MATEPИAЛЫ ПO AЛФABИTY*
+             ЧЛEH BEЩЬ,    ПPИBЯЗ ИH-CK0,
+             YПOPЯД ПO-ЭЛE HAЗB,ДYБЛИK PAЗPEШ;
+
+HAБOP SY-ЦEH:?*MATEPИAЛЫ БEЗ ЦEHЫ*
+             ЧЛEH BEЩЬ,    ПPИBЯЗ ИH-CK0,
+             BKЛЮЧE BPYЧHY,  ИCKЛЮЧ ДOПYCK,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-БEЗ:?*MATEPИAЛЫ БEЗ ЦEHЫ*
+             ЧЛEH BEЩЬ,    ПPИBЯЗ ИH-CK0,
+             BKЛЮЧE BPYЧHY,  ИCKЛЮЧ ДOПYCK,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-ДBИ:?*MATEPИAЛЫ, ПO KOTOPЫM БЫЛO ДBИЖEHИE*
+             ЧЛEH BEЩЬ,    ПPИBЯЗ ИH-CK0,
+             BKЛЮЧE BPYЧHY,  ИCKЛЮЧ ДOПYCK,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-MAT:?*BИДЫ MATEPИAЛOB*
+             ЧЛEH MATEP,   ПPИBЯЗ ИH-CK0,
+             YПOPЯД ПO-ЭЛE HAЧ;
+
+HAБOP SY-OTД:?*OTДEЛЫ OTГAHИЗAЦИИ*
+             ЧЛEH OTДEЛ,   ПPИBЯЗ ИH-CK0,
+             YПOPЯД ПO-ЭЛE HAЗB;
+
+
+
+HAБOP BE-BЗЯ:?*KAKИE OTДEЛЫ БPAЛИ BEЩЬ*
+             BЛAДEЛ BEЩЬ,   ЧЛEH BЗЯЛ,   ПPИBЯЗ ИH-CK0;
+
+HAБOP MA-CYM:?*KAKИE OTДEЛЫ БPAЛИ ЭTOT BИД MATEPИAЛA (MM)*
+             BЛAДEЛ MATEP,  ЧЛEH CYMMA,  ПPИBЯЗ ИH-CK0;
+HAБOP MA-BEЩ:?*K KAKOMY BИДY MATEPИAЛOB OTHOCИTCЯ BEЩЬ*
+             BЛAДEЛ MATEP,  ЧЛEH BEЩЬ,   ПPИBЯЗ ИH-CK0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP OT-CYM:?*HA KAKYЮ CYMMY BЗЯЛ MATEPИAЛOB OTДEЛ (MM)*
+             BЛAДEЛ OTДEЛ,  ЧЛEH CYMMA,  ПPИBЯЗ ИH-CK0;
+
+
+
+HAБOP CY-BЗЯ:?*KAKИE BEЩИ BЗЯЛ OTДEЛ (ЭTOГO BИДA MATEPИAЛOB) (MM)*
+             BЛAДEЛ CYMMA,  ЧЛEH BЗЯЛ,   ПPИBЯЗ ИH-CK0;
+
+
+
+KOHEЦ.
+*     REL:LP
+*TBC
+ЗAMEHИ ПOДCXE CX-CK0 PEЖИM 0:CXEMЫ CX-CK0;
+ЗAMEHИ ПOДCXE CX-CK- PEЖИM 0:CXEMЫ CX-CK0,CX-БИБ;
+?*   01 - ПOCTAB            10 - HAЙTИ ПO-KЛЮ     *
+?*   02 - HAЙTИ ПO KЛЮ ...  11 - HAЙTИ ПOCЛEД     *
+?*   03 - ЗAMEHИ HA         12 - HAЙTИ CЛEДYЮ     *
+?*   04 - HAЙTИ ПEPBYЮ      13 - HAЙTИ ПPEДЫД     *
+?*   05 - HAЙTИ BЛAДEЛ      14 - BЗЯTЬ HA         *
+?*   06 - BKЛЮЧИ            15 - ЗAMEHИ           *
+?*   07 - YБPATЬ            16 - BЗЯTЬ            *
+?*   08 - ИCKЛЮЧИ           17 - HAЙTИ ПEPBYЮ ... *
+?*   09 - HAЙTИ ПEPBYЮ ...                        *
+KOHEЦ.
+*END F
+? .CKBЫ
+ШИФP 410900 ЗMП^ЛEH 31(1C)^
+OЗY 32^
+BPE 1000^
+AЦП 1000^
+EEB1A3
+*NAME
+*CMP:BЫДAЧA ДAHHЫX ИЗ MAD
+*M
+PEЖИM 2;ЖYPHAЛ ЖY-CK0;ПOДCXE CX-CK0;
+
+HAЙTИ ПEPBYЮ B SY-OTД;
+Б:BЗЯTЬ;BЫДATЬ .HAЗB,'*';HAЙTИ CЛEДYЮ;ECЛИ COC=0 TO HA Б;
+
+HAЙTИ ПEPBYЮ B SY-BEЩЬ;
+A:BЗЯTЬ;
+  BЫДATЬ .HOMEP,'_',.EД,'_',.ЦEHA,'_',
+         .OCTAT,'_',.ПPИXOД,'_',.PACXOД;
+  BЫДATЬ '         _',.HAЗB,'*';
+  HAЙTИ CЛEДYЮ B SY-BEЩЬ;ECЛИ COC=0 TO HA A;
+CБPOCИ;ЗABEPШ;KOHEЦ
+*END F
+? .AMCX
+ШИФP 410900 ЗMП^ЛEH 31(1C)^
+OЗY 32^
+TPA 33^
+EEB1A3
+*NAME
+*CMP:CXEMA AMOPTИЗAЦИИ
+*TC
+ЗAMEHИ CXEMA CX-AM0:PEЖИM 0;
+OБЛACTЬ ДA-AM0;
+
+TИП CTPOKA CИMBOЛ 84;
+
+ЗAПИCЬ SYSTEM:
+              ЭЛ PEЖИMЫ ЦEЛOE,?*XPAHИMЫE ФЛAГИ CИCTEMЫ*
+              ЭЛ XPAHИM ЦEЛOE,?*KAKИE ФЛAГИ XPAHИM*
+              ЭЛ ГOД    ЦEЛOE PAЗMEP 99,?*ГOД PAЗPAБOTKИ*
+              ЭЛ ДATЗП  ЦEЛOE PAЗMEP 100000,?*ДATA ЗAПИCИ ДAHHЫX*
+              ЭЛ BPEЗП  ЦEЛOE PAЗMEP 10000,?*BPEMЯ ЗAПИCИ ДAHHЫX*
+              ЭЛ ПAPCИC CИMBOЛ 6,?*ПAPOЛЬ HA BXOД B CИCTEMHЫЙ БЛOK*
+              ЭЛ ПAPOЛЬ CИMBOЛ 6;?*ПAPOЛЬ HA PEЖИM AДMИHИCTPATOPA*
+
+ЗAПИCЬ ИHB:             ?*ИHBEHTAPHЫЙ HOMEP*
+              ЭЛ HOMEP  ЦEЛOE;
+
+ЗAПИCЬ OTДEЛ:           ?*OTДEЛ HИCA*
+              ЭЛ HAЗB   CИMBOЛ 6;
+
+ЗAПИCЬ ШИФP:            ?*ШИФP OБOPYДOBAHИЯ*
+              ЭЛ HOMEP  ЦEЛOE PAЗMEP 131071;
+
+ЗAПИCЬ ПPИБOP:          ?*OCH.ЗAПИCЬ B YЧETE OБOPYДOBAHИЯ*
+              ЭЛ HAЗB   CTPOKA KOHCИM,
+              ЭЛ ЦEHA   ДEЙCTB PAЗMEP 500000000,
+              ЭЛ BOC    ДEЙCTB PAЗMEP 5000,?*!AMOPT HA BOCCT*
+              ЭЛ KAП    ДEЙCTB PAЗMEP 5000;?*!AMOPT HA KAП.PEM*
+
+ЗAПИCЬ ГPYППA:          ?*ГPYППA ШИФPOB OБOPYДOBAHИЯ*
+              ЭЛ HAЗB   CTPOKA KOHCИM,
+              ЭЛ HAЧ    ЦEЛOE PAЗMEP 131071,?*HAЧAЛЬHЫЙ ШИФP*
+              ЭЛ KOH    ЦEЛOE PAЗMEP 131071;?*KOHEЧHЫЙ ШИФP*
+
+ЗAПИCЬ METAЛ:           ?*ДPAГOЦEHHЫЙ METAЛ*
+              ЭЛ HAЗB   CTPOKA;
+
+ЗAПИCЬ COДEPЖ:          ?*CBЯЗKA METAЛ-ПPИБOP (CKOЛЬKO COДEPЖИTCЯ*
+              ЭЛ KOЛИЧ  ДEЙCTB PAЗMEP 9999900000;?*ДP.METAЛA B ПPИБ)*
+
+ЗAПИCЬ CTOИT:           ?*CBЯЗKA OTДEЛ-ИHB.HOM (B KAKИX OTДEЛAX*
+              ЭЛ ПPИHЯЛ ЦEЛOE PAЗMEP 12,?*CTOЯЛ И CTOИT ИHB.HOM)*
+              ЭЛ CПИCAЛ ЦEЛOE PAЗMEP 12;?*ДATЫ ПPИHЯTИЯ-CПИCAHИЯ*
+
+
+     OБЛACT   BP-AM0;
+     ЗAПИCЬ   SS---M;
+     ЗAПИCЬ   SYS---;
+     HAБOP    BPEMEH:
+BЛAДEЛ   SYS---,   ЧЛEH     SS---M,
+ИCKЛЮЧ   ДOПYCK,
+BKЛЮЧE   BPYЧHY,
+YПOPЯД   ПPOИЗB;
+
+
+
+HAБOP SY-ГPY:?*ГPYППЫ ШИФPOB*
+             ЧЛEH ГPYППA,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HAЧ,
+             ДYБЛИKATЫ PAЗPEШ;
+
+HAБOP SY-ИHB:?*ИHB.HOMEPA ПPИБOPOB*
+             ЧЛEH ИHB,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-MET:?*ДPAГ.METAЛЛЫ*
+             ЧЛEH METAЛ,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HAЗB;
+
+HAБOP SY-OTД:?*OTДEЛЫ OTГAHИЗAЦИИ*
+             ЧЛEH OTДEЛ,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HAЗB;
+
+HAБOP SY-ПPИ:?*ПPИБOPЫ*
+             ЧЛEH ПPИБOP,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HAЗB,ДYБЛИK PAЗPEШ;
+
+HAБOP SY-ШИФ:?*ШИФPЫ OБOPYДOBAHИЯ*
+             ЧЛEH ШИФP,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+
+
+HAБOP ПP-ИHB:?*ПOД KAKИMИ ИHB.HOMEPAMИ ЭTOT ПPИБOP*
+             BЛAДEЛ ПPИБOP,ЧЛEH ИHB,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP OT-CTO:?*KAKИE ИHB.HOMEPA CTOЯT И CTOЯЛИ B OTДEЛE (MM)*
+             BЛAДEЛ OTДEЛ,ЧЛEH CTOИT,ПPИBЯЗ ИH-AM0;
+
+HAБOP ИH-CTO:?*B KAKИX OTДEЛAX CTOЯЛ И CTOИT ИHB.HOMEP (MM)*
+             BЛAДEЛ ИHB,ЧЛEH CTOИT,ПPИBЯЗ ИH-AM0;
+
+HAБOP ШИ-ПPИ:?*KAKИE ПPИБOPЫ ИMEЮT ДAHHЫЙ ШИФP*
+             BЛAДEЛ ШИФP,ЧЛEH ПPИБOP,ПPИBЯЗ ИH-AM0,
+             YПOPЯД ПO-ЭЛE HAЗB,ДYБЛИK PAЗPEШ;
+
+HAБOP ME-COД:?*COДEPЖAHИE ДPAГMETAЛOB B ПPИБOPAX (MM)*
+             BЛAДEЛ METAЛ,ЧЛEH COДEPЖ,ПPИBЯЗ ИH-AM0;
+
+HAБOP ПP-COД:?*COДEPЖAHИE ДPAГMETAЛOB B ПPИБOPE (MM)*
+             BЛAДEЛ ПPИБOP,ЧЛEH COДEPЖ,ПPИBЯЗ ИH-AM0;
+
+
+KOHEЦ.
+*      REL:LP
+*TBC
+ЗAMEHИ ПOДCXE CX-AM0 PEЖИM 0:CXEMЫ CX-AM0;
+ЗAMEHИ ПOДCXE CX-AM- PEЖИM 0:CXEMЫ CX-AM0,CX-БИБ;
+?*   01 - ПOCTAB            10 - HAЙTИ ПO-KЛЮ     *
+?*   02 - HAЙTИ ПO KЛЮ ...  11 - HAЙTИ ПOCЛEД     *
+?*   03 - ЗAMEHИ HA         12 - HAЙTИ CЛEДYЮ     *
+?*   04 - HAЙTИ ПEPBYЮ      13 - HAЙTИ ПPEДЫД     *
+?*   05 - HAЙTИ BЛAДEЛ      14 - BЗЯTЬ HA         *
+?*   06 - BKЛЮЧИ            15 - ЗAMEHИ           *
+?*   07 - YБPATЬ            16 - BЗЯTЬ            *
+?*   08 - ИCKЛЮЧИ           17 - HAЙTИ ПEPBYЮ ... *
+?*   09 - HAЙTИ ПEPBYЮ ...                        *
+KOHEЦ.
+*END F
+? .CTAPT
+ШИФP 410900 ЗMП^
+OЗY 27^TPA 9^
+EEB1A3
+*NAME
+*ИПC.HAЧ
+      SUBROUTINE SKLSTA
+      CALL SKLHED
+      CALL IPSSTA('SKLMON',.TRUE.)
+      ENTRY CK
+      CALL SKLHED
+      CALL IPSSTA('SKLMON',.FALSE.)
+      END
+      SUBROUTINE AMOSTA
+      CALL AMOHED
+      CALL IPSSTA('AMOMON',.TRUE.)
+      ENTRY AM
+      CALL AMOHED
+      CALL IPSSTA('AMOMON',.FALSE.)
+      END
+*     SUBROUTINE PLASTA
+*     CALL PLAHED
+*     CALL IPSSTA('PLAMON',.TRUE.)
+*     ENTRY ПЛ
+*     CALL PLAHED
+*     CALL IPSSTA('PLAMON',.FALSE.)
+*     END
+      SUBROUTINE ZATSTA
+      CALL ZATHED
+      CALL IPSSTA('ZATMON',.TRUE.)
+      ENTRY ЗT
+      CALL ZATHED
+      CALL IPSSTA('ZATMON',.FALSE.)
+      END
+      SUBROUTINE IPSSTA(HAЧAЛO,CTOП)
+      COMMON/KYДA/KUDA  /ДИP/DIR
+      INTEGER WAY(10),NW,HAЧAЛO
+      LOGICAL EQUAL,CTOП
+C
+      NW=1 $ WAY(NW)=HAЧAЛO $ DIR='      ' $ KUDA='HAЧAЛO'
+C
+    1 CALL LOADGO(WAY(NW))
+C
+      IF(EQUAL(KUDA,'ЭTOBCE').AND.CTOП) STOP
+      IF(EQUAL(KUDA,'ЭTOBCE')) RETURN
+C
+      IF(EQUAL(DIR,'BЫX')) GOTO 10
+      IF(EQUAL(DIR,'KOH')) GOTO 11
+      GOTO 19
+ 10   NW=NW-1 $ GOTO 2
+ 11   NW=1 $ GOTO 2
+ 19   NW=NW+1 $ WAY(NW)=KUDA $ GOTO 2
+C
+    2 GOTO 1
+      END
+*INSALL
+DRUM
+*WHAT:66-S
+*END F
+? .CKЗA
+ШИФP 410900 ЗMП^ЛEH 31(1C)^OЗY 32^TPA 46^BPE 1000^AЦП 1000^EEB1A3
+*NAME
+*CMP:ЗAГPYЗKA CKЛAДA
+*GENZAG
+ИMЯ-ЗA CKЛЗAГ
+ПOДCXEMA CX-CK0
+
+? .OГP
+OГPAHИЧ
+  ФOPMATA:[,];
+  ЭЛEMEHT:_;
+KOHEЦ
+
+? .ПPO
+ПPOЦEДYPЫ "
+PROCEDURE PUTSYSTEM;
+TYPE ФЛAГ=(ФS,ПEЧATЬ,MOДИФ,AДMИH,OTЛAД,OTЧCKЛ,OTЧOTД,BXOД,ФF);
+VAR ФЛAГИ,ФЛAГИCOX:SET OF ФЛAГ;
+BEGIN
+ФЛAГИ:=[BXOД];ФЛAГИCOX:=[OTЛAД,OTЧCKЛ,OTЧOTД,BXOД];
+(*=C-*)SYSTEM.PEЖИMЫ:=ФЛAГИ;SYSTEM.XPAHИM:=ФЛAГИCOX;(*=C+*)
+SYSTEM.ДATЧИC:=1;
+SYSTEM.ГOД:=88;SYSTEM.ДATЗП:=1;
+SYSTEM.BPEЗП:=0;SYSTEM.ПAPCИC:='0909  ';
+SYSTEM.ПAPOЛЬ:='CTAKAH';
+&&ЗAMEHИ SYSTEM&&
+END;
+(*HAЙДИ MAT ПO BEЩ*)
+PROCEDURE HAЙMAT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-MAT&&
+REPEAT
+  &&BЗЯTЬ&&
+  IF (BEЩЬ.HOMEP>=MATEP.HAЧ) AND (BEЩЬ.HOMEP<=MATEP.KOH) THEN EXIT;
+  &&HAЙTИ CЛEДYЮ&&
+  UNTIL FALSE;
+END;
+"
+
+? .Ф
+ФOPMAT SYSTEM
+  ПACKAЛ "PUTSYSTEM;"
+
+ФOPMAT MATEP
+  MATEP.HAЧ_MATEP.KOH_MATEP.HAЗB*
+  &&ПOCTAB MATEP&&
+
+ФOPMAT OTДEЛ
+  OTДEЛ.HAЗB*
+  ПACKAЛ "&&ПOCTAB OTДEЛ;HAЙTИ ПEPBYЮ B SY-MAT&&"
+
+ФOPMAT CYMMA
+  CYMMA.ЦEHA*
+  ПACKAЛ "&&ПOCTAB CYMMA;HAЙTИ CЛEДYЮ B SY-MAT&&"
+
+ФOPMAT BЗЯЛ
+  CYMMA.ЦEHA_BЗЯЛ.KOЛИЧ*
+  ПACKAЛ "BEЩЬ.HOMEP:=ROUND(CYMMA.ЦEHA*1000);
+    &&HAЙTИ ПO-KЛЮ B SY-BEЩ;ПOCTAB BЗЯЛ&&"
+
+ФOPMAT BEЩИ
+  CYMMA.ЦEHA_BEЩЬ.HAЗB_BEЩЬ.EД_
+  BEЩЬ.ЦEHA_BEЩЬ.OCTAT_BEЩЬ.ПPИXOД_BEЩЬ.PACXOД*
+  ПACKAЛ "BEЩЬ.HOMEP:=ROUND(CYMMA.ЦEHA*1000);
+    HAЙMAT;&&ПOCTAB BEЩЬ&&
+    IF BEЩЬ.ЦEHA<0.01
+      THEN_(&&BKЛЮЧИ B SY-БEЗ&&_)
+      ELSE_(&&BKЛЮЧИ B SY-ЦEH&&_);
+    IF (BEЩЬ.ЦEHA<0.01)OR(BEЩЬ.ПPИXOД+BEЩЬ.PACXOД>0.0001)
+      THEN_(&&BKЛЮЧИ B SY-ДBИ&&_);"
+
+KOHEЦ
+
+*REL:LP
+*READ:31017
+*PASC
+*C
+OCBOБO ЖY-CK0,ИH-CK0,ДA-CK0,BP-CK0;
+OЧИCTИ ЖY-CK0,ИH-CK0,ДA-CK0,BP-CK0;
+ЖYPHAЛ ЖY-CK0 CБPOCИ.
+? .E
+*ИПC
+*CALL CKЛЗAГ
+PEЖИM [[ПOBTOP]
+
+SYSTEM []
+
+MATEP [ 2001000_ 2050000_ГCM*
+        2051000_ 9350000_MATEPИAЛЫ*
+        9351000_12850000_MAЛ.ИHBEHTAPЬ*
+       12851000_13050000_CПEЦ.OДEЖДA*]
+
+
+ BEЩИ [
+ 2004.000_БEHЗИH AИ-93_Л _
+    0.20_0.000_0.000_0.000*
+ 2010.000_ДИЗ/MACЛO_Л _
+    0.22_0.000_0.000_0.000*
+ 13046.001_ШTOPЫ ШEЛKOBЫE_K _
+    44.00_67.000_0.000_0.000*]
+
+ OTДEЛ [ПPOФK *]
+   CYMMA [0.00*]
+   CYMMA [256.22*]
+   CYMMA [230.10*]
+   CYMMA [0.00*]
+ OTДEЛ [ППO   *]
+   CYMMA [0.00*]
+   CYMMA [88.27*]
+   CYMMA [0.00*]
+   CYMMA [0.00*]
+ OTДEЛ [ЭИO   *]
+   CYMMA [34.20*]
+   CYMMA [23953.01*]
+   CYMMA [837.67*]
+   CYMMA [2705.14*]
+
+KOHEЦ ]
+*END F
+? .AMЗA
+ШИФP 410900 ЗMП^ЛEH 31(1C)^
+OЗY 32^
+TPA 40^
+BPE 1000^
+AЦП 1000^
+EEB1A3
+*NAME
+*CMP:ЗAГPYЗKA AMOPTИЗAЦИИ
+*GENZAG
+ИMЯ-ЗA AMOЗAГ
+ПOДCXEMA CX-AM0
+
+? .ПEP
+ПEPEMEHHЫE
+  HH CИMBOЛ 84,
+  ЦЦ ДEЙCTB,
+  BB ДEЙCTB,
+  KK ДEЙCTB,
+  HAШЛИ ЛOГИЧE,
+KOHEЦ
+
+? .OГP
+OГPAHИЧ
+  ФOPMATA:[,];
+  ЭЛEMEHT:_;
+KOHEЦ
+
+? .ПPO
+ПPOЦEДYPЫ "
+PROCEDURE PUTSYSTEM;
+TYPE ФЛAГ=(ФS,ПEЧATЬ,MOДИФ,AДMИH,OTЛAД,OTЧCKЛ,OTЧOTД,BXOД,ФF);
+VAR ФЛAГИ,ФЛAГИCOX:SET OF ФЛAГ;
+BEGIN
+ФЛAГИ:=[BXOД];ФЛAГИCOX:=[OTЛAД,BXOД];
+(*=C-*)SYSTEM.PEЖИMЫ:=ФЛAГИ;SYSTEM.XPAHИM:=ФЛAГИCOX;(*=C+*)
+SYSTEM.ГOД:=88;SYSTEM.ДATЗП:=1;
+SYSTEM.BPEЗП:=0;SYSTEM.ПAPCИC:='0909  ';
+SYSTEM.ПAPOЛЬ:='CTAKAH';
+&&ЗAMEHИ SYSTEM&&
+END;
+"
+
+? .Ф
+ФOPMAT SYSTEM
+  ПACKAЛ "PUTSYSTEM;"
+
+ФOPMAT METAЛ
+  METAЛ.HAЗB*
+  &&ПOCTAB METAЛ&&
+
+ФOPMAT OTДEЛЫ
+  OTДEЛ.HAЗB*  ПACKAЛ "&&ПOCTAB OTДEЛ&&"
+
+ФOPMAT ШИФP
+  ШИФP.HOMEP*  ПACKAЛ "&&ПOCTAB ШИФP&&"
+
+ФOPMAT ДPAГOЦ
+ METAЛ.HAЗB_ИHB.HOMEP_COДEPЖ.KOЛИЧ*
+ ПACKAЛ "
+    &&HAЙTИ ПO-KЛЮ B SY-MET;
+    HAЙTИ ПO-KЛЮ B SY-ИHB;HAЙTИ BЛAДEЛ B ПP-ИHB;
+    ПOCTAB COДEPЖ&&
+  "
+
+ФOPMAT ПPИБOP
+  ПPИБOP.HAЗB_ИHB.HOMEP_
+  ПPИБOP.ЦEHA_ПPИБOP.BOC_ПPИБOP.KAП_
+  OTДEЛ.HAЗB_CTOИT.ПPИHЯЛ*
+  ПACKAЛ "
+    WITH ПPИБOP DO_(
+      HH:=HAЗB;ЦЦ:=ЦEHA;BB:=BOC;KK:=KAП;
+    CTOИT.CПИCAЛ:=0;
+    &&HAЙTИ ПO-KЛЮ B SY-OTД&&
+    (**)
+    &&HAЙTИ ПO-KЛЮ B ШИ-ПPИ&&;HAШЛИ:=FALSE;
+    (W) WHILE (COCT=0) AND NOT HAШЛИ DO_(
+      &&BЗЯTЬ&&
+      IF (HAЗB=HH)&(ЦEHA=ЦЦ)&(BOC=BB)&(KAП=KK) THEN_(
+        HAШЛИ:=TRUE;EXIT W_);
+      &&HAЙTИ ПPEДЫД B SY-ШИФ&&_);
+    (**)
+    IF NOT HAШЛИ THEN_(
+      HAЗB:=HH;ЦEHA:=ЦЦ;BOC:=BB;KAП:=KK;
+      &&ПOCTAB ПPИБOP&&_);
+    (**)
+    &&ПOCTAB ИHB;ПOCTAB CTOИT&&_);
+    "
+
+KOHEЦ
+
+*READ:31017
+*REL:LP
+*PASC
+*C
+OCBOБO ЖY-AM0,ИH-AM0,ДA-AM0,BP-AM0;
+OЧИCTИ ЖY-AM0,ИH-AM0,ДA-AM0,BP-AM0.
+? .E
+*ИПC
+*CALL AMOЗAГ
+PEЖИM [[ПOBTOP]
+
+SYSTEM []
+
+METAЛ [ЗOЛOTO*CEPEБPO*ПЛATИHA*ПAЛЛAДИЙ*ПЛAT.ГP.
+*ПAЛЛ.XЛOPИCT.*CEP.AЗOT-KИC*CEP.ПPИПOЙ*POДИЙ*ИHДИЙ*]
+
+OTДEЛЫ [
+ATX *
+AXO *
+HMOЭИ *
+O.K *
+OAИC *
+OBП *
+OHBЭ *
+OHИ *
+OKOИC *
+OMATИ *
+OMOИ *
+OMИ *
+OБC *
+OГИ *
+OГПC *
+OИCM *
+OИO *
+OИЖK *
+OПИP *
+OЭPC *
+OЭИ1 *
+OЭИ2 *
+PEAЛ *
+PYK-BO*
+БYXГ *
+ППO *
+ЭИO *
+]
+
+KOHEЦ]
+*END F
+? .AMBЫ
+ШИФP 410900 ЗMП^OЗY 32^TPA 10^AЦП 100^ЛEH 31(1C)^BPE 1000^
+EEB1A3
+*NAME
+*CMP
+*ИПC:PAЗГPYЗKA CXE-AM
+*YESME
+*MAD
+ДЛЯ-BЫ;ПOДCXE CXE-AM;
+
+BЫДATЬ 'OTДEЛЫ [';
+HAЙTИ ПEPBYЮ B SY-OTД;
+O:BB OTДEЛ.HAЗB,'*';HAЙTИ CЛEДYЮ B SY-OTД;ECЛИ COC=0 TO HA O;
+BЫДATЬ ']';
+?*
+HAЙTИ ПEPBYЮ B SY-ШИФ;
+Ш:
+  BB 'ШИФP [',.HOMEP,'!]';
+  HAЙTИ ПEPBYЮ B ШИ-ПPИ;
+  П:
+    BЗЯTЬ;HAЙTИ BЛAДEЛ B ИM-ПPИ;BЗЯTЬ;
+    HAЙTИ ПEPBYЮ B ПP-CTO;BЗЯTЬ;
+    HAЙTИ BЛAДEЛ B OT-CTO;BЗЯTЬ;
+    BЫДATЬ 'ПPИБOP [',ИMЯ.TEK,'_',/,'         ',
+           ПPИБOP.ИHB,'_',ПPИБOP.ЦEHA,'_',
+           ПPИБOP.BOC,'_',ПPИБOP.KAП,'_',
+           OTДEЛ.HAЗB,'_',CTOИT.ПPИHЯЛ,'!]';
+    HAЙTИ CЛEДYЮ B ШИ-ПPИ;ECЛИ COC=0 TO HA П;
+  HAЙTИ CЛEДYЮ B SY-ШИФ;ECЛИ COC=0 TO HA Ш;
+*
+KOHEЦ;
+*END F
+? .ЗTBЫ
+ШИФP 410900 ЗMП^OЗY 32^TPA 10^AЦП 100^ЛEH 31(1C)^BPE 1000^EEB1A3
+*NAME
+*CMP
+*M
+ДЛЯ-BЫ;ПOДCXE CXE-ПЛ;
+HAЙTИ ПEPBYЮ B SY-TEM;
+
+  T:HAЙTИ ПEPBYЮ B TE-ИCП;
+  BЗЯTЬ TEMA;HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ OTДEЛ;
+  BЫДATЬ 'TEMA [',TEMA.HOMEP,'_',OTДEЛ.HAЗB,'*]';
+  HAЙTИ ПEPBYЮ B ИC-ИCП;  ECЛИ COC<>0 TO HA П;
+
+    C:BЗЯTЬ БД-KЛЮ ИCПOЛH HA ЦEЛ.ЗH;
+    HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ OTДEЛ;
+    BЫДATЬ '                COИCП [',OTДEЛ.HAЗB,'*]';
+    HAЙTИ ПEPBYЮ B ИC-ИCП;
+    ECЛИ COC<>0 TO_(D:ЗAMEHИ БД-KЛЮ ИCПOЛH HA ЦEЛ.ЗH;
+      HAЙTИ CЛEДYЮ B ИC-ИCП;ECЛИ COC=0 TO_(HA C_)ИHAЧE HA П_)
+    ИHAЧE_(
+
+      E:HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ OTДEЛ;
+      BЫДATЬ '                         ПOДИCП [',OTДEЛ.HAЗB,'*]';
+      HAЙTИ CЛEДYЮ B ИC-ИCП;ECЛИ COC=0 TO_(HA E_)ИHAЧE HA D_);
+
+  П:HAЙTИ CЛEДYЮ B SY-TEM;ECЛИ COC=0 TO HA T;
+K;
+*END F
+? .ЗTCX
+ШИФP 410900 ЗMП^ЛEH 31(1C)^OЗY 32^TPA 17^EEB1A3
+*NAME
+*CMP:CXEMA ЗATPAT ПO TEMAM
+*TC
+ЗAMEHИ CXEMA CX-ЗT0:PEЖИM 0;
+OБЛACTЬ ДA-ЗT0;
+
+TИП CTPOKA CИMBOЛ 84;
+TИП PYБЛИ  ДEЙCTB PAЗMEP 9999900;
+
+? .З
+ЗAПИCЬ OTДEЛ: ЭЛ HAЗB   CИMBOЛ 6;
+
+ЗAПИCЬ TEMA:  ЭЛ HOMEP  ЦEЛOE;
+
+ЗAПИCЬ ИCПOЛH:ЭЛ HOMEP  ЦEЛOE,
+              ЭЛ YPOB   ЦEЛOE;
+
+ЗAПИCЬ ЭTAП  :ЭЛ HOMEP  ЦEЛOE;
+
+ЗAПИCЬ ЗAT   :ЭЛ MEC    ЦEЛOE PAЗMEP 9999;
+              ЭЛ BЫП    PYБЛИ,
+              ЭЛ OЗAPП  PYБЛИ,
+              ЭЛ ДЗAPП  PYБЛИ,
+              ЭЛ MATEP  PYБЛИ,
+              ЭЛ KOMAH  PYБЛИ,
+              ЭЛ CПEЦ   PYБЛИ,
+              ЭЛ AMOP   PYБЛИ,
+              ЭЛ CTOP   PYБЛИ,
+              ЭЛ ПOCH   PYБЛИ,
+              ЭЛ ПTPEC  PYБЛИ,
+              ЭЛ ПPБK   PYБЛИ,
+              ЭЛ OBЫШ   PYБЛИ,
+              ЭЛ OГOC   PYБЛИ,
+              ЭЛ HEПЛ   PYБЛИ;
+
+ЗAПИCЬ HAKЛ  :ЭЛ MEC    ЦEЛOE PAЗMEP 9999;
+              ЭЛ ПPOЧ   PYБЛИ,
+              ЭЛ HAKЛ   PYБЛИ,
+              ЭЛ ЗAHAK  PYБЛИ,
+              ЭЛ ЗAPП   PYБЛИ;
+
+
+
+ЗAПИCЬ ПAP:             ?*ПAPAMETPЫ CИCTEMЫ*
+              ЭЛ ИMЯ    CИMBOЛ 6,?*COKP HAЗBAHИE(AББP)*
+              ЭЛ HOMEP  ЦEЛOE,
+              ЭЛ HAЗB   CTPOKA KOHCИM,?*ПOЛHOE HAЗBAHИE*
+              ЭЛ COKP   CTPOKA KOHCИM;?*COKP HAЗBAHИE*
+
+ЗAПИCЬ TИП:             ?*TИП ПAPAMEHTPA*
+              ЭЛ ИMЯ    CИMBOЛ 6;?*COKP HAЗBAHИE*
+
+ЗAПИCЬ ATP:             ?*ATPИБYT TИПA*
+              ЭЛ ИMЯ    CИMBOЛ 6,?*COKP HAЗBAHИE*
+              ЭЛ ЗH     CTPOKA KOHCИM;
+
+
+
+ЗAПИCЬ ЦEЛ:   ЭЛ ЗH     ЦEЛOE;
+ЗAПИCЬ ДEЙ:   ЭЛ ЗH     ДEЙCTB;
+ЗAПИCЬ AЛФ:   ЭЛ ЗH     CИMBOЛ 6;
+ЗAПИCЬ CTP:   ЭЛ ЗH     CTPOKA KOHCИM;
+ЗAПИCЬ ЛOГ:   ЭЛ ЗH     ЛOГИЧE;
+
+
+
+     OБЛACT   BP-ЗT0;
+     ЗAПИCЬ   SS---M;
+     ЗAПИCЬ   SYS--O;
+     HAБOP    BPEMEH:
+BЛAДEЛ   SYS--O,   ЧЛEH     SS---M,
+ИCKЛЮЧ   ДOПYCK,
+BKЛЮЧE   BPYЧHY,
+YПOPЯД   ПPOИЗB;
+
+
+
+? .H
+HAБOP SY-OTД:?*OTДEЛЫ OTГAHИЗAЦИИ*
+             ЧЛEH OTДEЛ,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX,
+             YПOPЯД ПO-ЭЛE HAЗB;
+
+HAБOP SY-TEM:?*TEMЫ ИCCЛEДOBAHИЙ*
+             ЧЛEH TEMA,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP SY-HAK:?*OБЩEHИCOBCKИE MECЯЧHЫE*
+             ЧЛEH HAKЛ,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX,
+             YПOPЯД ПO-ЭЛE MEC;
+
+HAБOP OT-ИCП:?*ГДE OTДEЛЫ ЯBЛЯETCЯ ИCПOЛHИTEЛЯMИ*
+             BЛAДEЛ OTДEЛ,ЧЛEH ИCПOЛH,ПPИBЯЗ ИH-ЗT0,
+             YПOPЯД ПO-ЭЛE HOMEP,ДYБЛИK PAЗPEШ,
+             ИCKЛЮЧ ДOПYCK;
+
+HAБOP TE-ИCП:?*ИCПOЛHИTEЛИ TEM*
+             BЛAДEЛ TEMA,
+             ЧЛEH ИCПOЛH,ПPИBЯЗ ИH-ЗT0,
+             YПOPЯД ПO-ЭЛE HOMEP,
+             ИCKЛЮЧ ДOПYCK;
+
+HAБOP ИC-ИCП:?*COИCПOЛHИTEЛИ TEMЫ*
+             BЛAДEЛ ИCПOЛH,ЧЛEH ИCПOЛH,ПPИBЯЗ ИH-ЗT0,
+             BKЛЮЧE BPYЧHY,ИCKЛЮЧ ДOПYCK,
+             YПOPЯД ПO-ЭЛE HOMEP,
+             BЫБOP TE-ИCП ИCПOЛЬЗ ЦEЛ.ЗH;
+
+HAБOP TE-ЭTA:?*ЭTAПЫ TEM*
+             BЛAДEЛ TEMA,
+             ЧЛEH ЭTAП,ПPИBЯЗ ИH-ЗT0,
+             YПOPЯД ПO-ЭЛE HOMEP;
+
+HAБOP ИC-ЗAT:?*ЗATPATЫ ИCПOЛHИTEЛЯ*
+             BЛAДEЛ ИCПOЛH,
+             ЧЛEH ЗAT,ПPИBЯЗ ИH-ЗT0,
+             YПOPЯД ПO-ЭЛE MEC,ДYБЛИK PAЗPEШ;
+
+HAБOP ЭT-ЗAT:?*ЗATPATЫ ПO ЭTAПY*
+             BЛAДEЛ ЭTAП,
+             ЧЛEH ЗAT,ПPИBЯЗ ИH-ЗT0,
+             YПOPЯД ПO-ЭЛE MEC,ДYБЛИK PAЗPEШ;
+
+
+
+HAБOP SY-ПAP:?*ПAPAMETPЫ*
+             ЧЛEH ПAP,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX,
+             YПOPЯД ПO-ЭЛE ИMЯ;
+
+HAБOP ПA-ПAP:?*ПOДЧИHEHИE ПAPAMETPOB*
+             BЛAДEЛ ПAP,ЧЛEH ПAP,ПPИBЯЗ ИH-ЗT0,
+             BKЛЮЧE BPYЧHY,ИCKЛЮЧ ДOПYCK,
+             YПOPЯД ПO-ЭЛE HOMEP,
+             BЫБOP SY-ПAP ИCПOЛЬЗ AЛФ.ЗH;
+
+HAБOP ПA-TИП:?*TИП ПAPAMETPA*
+             BЛAДEЛ ПAP,OДHOЗH,
+             ЧЛEH TИП,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX;
+
+HAБOP TИ-ATP:?*ATPИБYTЫ TИПA*
+             BЛAДEЛ TИП,
+             ЧЛEH ATP,ПPИBЯЗ ИH-ЗT0,
+             ИEPAPX,YПOPЯД ПO-ЭЛE ИMЯ;
+
+
+
+HAБOP ПA-ЦEЛ:BЛAДEЛ ПAP,ЧЛEH ЦEЛ,ПPИBЯЗ ИHД-ПЛ,BKЛЮЧE BPYЧHY,
+             ИCKЛЮЧ ДOПYCK,YПOPЯД ПO-ЭЛE ЗH,ДYБЛИK PAЗPEШ;
+HAБOP ПA-ДEЙ:BЛAДEЛ ПAP,ЧЛEH ДEЙ,ПPИBЯЗ ИHД-ПЛ,BKЛЮЧE BPYЧHY,
+             ИCKЛЮЧ ДOПYCK,YПOPЯД ПO-ЭЛE ЗH,ДYБЛИK PAЗPEШ;
+HAБOP ПA-AЛФ:BЛAДEЛ ПAP,ЧЛEH AЛФ,ПPИBЯЗ ИHД-ПЛ,BKЛЮЧE BPYЧHY,
+             ИCKЛЮЧ ДOПYCK,YПOPЯД ПO-ЭЛE ЗH,ДYБЛИK PAЗPEШ;
+HAБOP ПA-CTP:BЛAДEЛ ПAP,ЧЛEH CTP,ПPИBЯЗ ИHД-ПЛ,BKЛЮЧE BPYЧHY,
+             ИCKЛЮЧ ДOПYCK,YПOPЯД ПO-ЭЛE ЗH,ДYБЛИK PAЗPEШ;
+HAБOP ПA-ЛOГ:BЛAДEЛ ПAP,ЧЛEH ЛOГ,ПPИBЯЗ ИHД-ПЛ,BKЛЮЧE BPYЧHY,
+             ИCKЛЮЧ ДOПYCK,YПOPЯД ПO-ЭЛE ЗH,ДYБЛИK PAЗPEШ;
+
+
+
+KOHEЦ.
+
+*      REL:LP
+*TBC
+ЗAMEHИ ПOДCXE CX-ЗT0 PEЖИM 0:CXEMЫ CX-ЗT0;
+ЗAMEHИ ПOДCXE CX-ЗT- PEЖИM 0:CXEMЫ CX-ЗT0,CX-БИБ;
+?*   01 - ПOCTAB            10 - HAЙTИ ПO-KЛЮ     *
+?*   02 - HAЙTИ ПO KЛЮ ...  11 - HAЙTИ ПOCЛEД     *
+?*   03 - ЗAMEHИ HA         12 - HAЙTИ CЛEДYЮ     *
+?*   04 - HAЙTИ ПEPBYЮ      13 - HAЙTИ ПPEДЫД     *
+?*   05 - HAЙTИ BЛAДEЛ      14 - BЗЯTЬ HA         *
+?*   06 - BKЛЮЧИ            15 - ЗAMEHИ           *
+?*   07 - YБPATЬ            16 - BЗЯTЬ            *
+?*   08 - ИCKЛЮЧИ           17 - HAЙTИ ПEPBYЮ ... *
+?*   09 - HAЙTИ ПEPBYЮ ...                        *
+KOHEЦ.
+
+*END F
+? .ЗTЗA
+ШИФP 410900 ЗMП^ЛEH 31(1C)^OЗY 32^TPA 32^AЦП 100^BPE 1000^EEB1A3
+*NAME
+*CMP:ЗAГPYЗЧИK ЗATPAT
+*GENZAG
+ИMЯ-ЗA ZATNZG
+ПOДCXEMA CX-ЗT0
+
+? .ПEP *)
+ПEPEMEHHHЫE
+  TEKИCП ЦEЛOE,TEKCOИ ЦEЛOE,
+  TEKCПИ CИMBOЛ 6,
+  ПYCTO CИMBOЛ 84,
+  KOHEЦ
+
+? .OГP *)
+OГPAHИЧ
+  ФOPMATA:[,];
+  ЭЛEMEHT:_;
+KOHEЦ
+
+? .ПPO *)
+ПPOЦEДYPЫ "
+PROCEDURE PUTSYSTEM;
+TYPE ФЛAГ=(ФS,ПEЧATЬ,MOДИФ,AДMИH,OTЛAД,OTЧCKЛ,OTЧOTД,BXOД,ФF);
+VAR ФЛAГИ,ФЛAГИCOX:SET OF ФЛAГ;
+BEGIN
+ФЛAГИ:=[OTЛAД,BXOД];ФЛAГИCOX:=[OTЛAД,BXOД];
+&&HAЙTИ ПO-KЛЮ 'ФЛAГИ' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ЦEЛ;
+ЗAMEHИ ЦEЛ.ЗH HA ФЛAГИ;
+HAЙTИ ПO-KЛЮ 'XPAHИM' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ЦEЛ;
+ЗAMEHИ ЦEЛ.ЗH HA ФЛAГИCOX&&
+(**)
+ПYCTO[1]:=' ';ПYCTO[2]:='_377';
+END;
+"
+
+? .ФOP *)
+
+ФOPMAT ФЛAГИ
+  ПACKAЛ "PUTSYSTEM;"
+
+ФOPMAT ПAPAM
+  ПAP.ИMЯ_ПAP.HAЗB*
+  ПACKAЛ "ПAP.COKP:=ПYCTO;&&ПOCTAB ПAP&&"
+
+ФOPMAT ПA-ЦEЛ
+  ПAP.ИMЯ_ПAP.HAЗB_ЦEЛ.ЗH*
+  ПACKAЛ "ПAP.COKP:=ПYCTO;
+    &&ПOCTAB ПAP;ПOCTAB ЦEЛ;BKЛЮЧИ B ПA-ЦEЛ&&"
+
+ФOPMAT ПA-ДEЙ
+  ПAP.ИMЯ_ПAP.HAЗB_ДEЙ.ЗH*
+  ПACKAЛ "ПAP.COKP:=ПYCTO;
+    &&ПOCTAB ПAP;ПOCTAB ДEЙ;BKЛЮЧИ B ПA-ДEЙ&&"
+
+ФOPMAT ПA-AЛФ
+  ПAP.ИMЯ_ПAP.HAЗB_AЛФ.ЗH*
+  ПACKAЛ "ПAP.COKP:=ПYCTO;
+    &&ПOCTAB ПAP;ПOCTAB AЛФ;BKЛЮЧИ B ПA-AЛФ&&"
+
+ФOPMAT ПA--AЛ
+  AЛФ.ЗH*
+  &&ПOCTAB AЛФ&& &&BKЛЮЧИ B ПA-AЛФ&&
+
+ФOPMAT OTДEЛЫ
+  OTДEЛ.HAЗB* ПACKAЛ "&&ПOCTAB OTДEЛ&&"
+
+ФOPMAT CYБПOД
+  ПACKAЛ "OTДEЛ.HAЗB:='CYБПOД';&&ПOCTAB OTДEЛ&&"
+
+ФOPMAT YCTCПИ
+  AЛФ.ЗH*  ПACKAЛ "TEKCПИ:=AЛФ.ЗH;ПAP.HOMEP:=0;"
+
+ФOPMAT ПAP
+  ПAP.ИMЯ_ПAP.HAЗB_ПAP.COKP_TИП.ИMЯ*
+  ПACKAЛ "AЛФ.ЗH:=TEKCПИ;ПAP.HOMEP:=ПAP.HOMEP+10;
+    &&ПOCTAB ПAP;ПOCTAB TИП;BKЛЮЧИ B ПA-ПAP&&"
+
+ФOPMAT ATP
+  ATP.ИMЯ_ATP.ЗH*
+  ПACKAЛ "&&ПOCTAB ATP&&"
+
+ФOPMAT TEMA
+  TEMA.HOMEP_OTДEЛ.HAЗB*
+  ПACKAЛ "
+    WITH ИCПOЛH DO_(HOMEP:=0;YPOB:=-1;TEKИCП:=HOMEP_);
+    &&ПOCTAB TEMA;HAЙTИ ПO-KЛЮ B SY-OTД;ПOCTAB ИCПOЛH&&"
+
+ФOPMAT COИCП
+  OTДEЛ.HAЗB*
+  ПACKAЛ "WITH ИCПOЛH DO_(HOMEP:=HOMEP+1;TEKCOИ:=HOMEP_);
+    ЦEЛ.ЗH:=TEKИCП;
+    &&HAЙTИ ПO-KЛЮ B SY-OTД;ПOCTAB ИCПOЛH;BKЛЮЧИ B ИC-ИCП&&"
+
+   ФOPMAT ПOДИCП
+   OTДEЛ.HAЗB*
+   ПACKAЛ "WITH ИCПOЛH DO HOMEP:=HOMEP+1;
+     ЦEЛ.ЗH:=TEKCOИ;
+     &&HAЙTИ ПO-KЛЮ B SY-OTД;ПOCTAB ИCПOЛH;BKЛЮЧИ B ИC-ИCП&&"
+
+KOHEЦ
+*REL:LP
+*READ:31017
+*PASC
+*C
+OCBOБO ЖY-ЗT0,ИH-ЗT0,ДA-ЗT0,BP-ЗT0;
+OЧИCTИ ЖY-ЗT0,ИH-ЗT0,ДA-ЗT0,BP-ЗT0;
+ЖYPHAЛ ЖY-ЗT0 CБPOCИ.
+
+? .E *)
+*ИПC
+*CALL ZATNZG
+PEЖИM [[ПOBTOP]
+ПA-ЦEЛ [ФЛAГИ _XPAHИMЫE ФЛAГИ CИCTEMЫ_0*]
+ПA-ЦEЛ [XPAHИM_KAKИE ФЛAГИ XPAHИM_0*]
+ФЛAГИ  []
+ПA-ЦEЛ [ДATЗП _ДATA ЗAПИCИ ДAHHЫX_0*]
+ПA-AЛФ [ПAPCИC_ПAPOЛЬ HA BXOД B CИC.БЛOK_0909*]
+ПA-AЛФ [ПAPOЛЬ_ПAPOЛЬ HA PEЖИM AДMИHИCTPATOPA_CTAKAH*]
+
+? .K *)
+ПAPAM  [ИM-KOЭ_ИMEHA KOЭФФИЦИEHTOB*]
+ПA--AЛ [ZKCC*ZKЭФЗ*ZKФPEЗ*ZKФMП*ZKФHT*MИHYC
+       *ZKПPOЧ*ZKHAKЛ*ZKBTЧЗ*]
+ПA-ДEЙ [ZKCC  _KOЭФ COЦ.CTPAXOBAHИЯ (ЗATPATЫ)_0.14*]
+ПA-ДEЙ [ZKЭФЗ _KOЭФ ЭKOHOMИИ ФOHДA ЗAPПЛ (ЗATPATЫ)_0.3747*]
+ПA-ДEЙ [ZKФPEЗ_KOЭФ ФИHAHCOBOГO PEЗEPBA (ЗATPATЫ)_0.1*]
+ПA-ДEЙ [ZKФMП _KOЭФ ФMП (ЗATPATЫ)_0.6584*]
+ПA-ДEЙ [ZKФHT _KOЭФ ФHTCP (ЗATPATЫ)_0.2416*]
+ПA-ДEЙ [MИHYC _MИHYC EДEHИЦA_-1.0*]
+ПA-ДEЙ [ZKПPOЧ_KOЭФ ПPOЧ.ПPЯM.ЗATP (ЗATPATЫ/BЫЧ)_0.0*]
+ПA-ДEЙ [ZKHAKЛ_KOЭФ HAKЛ.PACXOДOB  (ЗATPATЫ/BЫЧ)_0.0*]
+ПA-ДEЙ [ZKBTЧЗ_KOЭФ B T.Ч. ЗAPПЛ   (ЗATPATЫ/BЫЧ)_0.0*]
+
+ПA-ДEЙ [OA    _OБЩEHИC.AMOPTИЗAЦИЯ_273.1*]
+ПA-ДEЙ [OБ    _CYMMA OTЧ.B БЮДЖET_0*]
+ПA-ДEЙ [OФ    _OБЩEHИC.ФOHДЫ_127.7*]
+
+? .T *)
+ПAPAM [CП-TEM_YPEЗAHHЫЙ CПИCOK ПAPAMETPOB TEMЫ*]
+YCTCПИ [CП-TEM*]
+ПAP [THOMK_HOMEP KAЛЬKYЛЯЦИИ_HOM.KAЛ_ЦEЛ*]
+ПAP [TИCП_ИCПOЛHИTEЛЬ_ИCП_AЛФ*]
+ПAP [TCOИ_COИCПOЛHИTEЛЬ_COИ_AЛФ*]
+    ATP [ПEPEД_TЭTAП  H ECTЬ ЛИ COИCПOЛHИTEЛИ*]
+ПAP [TПOД_ПOДИCПOЛHИTEЛЬ_ПOД_AЛФ*]
+    ATP [ПEPEД_TCOИ   H ECTЬ ЛИ ПOДИCПOЛHИTEЛИ*]
+    ATP [YXOД_TПOД*]
+ПAP [TЭTAП_HOMEP ЭTAПA_ЭT_ЦEЛ*]
+    ATP [ПOCЛE_ЭTOBCE H ECTЬ ЛИ EЩE ЭTAПЫ*]
+    ATP [YXOД_TЭTAП*]
+
+? .H *)
+ПAPAM [CП-HAK_CПИCOK ПAPAMETPOB HAKЛAДHЫX*]
+YCTCПИ [CП-HAK*]
+ПAP [NMEC_MECЯЦ И ГOД_MEC_MEC*]
+ПAP [NПPOЧ_ПPOЧИE ПPЯMЫE ЗATPATЫ_ПPOЧ.ПP_ДEЙ*]
+ПAP [NHAKЛ_HAKЛAДHЫE PACXOДЫ_HAKЛ_ДEЙ*]
+ПAP [NЗAHAK_ЗAPПЛATA HAKЛAДHЫX_ЗAPП.HAKЛ_ДEЙ*]
+ПAP [NЗAPП_ЗAPПЛATA OCH.ИCПOЛHИTEЛEЙ_ЗAPП_ДEЙ*]
+
+? .З *)
+ПAPAM [CП-ЗAT_CПИCOK ПAPAMETPOB ЗATPAT ПO TEME*]
+YCTCПИ [CП-ЗAT*]
+ПAP [ZMEC_MECЯЦ И ГOД_MEC_MEC*]
+ПAP [ZTEMA_HOMEP KAЛЬKYЛЯЦИИ TEMЫ_TEMA_ЦEЛ*]
+ПAP [ZOTД_HOMEP ИCПOЛHИTEЛЯ_N.ИCП_ЦEЛ*]
+ПAP [ZЭTAП_HOMEP ЭTAПA_ЭT_ЦEЛ*]
+ПAP [ZBЫП_BЫПOЛHEHИE ПO TEME_BЫП_ДEЙ*]
+ПAP [ZOЗAPП_ЗAPПЛATA OCHOBHЫX ИCПOЛHИTEЛEЙ_ЗAPП_ДEЙ*]
+ПAP [ZДЗAPП_ДOП. ЗAPПЛATA OCHOBHЫX ИCПOЛHИTEЛEЙ_ДOП.ЗAPП_ДEЙ*]
+ПAP [ZMATEP_MATEPИAЛЫ_MAT_ДEЙ*]
+ПAP [ZKOMAH_KOMAHДИPOBKИ_KOM_ДEЙ*]
+ПAP [ZCПEЦ_CПEЦOБOPYДOBAHИE_CПEЦOБ_ДEЙ*]
+ПAP [ZAMOP_AMOPT.OTЧИCЛ.HA ПOЛHOE BOCCTAHOBЛEHИE_AMOPT_ДEЙ*]
+ПAP [ZCTOP_OПЛATA PAБOT CTOPOHHИX OPГAHИЗAЦИЙ_CTOP_ДEЙ*]
+ПAP [ZПOCH_ПЛATA ЗA OCHOBHЫE ФOHДЫ_OCH.Ф_ДEЙ*]
+ПAP [ZПTPEC_ПЛATA ЗA TPYДOBЫE PECYPCЫ_TPYД.P_ДEЙ*]
+ПAP [ZПPБK_ПPOЦEHTЫ ЗA БAHKOBCKИЙ KPEДИT_!БAHK.KP_ДEЙ*]
+ПAP [ZOBЫШ_OTЧИCЛEHИЯ B BЫШECTOЯЩYЮ OPГAHИЗAЦИЮ_OTЧ.BЫШ_ДEЙ*]
+ПAP [ZOГOC_OTЧИCЛEHИЯ B ГOCБЮДЖET B T.Ч.B MECTHЫЙ_OTЧ.ГOC_ДEЙ*]
+ПAP [ZHEПЛ_CAЛЬДO HEПЛAHИPYEMЫX ДOXOДOB И PACXOДOB_HEПЛ_ДEЙ*]
+
+? .O *)
+OTДEЛЫ [
+OГИ*
+OБC*
+OГПC*
+OИCM*
+OBП*
+OAИC*
+OHИ*
+OИЖK*
+ЛBЭ*
+OЭИ*
+OHBЭ*
+BOИ*
+OMATИ*
+HMOЭИ*
+OMOИ*
+OПИ*
+ЭИO*
+OMИ*
+OЭPИCP*
+AXO*
+BOXP*
+OИO*
+AYП*]
+
+CYБПOД []
+
+TEMA [   1021889_HMOЭИ *]
+                COИCП [OMATИ *]
+                COИCП [OГПC  *]
+TEMA [   1021989_HMOЭИ *]
+TEMA [   1200489_OГИ   *]
+TEMA [   1207189_OГИ   *]
+                COИCП [ЭИO   *]
+TEMA [   1207289_OГИ   *]
+TEMA [   1208089_OГИ   *]
+TEMA [   1210989_OГИ   *]
+TEMA [   1211089_OГИ   *]
+TEMA [   1211389_OГИ   *]
+                COИCП [ЭИO   *]
+TEMA [   1211489_OГИ   *]
+TEMA [   1215689_OГИ   *]
+                COИCП [ЭИO   *]
+                COИCП [OMATИ *]
+
+KOHEЦ]
+*END F
+?.CK
+ШИФP 410900 ЗMП^OЗY 32^TPA 88^BPE 1000^ЛEH 31(2C)41(2C)^EEB1A3
+*NAME
+*ИПC.HAЧ
+*EDIT
+*W
+*L:*PREDT
+? .CKГO *)
+!INCLU:HEADING
+
+BEGIN &&ЖYPHAЛ ЖY-CK0;KOMПAC&& END.
+? .CKMO *)
+(*=L1*) PROGRAM SKLMON (*CK:MOHИTOP *)
+(*=L0 &&ПOДCXE CX-CK0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ДATЧИC
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WДAT
+!INCLU:WCTP
+!INCLU:BIGLIN
+!INCLU:YCTПEЧ
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RMECKBA
+!INCLU:RKBA
+!INCLU:RMEC
+!INCLU:RДAT
+!INCLU:RЦEЛBEЩ
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:ЗAKPЫTO
+!INCLU:HEЛЬЗЯ
+!INCLU:MENU
+!INCLU:ЖYPHAЛ
+!INCLU:KOHEЦ
+
+
+
+? .YCTФ *)
+(* YCTAHOBKA XPAHИMЫX ФЛAГOB *)
+PROCEDURE YCTФЛAГ;
+BEGIN(*=C-*)
+ФЛAГИ:=SYSTEM.PEЖИMЫ;
+END;(*=C+*)
+
+
+
+? .CHЯФ *)
+(* CHЯTИE HE XPAHИMЫX ФЛAГOB *)
+PROCEDURE CHЯФЛAГ;
+BEGIN(*=C-*)
+SYSTEM.PEЖИMЫ:=ФЛAГИ*[OTЛAД,OTЧCKЛ,OTЧOTД,BXOД];
+END;(*=C+*)
+
+
+
+? .ПЗAK *)
+(*ДEЙCTBИЯ ДO ЗAKPEПЛEHИЯ*)
+PROCEDURE ПPEДЗAK;
+BEGIN
+SYSTEM.ДATЗП:=CEГOДHЯ;CHЯФЛAГ;
+&&ЗAMEHИ SYSTEM&&
+END;
+
+
+
+? .ПPABA
+(*ПPOBEPKA ПPAB ПOЛЬЗOBATEЛЯ*)
+PROCEDURE ПPABA;
+VAR ПPOB:ZZSYSTEM;
+BEGIN
+&&BЗЯTЬ SYSTEM&&;PUTT;YCTФЛAГ;
+WRITE(OUT,'         ДAHHЫE OT ');WДAT(OUT,SYSTEM.ДATЗП);
+IF OTЛAД IN ФЛAГИ THEN_(
+  ФЛAГИ:=ФЛAГИ+[AДMИH];CEГOДHЯ:=SYSTEM.ДATЗП+1_)
+ELSE_(
+PUTT;PUTT;
+WRITE(OUT,'       ...ЗДPABCTBYЙTE...');PUTT;
+WRITE(OUT,'BЫ - AДMИHИCTPATOP!');
+IF ДA THEN_(
+  WRITE(OUT,'ПOДTBEPДИTE ПAPOЛЬ:');GETT;
+  READ(INP,ПPOB.ПAPOЛЬ);
+  IF SYSTEM.ПAPOЛЬ=ПPOB.ПAPOЛЬ THEN_(
+    WRITE(OUT,'BЫ ДEЙCTBИTEЛЬHO AДMИHИCTPATOP');PUTT;
+    WRITE(OUT,'BAM OTKPЫTЫ ПPABA HA ИЗMEHEHИE ДAHHЫX');PUTT;
+    ФЛAГИ:=ФЛAГИ+[AДMИH]_)
+  ELSE_(
+    WRITE(OUT,'HE ЗHAETE ПAPOЛЯ - HE БAЛYЙTECЬ');PUTT_)_);
+IF NOT (AДMИH IN ФЛAГИ) THEN_(
+  WRITE(OUT,'BЫ - ПOЛЬЗOBATEЛЬ');PUTT;
+  WRITE(OUT,'BAM MOЖHO TOЛЬKO BЫДABATЬ OTЧETЫ');PUTT_);
+(**)
+WRITE(OUT,'COOБЩИTE CEГOДHЯШHЮЮ ДATY:');
+CEГOДHЯ:=RДAT(SYSTEM.ДATЗП,ДATЧИC(31,12,99))_);
+END;
+
+
+
+? .ПAPOЛЬ *)
+(*ИЗMEHEHИE ПAPOЛЯ*)
+PROCEDURE ПAPOЛЬ;
+BEGIN
+IF HEЛЬЗЯ OR ЗAKPЫTO THEN EXIT;
+WRITE(OUT,'COOБЩИTE HOBЫЙ ПAPOЛЬ:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,SYSTEM.ПAPOЛЬ);YCTMOД;
+ECTЬ;
+END;
+
+
+
+? .БCИCШ *)
+(*БЛOK-MEHЮ ДЛЯ CИCTEMHЫX PAБOT*)
+PROCEDURE БЛOKCИC;
+
+
+
+? .SF *)
+(* YCT/CHЯ ФЛAГOB *)
+PROCEDURE SETFLAG;
+VAR Ф,ФФ:ФЛAГ;N:INT;
+BEGIN
+WRITE(OUT,'TEKYЩEE COCTOЯHИE ФЛAГOB:');PUTT;
+FOR Ф:=SUCC(ФS) TO PRED(ФF) DO_(
+  WRITE(OUT,ORD(Ф):0,'.',Ф,' ');
+  IF Ф IN ФЛAГИ THEN WRITE(OUT,'(+)')
+                ELSE WRITE(OUT,'(-)');
+  PUTT_);
+WRITE(OUT,'YKAЖИTE HOMEP ИHBEPTИPYEMOГO ФЛAГA:');
+N:=RЦEЛ(1,ORD(ФF)-1);IF HAЧ THEN EXIT;
+Ф:=ФF;
+FOR ФФ:=SUCC(ФS) TO PRED(ФF) DO IF N=ORD(ФФ) THEN Ф:=ФФ;
+ФЛAГИ:=ФЛAГИ MOD [Ф];
+WRITE(OUT,ORD(Ф):0,'.',Ф);
+IF Ф IN ФЛAГИ THEN WRITE(OUT,' (-) --> (+)')
+              ELSE WRITE(OUT,' (+) --> (-)');
+PUTT;
+END;
+
+
+
+? .ПЗГ *)
+(*BЫДAЧA ДЛЯ ПEPEЗAГPYЗKИ*)
+PROCEDURE ПЗГ;
+CONST EE='_';EF='*';
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-BEЩ&&
+WRITELN(' BEЩИ [');
+WHILE MOЖHO DO WITH BEЩЬ DO_(
+  &&BЗЯTЬ&&
+  WRITE(' ',HOMEP/1000:0:23,EE);
+  WCTP(OUTPUT,HAЗB,0);WRITELN(EE,EД[1],EД[2],EE);
+  WRITELN('    ',ЦEHA:0:22,EE,
+          OCTAT:0:23,EE,ПPИXOД:0:23,EE,PACXOД:0:23,EF);
+  &&HAЙTИ CЛEДYЮ&&_);
+WRITELN(' ]');
+
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&
+  WRITELN(' OTДEЛ [',OTДEЛ.HAЗB,EF,']');
+  &&HAЙTИ ПEPBYЮ B OT-CYM&&
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ&&
+    WRITELN('   CYMMA [',CYMMA.ЦEHA:0:22,EF,']');
+    &&HAЙTИ ПEPBYЮ B CY-BЗЯ&&
+    WHILE MOЖHO DO_(
+      &&BЗЯTЬ;HAЙTИ BЛAДEЛ B BE-BЗЯ;BЗЯTЬ.HOMEP&&
+      WRITELN('     BЗЯЛ [',BEЩЬ.HOMEP/1000:0:23,EE,
+              BЗЯЛ.KOЛИЧ:0:23,EF,']');
+      &&HAЙTИ CЛEДYЮ B CY-BЗЯ&&_);
+    &&HAЙTИ CЛEДYЮ B OT-CYM&&_);
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&_);
+ECTЬ;
+END;
+
+
+
+? .БCИC *)
+BEGIN
+KYДA:='HAPYЖY';
+IF HEЛЬЗЯ THEN EXIT;
+WRITE(OUT,'ПAPOЛЬ:');GETT;
+READ(INP,OTДEЛ.HAЗB);
+IF SYSTEM.ПAPCИC!OTДEЛ.HAЗB THEN_(
+  WRITE(OUT,'HE ЛEЗЬ, KYДA HE HYЖHO???');PUTT;EXIT_);
+PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'      ...BЫ B CИCTEMHOM БЛOKE...  ');PUTT;
+WRITE(OUT,'ФЛA - ИHBEPTИPOBAHИE ФЛAГOB/',
+          'ПЗГ - BЫДAЧA ДAHHЫX ДЛЯ ПEPEЗAГPYЗKИ/');
+MENU;
+SELECT
+  'ФЛA'=ДИP:SETFLAG;
+  'ПЗГ'=ДИP:ПЗГ;
+  'BЫX'=ДИP:EXIT;
+  'KOH'=ДИP:EXIT_);
+_)
+END;
+
+
+
+? .B *)
+BEGIN CASE KYДA OF
+'HAЧAЛO':_(
+WRITELN(OUT);
+RGEXPORT:=[46];
+WRITELN;
+WRITE(OUT,'           ************');PUTPT;
+WRITE(OUT,'           ИПC CKЛAД-88');PUTPT;
+WRITE(OUT,'           ************');PUTPT;
+WRITELN;
+IF ПYCTO THEN_(
+    WRITE(OUT,'CИCTEMA TPEБYET BOCCTAHOBЛEHИЯ');PUTT;
+    WRITE(OUT,'COOБЩИTE AДMИHИCTPATOPY');PUTT;
+    WRITE(OUT,'      ...ДO CBИДAHИЯ...');PUTT;
+    &&ЗABEPШ&&;KYДA:='ЭTOBCE';EXIT_);
+  ПPABA_)_);
+  IF (KYДA!'HAPYЖY') AND (KYДA!'HAЧAЛO') THEN EXIT;
+(**)
+? .Д *)
+WHILE TRUE DO_(
+IF ДИP!'KOH' THEN_(
+WRITE(OUT,'      ...BЫ B OБЩEM БЛOKE...  ');PUTT;
+WRITE(OUT,'KAP - BXOД B БЛOK PEГИCTPAЦИИ KAPT/',
+          'OTЧ - BXOД B БЛOK BЫДAЧИ OTЧETOB/',
+          'OTД - BXOД B БЛOK PEГИCTPAЦИИ OTДEЛOB/',
+          'CИC - BXOД B CИCTEMHЫЙ БЛOK/',
+          'ПAP - ИЗMEHEHИE ПAPOЛЯ AДMИHИCTPATOPA/',
+          'ЗAK - ЗAKPEПИTЬ ИЗMEHEHИЯ/',
+          'CБP - CБPOCИTЬ ИЗMEHEHИЯ/');
+MENU_);
+SELECT
+  'KAP'=ДИP:IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN_(
+              KYДA:='SKLCAR';EXIT_);
+  'OTЧ'=ДИP:IF NOT ЗAKPЫTO THEN_(
+              KYДA:='SKLOTC';EXIT_);
+  'OTД'=ДИP:IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN_(
+              KYДA:='SKLOTD';EXIT_);
+  'CИC'=ДИP:БЛOKCИC;
+  'ЗAK'=ДИP:ЖYPHAЛ('ЗAK',ПPEДЗAK);
+  'CБP'=ДИP:ЖYPHAЛ('CБP',ПPEДЗAK);
+  'ПAP'=ДИP:ПAPOЛЬ;
+  'KOH'=ДИP:_(KOHEЦ(ПPEДЗAK);IF NOT HAЧ THEN_(ДИP:='KOH';EXIT_)_);
+  'BЫX'=ДИP:_(WRITE(OUT,
+             'ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE "KOH"');
+             PUTT_)_)_);
+END.
+? .CKPO *)
+(*=L1*) PROGRAM SKLOTD (*CK:OTДEЛЫ *)
+(*=L0 &&ПOДCXE CX-CK0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:ROTД
+!INCLU:STPUT
+
+
+
+? .ПPO *)
+PROCEDURE ПPO;
+VAR I:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET OTДEЛOB');PUTT;EXIT_);
+I:=0;ШAГ:=1;
+REPEAT
+  I:=I+1;&&BЗЯTЬ&&
+  WRITE(OUT,I:3,') ',OTДEЛ.HAЗB);
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&
+UNTIL STPUT OR ПYCTO;
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+BEGIN
+REPEAT
+  WRITE(OUT,'HAЗBAHИE OTДEЛA:');GETHAЧ;
+  IF HAЧ THEN EXIT;
+  READ(INP,OTДEЛ.HAЗB);
+  &&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;
+  IF ПYCTO THEN_(
+    &&ПOCTAB OTДEЛ;HAЙTИ ПEPBYЮ B SY-MAT&&
+    WHILE MOЖHO DO_(
+      CYMMA.ЦEHA:=0;
+      &&ПOCTABИTЬ CYMMA;HAЙTИ CЛEДYЮ B SY-MAT&&_);
+    YCTMOД_)
+  ELSE_(WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT_);
+UNTIL NOT EЩE('EЩE!  ');
+END;
+
+
+
+? .ЗAM *)
+PROCEDURE ЗAM;
+VAR CTOT:ZZOTДEЛ;
+BEGIN
+WRITE(OUT,'CTAPOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,CTOT.HAЗB);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ HE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+WRITE(OUT,'HOBOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,OTДEЛ.HAЗB);
+&&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;IF COCT=0 THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+&&ЗAMEHИTЬ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+PROCEDURE YHAP(I:INT);EXTERNAL;
+BEGIN
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+WRITE(OUT,'OTДEЛ ИCKЛЮЧAETCЯ BMECTE CO BCEЙ ИHФOPMAЦИEЙ O HEM');PUTT;
+WRITE(OUT,'ПOДTBEPДИTE ИCKЛЮЧEHИE');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ИCKЛЮЧEHИE OTMEHЯETCЯ');PUTT;EXIT_);
+YHAP(&&HAБ OT-CYM&&);
+&&YБPATЬ OTДEЛ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .B *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ OTДEЛOB...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX OTДEЛOB/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX OTДEЛOB/',
+          'ЗAM - ЗAMEHA HAЗBAHИЯ OTДEЛA/',
+          'ИCK - ИCKЛЮЧEHИE OTДEЛA/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ЗAM'=ДИP:ЗAM;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_);
+_);
+END.
+? .CKPK *)
+(*=L1*) PROGRAM SKLCAR (*CK:KAPTЫ *)
+(*=L0 &&ПOДCXE CX-CK0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:RЦEЛBEЩ
+!INCLU:CUTCTP
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:ROTД
+!INCLU:WCTP
+!INCLU:STPUT
+!INCLU:STEP
+!INCLU:FINLIN2
+!INCLU:FCBЯ
+
+
+
+? .RШ *)
+PROCEDURE REGIS;
+CONST
+      MINKOЛ=0.000;  MAXKOЛ=99999.000;
+      MINMEC=1;      MAXMEC=12;
+      MINЦEHA=0.01;  MAXЦEHA=300000.00;
+
+
+
+? .ЦB *)
+(*ИHB.HOM. INT --> REAL *)
+FUNCTION ЦB(I:INT):REAL;
+BEGIN ЦB:=I/1000 END;
+
+? .BЦ *)
+(*ИHB.HOM. REAL --> INT *)
+FUNCTION BЦ(R:REAL):INT;
+BEGIN BЦ:=ROUND(R*1000) END;
+
+
+
+? .EB *)
+(*OTДEЛ+BEЩЬ --> CYMMA (+BЗЯЛ, ECЛИ ECTЬ)*)
+FUNCTION ECTЬBЗЯЛ:BOOL;
+BEGIN
+&&HAЙTИ BЛAДEЛ B MA-BEЩ&&
+FCBЯ(&&HAБ MA-CYM&&,&&HAБ OT-CYM&&,&&ЗП OTДEЛ&&);
+FCBЯ(&&HAБ BE-BЗЯ&&,&&HAБ CY-BЗЯ&&,&&ЗП CYMMA&&);
+IF MOЖHO THEN_(&&BЗЯTЬ BЗЯЛ&&;ECTЬBЗЯЛ:=TRUE_)
+         ELSE ECTЬBЗЯЛ:=FALSE;
+END;
+
+
+
+? .HAЙMAT *)
+(*HAЙДИ MAT ПO BEЩ*)
+PROCEDURE HAЙMAT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-MAT&&
+REPEAT
+  &&BЗЯTЬ&&
+  IF (BEЩЬ.HOMEP>=MATEP.HAЧ) AND (BEЩЬ.HOMEP<=MATEP.KOH) THEN EXIT;
+  &&HAЙTИ CЛEДYЮ&&
+  UNTIL FALSE;
+END;
+
+
+
+? .WOЦ *)
+FUNCTION OЦEHEHO:BOOL;
+VAR HAШЛИ:BOOL;I:INT;
+BEGIN
+I:=0;HAШЛИ:=FALSE;OЦEHEHO:=TRUE;ШAГ:=1;
+&&HAЙTИ ПEPBYЮ B SY-БEЗ&&;
+(Ц) WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ CЛEДYЮ&&
+  IF NOT HAШЛИ THEN_(
+    OЦEHEHO:=FALSE;HAШЛИ:=TRUE;
+    WRITE(OUT,'HE OЦEHEHЫ CЛEДYЮЩИE HOMEPA:');PUTT_);
+  WRITE(OUT,' ',ЦB(BEЩЬ.HOMEP):9:23);I:=I+1;
+  IF (I MOD 13)=0 THEN IF STPUT THEN EXIT Ц_);
+IF (I MOD 13)!0 THEN PUTT;
+END;
+
+
+
+? .WK *)
+(*BЫBOД KAPTЫ*)
+PROCEDURE WKAPT;
+BEGIN
+WITH BEЩЬ DO_(
+WRITE(OUT,ЦB(HOMEP):9:23,') ');
+WCTP(OUT,BEЩЬ.HAЗB,0);PUTT;
+WRITE(OUT,'       ЦEHA=');
+IF ЦEHA>0.0001 THEN WRITE(OUT,ЦEHA:5:22)
+               ELSE WRITE(OUT,'!!!!!');
+WRITE(OUT,'  OCT=',OCTAT:0:23,
+  '   ПPИ=',ПPИXOД:0:23,' PAC=',PACXOД:0:23,'  EД=',EД[1],EД[2],'  (');
+WCTP(OUT,MATEP.HAЗB,10);WRITE(OUT,')');
+PUTT_);
+END;
+
+
+
+? .WP *)
+PROCEDURE WPACX;
+VAR I:INT;
+BEGIN
+I:=0;
+&&HAЙTИ ПEPBYЮ B BE-BЗЯ&&
+WHILE MOЖHO DO_(
+  I:=I+1;IF ((I-1) MOD 3)=0 THEN WRITE(OUT,'    ');
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B CY-BЗЯ;HAЙTИ BЛAДEЛ B OT-CYM;BЗЯTЬ&&
+  WRITE(OUT,'   ',OTДEЛ.HAЗB,'=',BЗЯЛ.KOЛИЧ:0:23);
+  IF (I MOD 3)=0 THEN PUTT;
+  &&HAЙTИ CЛEДYЮ B BE-BЗЯ&&_);
+IF (I MOD 3)!0 THEN PUTT;
+END;
+
+
+
+? .KAP *)
+FUNCTION KAPTA:BOOL;
+BEGIN KAPTA:=FALSE;
+&&HAЙTИ ПEPBYЮ B SY-MAT;BЗЯTЬ MATEP.HAЧ;
+HAЙTИ ПOCЛEД B SY-MAT;BЗЯTЬ MATEP.KOH&&
+WRITE(OUT,'HOMEHKЛATYPHЫЙ HOMEP KAPTЫ:');
+BEЩЬ.HOMEP:=BЦ(RBEЩ(ЦB(MATEP.HAЧ),ЦB(MATEP.KOH)));
+IF HAЧ THEN EXIT;
+&&HAЙTИ ПO-KЛЮ B SY-BEЩ&&
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET KAPTЫ C TAKИM HOMEPOM');PUTT;EXIT_);
+&&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-BEЩ;BЗЯTЬ&&
+WRITE(OUT,'BOT ЭTA KAPTA:');PUTT;WKAPT;
+KAPTA:=TRUE;
+END;
+
+
+
+? .ПPO *)
+PROCEDURE ПPO(PACX:BOOL);
+VAR N:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-BEЩ&&
+IF ПYCTO THEN_(WRITE(OUT,'HET KAPT');PUTT;EXIT_);
+&&BЗЯTЬ BEЩЬ.HOMEP HA MATEP.HAЧ;
+HAЙTИ ПOCЛEД B SY-BEЩ;BЗЯTЬ BEЩЬ.HOMEP HA MATEP.KOH&&
+WRITE(OUT,'C KAKOГO HOMEPA HAЧATЬ ПPOCMOTP (',
+         ЦB(MATEP.HAЧ):0:21,'-',ЦB(MATEP.KOH):0:21,'):');
+N:=BЦ(RBEЩ(ЦB(MATEP.HAЧ),ЦB(MATEP.KOH)));
+IF HAЧ THEN EXIT;
+&&HAЙTИ ПEPBYЮ B SY-BEЩ;BЗЯTЬ&&
+WHILE BEЩЬ.HOMEP<N DO_(
+  &&HAЙTИ CЛEДYЮ;BЗЯTЬ&&_);
+ШAГ:=1;
+REPEAT
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-BEЩ;BЗЯTЬ&&
+  WKAPT;IF PACX THEN WPACX;
+  &&HAЙTИ CЛEДYЮ B SY-BEЩ&&
+UNTIL STEP OR ПYCTO;
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+VAR EДИЗM:ALFA;
+BEGIN
+WITH BEЩЬ DO REPEAT
+&&HAЙTИ ПEPBYЮ B SY-MAT;BЗЯTЬ MATEP.HAЧ;
+HAЙTИ ПOCЛEД B SY-MAT;BЗЯTЬ MATEP.KOH&&
+REPEAT
+WRITE(OUT,'HOMEHKЛATYPHЫЙ HOMEP:');
+HOMEP:=BЦ(RBEЩ(ЦB(MATEP.HAЧ),ЦB(MATEP.KOH)));IF HAЧ THEN EXIT;
+&&HAЙTИ ПO-KЛЮ B SY-BEЩ&&
+IF MOЖHO THEN_(WRITE(OUT,
+  'KAPTA C TAKИM HOMEPOM YЖE ЗAPEГИCTPИPOBAHA, ПOBTOPИTE');PUTT_);
+UNTIL ПYCTO;
+(**)
+WRITE(OUT,'HAЗBAHИE:');RCTP;
+IF HAЧ THEN EXIT;
+READ(INP,BEЩЬ.HAЗB);
+(**)
+WRITE(OUT,'ЦEHA ИЗBECTHA!');
+IF ДA THEN_(IF HAЧ THEN EXIT;
+  WRITE(OUT,'ЦEHA:');ЦEHA:=RBEЩ(MINЦEHA,MAXЦEHA)_)
+ELSE_(IF HAЧ THEN EXIT;ЦEHA:=0.0_);
+(**)
+(ЦE) WHILE TRUE DO_(
+WRITE(OUT,'EДИHИЦA ИЗMEPEHИЯ (ШT,KГ,M,M2,M3,П,Л,T,ГP,K):');GETHAЧ;
+IF HAЧ THEN EXIT;READ(INP,EД);WRITE(OUT,
+'ШT    KГ    M     M2    M3    П     Л     T     ГP    K     ');
+RESET(OUT);
+WHILE NOT EOF(OUT) DO_(
+  READ(OUT,EДИЗM);IF EДИЗM=EД THEN_(REWRITE(OUT);EXIT ЦE_)_);
+REWRITE(OUT);
+WRITE(OUT,'TAKOЙ EДИHИЦЫ HET, ПOBTOPИTE');PUTT_);
+(**)
+WRITE(OUT,'ПPИXOД:');
+ПPИXOД:=RBEЩ(MINKOЛ,MAXKOЛ);OCTAT:=ПPИXOД;PACXOД:=0;
+IF HAЧ THEN EXIT;
+(**)
+HAЙMAT;&&BЗЯTЬ&&
+WRITE(OUT,'BOT, ЧTO BЫ BBEЛИ:');PUTT;WKAPT;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTABИTЬ BEЩЬ&&;ФЛAГИ:=ФЛAГИ-[OTЧOTД,OTЧCKЛ];
+  &&BKЛЮЧИ B SY-ДBИ&&
+  IF BEЩЬ.ЦEHA<0.01 THEN_(&&BKЛЮЧИ B SY-БEЗ&&_)
+                    ELSE_(&&BKЛЮЧИ B SY-ЦEH&&_);
+  YCTMOД;
+  WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE_WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ');
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+PROCEDURE YHAP(I:INT);EXTERNAL;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+WRITE(OUT,'ПOДTBEPДИTE EE ИCKЛЮЧEHИE:');
+IF ДA AND NOT HAЧ THEN_(
+  YHAP(&&HAБ BE-BЗЯ&&);ФЛAГИ:=ФЛAГИ-[OTЧOTД,OTЧCKЛ];
+  &&YБPATЬ BEЩЬ&&;YCTMOД;
+  WRITE(OUT,'KAPTA AHYЛИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA OCTABЛEHA');PUTT;
+END;
+
+
+
+? .ПPИ *)
+PROCEDURE ПPИ;
+VAR N:REAL;
+BEGIN WITH BEЩЬ DO_(
+IF NOT KAPTA THEN EXIT;
+WRITE(OUT,'CKOЛЬKO ПPИШЛO:');
+N:=RBEЩ(MINKOЛ,MAXKOЛ);ПPИXOД:=ПPИXOД+N;OCTAT:=OCTAT+N;
+IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'BOT, ЧTO Y BAC ПOЛYЧИЛOCЬ:');PUTT;WKAPT;
+WRITE(OUT,'ПOДTBEPДИTE ПPИXOД ');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ПPИXOД OTMEHЯETCЯ');PUTT;EXIT_);
+&&ЗAMEHИTЬ BEЩЬ&&;ФЛAГИ:=ФЛAГИ-[OTЧOTД,OTЧCKЛ];
+&&HAЙTИ ПO-KЛЮ B SY-ДBИ&&
+IF ПYCTO THEN_(&&HAЙTИ ПO-KЛЮ B SY-BEЩ;BKЛЮЧИ B SY-ДBИ&&_);
+YCTMOД;ECTЬ_);
+END;
+
+
+
+? .PAC *)
+PROCEDURE PAC;
+VAR N:REAL;ЗAMEHA:BOOL;
+BEGIN WITH BEЩЬ DO_(
+IF NOT KAPTA THEN EXIT;WPACX;
+REPEAT
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+WRITE(OUT,'CKOЛЬKO YШЛO:');
+N:=RBEЩ(MINKOЛ,OCTAT);IF HAЧ THEN EXIT;
+PACXOД:=PACXOД+N;OCTAT:=OCTAT-N;
+(**)
+ЗAMEHA:=ECTЬBЗЯЛ;
+IF NOT ЗAMEHA THEN BЗЯЛ.KOЛИЧ:=0;
+(**)
+WRITE(OUT,'BOT, ЧTO Y BAC ПOЛYЧИЛOCЬ:');PUTT;WKAPT;
+WRITE(OUT,'       ',OTДEЛ.HAЗB,
+  ': ',BЗЯЛ.KOЛИЧ:0:23,'+',N:0:23,'=',BЗЯЛ.KOЛИЧ+N:0:23);PUTT;
+WRITE(OUT,'ПOДTBEPДИTE PACXOД ');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'PACXOД OTMEHЯETCЯ');PUTT;EXIT_);
+BЗЯЛ.KOЛИЧ:=BЗЯЛ.KOЛИЧ+N;
+IF ЗAMEHA THEN_(&&ЗAMEHИTЬ BЗЯЛ&&_)
+ELSE_(&&ПOCTABИTЬ BЗЯЛ&&_);
+ФЛAГИ:=ФЛAГИ-[OTЧOTД,OTЧCKЛ];
+&&ЗAMEHИTЬ BEЩЬ&&;
+&&HAЙTИ ПO-KЛЮ B SY-ДBИ&&
+IF ПYCTO THEN_(&&HAЙTИ ПO-KЛЮ B SY-BEЩ;BKЛЮЧИ B SY-ДBИ&&_);
+YCTMOД;ECTЬ;
+UNTIL NOT EЩE('EЩE!  ');
+_)END;
+
+
+
+? .ЦEH *)
+PROCEDURE ЦEH;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+&&HAЙTИ ПO-KЛЮ B SY-БEЗ&&
+IF ПYCTO THEN_(
+  WRITE(OUT,'ЭTO ИЗДEЛИE YЖE OЦEHEHO');PUTT;EXIT_);
+(**)
+WRITE(OUT,'COOБЩИTE ЦEHY:');
+BEЩЬ.ЦEHA:=RBEЩ(MINЦEHA,MAXЦEHA);
+IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'BOT, ЧTO Y BAC ПOЛYЧИЛOCЬ:');PUTT;WKAPT;
+WRITE(OUT,'ПOДTBEPДИTE OЦEHKY');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'OЦEHKA OTMEHЯETCЯ');PUTT;EXIT_);
+&&ЗAMEHИ BEЩЬ;ИCKЛЮЧ B SY-БEЗ;BKЛЮЧИ B SY-ЦEH&&
+YCTMOД;ФЛAГИ:=ФЛAГИ-[OTЧOTД,OTЧCKЛ];ECTЬ;
+END;
+
+
+
+? .ЧИC *)
+(*ИTOГOBAЯ ЧИCTKA*)
+PROCEDURE ЧИC;
+PROCEDURE YHAP(I:INT);EXTERNAL;
+BEGIN
+IF NOT (OTЧCKЛ IN ФЛAГИ) THEN_(
+  WRITE(OUT,'CHAЧAЛA HAДO BЫДATЬ OTЧET ПO CKЛAДY');PUTT;EXIT_);
+IF NOT (OTЧOTД IN ФЛAГИ) THEN_(
+  WRITE(OUT,'CHAЧAЛA HAДO BЫДATЬ OTЧET ПO OTДEЛAM');PUTT;EXIT_);
+IF NOT OЦEHEHO THEN_(
+  WRITE(OUT,'ПO ЭTИM HOMEPAM ЧИCTKA ПPOИЗBOДИTCЯ HE БYДET');
+  PUTT_);
+WRITE(OUT,'ПOДTBEPДИTE ИTOГOBYЮ ЧИCTKY');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ЧИCTKA OTMEHЯETCЯ');PUTT;EXIT_);
+(**)
+WRITE(OUT,'ЖДИTE, ИДET ЧИCTKA...');PUTT;
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&HAЙTИ ПEPBYЮ B OT-CYM&&
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ;HAЙTИ ПEPBYЮ B CY-BЗЯ&&
+    WHILE MOЖHO DO_(
+      &&BЗЯTЬ;HAЙTИ BЛAДEЛ B BE-BЗЯ;BЗЯTЬ&&
+      CYMMA.ЦEHA:=CYMMA.ЦEHA+BEЩЬ.ЦEHA*BЗЯЛ.KOЛИЧ;
+      &&HAЙTИ CЛEДYЮ B CY-BЗЯ&&_);
+    &&ЗAMEHИTЬ CYMMA;HAЙTИ CЛEДYЮ B OT-CYM&&_);
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&_);
+(**)
+&&HAЙTИ ПEPBYЮ B SY-ДBИ&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ BEЩЬ&&
+  IF BEЩЬ.ЦEHA>0.001 THEN_(
+    BEЩЬ.ПPИXOД:=0;BEЩЬ.PACXOД:=0;
+    YHAP(&&HAБ BE-BЗЯ&&);&&ЗAMEHИ BEЩЬ&&_);
+  &&ИCKЛЮЧИ B SY-ДBИ;HAЙTИ ПEPBYЮ B SY-ДBИ&&_);
+(**)
+&&HAЙTИ ПEPBYЮ B SY-БEЗ&&
+WHILE MOЖHO DO_(
+  &&BKЛЮЧИ B SY-ДBИ;HAЙTИ CЛEДYЮ B SY-БEЗ&&_);
+(**)
+ФЛAГИ:=ФЛAГИ-[OTЧCKЛ,OTЧOTД];
+SYSTEM.ДATЧИC:=CEГOДHЯ;YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ KAPT...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP XPAHЯЩИXCЯ KAPT/',
+          'OTД - ПPOCMOTP KAPT C PACXOДOM ПO OTДEЛAM/',
+          'HOB - BBOД HOBЫX KAPT/',
+          'ЦEH - OЦEHKA HAИMEHOBAHИЙ/',
+          'ИCK - ИCKЛЮЧEHИE KAPT/',
+          'ПPИ - ПPИXOД HAИMEHOBAHИЙ/',
+          'PAC - PACXOД HAИMEHOBAHИЙ/',
+          'ЧИC - ИTOГOBAЯ ЧИCTKA/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO(FALSE);
+  'OTД'=ДИP:ПPO(TRUE);
+  'ЧИC'=ДИP:ЧИC;
+  'ЦEH'=ДИP:ЦEH;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'ПPИ'=ДИP:ПPИ;
+  'PAC'=ДИP:PAC;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_)_);
+END;
+
+
+
+? .B *)
+BEGIN REGIS END.
+? .CKOT *)
+(*=L1*) PROGRAM SKLOTC (*CK:OTЧET *)
+(*=L0 &&ПOДCXE CX-CK0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:FWRITE
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:ЧИCДAT
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WДAT
+!INCLU:WCTP
+!INCLU:ПШИK
+!INCLU:MINUSES
+!INCLU:WLF
+!INCLU:WBL
+!INCLU:BIGLIN
+!INCLU:YCTПEЧ
+!INCLU:YCTMOД
+!INCLU:ECTЬ
+!INCLU:STPUT
+!INCLU:ROTД
+!INCLU:MENU
+
+
+
+? .ЦB *)
+(*ИHB.HOM. INT --> REAL *)
+FUNCTION ЦB(I:INT):REAL;
+BEGIN ЦB:=I/1000 END;
+
+? .BЦ *)
+(*ИHB.HOM. REAL --> INT *)
+FUNCTION BЦ(R:REAL):INT;
+BEGIN BЦ:=ROUND(R*1000) END;
+
+
+
+? .ШAПKA *)
+(*BЫBOД ШAПKИ*)
+PROCEDURE ШAПKA;
+VAR I:INT;F:TEXT;
+BEGIN
+FCOPY(F,OUT);RESET(F);REWRITE(OUT);I:=0;
+WHILE NOT EOF(F) DO_(I:=I+1;GET(F)_);
+I:=(128-I) DIV 2;
+YCTПEЧ;WLF(4);MINUSES;WLF(1);WBL(I);FWRITE(F);
+WLF(2);MINUSES;
+WBL(50);WRITE('HAПEЧATAHO ');WДAT(OUTPUT,CEГOДHЯ);WRITELN;
+MINUSES;WLF(1);
+END;
+
+
+
+? .OЦEH *)
+FUNCTION OЦEHEHO:BOOL;
+VAR HAШЛИ:BOOL;I:INT;
+BEGIN
+I:=0;HAШЛИ:=FALSE;OЦEHEHO:=TRUE;ШAГ:=1;
+&&HAЙTИ ПEPBYЮ B SY-БEЗ&&;
+(Ц) WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ CЛEДYЮ&&
+  IF NOT HAШЛИ THEN_(
+    OЦEHEHO:=FALSE;HAШЛИ:=TRUE;
+    WRITE(OUT,'HE OЦEHEHЫ CЛEДYЮЩИE HOMEPA:');PUTT_);
+  WRITE(OUT,' ',ЦB(BEЩЬ.HOMEP):9:23);I:=I+1;
+  IF (I MOD 13)=0 THEN IF STPUT THEN EXIT Ц_);
+IF (I MOD 13)!0 THEN PUTT;
+END;
+
+
+
+? .ПKO *)
+(*ПEЧATЬ KAPTЫ ДЛЯ OTДEЛA*)
+PROCEDURE ПEЧKAPOT;
+BEGIN
+WITH BEЩЬ DO_(
+WRITE(' ',ЦB(HOMEP):9:23,'   ');
+WCTP(OUTPUT,BEЩЬ.HAЗB,44);
+WRITE(' ',EД[1],EД[2],'      ');
+IF ЦEHA>0.0001 THEN WRITE(ЦEHA:5:22)
+               ELSE WRITE('!!!!!');
+WRITELN('   ',BЗЯЛ.KOЛИЧ:9:23,'   ',ЦEHA*BЗЯЛ.KOЛИЧ:8:22)_);
+END;
+
+
+
+? .ПO *)
+(*ПOЛHAЯ ПEЧATЬ OTДEЛA*)
+PROCEDURE ПEЧOT;
+VAR S,SM:REAL;
+BEGIN
+WLF(2);MINUSES;WBL(33);
+WRITE(OTДEЛ.HAЗB,'   OTЧET C ');WДAT(OUTPUT,SYSTEM.ДATЧИC);
+WRITE(' ПO ');WДAT(OUTPUT,CEГOДHЯ);WRITELN;MINUSES;
+(**)
+S:=0.0;
+&&HAЙTИ ПEPBYЮ B OT-CYM&&
+(Ц) WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-CYM;BЗЯTЬ;HAЙTИ ПEPBYЮ B CY-BЗЯ&&
+  SM:=CYMMA.ЦEHA;
+  WCTP(OUTPUT,MATEP.HAЗB,15);
+  WRITE(': C HAЧAЛA ГOДA ДO OTЧETHOГO ПEPИOДA',
+        ' BЗЯTO HA CYMMY=',CYMMA.ЦEHA:8:22);
+  IF ПYCTO THEN_(
+    WRITELN(', B OTЧETHЫЙ ПEPИOД HИЧEГO HE БPAЛИ');
+    MINUSES_)
+  ELSE_(
+    WLF(2);
+    WRITE(' HOMEP');
+    WBL(13);WRITE('HAИMEHOBAHИE');
+    WBL(25);WRITE('EД.ИЗM.');
+    WBL(4);WRITE('ЦEHA');
+    WBL(4);WRITE('KOЛ-BO');
+    WBL(4);WRITELN('CYMMA');WLF(1);
+    (**)
+    WHILE MOЖHO DO_(
+      &&BЗЯTЬ;HAЙTИ BЛAДEЛ B BE-BЗЯ;BЗЯTЬ;HAЙTИ CЛEДYЮ B CY-BЗЯ&&
+      SM:=SM+BEЩЬ.ЦEHA*BЗЯЛ.KOЛИЧ;ПEЧKAPOT_);
+    WLF(1);WRITE(' ИTOГO:');
+    WBL(74);WRITELN(SM:9:22);MINUSES_);
+  S:=S+SM;
+  &&HAЙTИ CЛEДYЮ B OT-CYM&&_);
+WRITE(' ИTOГ ПO BCEM MATEPИAЛAM');WBL(57);WRITELN(S:9:22);MINUSES;
+END;
+
+
+
+? .ИO *)
+(*KPATKИЙ ИTOГ OTДEЛA*)
+PROCEDURE ИTOГOT;
+VAR S,SM:REAL;
+BEGIN
+WLF(2);MINUSES;WBL(33);
+WRITE(OTДEЛ.HAЗB,'   OTЧET C ');WДAT(OUTPUT,SYSTEM.ДATЧИC);
+WRITE(' ПO ');WДAT(OUTPUT,CEГOДHЯ);WLF(2);
+(**)
+S:=0.0;
+&&HAЙTИ ПEPBYЮ B OT-CYM&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-CYM;BЗЯTЬ;HAЙTИ ПEPBYЮ B CY-BЗЯ&&
+  WCTP(OUTPUT,MATEP.HAЗB,15);
+  WRITE(': C HAЧAЛA ГOДA ДO OTЧETHOГO ПEPИOДA',
+        ' BЗЯTO HA ',CYMMA.ЦEHA:8:22);
+  SM:=0.0;
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ;HAЙTИ BЛAДEЛ B BE-BЗЯ;BЗЯTЬ;HAЙTИ CЛEДYЮ B CY-BЗЯ&&
+    SM:=SM+BEЩЬ.ЦEHA*BЗЯЛ.KOЛИЧ_);
+  WRITE(' B OTЧETHЫЙ ПEPИOД BЗЯTO HA ',SM:9:22);
+  WRITELN(' ИTOГO:',SM+CYMMA.ЦEHA:9:22);S:=S+SM+CYMMA.ЦEHA;
+  &&HAЙTИ CЛEДYЮ B OT-CYM&&_);
+WLF(1);WRITE(' OБЩИЙ ИTOГ:');WBL(101);WRITELN(S:9:22);MINUSES;
+END;
+
+
+
+? .ИOЭ *)
+(*KPATKИЙ ИTOГ OTДEЛA HA ЭKPAH*)
+PROCEDURE ИTOГOTЭ;
+VAR S,SM:REAL;
+BEGIN
+WRITE(OUT,'   ',OTДEЛ.HAЗB,'   OTЧET C ');WДAT(OUT,SYSTEM.ДATЧИC);
+WRITE(OUT,' ПO ');WДAT(OUT,CEГOДHЯ);PUTT;
+(**)
+S:=0.0;
+&&HAЙTИ ПEPBYЮ B OT-CYM&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-CYM;BЗЯTЬ;HAЙTИ ПEPBYЮ B CY-BЗЯ&&
+  WCTP(OUT,MATEP.HAЗB,13);
+  WRITE(OUT,':ДO ЧИCTKИ=',CYMMA.ЦEHA:8:22);
+  SM:=0.0;
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ;HAЙTИ BЛAДEЛ B BE-BЗЯ;BЗЯTЬ;HAЙTИ CЛEДYЮ B CY-BЗЯ&&
+    SM:=SM+BEЩЬ.ЦEHA*BЗЯЛ.KOЛИЧ_);
+  WRITE(OUT,'   ПOCЛE ЧИCTKИ=',SM:8:22);
+  WRITELN(OUT,'   ИTOГO=',SM+CYMMA.ЦEHA:9:22);PUTT;S:=S+SM+CYMMA.ЦEHA;
+  &&HAЙTИ CЛEДYЮ B OT-CYM&&_);
+WRITE(OUT,'   OБЩИЙ ИTOГ:                                ',
+          '                    ',S:8:22);PUTT;
+END;
+
+
+
+? .ПBC *)
+(*BЫДAЧA ПOЛHOГO OTЧETA ПO BCEM OTДEЛAM*)
+PROCEDURE ПBC;
+BEGIN
+WRITE(OUT,'ПOЛHAЯ TAБЛИЦA MATEPИAЛOB ПO OTДEЛAM');ШAПKA;
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&;ПEЧOT;
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&_);
+ФЛAГИ:=ФЛAГИ+[OTЧOTД];YCTMOД;ECTЬ;
+END;
+
+
+
+? .ПOT *)
+(*BЫДAЧA ПOЛHOГO OTЧETA ПO OTДEЛЬHЫM OTДEЛAM*)
+PROCEDURE ПOT;
+BEGIN
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+YCTПEЧ;
+ПEЧOT;ECTЬ;
+END;
+
+
+
+? .KBC *)
+(*BЫДAЧA KPATKOГO OTЧETA ПO BCEM OTДEЛAM*)
+PROCEDURE KBC;
+BEGIN
+YCTПEЧ;
+WRITE(OUT,'KPATKAЯ TAБЛИЦA MATEPИAЛOB ПO OTДEЛAM');ШAПKA;
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&;ИTOГOT;
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&_);
+ФЛAГИ:=ФЛAГИ+[OTЧOTД];YCTMOД;ECTЬ;
+END;
+
+
+
+? .KOT *)
+(*BЫДAЧA KPATKOГO OTЧETA ПO OTДEЛЬHЫM OTДEЛAM*)
+PROCEDURE KOT;
+BEGIN
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;
+IF HAЧ THEN EXIT;
+ИTOГOTЭ;
+END;
+
+
+
+? .ПKД *)
+(*ПEЧATЬ ДBИГABШИXCЯ KAPT*)
+PROCEDURE ПEЧKAPДB;
+BEGIN
+WITH BEЩЬ DO_(
+WRITE(' ',ЦB(HOMEP):9:23,') ');WCTP(OUTPUT,HAЗB,32);
+WRITE(' ',EД[1],EД[2],'  ');
+IF ЦEHA>0.0001 THEN WRITE(ЦEHA:5:22)
+               ELSE WRITE('!!!!!');
+WRITE('   ',ПPИXOД:9:23,'/',ПPИXOД*ЦEHA:8:22,
+      '   ',PACXOД:9:23,'/',PACXOД*ЦEHA:8:22,
+      '   ',OCTAT :9:23,'/',OCTAT *ЦEHA:8:22,' ');
+WCTP(OUTPUT,MATEP.HAЗB,5)_);WRITELN;
+END;
+
+
+
+? .ПP *)
+PROCEDURE ПEЧPACX;
+VAR I:INT;
+BEGIN
+I:=0;
+&&BЗЯTЬ BEЩЬ&&
+WRITE(' ',ЦB(BEЩЬ.HOMEP):9:23,') ');
+WHILE MOЖHO DO_(
+  I:=I+1;IF (((I-1) MOD 5)=0) AND (I>1) THEN WBL(7);
+  &&BЗЯTЬ BЗЯЛ;HAЙTИ BЛAДEЛ B CY-BЗЯ;HAЙTИ BЛAДEЛ B OT-CYM;BЗЯTЬ&&
+  WRITE('   ',OTДEЛ.HAЗB,'=',BЗЯЛ.KOЛИЧ:0:23,'/');
+  IF BEЩЬ.ЦEHA<0.01 THEN WRITE('!!!!!')
+          ELSE WRITE(BЗЯЛ.KOЛИЧ*BEЩЬ.ЦEHA:0:22);
+  IF (I MOD 5)=0 THEN WRITELN;
+  &&HAЙTИ CЛEДYЮ B BE-BЗЯ&&_);
+IF (I MOD 5)!0 THEN WRITELN;
+END;
+
+
+
+? .ДBИ *)
+PROCEDURE ДBИ;
+BEGIN
+WRITE(OUT,'TAБЛИЦA MATEPИAЛOB ПO CKЛAДY (ДBИЖEHИE)');ШAПKA;
+&&HAЙTИ ПEPBYЮ B SY-ДBИ&&
+IF ПYCTO THEN_(WBL(55);WRITELN('HET KAPT');EXIT_);
+    WRITE(' HOMEP');
+    WBL(13);WRITE('HAИMEHOBAHИE');
+    WBL(11);WRITE('EД.ИЗM.');
+    WBL(1);WRITE('ЦEHA');
+    WBL(7);WRITE('ПPИXOД');
+    WBL(14);WRITE('PACXOД');
+    WBL(15);WRITE('OCTATOK');
+    WBL(11);WRITELN('BИД');MINUSES;
+REPEAT
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-BEЩ;BЗЯTЬ&&;ПEЧKAPДB;
+  &&HAЙTИ CЛEДYЮ B SY-ДBИ&&
+UNTIL ПYCTO;
+(**)
+WLF(3);MINUSES;WBL(43);
+WRITELN('TAБЛИЦA "ЧTO БPAЛИ OTДEЛЫ"');
+MINUSES;WLF(1);
+&&HAЙTИ ПEPBYЮ B SY-ДBИ&&
+REPEAT
+  &&HAЙTИ ПEPBYЮ B BE-BЗЯ&&
+  IF MOЖHO THEN ПEЧPACX;
+  &&HAЙTИ CЛEДYЮ B SY-ДBИ&&
+UNTIL ПYCTO;
+ФЛAГИ:=ФЛAГИ+[OTЧCKЛ];YCTMOД;ECTЬ;
+END;
+
+
+
+? .BCE *)
+PROCEDURE BCEBCE;
+BEGIN
+WRITE(OUT,'ПOЛHAЯ TAБЛИЦA MATEPИAЛOB ПO CKЛAДY');ШAПKA;
+&&HAЙTИ ПEPBYЮ B SY-BEЩ&&
+IF ПYCTO THEN_(WBL(55);WRITELN('HET KAPT');EXIT_);
+    WRITE(' HOMEP');
+    WBL(13);WRITE('HAИMEHOBAHИE');
+    WBL(11);WRITE('EД.ИЗM.');
+    WBL(1);WRITE('ЦEHA');
+    WBL(7);WRITE('ПPИXOД');
+    WBL(14);WRITE('PACXOД');
+    WBL(15);WRITE('OCTATOK');
+    WBL(11);WRITELN('BИД');MINUSES;
+REPEAT
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B MA-BEЩ;BЗЯTЬ&&;ПEЧKAPДB;
+  &&HAЙTИ CЛEДYЮ B SY-BEЩ&&
+UNTIL ПYCTO;
+(**)
+WLF(3);MINUSES;WBL(43);
+WRITELN('TAБЛИЦA "ЧTO БPAЛИ OTДEЛЫ"');
+MINUSES;WLF(1);
+&&HAЙTИ ПEPBYЮ B SY-ДBИ&&
+REPEAT
+  &&HAЙTИ ПEPBYЮ B BE-BЗЯ&&
+  IF MOЖHO THEN ПEЧPACX;
+  &&HAЙTИ CЛEДYЮ B SY-ДBИ&&
+UNTIL ПYCTO;
+ФЛAГИ:=ФЛAГИ+[OTЧCKЛ];YCTMOД;ECTЬ;
+END;
+
+
+
+? .ИTO *)
+(*KPATKИЙ ИTOГ ПO CKЛAДY HA ЭKPAH*)
+PROCEDURE ИTO;
+ VAR SП,SP,SO,SПM,SPM,SOM:REAL;
+BEGIN
+WRITE(OUT,'И T O Г    П O    C K Л A Д Y');ШAПKA;
+SП:=0.0;SP:=0.0;SO:=0.0;
+&&HAЙTИ ПEPBYЮ B SY-MAT&&
+WHILE MOЖHO DO_(
+SПM:=0.0;SPM:=0.0;SOM:=0.0;
+  &&BЗЯTЬ;HAЙTИ ПEPBYЮ B MA-BEЩ&&
+  WCTP(OUT,MATEP.HAЗB,13);WRITE(OUT,':');
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ;HAЙTИ CЛEДYЮ B MA-BEЩ&&
+    SПM:=SПM+BEЩЬ.ЦEHA*BEЩЬ.ПPИXOД;
+    SPM:=SPM+BEЩЬ.ЦEHA*BEЩЬ.PACXOД;
+    SOM:=SOM+BEЩЬ.ЦEHA*BEЩЬ.OCTAT_);
+  WRITE(OUT,'  ПPИXOД=',SПM:9:22,
+            '  PACXOД=',SPM:9:22,
+            '  OCTATOK=',SOM:9:22);
+  FWRITE(OUT);MINUSES;PUTT;
+  SП:=SП+SПM;
+  SP:=SP+SPM;
+  SO:=SO+SOM;
+  &&HAЙTИ CЛEДYЮ B SY-MAT&&_);
+WRITE(OUT,'   OБЩИЙ ИTOГ:',
+          '  ПPИXOД=',SП:9:22,
+          '  PACXOД=',SP:9:22,
+          '  OCTATOK=',SO:9:22);
+FWRITE(OUT);MINUSES;PUTT;
+END;
+
+
+
+? .B *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE BЫДAЧИ OTЧETOB...');PUTT;
+KYДA:='HAPYЖY';
+IF NOT OЦEHEHO THEN_(
+  WRITE(OUT,'OTЧETЫ БYДYT HE BEPHЫ ???');
+  PUTT;PUTT;_);
+WHILE TRUE DO_(
+WRITE(OUT,'ДBИ - OTЧET ПO ДBИЖEHИЮ HA CKЛAДE/',
+          'BCE - ПOЛHЫЙ OTЧET ПO CKЛAДY/',
+          'ИTO - TEKYЩИЙ ИTOГ ПO CKЛAДY/',
+          'ПBC - ПOЛHЫЙ OTЧET ПO BCEM OTДEЛAM/',
+          'ПOT - ПOЛHЫЙ OTЧET ПO OTДEЛЬHЫM OTДEЛAM/',
+          'KBC - KPATKИЙ OTЧET ПO BCEM OTДEЛAM/',
+          'KOT - KPATKИЙ OTЧET ПO OTДEЛЬHЫM OTДEЛAM/');
+MENU;
+SELECT
+  'ИTO'=ДИP:ИTO;
+  'BCE'=ДИP:BCEBCE;
+  'ДBИ'=ДИP:ДBИ;
+  'ПBC'=ДИP:ПBC;
+  'ПOT'=ДИP:ПOT;
+  'KBC'=ДИP:KBC;
+  'KOT'=ДИP:KOT;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_);
+_);
+END.
+? .E *)
+.
+*EE
+*AREA:36
+*INCLUD:1,2
+*ROLL:2
+*REL:03
+*REL:05
+*PASEDIT:31,41
+*PASCAL
+*READ:41
+*WHAT:T-S
+*INSALL
+DRUM
+*WHAT:66-S
+*END F
+?P
+?.AM
+ШИФP 410900 ЗMП^OЗY 32^TPA 88^BPE 1000^ЛEH 31(2C)41(2C)^EEB1A3
+*NAME
+*ИПC.HAЧ
+*EDIT
+*W
+*L:*PREDT
+? .AMГO *)
+(*=L1*) PROGRAM AMOHED (*AM:ГOЛOBA*)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+BEGIN &&ЖYPHAЛ ЖY-AM0;KOMПAC&& END.
+? .AMMO *)
+(*=L1*) PROGRAM AMOMON (*AM:MOHИTOP *)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ДATЧИC
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WДAT
+!INCLU:BIGLIN
+!INCLU:YCTПEЧ
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RMECKBA
+!INCLU:RKBA
+!INCLU:RMEC
+!INCLU:RДAT
+!INCLU:RЦEЛBEЩ
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:ЗAKPЫTO
+!INCLU:HEЛЬЗЯ
+!INCLU:MENU
+!INCLU:ЖYPHAЛ
+!INCLU:KOHEЦ
+
+
+
+? .YCTФ *)
+(* YCTAHOBKA XPAHИMЫX ФЛAГOB *)
+PROCEDURE YCTФЛAГ;
+BEGIN(*=C-*)
+ФЛAГИ:=SYSTEM.PEЖИMЫ;
+END;(*=C+*)
+
+
+
+? .CHЯФ *)
+(* CHЯTИE HE XPAHИMЫX ФЛAГOB *)
+PROCEDURE CHЯФЛAГ;
+BEGIN(*=C-*)
+SYSTEM.PEЖИMЫ:=ФЛAГИ*[OTЛAД,BXOД];
+END;(*=C+*)
+
+
+
+? .ПЗAK *)
+(*ДEЙCTBИЯ ДO ЗAKPEПЛEHИЯ*)
+PROCEDURE ПPEДЗAK;
+BEGIN
+SYSTEM.ДATЗП:=CEГOДHЯ;CHЯФЛAГ;
+&&ЗAMEHИ SYSTEM&&
+END;
+
+
+
+? .ПPABA
+(*ПPOBEPKA ПPAB ПOЛЬЗOBATEЛЯ*)
+PROCEDURE ПPABA;
+VAR ПPOB:ZZSYSTEM;
+BEGIN
+&&BЗЯTЬ SYSTEM&&;PUTT;YCTФЛAГ;
+WRITE(OUT,'         ДAHHЫE OT ');WДAT(OUT,SYSTEM.ДATЗП);
+IF OTЛAД IN ФЛAГИ THEN_(
+  ФЛAГИ:=ФЛAГИ+[AДMИH];CEГOДHЯ:=SYSTEM.ДATЗП+1_)
+ELSE_(
+PUTT;PUTT;
+WRITE(OUT,'       ...ЗДPABCTBYЙTE...');PUTT;
+WRITE(OUT,'BЫ - AДMИHИCTPATOP!');
+IF ДA THEN_(
+  WRITE(OUT,'ПOДTBEPДИTE ПAPOЛЬ:');GETT;
+  READ(INP,ПPOB.ПAPOЛЬ);
+  IF SYSTEM.ПAPOЛЬ=ПPOB.ПAPOЛЬ THEN_(
+    WRITE(OUT,'BЫ ДEЙCTBИTEЛЬHO AДMИHИCTPATOP');PUTT;
+    WRITE(OUT,'BAM OTKPЫTЫ ПPABA HA ИЗMEHEHИE ДAHHЫX');PUTT;
+    ФЛAГИ:=ФЛAГИ+[AДMИH]_)
+  ELSE_(
+    WRITE(OUT,'HE ЗHAETE ПAPOЛЯ - HE БAЛYЙTECЬ');PUTT_)_);
+IF NOT (AДMИH IN ФЛAГИ) THEN_(
+  WRITE(OUT,'BЫ - ПOЛЬЗOBATEЛЬ');PUTT;
+  WRITE(OUT,'BAM MOЖHO TOЛЬKO BЫДABATЬ OTЧETЫ');PUTT_);
+(**)
+WRITE(OUT,'COOБЩИTE CEГOДHЯШHЮЮ ДATY:');
+CEГOДHЯ:=RДAT(SYSTEM.ДATЗП,ДATЧИC(31,12,99))_);
+END;
+
+
+
+? .ПAPOЛЬ *)
+(*ИЗMEHEHИE ПAPOЛЯ*)
+PROCEDURE ПAPOЛЬ;
+BEGIN
+IF HEЛЬЗЯ OR ЗAKPЫTO THEN EXIT;
+WRITE(OUT,'COOБЩИTE HOBЫЙ ПAPOЛЬ:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,SYSTEM.ПAPOЛЬ);YCTMOД;
+ECTЬ;
+END;
+
+
+
+? .БCИCШ *)
+(*БЛOK-MEHЮ ДЛЯ CИCTEMHЫX PAБOT*)
+PROCEDURE БЛOKCИC;
+
+
+
+? .SF *)
+(* YCT/CHЯ ФЛAГOB *)
+PROCEDURE SETFLAG;
+VAR Ф,ФФ:ФЛAГ;N:INT;
+BEGIN
+WRITE(OUT,'TEKYЩEE COCTOЯHИE ФЛAГOB:');PUTT;
+FOR Ф:=SUCC(ФS) TO PRED(ФF) DO_(
+  WRITE(OUT,ORD(Ф):0,'.',Ф,' ');
+  IF Ф IN ФЛAГИ THEN WRITE(OUT,'(+)')
+                ELSE WRITE(OUT,'(-)');
+  PUTT_);
+WRITE(OUT,'YKAЖИTE HOMEP ИHBEPTИPYEMOГO ФЛAГA:');
+N:=RЦEЛ(1,ORD(ФF)-1);IF HAЧ THEN EXIT;
+Ф:=ФF;
+FOR ФФ:=SUCC(ФS) TO PRED(ФF) DO IF N=ORD(ФФ) THEN Ф:=ФФ;
+ФЛAГИ:=ФЛAГИ MOD [Ф];
+WRITE(OUT,ORD(Ф):0,'.',Ф);
+IF Ф IN ФЛAГИ THEN WRITE(OUT,' (-) --> (+)')
+              ELSE WRITE(OUT,' (+) --> (-)');
+PUTT;
+END;
+
+
+
+? .БCИC *)
+BEGIN
+KYДA:='HAPYЖY';
+IF HEЛЬЗЯ THEN EXIT;
+WRITE(OUT,'ПAPOЛЬ:');GETT;
+READ(INP,OTДEЛ.HAЗB);
+IF SYSTEM.ПAPCИC!OTДEЛ.HAЗB THEN_(
+  WRITE(OUT,'HE ЛEЗЬ, KYДA HE HYЖHO???');PUTT;EXIT_);
+PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'      ...BЫ B CИCTEMHOM БЛOKE...  ');PUTT;
+WRITE(OUT,'ФЛA - ИHBEPTИPOBAHИE ФЛAГOB/');
+MENU;
+SELECT
+  'BЫX'=ДИP:EXIT;
+  'KOH'=ДИP:EXIT;
+  'ФЛA'=ДИP:SETFLAG_);
+_)
+END;
+
+
+
+? .B *)
+BEGIN CASE KYДA OF
+'HAЧAЛO':_(
+WRITELN(OUT);
+RGEXPORT:=[46];
+WRITELN;PUTT;
+WRITE(OUT,'           ******************');PUTPT;
+WRITE(OUT,'           ИПC AMOPTИЗAЦИЯ-88');PUTPT;
+WRITE(OUT,'           ******************');PUTPT;
+WRITELN;
+IF ПYCTO THEN_(
+    WRITE(OUT,'CИCTEMA TPEБYET BOCCTAHOBЛEHИЯ');PUTT;
+    WRITE(OUT,'COOБЩИTE AДMИHИCTPATOPY');PUTT;
+    WRITE(OUT,'      ...ДO CBИДAHИЯ...');PUTT;
+    &&ЗABEPШ&&;KYДA:='ЭTOBCE';EXIT_);
+  ПPABA_)_);
+  IF (KYДA!'HAPYЖY') AND (KYДA!'HAЧAЛO') THEN EXIT;
+(**)
+? .Д *)
+WHILE TRUE DO_(
+IF ДИP!'KOH' THEN_(
+WRITE(OUT,'      ...BЫ B OБЩEM БЛOKE...  ');PUTT;
+WRITE(OUT,'KAP - BXOД B БЛOK PEГИCTPAЦИИ KAPT/',
+          'ГPY - BXOД B БЛOK PEГИCTPAЦИИ ГPYПП ШИФPOB/',
+          'OTД - BXOД B БЛOK PEГИCTPAЦИИ OTДEЛOB/',
+          'OTЧ - BXOД B БЛOK BЫДAЧИ OTЧETOB/',
+          'CИC - BXOД B CИCTEMHЫЙ БЛOK/',
+          'ПAP - ИЗMEHEHИE ПAPOЛЯ AДMИHИCTPATOPA/',
+          'ЗAK - ЗAKPEПИTЬ ИЗMEHEHИЯ/',
+          'CБP - CБPOCИTЬ ИЗMEHEHИЯ/');
+MENU_);
+SELECT
+  'KAP'=ДИP:IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN_(
+              KYДA:='AMOCAR';EXIT_);
+  'ГPY'=ДИP:IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN_(
+              KYДA:='AMOGRU';EXIT_);
+  'OTД'=ДИP:IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN_(
+              KYДA:='AMOOTD';EXIT_);
+  'OTЧ'=ДИP:IF NOT ЗAKPЫTO THEN_(
+              KYДA:='AMOOTC';EXIT_);
+  'CИC'=ДИP:БЛOKCИC;
+  'ЗAK'=ДИP:ЖYPHAЛ('ЗAK',ПPEДЗAK);
+  'CБP'=ДИP:ЖYPHAЛ('CБP',ПPEДЗAK);
+  'ПAP'=ДИP:ПAPOЛЬ;
+  'KOH'=ДИP:_(KOHEЦ(ПPEДЗAK);IF NOT HAЧ THEN_(ДИP:='KOH';EXIT_)_);
+  'BЫX'=ДИP:_(WRITE(OUT,
+             'ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE "KOH"');
+             PUTT_)_)_);
+END.
+? .AMPO *)
+(*=L1*) PROGRAM AMOOTD (*AM:OTДEЛЫ *)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:ROTД
+!INCLU:STPUT
+
+
+
+? .ПPO *)
+PROCEDURE ПPO;
+VAR I:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET OTДEЛOB');PUTT;EXIT_);
+I:=0;ШAГ:=1;
+REPEAT
+  I:=I+1;&&BЗЯTЬ&&
+  WRITE(OUT,I:3,') ',OTДEЛ.HAЗB);
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&
+UNTIL STPUT OR ПYCTO;
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+BEGIN
+REPEAT
+  WRITE(OUT,'HAЗBAHИE OTДEЛA:');GETHAЧ;
+  IF HAЧ THEN EXIT;
+  READ(INP,OTДEЛ.HAЗB);
+  &&HAЙTИ ПO-KЛЮ B SY-OTД&&
+  IF ПYCTO THEN_(
+    &&ПOCTABИTЬ OTДEЛ&&;YCTMOД_)
+  ELSE_(WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT_);
+UNTIL NOT EЩE('EЩE!  ');
+END;
+
+
+
+? .ЗAM *)
+PROCEDURE ЗAM;
+VAR CTOT:ZZOTДEЛ;
+BEGIN
+WRITE(OUT,'CTAPOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,CTOT.HAЗB);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ HE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+WRITE(OUT,'HOBOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,OTДEЛ.HAЗB);
+&&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;IF COCT=0 THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+&&ЗAMEHИTЬ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+BEGIN
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+&&HAЙTИ ПEPBYЮ B OT-CTO&&
+IF NOT ПYCTO THEN_(
+  WRITE(OUT,'ЗA ЭTИM OTДEЛOM ЗAKPEПЛEHO OБOPYДOBAHИE');
+  PUTT;EXIT_);
+WRITE(OUT,'ПOДTBEPДИTE ИCKЛЮЧEHИE');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ИCKЛЮЧEHИE OTMEHЯETCЯ');PUTT;EXIT_);
+&&YБPATЬ OTДEЛ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .B *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ OTДEЛOB...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX OTДEЛOB/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX OTДEЛOB/',
+          'ЗAM - ЗAMEHA HAЗBAHИЯ OTДEЛA/',
+          'ИCK - ИCKЛЮЧEHИE OTДEЛA/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ЗAM'=ДИP:ЗAM;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_);
+_);
+END.
+? .AMPK *)
+(*=L1*) PROGRAM AMOCAR (*AM:KAPTЫ *)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:RЦEЛBEЩ
+!INCLU:CUTCTP
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:ROTД
+!INCLU:WCTP
+!INCLU:STEP
+
+
+
+? .BB *)
+(*BЗЯTЬ ПPИБOP И BЛAДEЛ B SY-OTД И SY-ШИФ*)
+PROCEDURE BЗЯTЬBCE;
+BEGIN
+&&BЗЯTЬ ИHB;
+HAЙTИ BЛAДEЛ B ПP-ИHB;BЗЯTЬ;
+HAЙTИ BЛAДEЛ B ШИ-ПPИ;BЗЯTЬ&&
+END;
+
+
+
+? .RШ *)
+PROCEDURE REGIS;
+CONST
+      MINИHBN=100  ; MAXИHBN=99999;
+      MINШИФP=10000; MAXШИФP=110001;
+      MINMEC=1;      MAXMEC=12;
+      MINПPOЦ=0.01;  MAXПPOЦ=50.0;
+      MINЦEHA=0.0;  MAXЦEHA=5000000.0;
+VAR ДP:FILE OF RECORD HAЗB:CTPOKA;KOЛИЧ:REAL END;
+
+
+
+? .BЗЯMET *)
+(*BЗЯTЬ METAЛЛЫ*)
+PROCEDURE BЗЯMET;
+BEGIN
+&&HAЙTИ ПEPBYЮ B ПP-COД&&;REWRITE(ДP);
+WHILE MOЖHO DO_(
+  &&HAЙTИ BЛAДEЛ B ME-COД;
+  BЗЯTЬ METAЛ.HAЗB HA ДP!.HAЗB;
+  BЗЯTЬ COДEPЖ.KOЛИЧ HA ДP!.KOЛИЧ;
+  HAЙTИ CЛEДYЮ B ПP-COД&&;PUT(ДP)_);
+END;
+
+
+
+? .ДAЙMET *)
+(*ДAЙ METAЛЛЫ*)
+PROCEDURE ДAЙMET;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-MET&&;REWRITE(ДP);
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ CЛEДYЮ&&
+  WCTP(OUT,METAЛ.HAЗB,8);WRITE(OUT,':');
+  ДP!.HAЗB:=METAЛ.HAЗB;
+  ДP!.KOЛИЧ:=RBEЩ(0.0,9999.0);IF HAЧ THEN EXIT;
+  IF ДP!.KOЛИЧ>0.00000001 THEN PUT(ДP)_);
+END;
+
+
+
+? .ПOCMET *)
+(*ПOCTAB METAЛЫ*)
+PROCEDURE ПOCMET;
+BEGIN
+RESET(ДP);
+WHILE NOT EOF(ДP) DO_(
+  &&HAЙTИ ПO-KЛЮ ДP!.HAЗB B SY-MET&&
+  COДEPЖ.KOЛИЧ:=ДP!.KOЛИЧ;
+  &&ПOCTAB COДEPЖ&&;GET(ДP)_);
+END;
+
+
+
+? .WMET *)
+(*ПEЧATЬ METAЛOB*)
+PROCEDURE WMET;
+VAR I:INT;
+BEGIN
+RESET(ДP);I:=0;
+IF EOF(ДP) THEN EXIT;
+WHILE NOT EOF(ДP) DO_(
+  IF (I MOD 4)=0 THEN WRITE(OUT,'       ');
+  I:=I+1;WCTP(OUT,ДP!.HAЗB,6);
+  WRITE(OUT,'=',ДP!.KOЛИЧ:0:25);
+  IF (I MOD 4)=0 THEN PUTT ELSE WRITE(OUT,'  ');
+  GET(ДP)_);
+IF (I MOD 4)!0 THEN PUTT;
+END;
+
+
+
+? .WCTO *)
+PROCEDURE WCTO;
+BEGIN
+  WRITE(OUT,'       OTДEЛ=',OTДEЛ.HAЗB);
+  IF CTOИT.ПPИHЯЛ!0 THEN WRITE(OUT,' ПPИ=',CTOИT.ПPИHЯЛ:2);
+  IF CTOИT.CПИCAЛ!0 THEN WRITE(OUT,' CПИ=',CTOИT.CПИCAЛ:2);
+  PUTT;
+END;
+
+
+
+? .WC *)
+(*BЫBOД "CTOИT ПO OTДEЛAM"*)
+PROCEDURE WCTOИT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B ИH-CTO&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B OT-CTO;BЗЯTЬ&&
+  WCTO;
+  &&HAЙTИ CЛEДYЮ B ИH-CTO&&_);
+END;
+
+
+
+? .WK *)
+(*BЫBOД ПPИБOPA*)
+PROCEDURE WKAPT;
+BEGIN
+WITH ПPИБOP DO_(
+WRITE(OUT,ИHB.HOMEP:5,') Ш=',ШИФP.HOMEP:6,
+          ' Ц=',ЦEHA:6:22,' !B=',BOC:5:22,' !K=',KAП:5:22,' ');
+WCTP(OUT,HAЗB,0);PUTT;WMET;
+_)END;
+
+
+
+? .KAPTA *)
+FUNCTION KAPTA:BOOL;
+BEGIN
+KAPTA:=FALSE;
+WRITE(OUT,'ИHBEHTAPHЫЙ HOMEP KAPTЫ:');
+ИHB.HOMEP:=RЦEЛ(MINИHBN,MAXИHBN);
+IF HAЧ THEN EXIT;
+&&HAЙTИ ПO-KЛЮ B SY-ИHB&&
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET KAPTЫ C TAKИM ИHB.N');PUTT;EXIT_);
+BЗЯTЬBCE;BЗЯMET;
+WRITE(OUT,'BOT ЭTA KAPTA:');PUTT;WKAPT;WCTOИT;
+KAPTA:=TRUE;
+END;
+
+
+
+? .ИHB *)
+FUNCTION ИHBHOM:BOOL;
+BEGIN
+ИHBHOM:=FALSE;
+REPEAT
+WRITE(OUT,'HOBЫЙ ИHBEHTAPHЫЙ HOMEP:');
+ИHB.HOMEP:=RЦEЛ(MINИHBN,MAXИHBN);IF HAЧ THEN EXIT;
+&&HAЙTИ ПO-KЛЮ B SY-ИHB&&
+IF MOЖHO THEN_(WRITE(OUT,
+  'KAPTA C TAKИM ИHB.N YЖE ЗAPEГИCTPИPOBAHA, ПOBTOPИTE');PUTT_);
+UNTIL ПYCTO;
+ИHBHOM:=TRUE;
+END;
+
+
+
+
+? .ПPO *)
+PROCEDURE ПPO;
+VAR N,FIRST,LAST:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-ИHB&&
+IF ПYCTO THEN_(WRITE(OUT,'HET KAPT');PUTT;EXIT_);
+&&BЗЯTЬ ИHB.HOMEP HA FIRST;
+HAЙTИ ПOCЛEД B SY-ИHB;BЗЯTЬ ИHB.HOMEP HA LAST&&
+WRITE(OUT,'C KAKOГO HOMEPA HAЧATЬ ПPOCMOTP (',FIRST:0,'-',LAST:0,'):');
+N:=RЦEЛ(FIRST,LAST);IF HAЧ THEN EXIT;
+(**)
+IF N < (LAST-FIRST) DIV 2 THEN_(
+  &&HAЙTИ ПEPBYЮ B SY-ИHB;BЗЯTЬ&&
+  WHILE ИHB.HOMEP<N DO_(
+    &&HAЙTИ CЛEДYЮ;BЗЯTЬ ИHB.HOMEP&&_)_)
+ELSE_(
+  &&HAЙTИ ПOCЛEД B SY-ИHB;BЗЯTЬ&&
+  WHILE ИHB.HOMEP>N DO_(
+    &&HAЙTИ ПPEДЫД;BЗЯTЬ&&_)_);
+ШAГ:=1;
+REPEAT
+  BЗЯTЬBCE;BЗЯMET;
+  WKAPT;WCTOИT;&&HAЙTИ CЛEДYЮ B SY-ИHB&&
+UNTIL STEP OR ПYCTO;
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+BEGIN
+WITH ПPИБOP DO REPEAT
+(**)
+IF NOT ИHBHOM THEN EXIT;
+(**)
+WRITE(OUT,'ШИФP OБOPYДOBAHИЯ:');
+ШИФP.HOMEP:=RЦEЛ(MINШИФP,MAXШИФP);IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'HAИMEHOBAHИE:');RCTP;IF HAЧ THEN EXIT;
+READ(INP,HAЗB);
+(**)
+WRITE(OUT,'ЦEHA:');
+ЦEHA:=RBEЩ(MINЦEHA,MAXЦEHA);IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'ECTЬ ЛИ ДPAГ.METAЛЛЫ!');
+IF ДA AND NOT HAЧ THEN ДAЙMET ELSE REWRITE(ДP);
+IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'! HA BOCCTAHOBЛEHИE:');
+BOC:=RBEЩ(MINПPOЦ,MAXПPOЦ);IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'! HA KAП.PEMOHT:');
+KAП:=RBEЩ(0.0,MAXПPOЦ);IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'MECЯЦ ПPИOБPETEHИЯ:');
+CTOИT.ПPИHЯЛ:=RЦEЛ(MINMEC,MAXMEC);IF HAЧ THEN EXIT;
+(**)
+CTOИT.CПИCAЛ:=0;
+(**)
+WRITE(OUT,'BOT, ЧTO BЫ BBEЛИ:');PUTT;WKAPT;WCTO;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&HAЙTИ ПO-KЛЮ ШИФP.HOMEP B SY-ШИФ&&
+  IF ПYCTO THEN_(&&ПOCTAB ШИФP&&_);
+  &&ПOCTAB ПPИБOP;ПOCTAB ИHB;ПOCTAB CTOИT&&;ПOCMET;
+  YCTMOД;
+  WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ') OR HAЧ;
+END;
+
+
+
+? .KOП *)
+PROCEDURE KOП;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+REPEAT
+(**)
+IF NOT ИHBHOM THEN EXIT;
+(**)
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'MECЯЦ ПPИOБPETEHИЯ:');
+CTOИT.ПPИHЯЛ:=RЦEЛ(MINMEC,MAXMEC);
+IF HAЧ THEN EXIT;
+(**)
+CTOИT.CПИCAЛ:=0;
+(**)
+WRITE(OUT,'BOT, ЧTO ПOЛYЧИЛOCЬ:');PUTT;WKAPT;WCTO;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTAB ИHB;ПOCTAB CTOИT&&YCTMOД;
+  WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ') OR HAЧ;
+END;
+
+
+
+? .ПOB *)
+PROCEDURE ПOB;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+&&HAЙTИ ПEPBYЮ B ИH-CTO;BЗЯTЬ&&
+IF CTOИT.CПИCAЛ!0 THEN_(WRITE(OUT,
+  'ПOBTOPЯTЬ MOЖHO TOЛЬKO HИ PAЗY HE CПИCAHHЫE HAИMEHOBAHИЯ');
+  PUTT;EXIT_);
+REPEAT
+(**)
+IF NOT ИHBHOM THEN EXIT;
+(**)
+WRITE(OUT,'BOT, ЧTO ПOЛYЧИЛOCЬ:');PUTT;WKAPT;WCTO;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTAB ИHB;ПOCTAB CTOИT&&YCTMOД;
+  WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ') OR HAЧ;
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+VAR OTД:ALFA;DEL:BOOL;
+PROCEDURE YHAP(I:INT);EXTERNAL;
+FUNCTION COUNT(I:INT):INT;EXTERNAL;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+WRITE(OUT,'ПOДTBEPДИTE EE ИCKЛЮЧEHИE:');
+IF ДA AND NOT HAЧ THEN_(
+  YHAP(&&HAБ ИH-CTO&&);&&YБPATЬ ИHB&&
+  IF COUNT(&&HAБ ПP-ИHB&&)=0 THEN_(
+    YHAP(&&HAБ ПP-COД&&);&&YБPATЬ ПPИБOP&&_);
+  IF COUNT(&&HAБ ШИ-ПPИ&&)=0 THEN_(&&YБPATЬ ШИФP&&_);
+  YCTMOД;WRITE(OUT,'KAPTA AHYЛИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA OCTABЛEHA');PUTT;
+END;
+
+
+
+? .CПИ *)
+PROCEDURE CПИ;
+VAR N:INT;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+&&HAЙTИ ПOCЛEД B ИH-CTO;BЗЯTЬ;HAЙTИ BЛAДEЛ B OT-CTO;BЗЯTЬ&&
+IF CTOИT.CПИCAЛ!0 THEN_(
+  WRITE(OUT,'ЭTO HAИMEHOBAHИE YЖE CПИCAHO');PUTT;EXIT_);
+(**)
+WRITE(OUT,'MECЯЦ CПИCAHИЯ:');
+N:=CTOИT.ПPИHЯЛ;IF N=0 THEN N:=MINMEC;
+CTOИT.CПИCAЛ:=RЦEЛ(N,MAXMEC);
+IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'BOT, ЧTO Y BAC ПOЛYЧИЛOCЬ:');PUTT;WCTO;
+WRITE(OUT,'ПOДTBEPДИTE CПИCAHИE');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'CПИCAHИE OTMEHЯETCЯ');PUTT;EXIT_);
+&&ЗAMEHИTЬ CTOИT&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .ПEP *)
+PROCEDURE ПEP;
+VAR N,KYП,ПPOД,MECПEP:INT;HOBOT:ALFA;HECTOЯЛ:BOOL;
+BEGIN
+IF NOT KAPTA THEN EXIT;
+&&HAЙTИ ПOCЛEД B ИH-CTO;BЗЯTЬ;HAЙTИ BЛAДEЛ B OT-CTO;BЗЯTЬ&&
+IF CTOИT.CПИCAЛ!0 THEN_(
+  WRITE(OUT,'ЭTO HAИMEHOBAHИE YЖE CПИCAHO');PUTT;EXIT_);
+(**)
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');HOBOT:=ROTД;IF HAЧ THEN EXIT;
+IF HOBOT=OTДEЛ.HAЗB THEN_(
+  WRITE(OUT,'ЭTO HAИMEHOBAHИE YЖE ЧИCЛИTCЯ B ЭTOM OTДEЛE');
+  PUTT;EXIT_);
+WRITE(OUT,'MECЯЦ ПEPEДAЧИ:');
+N:=CTOИT.ПPИHЯЛ;IF N=0 THEN N:=MINMEC;
+MECПEP:=RЦEЛ(N+1,MAXMEC);
+IF HAЧ THEN EXIT;
+(**)
+IF MECПEP=1 THEN CTOИT.CПИCAЛ:=12
+            ELSE CTOИT.CПИCAЛ:=MECПEP-1;
+HECTOЯЛ:=CTOИT.ПPИHЯЛ>CTOИT.CПИCAЛ;
+WRITE(OUT,'CПИCAH:');WCTO;
+KYП:=CTOИT.ПPИHЯЛ;ПPOД:=CTOИT.CПИCAЛ;
+CTOИT.ПPИHЯЛ:=MECПEP;CTOИT.CПИCAЛ:=0;OTДEЛ.HAЗB:=HOBOT;
+WRITE(OUT,'ПPИHЯT:');WCTO;
+IF HECTOЯЛ THEN_(WRITE(OUT,
+  'ПEPEДAЮЩИЙ OTДEЛ БYДET ИCKЛЮЧEH ИЗ CПИCKOB ЭTOГO HAИMEHOBAHИЯ');
+  PUTT_);
+WRITE(OUT,'ПOДTBEPДИTE ПEPEBOД');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ПEPEBOД OTMEHЯETCЯ');PUTT;EXIT_);
+CTOИT.ПPИHЯЛ:=KYП;CTOИT.CПИCAЛ:=ПPOД;
+IF HECTOЯЛ THEN_(&&YБPATЬ CTOИT&&_)
+           ELSE_(&&ЗAMEHИ CTOИT&&_);
+CTOИT.ПPИHЯЛ:=MECПEP;CTOИT.CПИCAЛ:=0;
+&&HAЙTИ ПO-KЛЮ HOBOT B SY-OTД;ПOCTAB CTOИT&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ KAPT...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP XPAHЯЩИXCЯ KAPT/',
+          'HOB - BBOД HOBЫX KAPT/',
+          'ПOB - ПOBTOPEHИE KAPTЫ B OTДEЛE/',
+          'KOП - KOПИPOBAHИE KAPTЫ ИЗ OTДEЛA B OTДEЛ/',
+          'ИCK - ИCKЛЮЧEHИE KAPT/',
+          'ПEP - ПEPEДAЧA HAИM.B ДPYГOЙ OTДEЛ/',
+          'CПИ - CПИCAHИE HAИMEHOBAHИЙ/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'ПOB'=ДИP:ПOB;
+  'KOП'=ДИP:KOП;
+  'ПEP'=ДИP:ПEP;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'CПИ'=ДИP:CПИ;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_)_);
+END;
+
+
+
+? .B *)
+BEGIN REGIS END.
+? .AMOT *)
+(*=L1*) PROGRAM AMOOTC (*AM:OTЧET *)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:FWRITE
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:ЧИCДAT
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WДAT
+!INCLU:WCTP
+!INCLU:ПШИK
+!INCLU:MINUSES
+!INCLU:WLF
+!INCLU:WBL
+!INCLU:BIGLIN
+!INCLU:YCTПEЧ
+!INCLU:YCTMOД
+!INCLU:ECTЬ
+!INCLU:ROTД
+!INCLU:RЦEЛBEЩ
+!INCLU:MENU
+
+
+
+? .BB *)
+(*BЗЯTЬ ПPИБOP И BЛAДEЛ B SY-OTД И SY-ШИФ*)
+PROCEDURE BЗЯTЬBCE;
+BEGIN
+&&BЗЯTЬ ИHB;
+HAЙTИ BЛAДEЛ B ПP-ИHB;BЗЯTЬ;
+HAЙTИ BЛAДEЛ B ШИ-ПPИ;BЗЯTЬ&&
+END;
+
+
+
+? .OT *)
+(*BЫДAЧA OTЧETOB*)
+PROCEDURE OTЧET;
+VAR MEC,MK,MП:INT;BMEC,KMEC,Z:REAL;
+
+
+
+? .MECЯЦ *)
+(*BBOД OTЧETHOГO MECЯЦA*)
+FUNCTION MECЯЦ:INT;
+VAR I:INT;
+BEGIN
+WRITE(OUT,'HOMEP OTЧETHOГO MECЯЦA:');
+MECЯЦ:=RЦEЛ(1,12);
+END;
+
+
+
+? .ЭM *)
+(*ПPИHAДЛEЖHOCTЬ MECЯЦA ПPOMEЖYTKY*)
+FUNCTION ЭTOTMEC:BOOL;
+BEGIN
+WITH ПPИБOP DO_(
+IF CTOИT.ПPИHЯЛ=0 THEN MK:=1
+                  ELSE MK:=CTOИT.ПPИHЯЛ;
+IF CTOИT.CПИCAЛ=0 THEN MП:=12
+                  ELSE MП:=CTOИT.CПИCAЛ;
+IF MП>MEC THEN MП:=MEC;
+BMEC:=ЦEHA/100*BOC/12;
+KMEC:=ЦEHA/100*KAП/12_);
+ЭTOTMEC:=(MEC>=MK)AND(MEC<=MП);
+END;
+
+
+
+? .ШИФ *)
+(*BЫДAЧA TAБЛИЦЫ ПO ГPYППAM ШИФPOB*)
+PROCEDURE ШИФ;
+
+
+
+? .ШO *)
+(*BЫДAЧA CTPOKИ TAБЛИЦЫ ПO ГPYППE ШИФPOB*)
+PROCEDURE ШИФOTД;
+VAR SЦEHA,SBMEC,SKMEC,SBTEK,SKTEK:REAL;
+BEGIN
+SЦEHA:=0;SBMEC:=0;SKMEC:=0;SBTEK:=0;SKTEK:=0;
+&&HAЙTИ ПEPBYЮ B SY-ШИФ&&
+(Ц1)WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&;IF ШИФP.HOMEP>=ГPYППA.HAЧ THEN EXIT Ц1;
+  &&HAЙTИ CЛEДYЮ&&_);
+(**)
+WHILE MOЖHO AND(ШИФP.HOMEP<=ГPYППA.KOH) DO_(
+  &&BЗЯTЬ;HAЙTИ ПEPBYЮ B ШИ-ПPИ&&
+  WHILE MOЖHO DO WITH ПPИБOP DO_(
+    &&HAЙTИ ПEPBYЮ B ПP-ИHB&&
+    WHILE MOЖHO DO_(
+      &&BЗЯTЬ ПPИБOP;
+      HAЙTИ ПEPBYЮ B ИH-CTO;BЗЯTЬ CTOИT.ПPИHЯЛ;
+      HAЙTИ ПOCЛEД B ИH-CTO;BЗЯTЬ CTOИT.CПИCAЛ&&
+      IF ЭTOTMEC THEN_(
+        SЦEHA:=SЦEHA+ЦEHA;
+        SBMEC:=SBMEC+BMEC;
+        SKMEC:=SKMEC+KMEC_);
+      SBTEK:=SBTEK+BMEC*(MП-MK+1);
+      SKTEK:=SKTEK+KMEC*(MП-MK+1);
+      &&HAЙTИ CЛEДYЮ B ПP-ИHB&&_);
+    &&HAЙTИ CЛEДYЮ B ШИ-ПPИ&&_);
+  &&HAЙTИ CЛEДYЮ B SY-ШИФ&&_);
+(**)
+WRITE(' ',ГPYППA.HAЧ:6,' - ',
+          ГPYППA.KOH:6,' ');
+WCTP(OUTPUT,ГPYППA.HAЗB,48);
+WRITELN(' ',SЦEHA:10:22,' ',
+        SBMEC:9:22,' ',SKMEC:9:22,'  ',
+        SBTEK:9:22,' ',SKTEK:9:22);
+MINUSES;END;
+
+
+
+? .ШИФB *)
+BEGIN
+MEC:=MECЯЦ;IF HAЧ THEN EXIT;
+YCTПEЧ;
+WLF(4);MINUSES;WLF(1);WBL(20);
+WRITE('TAБЛИЦA AMOPTИЗAЦИИ ПO ГPYППAM ШИФPOB');
+WRITE('    ЗA ',MEC:0,' MECЯЦ      (HAПEЧATAHO ');
+WДAT(OUTPUT,CEГOДHЯ);WRITELN(')');
+WLF(1);MINUSES;WLF(1);
+WBL(10);WRITE('Г P Y П П A   Ш И Ф P O B');
+WBL(36);WRITE('ЦEHA');
+WBL(7);WRITELN('AMOPT.ЗA MECЯЦ     AMOPT.C HAЧAЛA ГOДA');
+WBL(80);WRITELN('HA BOCCT  HA KAП.P   HA BOCCT  HA KAП.P');
+MINUSES;
+&&HAЙTИ ПEPBYЮ B SY-ГPY&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&;ШИФOTД;
+  &&HAЙTИ CЛEДYЮ B SY-ГPY&&_);
+ECTЬ;
+END;
+
+
+
+? .ПKO *)
+(*ПEЧATЬ KAPTЫ ДЛЯ OTДEЛA*)
+PROCEDURE ПEЧKAPOT;
+BEGIN
+WITH ПPИБOP DO_(
+WRITE(' ',ИHB.HOMEP:5,' ');
+WCTP(OUTPUT,HAЗB,48);
+WRITELN(' ',ШИФP.HOMEP:6,'     ',ЦEHA:9:22,'      ',
+  BOC:5:22,'!(',BMEC:8:22,')      ',
+  KAП:5:22,'!(',KMEC:8:22,')')_);
+END;
+
+
+
+? .ПO *)
+(*ПOЛHAЯ ПEЧATЬ OTДEЛA*)
+PROCEDURE ПEЧOT;
+VAR SЦEHA,SBOC,SKAП:REAL;OTД:ALFA;
+BEGIN
+SЦEHA:=0;SBOC:=0;SKAП:=0;
+(**)
+WLF(2);MINUSES;WBL(33);
+WRITE(OTДEЛ.HAЗB,'  ЗA ',MEC:0,' MECЯЦ    (HAПEЧATAHO ');
+WДAT(OUTPUT,CEГOДHЯ);WRITELN(')');
+MINUSES;
+&&HAЙTИ ПEPBYЮ B OT-CTO&&
+IF ПYCTO THEN_(WBL(40);
+  WRITELN('HИЧEГO HE ЗAPEГИCTPИPOBAHO');
+  MINUSES;EXIT_);
+WRITE(' ИHB.N');
+WBL(10);WRITE('HAИMEHOBAHИE');
+WBL(29);WRITE('ШИФP');
+WBL(9);WRITE('ЦEHA');
+WBL(10);WRITE('OTЧ.HA BOCCT');
+WBL(12);WRITELN('OTЧ.HA KAП.P');MINUSES;
+(**)
+&&HAЙTИ ПEPBYЮ B SY-ПPИ&&
+WHILE MOЖHO DO_(
+  &&HAЙTИ ПEPBYЮ B ПP-ИHB&&
+  WHILE MOЖHO DO_(
+    &&HAЙTИ ПEPBYЮ B ИH-CTO&&
+    WHILE MOЖHO DO_(
+      &&HAЙTИ BЛAДEЛ B OT-CTO;BЗЯTЬ OTДEЛ.HAЗB HA OTД&&
+      IF OTДEЛ.HAЗB=OTД THEN_(
+        &&BЗЯTЬ CTOИT;BЗЯTЬ ПPИБOP&&
+        IF ЭTOTMEC THEN_(
+          &&BЗЯTЬ ИHB;HAЙTИ BЛAДEЛ B ШИ-ПPИ;BЗЯTЬ&&;ПEЧKAPOT;
+          SЦEHA:=SЦEHA+ПPИБOP.ЦEHA;
+          SBOC:=SBOC+BMEC;
+          SKAП:=SKAП+KMEC_)_);
+      &&HAЙTИ CЛEДYЮ B ИH-CTO&&_);
+    &&HAЙTИ CЛEДYЮ B ПP-ИHB&&_);
+  &&HAЙTИ CЛEДYЮ B SY-ПPИ&&_);
+(**)
+WRITE('ИTOГO:');
+WBL(61);WRITE(SЦEHA:9:22);
+WBL(13);WRITE(SBOC:8:22);
+WBL(14);WRITELN(SKAП:8:22);
+MINUSES;
+END;
+
+
+
+? .ИO *)
+(*KPATKИЙ ИTOГ OTДEЛA*)
+PROCEDURE ИTOГOT(ЭKPAH:BOOL);
+VAR SЦEHA,SBOC,SKAП:REAL;
+BEGIN
+SЦEHA:=0;SBOC:=0;SKAП:=0;
+WRITE(OUT,' ',OTДEЛ.HAЗB);
+IF NOT ЭKPAH THEN_(
+  WRITE(OUT,' ЗA ',MEC:0,' MECЯЦ     (HAПEЧATAHO ');
+  WДAT(OUT,CEГOДHЯ);WRITE(OUT,')')_);
+&&HAЙTИ ПEPBYЮ B OT-CTO&&
+IF ПYCTO THEN_(WLF(1);
+  WRITELN(OUT,' - HИЧEГO HE ЗAPEГИCTPИPOBAHO');
+  FWRITE(OUT);REWRITE(OUT);MINUSES;EXIT_);
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ BЛAДEЛ B ИH-CTO&&
+  BЗЯTЬBCE;&&HAЙTИ CЛEДYЮ B OT-CTO&&
+  IF ЭTOTMEC THEN_(
+    SЦEHA:=SЦEHA+ПPИБOP.ЦEHA;
+    SBOC:=SBOC+BMEC;
+    SKAП:=SKAП+KMEC_)_);
+(**)
+WRITELN(OUT,
+  '  OБЩ.CTOИM=',SЦEHA:0:22,
+  '  OTЧ.HA BOCCT=',SBOC:0:22,
+  '  OTЧ.HA KAП.P=',SKAП:0:22);
+IF ЭKPAH THEN PUTT ELSE_(
+  WLF(1);FWRITE(OUT);REWRITE(OUT);MINUSES_);
+END;
+
+
+
+? .ПBC *)
+(*BЫДAЧA ПOЛHOГO OTЧETA ПO BCEM OTДEЛAM*)
+PROCEDURE ПBC;
+VAR KEYBD:ZZBDKEY;
+BEGIN
+MEC:=MECЯЦ;IF HAЧ THEN EXIT;
+WLF(4);MINUSES;WLF(1);WBL(40);
+WRITELN('ПOЛHAЯ TAБЛИЦA AMOPTИЗAЦИИ ПO OTДEЛAM');
+WLF(1);MINUSES;WLF(1);
+YCTПEЧ;
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ БД-KЛЮ OTДEЛ HA KEYBD;BЗЯTЬ&&;ПEЧOT;
+  &&ЗAMEHИ БД-KЛЮ OTДEЛ HA KEYBD;
+  HAЙTИ CЛEДYЮ B SY-OTД&&_);
+ECTЬ;
+END;
+
+
+
+? .ПOT *)
+(*BЫДAЧA ПOЛHOГO OTЧETA ПO OTДEЛЬHЫM OTДEЛAM*)
+PROCEDURE ПOT;
+BEGIN
+MEC:=MECЯЦ;IF HAЧ THEN EXIT;
+YCTПEЧ;
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+&&HAЙTИ ПEPBYЮ B OT-CTO&&
+IF ПYCTO THEN_(
+  WRITE(OUT,'Y ЭTOГO OTДEЛA HИЧEГO HE ЗAPEГИCTPИPOBAHO');PUTT;EXIT_);
+ПEЧOT;
+ECTЬ;
+END;
+
+
+
+? .KBC *)
+(*BЫДAЧA KPATKOГO OTЧETA ПO BCEM OTДEЛAM*)
+PROCEDURE KBC;
+BEGIN
+MEC:=MECЯЦ;IF HAЧ THEN EXIT;
+YCTПEЧ;
+WLF(4);MINUSES;WLF(1);WBL(40);
+WRITELN('KPATKAЯ TAБЛИЦA AMOPTИЗAЦИИ ПO OTДEЛAM');
+WLF(1);MINUSES;WLF(1);
+YCTПEЧ;
+&&HAЙTИ ПEPBYЮ B SY-OTД&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&;ИTOГOT(FALSE);
+  &&HAЙTИ CЛEДYЮ B SY-OTД&&_);
+ECTЬ;
+END;
+
+
+
+? .KOT *)
+(*BЫДAЧA KPATKOГO OTЧETA ПO OTДEЛЬHЫM OTДEЛAM*)
+PROCEDURE KOT;
+BEGIN
+MEC:=MECЯЦ;IF HAЧ THEN EXIT;
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,OTДEЛ.HAЗB);
+&&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ HE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+&&HAЙTИ ПEPBYЮ B OT-CTO&&
+IF ПYCTO THEN_(
+  WRITE(OUT,'Y ЭTOГO OTДEЛA HИЧEГO HE ЗAPEГИCTPИPOBAHO');PUTT;EXIT_);
+ИTOГOT(TRUE);
+END;
+
+
+
+? .ДPA *)
+(*BЫДAЧA OTЧETA ПO ДPAГ.METAЛЛAM *)
+PROCEDURE ДPA;
+VAR S:REAL;
+BEGIN
+WRITE(OUT,'COДEPЖAHИE ДPAГ.METAЛOB B OCH.CPEДCTBAX');PUTT;
+&&HAЙTИ ПEPBYЮ B SY-MET&&
+WHILE MOЖHO DO_(
+  S:=0.0;
+  &&BЗЯTЬ;HAЙTИ ПEPBYЮ B ME-COД&&
+  WHILE MOЖHO DO_(
+    &&BЗЯTЬ;HAЙTИ CЛEДYЮ&&
+    S:=S+COДEPЖ.KOЛИЧ_);
+  WCTP(OUT,METAЛ.HAЗB,15);WRITE(OUT,':',S:0:26);PUTT;
+  &&HAЙTИ CЛEДYЮ B SY-MET&&_);
+END;
+
+
+
+? .B *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE BЫДAЧИ OTЧETOB...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ШИФ - OTЧET ПO ГPYППAM ШИФPOB/',
+          'ПBC - ПOЛHЫЙ OTЧET ПO BCEM OTДEЛAM/',
+          'ПOT - ПOЛHЫЙ OTЧET ПO OTДEЛЬHЫM OTДEЛAM/',
+          'KBC - KPATKИЙ OTЧET ПO BCEM OTДEЛAM/',
+          'KOT - KPATKИЙ OTЧET ПO OTДEЛЬHЫM OTДEЛAM/',
+          'ДPA - OTЧET ПO ДPAГOЦEHHЫM METAЛЛAM/');
+MENU;
+SELECT
+  'ДPA'=ДИP:ДPA;
+  'ШИФ'=ДИP:ШИФ;
+  'ПBC'=ДИP:ПBC;
+  'ПOT'=ДИP:ПOT;
+  'KBC'=ДИP:KBC;
+  'KOT'=ДИP:KOT;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_);
+_);
+END;
+
+
+
+? .BEGIN *)
+BEGIN OTЧET END.
+? .AMPГ *)
+(*=L1*) PROGRAM AMOGRU (*AM:ШИФPЫ *)
+(*=L0 &&ПOДCXE CX-AM0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:RЦEЛBEЩ
+!INCLU:CUTCTP
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:WCTP
+!INCLU:STEP
+
+
+
+? .RШ *)
+PROCEDURE REGIS;
+CONST
+      MINШИФP=10000; MAXШИФP=110001;
+
+
+
+? .WГ *)
+PROCEDURE WГPYП;
+BEGIN
+  WRITE(OUT,ГPYППA.HAЧ:6,' - ',ГPYППA.KOH,'   ');
+  WCTP(OUT,ГPYППA.HAЗB,0);PUTT;
+END;
+
+
+
+? .PГП *)
+PROCEDURE ПPO;
+VAR I:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-ГPY&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET ГPYПП');PUTT;EXIT_);
+I:=0;ШAГ:=1;
+REPEAT
+  I:=I+1;&&BЗЯTЬ;HAЙTИ CЛEДYЮ&&;
+  WГPYП;
+UNTIL STEP OR ПYCTO;
+END;
+
+
+
+? .PГH *)
+PROCEDURE HOB;
+BEGIN
+REPEAT
+  WRITE(OUT,'HAЗBAHИE ГPYППЫ:');RCTP;
+  IF HAЧ THEN EXIT;
+  READ(INP,ГPYППA.HAЗB);
+(**)
+  WRITE(OUT,'HAЧAЛЬHЫЙ ШИФP:');
+  ГPYППA.HAЧ:=RЦEЛ(MINШИФP,MAXШИФP);
+  IF HAЧ THEN EXIT;
+(**)
+  WRITE(OUT,'KOHEЧHЫЙ ШИФP:');
+  ГPYППA.KOH:=RЦEЛ(ГPYППA.HAЧ,MAXШИФP);
+  IF HAЧ THEN EXIT;
+(**)
+WRITE(OUT,'BOT, ЧTO BЫ BBEЛИ:');PUTT;WГPYП;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ ГPYППЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTABИTЬ ГPYППA&&YCTMOД;
+  WRITE(OUT,'ГPYППA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'ГPYППA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ') OR HAЧ;
+END;
+
+
+
+? .PГИ *)
+PROCEDURE ИCK;
+VAR Г:ZZГPYППA;
+BEGIN
+WRITE(OUT,'HAЧAЛЬHЫЙ ШИФP ГPYППЫ:');
+Г.HAЧ:=RЦEЛ(MINШИФP,MAXШИФP);
+IF HAЧ THEN EXIT;
+&&HAЙTИ ПO-KЛЮ Г.HAЧ B SY-ГPY&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKAЯ ГPYППA HE ЗAPEГИCTPИPOBAHA');PUTT;EXIT_);
+WRITE(OUT,'KOHEЧHЫЙ ШИФP ГPYППЫ:');
+Г.KOH:=RЦEЛ(Г.HAЧ,MAXШИФP);
+IF HAЧ THEN EXIT;
+(Ц) WHILE TRUE DO_(
+  &&BЗЯTЬ&&
+  IF ГPYППA.KOH=Г.KOH THEN EXIT Ц;
+  &&HAЙTИ ПPEДЫД&&
+  IF (ГPYППA.HAЧ!Г.HAЧ) OR ПYCTO THEN_(
+    WRITE(OUT,'TAKAЯ ГPYППA HE ЗAPEГИCTPИPOBAHA');PUTT;EXIT_)_);
+(**)
+WRITE(OUT,'BOT ЭTA ГPYППA:');PUTT;WГPYП;
+WRITE(OUT,'ПOДTBEPДИTE EE ИCKЛЮЧEHИE');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ИCKЛЮЧEHИE OTMEHЯETCЯ');PUTT;EXIT_);
+&&YБPATЬ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ ГPYПП ШИФPOB...');PUTT;
+KYДA:='HAPYЖY';
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX ГPYПП/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX ГPYПП/',
+          'ИCK - ИCKЛЮЧEHИE ГPYППЫ/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN REGIS END.
+? .E *)
+.
+*EE
+*AREA:36
+*INCLUD:1,2
+*ROLL:2
+*REL:03
+*REL:05
+*PASEDIT:31,41
+*PASCAL
+*READ:41
+*WHAT:T-S
+*INSALL
+DRUM
+*WHAT:66-S
+*END F
+?P
+?.ЗT
+ШИФP 410900 ЗMП^OЗY 32^TPA 88^BPE 1000^ЛEH 31(2C)41(2C)^EEB1A3
+*NAME
+*ИПC.HAЧ
+*EDIT
+*W
+*L:*PREDT
+? .ЗTГO *)
+(*=L1*) PROGRAM ZATHED (*ЗT:ГOЛOBA*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+BEGIN &&ЖYPHAЛ ЖY-ЗT0;KOMПAC&& END.
+? .ЗTMO *)
+(*=L1*) PROGRAM ZATMON (*ЗT:MOHИTOP*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ДATЧИC
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WДAT
+!INCLU:BIGLIN
+!INCLU:YCTПEЧ
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RMECKBA
+!INCLU:RKBA
+!INCLU:RMEC
+!INCLU:RДAT
+!INCLU:RЦEЛBEЩ
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:ЗAKPЫTO
+!INCLU:HEЛЬЗЯ
+!INCLU:MENU
+!INCLU:ЖYPHAЛ
+!INCLU:KOHEЦ
+
+
+
+? .YCTФ *)
+(* YCTAHOBKA XPAHИMЫX ФЛAГOB *)
+PROCEDURE YCTФЛAГ;
+BEGIN
+&&HAЙTИ ПO-KЛЮ 'ФЛAГИ' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ЦEЛ;
+BЗЯTЬ ЦEЛ.ЗH HA ФЛAГИ&&
+END;
+
+
+
+? .PЦEЛ *)
+(*ЗAMEHИTЬ ПEPBOE ЗHAЧEHИE ЦEЛOГO ПAPAMETPA*)
+PROCEDURE PЦEЛ(A:ALFA;I:INT);
+BEGIN;&&HAЙTИ ПO-KЛЮ A B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ЦEЛ;ЗAMEHИ&&
+END;
+
+
+
+? .CHЯФ *)
+(* CHЯTИE HE XPAHИMЫX ФЛAГOB *)
+PROCEDURE CHЯФЛAГ;
+BEGIN(*=C-*)
+PЦEЛ('ФЛAГИ ',ФЛAГИ*[OTЛAД,BXOД]);
+END;(*=C+*)
+
+
+
+? .ПЗAK *)
+(*ДEЙCTBИЯ ДO ЗAKPEПЛEHИЯ*)
+PROCEDURE ПPEДЗAK;
+BEGIN
+PЦEЛ('ДATЗП ',CEГOДHЯ);CHЯФЛAГ;
+END;
+
+
+
+? .ПPABA
+(*ПPOBEPKA ПPAB ПOЛЬЗOBATEЛЯ*)
+PROCEDURE ПPABA;
+VAR ДATЗП:INT;ПAPOЛЬ,PAROL:ALFA;
+BEGIN
+&&HAЙTИ ПO-KЛЮ 'ДATЗП' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ЦEЛ;
+BЗЯTЬ ЦEЛ.ЗH HA ДATЗП;
+HAЙTИ ПO-KЛЮ 'ПAPOЛЬ' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-AЛФ;
+BЗЯTЬ AЛФ.ЗH HA ПAPOЛЬ&&
+PUTT;YCTФЛAГ;
+WRITE(OUT,'         ДAHHЫE OT ');WДAT(OUT,ДATЗП);
+IF OTЛAД IN ФЛAГИ THEN_(
+  ФЛAГИ:=ФЛAГИ+[AДMИH];CEГOДHЯ:=ДATЗП+1_)
+ELSE_(
+PUTT;PUTT;
+WRITE(OUT,'       ...ЗДPABCTBYЙTE...');PUTT;
+WRITE(OUT,'BЫ - AДMИHИCTPATOP!');
+IF ДA THEN_(
+  WRITE(OUT,'ПOДTBEPДИTE ПAPOЛЬ:');GETHAЧ;
+  READ(INP,PAROL);
+  IF ПAPOЛЬ=PAROL THEN_(
+    WRITE(OUT,'BЫ ДEЙCTBИTEЛЬHO AДMИHИCTPATOP');PUTT;
+    WRITE(OUT,'BAM OTKPЫTЫ ПPABA HA ИЗMEHEHИE ДAHHЫX');PUTT;
+    ФЛAГИ:=ФЛAГИ+[AДMИH]_)
+  ELSE_(
+    WRITE(OUT,'HE ЗHAETE ПAPOЛЯ - HE БAЛYЙTECЬ');PUTT_)_);
+IF NOT (AДMИH IN ФЛAГИ) THEN_(
+  WRITE(OUT,'BЫ - ПOЛЬЗOBATEЛЬ');PUTT;
+  WRITE(OUT,'BAM MOЖHO TOЛЬKO BЫДABATЬ OTЧETЫ');PUTT_);
+(**)
+WRITE(OUT,'COOБЩИTE CEГOДHЯШHЮЮ ДATY:');
+CEГOДHЯ:=RДAT(ДATЗП,ДATЧИC(31,12,99))_);
+END;
+
+
+
+? .ПAPOЛЬ *)
+(*ИЗMEHEHИE ПAPOЛЯ*)
+PROCEDURE ПAPOЛЬ;
+BEGIN
+IF HEЛЬЗЯ OR ЗAKPЫTO THEN EXIT;
+WRITE(OUT,'COOБЩИTE HOBЫЙ ПAPOЛЬ:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,AЛФ.ЗH);
+&&HAЙTИ ПO-KЛЮ 'ПAPOЛЬ' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-AЛФ;ЗAMEHИ&&
+YCTMOД;ECTЬ;
+END;
+
+
+
+? .БPEГ *)
+(*PEГИCTPAЦИOHHЫЙ БЛOK-MEHЮ*)
+PROCEDURE БЛOKPEГ;
+BEGIN
+IF HEЛЬЗЯ OR ЗAKPЫTO THEN_(KYДA:='HAPYЖY';EXIT_);
+WHILE TRUE DO_(
+WRITE(OUT,'      ...BЫ B PEГИCTPAЦИOHHOM БЛOKE...  ');PUTT;
+WRITE(OUT,'KOФ - BXOД B БЛOK PEГИCTPAЦИИ KOЭФФИЦИEHTOB/',
+          'OTД - BXOД B БЛOK PEГИCTPAЦИИ OTДEЛOB/',
+          'TEM - BXOД B БЛOK PEГИCTPAЦИИ TEM/',
+          'ФAK - BXOД B БЛOK PEГИCTPAЦИИ ФAKTИЧ.ЗATPAT/',
+          'OБЩ - BXOД B БЛOK PEГИCTPAЦИИ OБЩИX ЗATPAT/');
+MENU;
+SELECT
+  'KOФ'=ДИP:_(KYДA:='ZATCOF';EXIT_);
+  'OTД'=ДИP:_(KYДA:='ZATOTD';EXIT_);
+  'TEM'=ДИP:_(KYДA:='ZATRTE';EXIT_);
+  'ФAK'=ДИP:_(KYДA:='ZATZAT';EXIT_);
+  'OБЩ'=ДИP:_(KYДA:='ZATNAK';EXIT_);
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:_(KYДA:='HAPYЖY';EXIT_)_)_);
+END;
+
+
+
+? .БOTЧ *)
+(*БЛOK-MEHЮ BЫДAЧИ OTЧETOB*)
+PROCEDURE БЛOKOTЧ;
+BEGIN
+IF ЗAKPЫTO THEN_(KYДA:='HAPYЖY';EXIT_);
+IF KYДA='ZATTAB' THEN ECTЬ;
+WHILE TRUE DO_(
+WRITE(OUT,'      ...BЫ B БЛOKE BЫДAЧИ OTЧETOB...  ');PUTT;
+WRITE(OUT,'ПOC - BЫДAЧA OTЧETA ПO ПOCЛEДHEMY MECЯЦY/');
+MENU;
+SELECT
+  'ПOC'=ДИP:_(YCTПEЧ;YCTMOД;KYДA:='ZATTAB';EXIT_);
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:_(KYДA:='HAPYЖY';EXIT_)_)_);
+END;
+
+
+
+? .SF *)
+(* YCT/CHЯ ФЛAГOB *)
+PROCEDURE SETFLAG;
+VAR Ф,ФФ:ФЛAГ;N:INT;
+BEGIN
+WRITE(OUT,'TEKYЩEE COCTOЯHИE ФЛAГOB:');PUTT;
+FOR Ф:=SUCC(ФS) TO PRED(ФF) DO_(
+  WRITE(OUT,ORD(Ф):0,'.',Ф,' ');
+  IF Ф IN ФЛAГИ THEN WRITE(OUT,'(+)')
+                ELSE WRITE(OUT,'(-)');
+  PUTT_);
+WRITE(OUT,'YKAЖИTE HOMEP ИHBEPTИPYEMOГO ФЛAГA:');
+N:=RЦEЛ(1,ORD(ФF)-1);IF HAЧ THEN EXIT;
+Ф:=ФF;
+FOR ФФ:=SUCC(ФS) TO PRED(ФF) DO IF N=ORD(ФФ) THEN Ф:=ФФ;
+ФЛAГИ:=ФЛAГИ MOD [Ф];
+WRITE(OUT,ORD(Ф):0,'.',Ф);
+IF Ф IN ФЛAГИ THEN WRITE(OUT,' (-) --> (+)')
+              ELSE WRITE(OUT,' (+) --> (-)');
+PUTT;
+END;
+
+
+
+? .БCИC *)
+(*CИCTEMHЫЙ БЛOK*)
+PROCEDURE БЛOKCИC;
+VAR ПAPCИC:ALFA;
+BEGIN
+KYДA:='HAPYЖY';
+WRITE(OUT,'ПAPOЛЬ:');GETT;
+READ(INP,ПAPCИC);
+&&HAЙTИ ПO-KЛЮ 'ПAPCИC' B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-AЛФ;BЗЯTЬ&&
+PUTT;YCTФЛAГ;
+IF AЛФ.ЗH ! ПAPCИC THEN_(
+  WRITE(OUT,'HE ЛEЗЬ, KYДA HE HYЖHO???');PUTT;EXIT_);
+PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'      ...BЫ B CИCTEMHOM БЛOKE...  ');PUTT;
+WRITE(OUT,'ФЛA - ИHBEPTИPOBAHИE ФЛAГOB/');
+MENU;
+SELECT
+  'KOH'=ДИP:EXIT;
+  'BЫX'=ДИP:EXIT;
+  'ФЛA'=ДИP:SETFLAG_);
+_)
+END;
+
+
+
+? .B *)
+BEGIN CASE KYДA OF
+'HAЧAЛO':_(
+WRITELN(OUT);PUTT;
+RGEXPORT:=[46];
+PUTT;WRITELN;
+WRITE(OUT,'           **************');PUTPT;
+WRITE(OUT,'           ИПC ЗATPATЫ-89');PUTPT;
+WRITE(OUT,'           **************');PUTPT;
+WRITELN;
+IF ПYCTO THEN_(
+    WRITE(OUT,'CИCTEMA TPEБYET BOCCTAHOBЛEHИЯ');PUTT;
+    WRITE(OUT,'COOБЩИTE AДMИHИCTPATOPY');PUTT;
+    WRITE(OUT,'      ...ДO CBИДAHИЯ...');PUTT;
+    &&ЗABEPШ&&;KYДA:='ЭTOBCE';EXIT_);
+  ПPABA_);
+(**)
+  'ZATTAB':БЛOKOTЧ;
+  'ZATZAT','ZATNAK','ZATRTE','ZATCOF','ZATOTD':БЛOKPEГ_);
+(**)
+IF (KYДA!'HAPYЖY') AND (KYДA!'HAЧAЛO') THEN EXIT;
+(**)
+WHILE TRUE DO_(
+IF ДИP!'KOH' THEN_(
+WRITE(OUT,'      ...BЫ B OБЩEM БЛOKE...  ');PUTT;
+? .Д *)
+WRITE(OUT,'PEГ - BXOД B PEГИCTPAЦИOHHЫЙ БЛOK/',
+          'OTЧ - BXOД B БЛOK BЫДAЧИ OTЧETOB/',
+          'ПAP - ИЗMEHEHИE ПAPOЛЯ AДMИHИCTPATOPA/',
+          'ЗAK - ЗAKPEПИTЬ ИЗMEHEHИЯ/',
+          'CБP - CБPOCИTЬ ИЗMEHEHИЯ/',
+          'CИC - BXOД B CИCTEMHЫЙ БЛOK/');
+MENU_);
+SELECT
+  'PEГ'=ДИP:_(БЛOKPEГ;IF KYДA!'HAPYЖY' THEN EXIT_);
+  'OTЧ'=ДИP:_(БЛOKOTЧ;IF KYДA!'HAPYЖY' THEN EXIT_);
+  'CИC'=ДИP:_(БЛOKCИC;IF KYДA!'HAPYЖY' THEN EXIT_);
+  'ЗAK'=ДИP:ЖYPHAЛ('ЗAK',ПPEДЗAK);
+  'CБP'=ДИP:ЖYPHAЛ('CБP',ПPEДЗAK);
+  'ПAP'=ДИP:ПAPOЛЬ;
+  'KOH'=ДИP:_(KOHEЦ(ПPEДЗAK);IF NOT HAЧ THEN_(ДИP:='KOH';EXIT_)_);
+  'BЫX'=ДИP:_(WRITE(OUT,
+             'ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE "KOH"');
+             PUTT_)_)_);
+END.
+? .ЗTPO *)
+(*=L1*) PROGRAM ZATOTD (*ЗT:PEГИC.OTДEЛOB*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:ROTД
+
+
+
+? .RШ *)
+(*БЛOK PEГИCTPAЦИИ KAPT*)
+PROCEDURE REGIS;
+
+
+
+? .W *)
+(*ПEЧATЬ OTДEЛA*)
+PROCEDURE ПEЧOTД;
+BEGIN
+WRITE(OUT,OTДEЛ.HAЗB);
+END;
+
+
+
+? .ПPO *)
+PROCEDURE ПPO;
+VAR I:INT;
+BEGIN
+&&HAЙTИ ПEPBYЮ B SY-OTД&&;
+IF ПYCTO THEN_(
+  WRITE(OUT,'HET OTДEЛOB');PUTT;EXIT_);
+I:=0;ШAГ:=1;
+REPEAT
+  I:=I+1;&&BЗЯTЬ&&;ПEЧOTД;&&HAЙTИ CЛEДYЮ B SY-OTД&&
+UNTIL ПYCTO OR NOT EЩE('EЩE ! ') OR HAЧ;
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+BEGIN
+REPEAT
+REPEAT
+  WRITE(OUT,'HAЗBAHИE OTДEЛA:');GETHAЧ;
+  IF HAЧ THEN EXIT;
+  READ(INP,OTДEЛ.HAЗB);
+  &&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;
+  IF MOЖHO THEN_(WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT_);
+UNTIL ПYCTO;
+(**)
+WRITE(OUT,'BOT, ЧTO BЫ BBEЛИ:');PUTT;ПEЧOTД;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTABИTЬ OTДEЛ&&;YCTMOД;
+  WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE!  ') OR HAЧ;
+END;
+
+
+
+? .ЗAM *)
+PROCEDURE ЗAM;
+VAR CTOT:ZZOTДEЛ;
+BEGIN
+WRITE(OUT,'CTAPOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,CTOT.HAЗB);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+IF MOЖHO THEN_(&&BЗЯTЬ&&_) ELSE_(
+  WRITE(OUT,'TAKOЙ OTДEЛ HE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+WRITE(OUT,'HOBOE HAЗBAHИE OTДEЛA:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,OTДEЛ.HAЗB);
+&&HAЙTИ ПO-KЛЮ OTДEЛ.HAЗB B SY-OTД&&;IF COCT=0 THEN_(
+  WRITE(OUT,'TAKOЙ OTДEЛ YЖE ЗAPEГИCTPИPOBAH');PUTT;EXIT_);
+&&HAЙTИ ПO-KЛЮ CTOT.HAЗB B SY-OTД&&;
+&&ЗAMEHИTЬ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+BEGIN
+WRITE(OUT,'HAЗBAHИE OTДEЛA:');
+OTДEЛ.HAЗB:=ROTД;IF HAЧ THEN EXIT;
+&&HAЙTИ ПEPBYЮ B OT-ИCП&&
+IF NOT ПYCTO THEN_(
+WRITE(OUT,'OTДEЛ HEЛЬЗЯ ИCKЛЮЧИTЬ ПOKA OH ЗAPEГИCTPИPOBAH',LF,
+          'KAK ИCПOЛHИTEЛЬ B TEMAX');PUTT;EXIT_);
+WRITE(OUT,'ПOДTBEPДИTE ИCKЛЮЧEHИE OTДEЛA');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ИCKЛЮЧEHИE OTMEHЯETCЯ');PUTT;EXIT_);
+&&YБPATЬ OTДEЛ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ OTДEЛOB...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX OTДEЛOB/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX OTДEЛOB/',
+          'ЗAM - ЗAMEHA HAЗBAHИЯ OTДEЛA/',
+          'ИCK - ИCKЛЮЧEHИE OTДEЛA/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ЗAM'=ДИP:ЗAM;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:EXIT_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN REGIS END.
+? .ЗTKO *)
+(*=L1*) PROGRAM ZATCOF (*ЗT:PEГИC.KOЭФФ*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:CUTCTP
+!INCLU:WCTP
+!INCLU:RЦEЛBEЩ
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+!INCLU:FПAP
+!INCLU:STEP
+!INCLU:TOЛЬKOCИ
+
+
+
+? .PK *)
+(*PEГИCTPAЦИЯ KOЭФФИЦИEHTOB И OTДEЛЬHЫX ПAPAMETPOB*)
+PROCEDURE PEKOЭФ;
+VAR Д:ДИPEKT;
+
+
+
+? .W *)
+(*ПEЧATЬ KOЭФФИЦИEHTA*)
+PROCEDURE ПEЧKOЭФ;
+BEGIN
+WRITE(OUT,ПAP.ИMЯ,':');WCTP(OUT,ПAP.HAЗB,32);
+WRITE(OUT,' = ',ДEЙ.ЗH:8:23);
+PUTT;
+END;
+
+
+
+? .ПPO *)
+PROCEDURE ПPO;
+VAR I,J:INT;A:ARRAY 1..100 OF ALFA;
+BEGIN
+FПAP('ИM-KOЭ');&&HAЙTИ ПEPBYЮ B ПA-AЛФ&&
+IF ПYCTO THEN_(WRITE(OUT,'HET KAPT');PUTT;EXIT_);
+I:=0;WHILE MOЖHO DO_(I:=I+1;&&BЗЯTЬ AЛФ.ЗH HA A[I];HAЙTИ CЛEДYЮ&&_);
+J:=1;ШAГ:=1;
+REPEAT
+  FПAP(A[J]);&&HAЙTИ ПEPBYЮ B ПA-ДEЙ;
+  BЗЯTЬ ПAP;BЗЯTЬ ДEЙ&&;ПEЧKOЭФ;J:=J+1;
+UNTIL STEP OR (J>I);
+END;
+
+
+
+? .HOB *)
+PROCEDURE HOB;
+VAR I:INT;
+BEGIN
+IF TOЛЬKOCИ THEN EXIT;
+REPEAT
+REPEAT
+  WRITE(OUT,'COKPAЩEHHOE HAЗBAHИE:');GETHAЧ;
+  IF HAЧ THEN EXIT;
+  READ(INP,ПAP.ИMЯ);FПAP(ПAP.ИMЯ);
+  IF MOЖHO THEN_(WRITE(OUT,'ЭTO HAЗBAHИE YЖE ЗAPEГИCTPИPOBAHO');PUTT_);
+UNTIL ПYCTO;
+(**)
+WRITE(OUT,'ПOЛHOE HAЗBAHИE:');RCTP;IF HAЧ THEN EXIT;
+READ(INP,ПAP.HAЗB);
+(**)
+WRITE(OUT,'ЗHAЧEHИE:');
+ДEЙ.ЗH:=RBEЩ(0.0,999999.9);IF HAЧ THEN EXIT;
+(**)
+ПAP.COKP[1]:='_377';
+(**)
+WRITE(OUT,'BOT, ЧTO BЫ BBEЛИ:');PUTT;ПEЧKOЭФ;
+WRITE(OUT,'ПOДTBEPДИTE ПPABИЛЬHOCTЬ KAPTЫ');
+IF ДA AND NOT HAЧ THEN_(
+  &&ПOCTABИTЬ ПAP;ПOCTABИTЬ ДEЙ;BKЛЮЧИ B ПA-ДEЙ&&;
+  &&HAЙTИ ПO-KЛЮ 'ИM-KOЭ' B SY-ПAP;ПOCTAB AЛФ;BKЛЮЧИ B ПA-AЛФ&&
+  YCTMOД;WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA')_)
+ELSE WRITE(OUT,'KAPTA AHYЛИPOBAHA');PUTT;
+UNTIL NOT EЩE('EЩE ! ') OR HAЧ;
+END;
+
+
+
+? .ЗAM *)
+PROCEDURE ЗAM;
+BEGIN
+WRITE(OUT,'COKPAЩEHHOE HAЗBAHИE:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,ПAP.ИMЯ);FПAP(ПAP.ИMЯ);
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKAЯ KAPTA HE ЗAPEГИCTPИPOBAHA');PUTT;EXIT_);
+&&BЗЯTЬ;HAЙTИ ПEPBYЮ B ПA-ДEЙ;BЗЯTЬ&&
+WRITE(OUT,'BOT ЭTA KAPTA:');PUTT;ПEЧKOЭФ;
+WRITE(OUT,'HOBOE ЗHAЧEHИE:');
+ДEЙ.ЗH:=RBEЩ(0.0,999999.9);IF HAЧ THEN EXIT;
+&&ЗAMEHИTЬ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .ИCK *)
+PROCEDURE ИCK;
+BEGIN
+IF TOЛЬKOCИ THEN EXIT;
+WRITE(OUT,'COKPAЩEHHOE HAЗBAHИE:');GETHAЧ;
+IF HAЧ THEN EXIT;
+READ(INP,ПAP.ИMЯ);FПAP(ПAP.ИMЯ);
+IF ПYCTO THEN_(
+  WRITE(OUT,'TAKAЯ KAPTA HE ЗAPEГИCTPИPOBAHA');PUTT;EXIT_);
+&&BЗЯTЬ;HAЙTИ ПEPBYЮ B ПA-ДEЙ;BЗЯTЬ&&
+WRITE(OUT,'BOT ЭTA KAPTA:');PUTT;ПEЧKOЭФ;
+WRITE(OUT,'ПOДTBEPДИTE ИCKЛЮЧEHИE');
+IF NOT ДA OR HAЧ THEN_(
+  WRITE(OUT,'ИCKЛЮЧEHИE OTMEHЯETCЯ');PUTT;EXIT_);
+&&YБPATЬ ДEЙ;YБPATЬ ПAP&&
+FПAP('ИM-KOЭ');&&HAЙTИ ПO-KЛЮ ПAP.ИMЯ B ПA-AЛФ;YБPATЬ&&;YCTMOД;
+END;
+
+
+
+? .PKB *)
+BEGIN
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ KOЭФФИЦИEHTOB...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',
+          'ЗAM - ЗAMEHA ЗHAЧEHИЯ KOЭФИЦИEHTA/',
+          'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ЗAM'=ДИP:ЗAM;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:EXIT_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN
+PEKOЭФ;KYДA:='HAPYЖY';
+END.
+? .ЗTPЗ *)
+(*=L1*) PROGRAM ZATZAT (*ЗT:PEГИC.ЗATPAT*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ЧИCMEC
+!INCLU:ЧИCKBA
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WREAL
+!INCLU:WДAT
+!INCLU:WMEC
+!INCLU:WKBA
+!INCLU:WCTP
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+
+
+
+? .RШ *)
+(*БЛOK PEГИCTPAЦИИ KAPT*)
+PROCEDURE REGIS;
+!INCLU:LIST
+
+
+
+? .WT *)
+(*ПPOCMOTP ДEPEBA ПOДЧИHEHHOCTИ ИCПOЛHИTEЛEЙ*)
+PROCEDURE WTREE;
+PROCEDURE GTREE(YPOB:INT);
+VAR TEKЗAП:ZZBDKEY;
+BEGIN
+&&BЗЯTЬ ИCПOЛH;HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ OTДEЛ&&
+CASE YPOB OF
+1:WRITE(OUT,'ИCП');
+2:WRITE(OUT,'COИ');
+3:WRITE(OUT,'ПOД')_);
+WRITE(OUT,'(',ИCПOЛH.HOMEP:0,')=',OTДEЛ.HAЗB,CLF);
+&&HAЙTИ ПEPBYЮ B ИC-ИCП&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ БД-KЛЮ ИCПOЛH HA TEKЗAП&&;GTREE(YPOB+1);
+  &&ЗAMEHИ БД-KЛЮ ИCПOЛH HA TEKЗAП;HAЙTИ CЛEДYЮ B ИC-ИCП&&_);
+END;
+BEGIN
+&&HAЙTИ ПEPBYЮ B TE-ИCП&&;IF MOЖHO THEN GTREE(1);
+WRITELN(OUT);PUTT;
+END;
+
+
+
+? .ПOC *)
+(*ПOCTABИTЬ ЗATPATЫ*)
+PROCEDURE ПOCTAB;
+BEGIN
+RESETCON;
+REPEAT WITH CUL!.CUC! DO WITH ЗAT DO SELECT
+BOS!.NAM='ZMEC  ':ЗAT.MEC:=Ц!;
+BOS!.NAM='ZTEMA ':_(&&HAЙTИ ПO-KЛЮ Ц! B SY-TEM&&_);
+BOS!.NAM='ZOTД  ':_(&&HAЙTИ ПO-KЛЮ Ц! B TE-ИCП&&_);
+BOS!.NAM='ZЭTAП ':_(&&HAЙTИ ПO-KЛЮ Ц! B TE-ЭTA&&_);
+BOS!.NAM='ZBЫП  ':BЫП  :=Д!;
+BOS!.NAM='ZOЗAPП':OЗAPП:=Д!;
+BOS!.NAM='ZДЗAPП':ДЗAPП:=Д!;
+BOS!.NAM='ZMATEP':MATEP:=Д!;
+BOS!.NAM='ZKOMAH':KOMAH:=Д!;
+BOS!.NAM='ZCПEЦ ':CПEЦ :=Д!;
+BOS!.NAM='ZAMOP ':AMOP :=Д!;
+BOS!.NAM='ZCTOP ':CTOP :=Д!;
+BOS!.NAM='ZПOCH ':ПOCH :=Д!;
+BOS!.NAM='ZПTPEC':ПTPEC:=Д!;
+BOS!.NAM='ZПPБK ':ПPБK :=Д!;
+BOS!.NAM='ZOBЫШ ':OBЫШ :=Д!;
+BOS!.NAM='ZOГOC ':OГOC :=Д!;
+BOS!.NAM='ZHEПЛ ':HEПЛ :=Д!_);
+UNTIL NEXTCON;
+&&ПOCTAB ЗAT&&;YCTMOД;
+WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA');PUTT;
+END;
+
+
+
+? .BЗЯ *)
+(*BЗЯTЬ ЗATPATЫ*)
+PROCEDURE BЗЯTЬ;
+VAR C:!CONTENT;
+BEGIN
+&&BЗЯTЬ ЗAT&&;
+WHILE NOT NEXTPAR DO_(
+  NEWCONT(C);WITH C! DO WITH ЗAT DO SELECT
+    BOS!.NAM='ZBЫП  ':Д!:=BЫП  ;
+    BOS!.NAM='ZOЗAPП':Д!:=OЗAPП;
+    BOS!.NAM='ZДЗAPП':Д!:=ДЗAPП;
+    BOS!.NAM='ZMATEP':Д!:=MATEP;
+    BOS!.NAM='ZKOMAH':Д!:=KOMAH;
+    BOS!.NAM='ZCПEЦ ':Д!:=CПEЦ ;
+    BOS!.NAM='ZAMOP ':Д!:=AMOP ;
+    BOS!.NAM='ZCTOP ':Д!:=CTOP ;
+    BOS!.NAM='ZПOCH ':Д!:=ПOCH ;
+    BOS!.NAM='ZПTPEC':Д!:=ПTPEC;
+    BOS!.NAM='ZПPБK ':Д!:=ПPБK ;
+    BOS!.NAM='ZOBЫШ ':Д!:=OBЫШ ;
+    BOS!.NAM='ZOГOC ':Д!:=OГOC ;
+    BOS!.NAM='ZHEПЛ ':Д!:=HEПЛ_)_);
+END;
+
+
+
+? .EЗ *)
+(*HAЙTИ ЗATPATЫ ПO MECЯЦY,OTДEЛY,ЭTAПY*)
+FUNCTION ECTЬЗAT:BOOL;
+BEGIN
+ECTЬЗAT:=TRUE;
+&&HAЙTИ ПO-KЛЮ B ЭT-ЗAT&&
+(W)WHILE MOЖHO DO_(
+  &&BЗЯTЬ ЗAT.MEC HA ЦEЛ.ЗH&&;IF ЗAT.MEC!ЦEЛ.ЗH THEN EXIT W;
+  &&HAЙTИ BЛAДEЛ B ИC-ЗAT;BЗЯTЬ ИCПOЛH.HOMEP HA ЦEЛ.ЗH&&
+  IF ИCПOЛH.HOMEP=ЦEЛ.ЗH THEN EXIT;
+  &&HAЙTИ ПPEДЫД B ЭT-ЗAT&&_);
+ECTЬЗAT:=FALSE;
+END;
+
+
+
+? .HAЙ *)
+(*HAЙTИ KAPTY*)
+PROCEDURE HAЙTИ;
+BEGIN
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+IF NAM='ZOTД  ' THEN WTREE;
+READCON(NEXT);IF HAЧ THEN EXIT;
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='ZMEC  ':ЗAT.MEC:=Ц!;
+NAM='ZTEMA ':_(&&HAЙTИ ПO-KЛЮ Ц! B SY-TEM&&
+  IF ПYCTO THEN_(
+    WRITE(OUT,'HET TAKOЙ TEMЫ');PUTT;NEXT:=FALSE_)_);
+NAM='ZOTД  ':_(ИCПOЛH.HOMEP:=Ц!;&&HAЙTИ ПO-KЛЮ B TE-ИCП&&
+  IF ПYCTO THEN_(
+    WRITE(OUT,'HET TAKOГO ИCПOЛHИTELЯ');PUTT;NEXT:=FALSE_)_);
+NAM='ZЭTAП ':_(&&HAЙTИ ПO-KЛЮ Ц! B TE-ЭTA&&
+  IF ПYCTO THEN_(
+    WRITE(OUT,'HET TAKOГO ЭTAПA');PUTT;NEXT:=FALSE_)
+  ELSE_(
+    IF ECTЬЗAT THEN EXIT ELSE_(
+      WRITE(OUT,'ЭTOM MECЯЦE ЗATPATЫ HE ЗAPEГИCTPИPOBAHЫ');
+      PUTT;NEXT:=FALSE_)_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+END;
+
+
+
+? .HOB *)
+(*BBOД HOBЫX ЗATPAT*)
+PROCEDURE HOB;
+VAR TEM,MEC,OTД:INT;
+BEGIN
+MEC:=0;TEM:=0;OTД:=-1;
+REPEAT REPEAT REPEAT REPEAT
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+IF (NAM='ZOTД  ') AND (OTД=-1) THEN WTREE;
+SELECT
+  (NAM='ZMEC  ')&(MEC!0):_(REWRITE(INP);WRITE(INP,MEC);INPUTCON_);
+  (NAM='ZTEMA ')&(TEM!0):_(REWRITE(INP);WRITE(INP,TEM);INPUTCON_);
+  (NAM='ZOTД  ')&(OTД!-1):_(REWRITE(INP);WRITE(INP,OTД);INPUTCON_);
+  TRUE:_(READCON(NEXT);IF HAЧ THEN EXIT_)_);
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='ZMEC  ':_(MEC:=Ц!;ЗAT.MEC:=Ц!_);
+NAM='ZTEMA ':_(&&HAЙTИ ПO-KЛЮ Ц! B SY-TEM&&
+  IF NOT ПYCTO THEN TEM:=Ц! ELSE_(
+    WRITE(OUT,'HET TAKOЙ TEMЫ');PUTT;NEXT:=FALSE_)_);
+NAM='ZOTД  ':_(ИCПOЛH.HOMEP:=Ц!;&&HAЙTИ ПO-KЛЮ B TE-ИCП&&
+  IF NOT ПYCTO THEN OTД:=Ц! ELSE_(
+    WRITE(OUT,'HET TAKOГO ИCПOЛHИTEЛЯ');PUTT;NEXT:=FALSE_)_);
+NAM='ZЭTAП ':_(ЭTAП.HOMEP:=Ц!;&&HAЙTИ ПO-KЛЮ B TE-ЭTA&&
+  IF ПYCTO THEN_(
+    WRITE(OUT,'HET TAKOГO ЭTAПA');PUTT;NEXT:=FALSE_)
+  ELSE IF ECTЬЗAT THEN_(
+    WRITE(OUT,'YЖE ECTЬ ЭTOT ИCПOЛHИTEЛЬ');
+    PUTT;NEXT:=FALSE_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+(**)
+IF CONFIRM THEN ПOCTAB;
+(**)
+WRITE(OUT,'EЩE ЭTAП!');
+UNTIL NOT ДA;IF HAЧ THEN EXIT;
+OTД:=-1;WRITE(OUT,'EЩE OTДEЛ!');
+UNTIL NOT ДA;IF HAЧ THEN EXIT;
+TEM:=0;WRITE(OUT,'EЩE TEMY!');
+UNTIL NOT ДA;IF HAЧ THEN EXIT;
+MEC:=0;WRITE(OUT,'EЩE MECЯЦ!');
+UNTIL NOT ДA;(*IF HAЧ THEN EXIT;*)
+END;
+
+
+
+? .ПPO *)
+(*ПPOCMOTP ЗATPAT*)
+PROCEDURE ПPO;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;WTREE;WRITELIST;
+END;
+
+
+
+? .ИCK *)
+(*ИCKЛЮЧEHИE ЗATPAT*)
+PROCEDURE ИCK;
+PROCEDURE YHAP(H:INT);EXTERNAL;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;
+IF NOT CONFIRM THEN EXIT;
+&&YБPATЬ ЗAT&&
+YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+FIL:=NIL;LOADLIST('CП-ЗAT');FINDLIST('CП-ЗAT');
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ ЗATPAT ПO TEMAM...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',
+          'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';CLEANALL;EXIT_);
+  'BЫX'=ДИP:_(CLEANALL;EXIT_)_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN
+REGIS;
+END.
+? .ЗTPH *)
+(*=L1*) PROGRAM ZATNAK (*ЗT:PEГИC.OБЩ.ЗATPAT*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ЧИCMEC
+!INCLU:ЧИCKBA
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WREAL
+!INCLU:WДAT
+!INCLU:WMEC
+!INCLU:WKBA
+!INCLU:WCTP
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+
+
+
+? .RШ *)
+(*БЛOK PEГИCTPAЦИИ KAPT*)
+PROCEDURE REGIS;
+!INCLU:LIST
+
+
+
+? .S *)
+(*CYMMИPOBAHИE ЗAPПЛATЫ ЗA MECЯЦ*)
+FUNCTION SUM(MES:INT):REAL;
+VAR S:REAL;
+BEGIN
+S:=0;
+&&HAЙTИ ПEPBYЮ ЗAT&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ&&
+  WITH ЗAT DO IF MEC=MES THEN_(S:=S+OЗAPП+ДЗAPП_);
+  &&HAЙTИ CЛEДYЮ ЗAT&&_);
+SUM:=S;
+END;
+
+
+
+? .ПOC *)
+(*ПOCTABИTЬ KAPTY*)
+PROCEDURE ПOCTAB;
+BEGIN
+RESETCON;
+REPEAT WITH CUL!.CUC! DO WITH HAKЛ DO SELECT
+BOS!.NAM='NMEC  ':MEC:=Ц!;
+BOS!.NAM='NПPOЧ ':ПPOЧ:=Ц!;
+BOS!.NAM='NHAKЛ ':HAKЛ:=Ц!;
+BOS!.NAM='NЗAHAK':ЗAHAK:=Ц!;
+BOS!.NAM='NЗAPП ':ЗAPП:=Ц!_);
+UNTIL NEXTCON;
+&&ПOCTAB HAKЛ&&;YCTMOД;
+WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA');PUTT;
+END;
+
+
+
+? .BЗЯ *)
+(*BЗЯTЬ KAPTY*)
+PROCEDURE BЗЯTЬ;
+VAR C:!CONTENT;
+BEGIN
+&&BЗЯTЬ HAKЛ&&
+WHILE NOT NEXTPAR DO_(
+  NEWCONT(C);
+  WITH C! DO WITH HAKЛ DO CASE BOS!.NAM OF
+    'NПPOЧ ':Д!:=ПPOЧ;
+    'NHAKЛ ':Д!:=HAKЛ;
+    'NЗAHAK':Д!:=ЗAHAK;
+    'NЗAPП ':Д!:=ЗAPП_)_);
+END;
+
+
+
+? .HAЙ *)
+(*HAЙTИ KAPTY*)
+PROCEDURE HAЙTИ;
+BEGIN
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+READCON(NEXT);IF HAЧ THEN EXIT;
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='NMEC  ':_(&&HAЙTИ ПO-KЛЮ Ц! B SY-HAK&&
+  IF MOЖHO THEN EXIT ELSE_(
+    WRITE(OUT,'HET TAKOГO MECЯЦA');PUTT;NEXT:=FALSE_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+END;
+
+
+
+? .HOB *)
+(*BBOД HOBOЙ KAPTЫ*)
+PROCEDURE HOB;
+VAR MES:INT;
+BEGIN
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+IF NAM='NЗAPП ' THEN_(
+  WRITE(OUT,'      ЖДИTE, ИДET CYMMИPOBAHИE ЗAPПЛATЫ');PUTT;
+  WRITE(OUT,'      CYMMA ЗAPПЛATЫ (ЗAPEГИCTPИPOBAHHOЙ B БД) ЗA ');
+  WMEC(OUT,MES);WRITE(OUT,' = ');
+  WREAL(SUM(MES),6);PUTT_);
+(**)
+READCON(NEXT);IF HAЧ THEN EXIT;
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='NMEC  ':_(MES:=Ц!;
+  &&HAЙTИ ПO-KЛЮ Ц! B SY-HAK&&;
+  IF NOT ПYCTO THEN_(
+    WRITE(OUT,'YЖE ECTЬ ЭTOT MECЯЦ');
+    PUTT;NEXT:=FALSE_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+(**)
+IF CONFIRM THEN ПOCTAB;
+END;
+
+
+
+? .ПPO *)
+(*ПPOCMOTP KAPTЫ*)
+PROCEDURE ПPO;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;WRITELIST;
+END;
+
+
+
+? .ИCK *)
+(*ИCKЛЮЧEHИE KAPTЫ*)
+PROCEDURE ИCK;
+PROCEDURE YHAP(H:INT);EXTERNAL;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;
+IF NOT CONFIRM THEN EXIT;
+&&YБPATЬ HAKЛ&&;YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+FIL:=NIL;LOADLIST('CП-HAK');FINDLIST('CП-HAK');
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ OБЩИX ЗATPAT...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',
+          'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
+MENU;
+SELECT
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:EXIT_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN
+REGIS;
+END.
+? .ЗTPT *)
+(*=L1*) PROGRAM ZATRTE (*ЗT:PEГИC.TEM (YCEЧEHHAЯ)*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:PUT
+!INCLU:GET
+!INCLU:ДA
+!INCLU:MOЖHO
+!INCLU:YCTMOД
+!INCLU:ЧИCДAT
+!INCLU:ЧИCMEC
+!INCLU:ЧИCKBA
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WREAL
+!INCLU:WДAT
+!INCLU:WMEC
+!INCLU:WKBA
+!INCLU:WCTP
+!INCLU:RSEP
+!INCLU:RINT
+!INCLU:RCTP
+!INCLU:ECTЬ
+!INCLU:ПШИK
+!INCLU:MENU
+
+
+
+? .RШ *)
+(*БЛOK PEГИCTPAЦИИ KAPT*)
+PROCEDURE REGIS;
+!INCLU:LIST
+
+
+
+? .ПOC *)
+(*ПOCTABИTЬ KAPTY*)
+PROCEDURE ПOCTAB;
+VAR TEKИCП,TEKCOИ:INT;
+BEGIN
+RESETCON;WITH ИCПOЛH DO_(HOMEP:=-1;YPOB:=-1_);
+REPEAT WITH CUL!.CUC! DO SELECT
+BOS!.NAM='THOMK ':_(TEMA.HOMEP:=Ц!;
+  &&HAЙTИ ПO-KЛЮ B SY-TEM&&;IF ПYCTO THEN_(&&ПOCTAB TEMA&&_)_);
+BOS!.NAM='TЭTAП ':_(ЭTAП.HOMEP:=Ц!;
+  &&HAЙTИ ПO-KЛЮ B TE-ЭTA&&;IF ПYCTO THEN_(&&ПOCTAB ЭTAП&&_)_);
+BOS!.NAM='TИCП  ':_(WITH ИCПOЛH DO_(HOMEP:=HOMEP+1;TEKИCП:=HOMEP_);
+  &&HAЙTИ ПO-KЛЮ B TE-ИCП&&;IF ПYCTO THEN_(
+    &&HAЙTИ ПO-KЛЮ A! B SY-OTД;ПOCTAB ИCПOЛH&&_)_);
+BOS!.NAM='TCOИ  ':_(WITH ИCПOЛH DO_(HOMEP:=HOMEP+1;TEKCOИ:=HOMEP_);
+  ЦEЛ.ЗH:=TEKИCП;
+  &&HAЙTИ ПO-KЛЮ B TE-ИCП&&;IF ПYCTO THEN_(
+    &&HAЙTИ ПO-KЛЮ A! B SY-OTД;ПOCTAB ИCПOЛH;BKЛЮЧИ B ИC-ИCП&&_)_);
+BOS!.NAM='TПOД  ':_(WITH ИCПOЛH DO HOMEP:=HOMEP+1;
+  ЦEЛ.ЗH:=TEKCOИ;
+  &&HAЙTИ ПO-KЛЮ B TE-ИCП&&;IF ПYCTO THEN_(
+    &&HAЙTИ ПO-KЛЮ A! B SY-OTД;ПOCTAB ИCПOЛH;BKЛЮЧИ B ИC-ИCП&&_)_)_);
+UNTIL NEXTCON;
+YCTMOД;
+WRITE(OUT,'KAPTA ЗAPEГИCTPИPOBAHA');PUTT;
+END;
+
+
+
+? .GT *)
+(*ПPOCMOTP ДEPEBA ПOДЧИHEHHOCTИ ИCПOЛHИTEЛEЙ*)
+PROCEDURE GTREE(YPOB:INT);
+VAR TEKЗAП:ZZBDKEY;C:!CONTENT;
+BEGIN
+CASE YPOB OF
+1:FINDPAR('TИCП  ');
+2:FINDPAR('TCOИ  ');
+3:FINDPAR('TПOД  ')_);
+NEWCONT(C);
+&&HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ OTДEЛ.HAЗB HA C!.A!;
+HAЙTИ ПEPBYЮ B ИC-ИCП&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ БД-KЛЮ ИCПOЛH HA TEKЗAП&&;GTREE(YPOB+1);
+  &&ЗAMEHИ БД-KЛЮ ИCПOЛH HA TEKЗAП;HAЙTИ CЛEДYЮ B ИC-ИCП&&_);
+END;
+
+
+
+? .BЗЯ *)
+(*BЗЯTЬ KAPTY*)
+PROCEDURE BЗЯTЬ;
+VAR C:!CONTENT;
+BEGIN
+RESETCON;
+(S)REPEAT WITH CUL!.CUC! DO SELECT
+BOS!.NAM='THOMK ':EXIT S_);
+UNTIL NEXTCON;
+(**)
+&&HAЙTИ ПEPBYЮ B TE-ИCП&&;IF MOЖHO THEN GTREE(1);
+(**)
+&&HAЙTИ ПEPBYЮ B TE-ЭTA&&
+WHILE MOЖHO DO_(
+  FINDPAR('TЭTAП ');NEWCONT(C);
+  &&BЗЯTЬ ЭTAП.HOMEP HA C!.Ц!;HAЙTИ CЛEДYЮ&&_);
+END;
+
+
+
+? .HAЙ *)
+(*HAЙTИ KAPTY*)
+PROCEDURE HAЙTИ;
+BEGIN
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+READCON(NEXT);IF HAЧ THEN EXIT;
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='THOMK ':_(&&HAЙTИ ПO-KЛЮ Ц! B SY-TEM&&
+  IF MOЖHO THEN EXIT ELSE_(
+    WRITE(OUT,'HET TAKOЙ TEMЫ');PUTT;NEXT:=FALSE_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+END;
+
+
+
+? .HOB *)
+(*BBOД HOBOЙ KAPTЫ*)
+PROCEDURE HOB;
+BEGIN
+RESETPAR;CLEANCON;
+REPEAT
+NEXT:=TRUE;
+WITH CUL!.CUP! DO REPEAT
+READCON(NEXT);IF HAЧ THEN EXIT;
+NEXT:=TRUE;
+WITH CUL!.CUC! DO SELECT
+NAM='THOMK ':_(
+  &&HAЙTИ ПO-KЛЮ Ц! B SY-TEM&&;
+  IF NOT ПYCTO THEN_(
+    WRITE(OUT,'YЖE ECTЬ ЭTA TEMA');
+    PUTT;NEXT:=FALSE_)_);
+(NAM='TИCП  ')OR(NAM='TCOИ  ')OR(NAM='TПOД  '):_(
+  &&HAЙTИ ПO-KЛЮ A! B SY-OTД&&;
+  IF ПYCTO THEN_(
+    WRITE(OUT,'HET TAKOГO OTДEЛA');
+    PUTT;NEXT:=FALSE_)_)_);
+UNTIL NEXT;UNTIL NEXTPAR;
+(**)
+IF CONFIRM THEN ПOCTAB;
+END;
+
+
+
+? .ЭTA *)
+(*BBOД HOBЫX ЭTAПOB*)
+PROCEDURE ЭTA;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;WRITELIST;
+REPEAT
+NEXT:=TRUE;
+READCON(NEXT);IF HAЧ THEN EXIT;
+UNTIL NEXTPAR;
+(**)
+IF CONFIRM THEN ПOCTAB;
+END;
+
+
+
+? .ПPO *)
+(*ПPOCMOTP KAPTЫ*)
+PROCEDURE ПPO;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;WRITELIST;
+END;
+
+
+
+? .ИCK *)
+(*ИCKЛЮЧEHИE KAPTЫ*)
+PROCEDURE ИCK;
+PROCEDURE YHAP(H:INT);EXTERNAL;
+BEGIN
+HAЙTИ;IF HAЧ THEN EXIT;BЗЯTЬ;
+&&HAЙTИ ПEPBYЮ B TE-ЭTA&&
+WHILE MOЖHO DO_(
+  &&HAЙTИ ПEPBYЮ B ЭT-ЗAT&&
+  IF NOT ПYCTO THEN_(WRITE(OUT,
+    'CHAЧAЛA HAДO ИCKЛЮЧИTЬ BCE ЗATPATЫ ПO TEME');PUTT;EXIT_);
+  &&HAЙTИ CЛEДYЮ B TE-ЭTA&&_);
+IF NOT CONFIRM THEN EXIT;
+&&HAЙTИ ПEPBYЮ B TE-ИCП&&
+WHILE MOЖHO DO_(&&ИCKЛЮЧ B ИC-ИCП;HAЙTИ CЛEДYЮ B TE-ИCП&&_);
+YHAP(&&HAБ TE-ЭTA&&);YHAP(&&HAБ TE-ИCП&&);&&YБPATЬ TEMA&&
+YCTMOД;ECTЬ;
+END;
+
+
+
+? .R *)
+BEGIN
+FIL:=NIL;LOADLIST('CП-TEM');FINDLIST('CП-TEM');
+WRITE(OUT,'      ...BЫ B БЛOKE PEГИCTPAЦИИ TEM...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
+          'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',
+          'ЭTA - ДOБABЛEHИE B TEMY HOBЫX ЭTAПOB/',
+          'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
+MENU;
+SELECT
+  'ЭTA'=ДИP:ЭTA;
+  'ПPO'=ДИP:ПPO;
+  'HOB'=ДИP:HOB;
+  'ИCK'=ДИP:ИCK;
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';CLEANALL;EXIT_);
+  'BЫX'=ДИP:_(CLEANALL;EXIT_)_);
+_);
+END;
+
+
+
+? .B *)
+BEGIN
+REGIS;
+END.
+? .ЗTTЗ *)
+(*=L1*) PROGRAM ZATTAB (*ЗT:TAБЛ.ЗATPAT ЗA ПOCЛ.MECЯЦ*)
+(*=L0 &&ПOДCXE CX-ЗT0&&*)
+!INCLU:HEADING
+
+? .EX *)
+!INCLU:FCOPY
+!INCLU:FWRITE
+!INCLU:PUT
+!INCLU:MOЖHO
+!INCLU:ЧИCДAT
+!INCLU:ЧИCMEC
+!INCLU:ЧИCKBA
+!INCLU:ДATЧИC
+!INCLU:CUTCTP
+!INCLU:APИФM
+!INCLU:WINT
+!INCLU:WREAL
+!INCLU:WДAT
+!INCLU:WMEC
+!INCLU:WKBA
+!INCLU:WCTP
+!INCLU:ПШИK
+!INCLU:FПAP
+!INCLU:TPUT
+!INCLU:MINUSES
+!INCLU:WLF
+
+
+
+? .TЗ *)
+PROCEDURE TAБЛЗAT;
+(*=Y+*)
+TYPE
+COLUMN=(
+        ZTEMA   ,
+        ZMEC    ,
+        ZOTД    ,
+        ZNOTД   ,
+        ZЭTAП   ,
+        ZBЫП    ,
+        ZOЗAPП  ,
+        ZДЗAPП  ,
+        VЗAPП   ,
+        VCTPAX  ,
+        ZMATEP  ,
+        ZKOMAH  ,
+        ZCПEЦ   ,
+        ZAMOP   ,
+        ZCTOP   ,
+        VПPOЧ   ,
+        VHAKЛ   ,
+        VЗAPH   ,
+        VCБC    ,
+        VЭФЗ    ,
+        ZПOCH   ,
+        ZПTPEC  ,
+        ZПPБK   ,
+        VPACЧ   ,
+        ZOBЫШ   ,
+        ZOГOC   ,
+        ZHEПЛ   ,
+        VOCT    ,
+        VФPEЗ   ,
+        VФMП    ,
+        VФHTCP  );
+TYPPAR=(CEL,DEY,ALF,STR,LOG,DAT,MES,KVA);
+CELL=PACKED RECORD FRM:CHAR;CON:!CONTENT_);
+CONTENT=RECORD CASE TYP:TYPPAR OF
+                   CEL,DAT,MES,KVA:(Ц:!ATCЦEЛ);
+                   DEY:(Д:!ATCДEЙ);
+                   ALF:(A:!ATCAЛФ);
+                   STR:(C:!ATCCTP);
+                   LOG:(Л:!ATCЛOГ)_);
+ATCЦEЛ=RECORD ЗH:INT_);
+ATCДEЙ=RECORD ЗH:REAL_);
+ATCAЛФ=RECORD ЗH:ALFA_);
+ATCCTP=RECORD ЗH:CTPOKA_);
+ATCЛOГ=RECORD ЗH:BOOL_);
+
+
+
+CONST FIRCOL=ZTEMA;LASCOL=VФHTCP;
+      FIRLIN=1;LASLIN=48;
+
+TYPE LINE=FIRLIN..LASLIN;
+
+
+
+VAR
+SCREEN:INT;EXPORT:TABLEREG;PRINTCALC:BOOL;
+T:ARRAY FIRCOL..LASCOL,FIRLIN..LASLIN OF CELL;
+TOTAL:ARRAY FIRLIN..LASLIN OF LINE;
+MINLIN,MAXLIN,CURLIN:LINE;
+SETCOL:RECORD ИCXДEЙ,BЫЧДEЙ,CYMДEЙ,CLEAN:SET OF COLUMN_);
+FORCOL:ARRAY FIRCOL..LASCOL OF RECORD S:INT;F:CHAR END;
+FORLIN:ARRAY FIRLIN..LASLIN OF SET OF TABLEREG;
+(*=Y-*)
+
+
+
+
+
+
+? .WSET *)
+(*PACПEЧATKA HAБOPA
+PROCEDURE WSET(S:SET OF TABLEREG);
+CONST F=PAЗ;L=БEЗ;
+VAR I:TABLEREG;
+BEGIN
+WRITE(OUT,'HAБOP:[');
+FOR I:=F TO L DO IF I IN S THEN WRITE(OUT,I);
+WRITE(OUT,' ]');PUTT;
+END;*)
+
+
+
+? .ИMЯ *)
+(*TИПЫ: ПEPEЧИCЛИMЫЙ --> ALFA*)
+FUNCTION ИMЯ(И:COLUMN):ALFA;VAR F:TEXT;A:ALFA;
+BEGIN REWRITE(F);WRITE(F,И,'      ');RESET(F);
+WHILE F!=' ' DO GET(F);READ(F,A);ИMЯ:=A END;
+
+
+? .IT *)
+(*ИHИЦИAЛИЗAЦИЯ TAБЛИЦЫ*)
+PROCEDURE INITTAB;
+VAR C:COLUMN;L:LINE;
+BEGIN
+PRINTCALC:=TRUE;
+WITH SETCOL DO_(
+  ИCXДEЙ:=[ZBЫП,ZOЗAPП,ZДЗAPП,ZMATEP,
+           ZKOMAH,ZCПEЦ,ZAMOP,ZCTOP,
+           ZПOCH,ZПTPEC,ZПPБK,ZOBЫШ,ZOГOC,ZHEПЛ];
+  BЫЧДEЙ:=[VПPOЧ,VHAKЛ,VЗAPH ,
+           VЗAPП,VCTPAX,VCБC,VPACЧ,VЭФЗ,VOCT,VФPEЗ,VФMП,VФHTCP];
+  CYMДEЙ:=ИCXДEЙ+BЫЧДEЙ;
+  CLEAN:=[FIRCOL..LASCOL];
+_);
+END;
+
+
+
+? .WCOL *)
+(*BЫBOД CTOЛБЦA*)
+PROCEDURE WCOL(C:COLUMN);
+BEGIN WRITE(OUT,C,'[',ORD(C)+1:0,']') END;
+
+
+
+? .BK *)
+(*BЫЧИCЛEHИE BЫЧИCЛЯEMЫX KOЭФФИЦИEHTOB*)
+PROCEDURE BЫЧKOЭФ;
+VAR OБЩЗAPП:REAL;
+PROCEDURE PДEЙ(A:ALFA;I:REAL);
+BEGIN;&&HAЙTИ ПO-KЛЮ A B SY-ПAP;HAЙTИ ПEPBYЮ B ПA-ДEЙ;ЗAMEHИ&&
+END;
+BEGIN
+WITH HAKЛ DO_(OБЩЗAPП:=ЗAPП;
+PДEЙ('ZKПPOЧ',ПPOЧ/OБЩЗAPП);
+PДEЙ('ZKHAKЛ',HAKЛ/OБЩЗAPП);
+PДEЙ('ZKЗAPH',ЗAHAK/OБЩЗAPП)_);
+END;
+
+
+
+? .MUL *)
+(*YMHOЖИTЬ CTOЛБEЦ HA KOЭФФИЦИEHT*)
+PROCEDURE MUL(CR:COLUMN;A:ALFA);
+VAR L:LINE;R:REAL;
+BEGIN
+FПAP(A);&&HAЙTИ ПEPBYЮ B ПA-ДEЙ;BЗЯTЬ ДEЙ.ЗH HA R&&
+FOR L:=MINLIN TO MAXLIN DO
+  T[CR,L].CON!.Д!.ЗH:=T[CR,L].CON!.Д!.ЗH * R;
+IF PRINTCALC THEN_(
+  WCOL(CR);WRITE(OUT,' * ',A,'(',R:0:23,') --> ');WCOL(CR);PUTP_);
+END;
+
+
+
+? .MOV *)
+(*ДEЙCTBИE HAД CTOЛБЦAMИ*)
+PROCEDURE MOV(CR:COLUMN;ZNAK:CHAR;SC:SET OF COLUMN);
+VAR C:COLUMN;L:LINE;ПEPBЫЙ:BOOL;
+BEGIN
+IF PRINTCALC THEN_(ПEPBЫЙ:=TRUE;WCOL(CR);WRITE(OUT,' ',ZNAK)_);
+FOR L:=MINLIN TO MAXLIN DO WITH T[CR,L].CON!.Д! DO_(
+  FOR C:=FIRCOL TO LASCOL DO IF C IN SC THEN_(
+    IF PRINTCALC AND (L=MINLIN) THEN_(
+      IF ПEPBЫЙ THEN ПEPBЫЙ:=FALSE ELSE WRITE(OUT,' ',ZNAK);
+      WCOL(C);WRITE(OUT,CLF)_);
+    SELECT
+      ZNAK='+':ЗH:=ЗH+T[C,L].CON!.Д!.ЗH;
+      ZNAK='-':ЗH:=ЗH-T[C,L].CON!.Д!.ЗH_)_)_);
+IF PRINTCALC THEN_(WRITE(OUT,' --> ');WCOL(CR);PUTP_);
+END;
+
+
+
+? .FILL *)
+(*ЗAПOЛHEHИE ЯЧEЙKИ*)
+PROCEDURE FILL(TT:TYPPAR;CC:COLUMN;LL:LINE;FF:CHAR);
+VAR I:INT;
+BEGIN
+WITH T[CC,LL] DO_(
+  NEW(CON);FRM:=FF;
+  WITH CON! DO_(
+    TYP:=TT;
+    CASE TYP OF
+      CEL,DAT,MES,KVA:_(NEW(Ц);Ц!.ЗH:=ЦEЛ.ЗH_);
+      DEY:_(NEW(Д);Д!.ЗH:=ДEЙ.ЗH_);
+      ALF:_(NEW(A);A!.ЗH:=AЛФ.ЗH_);
+      STR:_(NEW(C);C!.ЗH:=CTP.ЗH_);
+      LOG:_(NEW(Л);Л!.ЗH:=ЛOГ.ЗH_)_)_)_);
+END;
+
+
+
+? .SUM *)
+(*CYMMИPOBAHИE CTOЛБЦOB*)
+PROCEDURE SUM(LR,LASTOT:LINE;NNEEWW:BOOL);
+VAR C:COLUMN;L,NT:LINE;
+BEGIN
+FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.CYMДEЙ THEN_(
+  IF NNEEWW THEN_(ДEЙ.ЗH:=0.0;FILL(DEY,C,LR,'Ц')_);
+  WITH T[C,LR].CON!.Д! DO_(
+    FOR NT TO LASTOT DO
+      ЗH:=ЗH+T[C,TOTAL[NT]].CON!.Д!.ЗH_)_);
+(**)
+IF NNEEWW THEN_(
+FORLIN[LR]:=[PAЗ,HAД,ПOД];
+AЛФ.ЗH:='ИTOГO ';FILL(ALF,ZTEMA,LR,'П');
+AЛФ.ЗH:='      ';FILL(ALF,ZMEC,LR,'Ц');
+AЛФ.ЗH:='      ';FILL(ALF,ZNOTД,LR,'Ц');
+AЛФ.ЗH:='      ';FILL(ALF,ZOTД,LR,'Ц');
+AЛФ.ЗH:='      ';FILL(ALF,ZЭTAП,LR,'Ц')_);
+END;
+
+
+
+? .CA *)
+(*DISPOSE BCEЙ TAБЛИЦЫ*)
+PROCEDURE CLEAN(FIRLIN,MAXLIN:LINE);
+VAR C:COLUMN;L:LINE;CONT:!CONTENT;
+BEGIN
+FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.CLEAN THEN
+  FOR L:=FIRLIN TO MAXLIN DO_(
+    WITH T[C,L].CON! DO CASE TYP OF
+      CEL,DAT,MES,KVA:DISPOSE(Ц);
+      DEY:DISPOSE(Д);
+      ALF:DISPOSE(A);
+      STR:DISPOSE(C);
+      LOG:DISPOSE(Л)_);
+    CONT:=T[C,L].CON;DISPOSE(CONT)_);
+END;
+
+
+
+? .ЗШШ *)
+(*ЗAПOЛHEHИE ШAПKИ TAБЛИЦЫ*)
+PROCEDURE ЗAПШAП;
+CONST SIZE=39;
+VAR C:COLUMN;L:LINE;
+
+(*FILL ШAПKИ*)
+PROCEDURE Z(JUNC:INT;C:COLUMN;N:PACKED ARRAY 1..SIZE OF CHAR;S:INT);
+VAR I:INT;
+BEGIN
+FOR I TO SIZE DO CTP.ЗH[I]:=N[I];
+FOR I:=SIZE+1 TO SCTPOKA DO CTP.ЗH[I]:=' ';
+FORCOL[C].S:=S;
+FILL(STR,C,L,'Ц');
+END;
+
+? .ЗШ *)
+BEGIN
+L:=FIRLIN;FORLIN[L]:=[PAЗ,HAД,ПOД];
+? .Z *)
+?P
+Z( 0,ZTEMA   ,'HOMEP^KAЛЬK^TEMЫ                       ', 7);
+             (*                       XXXXXXX             *)
+Z( 1,ZMEC    ,'MECЯЦ^ГOД                              ', 5);
+             (*             XX.XX                         *)
+Z(99,ZOTД    ,'OTДEЛ                                  ', 6);
+             (*             XXXXXX                        *)
+Z(99,ZNOTД   ,'N                                      ', 1);
+             (*             X                             *)
+Z(99,ZЭTAП   ,'ЭTAП                                   ', 4);
+             (*             XXXXXX                        *)
+Z( 2,ZBЫП    ,'BЫПOЛH^ПO^TEME                         ', 6);
+             (*                       XXXXXX              *)
+Z( 3,ZOЗAPП  ,'ЗAPПЛ^OCH^ИCП                          ', 6);
+             (*                 XXXXX.XX                  *)
+Z( 4,ZДЗAPП  ,'ДOПOЛH^ЗAPПЛ^OCH^ИCП                   ', 6);
+             (*                     XXXX.XX               *)
+Z(99,VЗAPП   ,'CYMMAP^ЗAPПЛ^OCH^ИCП                   ', 6);
+             (*                    XXXXX.XX               *)
+Z( 5,VCTPAX  ,'OTЧ HA^COЦ^CTPAX                       ', 6);
+             (*   0.14*(П3+П4)      XXXX.XX               *)
+Z( 6,ZMATEP  ,'MATEP                                  ', 6);
+             (*             XXXXX.XX                      *)
+Z( 7,ZKOMAH  ,'KOMAHД                                 ', 6);
+             (*                 XXX.XX                    *)
+Z( 8,ZCПEЦ   ,'CПEЦ^OБOP                              ', 5);
+             (*                    XXXXX                  *)
+Z( 9,ZAMOP   ,'AMOPT^HA^BOCCT                         ', 5);
+             (*                  XXXXX                    *)
+Z(10,ZCTOP   ,'OПЛ^PAБOT^CTOP^OPГ                     ', 5);
+             (*                         XXXXX             *)
+Z(11,VПPOЧ   ,'ПPOЧИE^ПPЯMЫE^ЗATP                     ', 6);
+             (* (П3+П4)*ZKПPOЧ         XXX.XX             *)
+Z(12,VHAKЛ   ,'HAKЛ^PACX                              ', 6);
+             (* (П3+П4)*ZKHAKЛ      XXXXX.XX              *)
+Z(13,VЗAPH   ,'ЗAPПЛ^HAKЛ                             ', 6);
+             (* (П3+П4)*ZKЗAPH       XXXX.XX              *)
+Z(14,VCБC    ,'ИTOГO^C/CTOИM                          ', 6);
+             (*   CYMMA(П3..П12)   XXXXX.XX               *)
+Z(15,VЭФЗ    ,'ЭKOHOMИЯ^ФOHДA^ЗAPПЛ                   ', 7);
+             (*   0.3747(П2-П10)-П3-П4-П13  XXXXX.XX      *)
+Z(16,ZПOCH   ,'ПЛAT^ЗA^OCH^ФOHД                       ', 4);
+             (*                            XXXX           *)
+Z(17,ZПTPEC  ,'ПЛA^ЗA^TPY^PEC                         ', 3);
+             (*                             XXX           *)
+Z(18,ZПPБK   ,'ПP^ЗA^БAH^KP                           ', 3);
+             (*                              XXX          *)
+Z(19,VPACЧ   ,'PACЧETH^ПPИБЫЛЬ                        ', 7);
+             (*   П2-CYMMA(П14..П18)         XXXXX.XX     *)
+Z(20,ZOBЫШ   ,'OTЧ^B^BЫШ^OPГ                          ', 4);
+             (*                            XXXX           *)
+Z(21,ZOГOC   ,'OTЧ^B^ГOC^BTЧ^MEC                      ', 3);
+             (*                                XXX        *)
+Z(22,ZHEПЛ   ,'CAЛЬДO^HEПЛ^ДOX И^PACX                 ', 6);
+             (*                              XXX.XX       *)
+Z(23,VOCT    ,'OCTATOЧH^ПPИБЫЛЬ                       ', 7);
+             (*   П19-П20-П21-П22        XXXXX.XX         *)
+Z(24,VФPEЗ   ,'ФИHAHC^PEЗEPB                          ', 7);
+             (*   0.1*П23                XXXXX.XX         *)
+Z(25,VФMП    ,'ФMП                                    ', 7);
+             (*   0.6584*П23             XXXXX.XX         *)
+Z(26,VФHTCP  ,'ФHTCP                                  ', 7);
+             (*   0.2416*П23             XXXXX.XX         *)
+?P
+? .ENDZ *)
+(**)
+L:=L+1;FORLIN[L]:=[PAЗ,ПOД];
+FOR C:=FIRCOL TO LASCOL DO_(
+  ЦEЛ.ЗH:=ORD(C)+1;FILL(CEL,C,L,'Ц')_);
+CURLIN:=L;MINLIN:=L+1;MAXLIN:=CURLIN;
+END;
+
+
+
+? .ЗT *)
+(*ЗAПOЛHEHИE TAБЛИЦЫ TEMOЙ ЗA MECЯЦ*)
+PROCEDURE ЗAПTEM;
+VAR C:COLUMN;L,NT:LINE;
+BEGIN
+&&BЗЯTЬ TEMA&&
+L:=CURLIN+1;NT:=1;
+&&HAЙTИ ПEPBYЮ B TE-ИCП&&
+WHILE MOЖHO DO_(
+  &&BЗЯTЬ;HAЙTИ ПO-KЛЮ HAKЛ.MEC B ИC-ЗAT&&
+  (W)WHILE MOЖHO DO_(
+    &&BЗЯTЬ&&;IF ЗAT.MEC!HAKЛ.MEC THEN EXIT W;
+    &&HAЙTИ BЛAДEЛ B ЭT-ЗAT;BЗЯTЬ&&
+    FORLIN[L]:=[PAЗ];TOTAL[NT]:=L;
+    &&HAЙTИ BЛAДEЛ B OT-ИCП;BЗЯTЬ&&
+    ЦEЛ.ЗH:=TEMA.HOMEP;FILL(CEL,ZTEMA,L,'Ц');
+    ЦEЛ.ЗH:=HAKЛ.MEC;FILL(MES,ZMEC,L,'Ц');
+    AЛФ.ЗH:=OTДEЛ.HAЗB;FILL(ALF,ZOTД,L,'Ц');
+    ЦEЛ.ЗH:=ИCПOЛH.HOMEP;FILL(CEL,ZNOTД,L,'Ц');
+    ЦEЛ.ЗH:=ЭTAП.HOMEP;FILL(CEL,ZЭTAП,L,'Ц');
+    (**)
+    WITH ДEЙ DO WITH ЗAT DO_(
+      ЗH:=BЫП    ;FILL(DEY, ZBЫП    ,L,'Ц');
+      ЗH:=OЗAPП  ;FILL(DEY, ZOЗAPП  ,L,'Ц');
+      ЗH:=ДЗAPП  ;FILL(DEY, ZДЗAPП  ,L,'Ц');
+      ЗH:=MATEP  ;FILL(DEY, ZMATEP  ,L,'Ц');
+      ЗH:=KOMAH  ;FILL(DEY, ZKOMAH  ,L,'Ц');
+      ЗH:=CПEЦ   ;FILL(DEY, ZCПEЦ   ,L,'Ц');
+      ЗH:=AMOP   ;FILL(DEY, ZAMOP   ,L,'Ц');
+      ЗH:=CTOP   ;FILL(DEY, ZCTOP   ,L,'Ц');
+      ЗH:=ПOCH   ;FILL(DEY, ZПOCH   ,L,'Ц');
+      ЗH:=ПTPEC  ;FILL(DEY, ZПTPEC  ,L,'Ц');
+      ЗH:=ПPБK   ;FILL(DEY, ZПPБK   ,L,'Ц');
+      ЗH:=OBЫШ   ;FILL(DEY, ZOBЫШ   ,L,'Ц');
+      ЗH:=OГOC   ;FILL(DEY, ZOГOC   ,L,'Ц');
+      ЗH:=HEПЛ   ;FILL(DEY, ZHEПЛ   ,L,'Ц')_);
+    (**)
+    FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.BЫЧДEЙ THEN_(
+      ДEЙ.ЗH:=0.0;FILL(DEY,C,L,'Ц')_);
+    (**)
+    L:=L+1;NT:=NT+1;
+    &&HAЙTИ ПPEДЫД B ИC-ЗAT&&_); (*W*)
+  &&HAЙTИ CЛEДYЮ B TE-ИCП&&_);
+SUM(L,NT-1,TRUE);CURLIN:=L;MAXLIN:=CURLIN;
+END;
+
+
+
+
+
+
+? .BT *)
+(*BЫЧИCЛEHИE TAБЛИЦЫ ПO TEME*)
+PROCEDURE BЫЧTEM;
+
+PROCEDURE MINUS;
+BEGIN IF PRINTCALC THEN MINUSES END;
+
+BEGIN
+IF PRINTCALC THEN WLF(3);
+(*VЗAPП*)
+MINUS;
+MOV(VЗAPП,'+',[ZOЗAPП,ZДЗAPП]);
+(*VCTPAX*)
+MINUS;
+MOV(VCTPAX,'+',[VЗAPП]);
+MUL(VCTPAX,'ZKCC  ');
+(*VПPOЧ*)
+MINUS;
+MOV(VПPOЧ,'+',[VЗAPП]);
+MUL(VПPOЧ,'ZKПPOЧ');
+(*VHAKЛ*)
+MINUS;
+MOV(VHAKЛ,'+',[VЗAPП]);
+MUL(VHAKЛ,'ZKHAKЛ');
+(*VЗAPH *)
+MINUS;
+MOV(VЗAPH ,'+',[VЗAPП]);
+MUL(VЗAPH ,'ZKЗAPH');
+(*VCБC*)
+MINUS;
+MOV(VCБC,'+',[VЗAPП..VHAKЛ]);
+(*VЭФЗ*)
+MINUS;
+MOV(VЭФЗ,'+',[ZBЫП]);
+MOV(VЭФЗ,'-',[ZCTOP]);
+MUL(VЭФЗ,'ZKЭФЗ ');
+MOV(VЭФЗ,'-',[VЗAPП,VЗAPH ]);
+(*VPACЧ*)
+MINUS;
+MOV(VPACЧ,'+',[ZBЫП]);
+MOV(VPACЧ,'-',[VCБC..ZПPБK]);
+(*VOCT*)
+MINUS;
+MOV(VOCT,'+',[VPACЧ]);
+MOV(VOCT,'-',[ZOBЫШ..ZHEПЛ]);
+(*VФPEЗ*)
+MINUS;
+MOV(VФPEЗ,'+',[VOCT]);
+MUL(VФPEЗ,'ZKФPEЗ');
+(*VФMП*)
+MINUS;
+MOV(VФMП,'+',[VOCT]);
+MUL(VФMП,'ZKФMП ');
+(*VФHTCP*)
+MINUS;
+MOV(VФHTCP,'+',[VOCT]);
+MUL(VФHTCP,'ZKФHT ');
+MINUS;
+IF PRINTCALC THEN WLF(3);
+END;
+
+
+
+? .ПTШ *)
+(*ПEЧATЬ TAБЛИЦЫ ПO TEME*)
+PROCEDURE ПEЧTAБ(FIRLIN,MAXLIN:LINE);
+VAR INTERVAL:ARRAY 1..10 OF RECORD UP,LOW:COLUMN;SIZ:INT_);
+    LASTINT:INT;C:COLUMN;L:LINE;I,J:INTEGER;
+
+
+
+? .DIV *)
+(*PAЗБИEHИE TAБЛИЦЫ*)
+PROCEDURE DIVIDE(FIRCOL,LASCOL:COLUMN);
+VAR N:INT;C:COLUMN;
+BEGIN
+N:=1;C:=FIRCOL;
+(W) WHILE C<LASCOL DO_(
+  WITH INTERVAL[N] DO_(
+    UP:=C;SIZ:=1;
+    FOR C:=C TO LASCOL DO SIZ:=SIZ+FORCOL[C].S+1;
+    C:=LASCOL;
+    WHILE SIZ>SCREEN DO_(
+      SIZ:=SIZ-FORCOL[C].S-1;C:=PRED(C)_);
+    LOW:=C;
+    IF C=LASCOL THEN EXIT W_);
+  N:=N+1;C:=SUCC(C)_);
+LASTINT:=N;
+END;
+
+
+
+? .WCELL *)
+(*ПEЧATЬ ЯЧEЙKИ TAБЛИЦЫ*)
+PROCEDURE WRITECELL(C:CELL);
+BEGIN
+(*WRITE(OUT,C.FRM,' ',C.CON!.TYP,'=');*)
+WITH C.CON! DO CASE TYP OF
+  CEL:WRITE(OUT,Ц!.ЗH:0);
+  DAT:WДAT(OUT,Ц!.ЗH);
+  MES:WMEC(OUT,Ц!.ЗH);
+  KVA:WKBA(OUT,Ц!.ЗH);
+  DEY:WREAL(Д!.ЗH,2);
+  ALF:WRITE(OUT,A!.ЗH);
+  STR:WCTP(OUT,C!.ЗH,0);
+  LOG:IF Л!.ЗH THEN WRITE(OUT,'ДA') ELSE WRITE(OUT,'HET')_);
+END;
+
+
+
+? .ПT *)
+BEGIN
+DIVIDE(FIRCOL,VCБC);
+FOR I TO LASTINT DO WITH INTERVAL[I] DO_(
+  FOR L:=FIRLIN TO MAXLIN DO_(
+    J:=1;
+    FOR C:=UP TO LOW DO_(
+      TABLE[J].S:=FORCOL[C].S;
+      TABLE[J].F:=T[C,L].FRM;
+      WRITECELL(T[C,L]);WRITE(OUT,'!');
+      J:=J+1_);
+    TABLE[J].S:=BCE;
+    TPUT(FORLIN[L]+[EXPORT])_);
+  IF EXPORT=ЭKP THEN PUTT_);
+END;
+
+
+
+? .П *)
+(*OTЧET ПO ПOCЛEДHEMY MECЯЦY*)
+PROCEDURE ПOCЛEД;
+VAR L,NT:LINE;
+BEGIN
+&&HAЙTИ ПOCЛEД B SY-HAK&&;IF ПYCTO THEN EXIT;&&BЗЯTЬ&&;BЫЧKOЭФ;
+ЗAПШAП;
+SUM(LASLIN,0,TRUE);
+(**)
+&&HAЙTИ ПEPBYЮ B SY-TEM&&
+(R)REPEAT
+  (W)WHILE TRUE DO_(
+    IF ПYCTO THEN EXIT R;&&HAЙTИ ПEPBYЮ B TE-ИCП&&;
+    WHILE MOЖHO DO_(
+      &&HAЙTИ ПO-KЛЮ HAKЛ.MEC B ИC-ЗAT&&;IF NOT ПYCTO THEN EXIT W;
+      &&HAЙTИ CЛEДYЮ B TE-ИCП&&_);
+    &&HAЙTИ CЛEДYЮ B SY-TEM&&_);(*W*)
+  (**)
+  ЗAПTEM;BЫЧTEM;
+  IF PRINTCALC THEN ПEЧTAБ(FIRLIN,MAXLIN)
+               ELSE ПEЧTAБ(MINLIN,MAXLIN);
+  PRINTCALC:=FALSE;
+  TOTAL[1]:=MAXLIN;SUM(LASLIN,1,FALSE);
+  CLEAN(MINLIN,MAXLIN);
+  CURLIN:=MINLIN-1;
+  &&HAЙTИ CЛEДYЮ B SY-TEM&&
+UNTIL FALSE;
+(**)
+ПEЧTAБ(LASLIN,LASLIN);WLF(3);
+CLEAN(FIRLIN,MINLIN-1);CLEAN(LASLIN,LASLIN);
+END;
+
+
+
+? .TЗB *)
+BEGIN
+INITTAB;SCREEN:=126;EXPORT:=ПEЧ;ПOCЛEД;ДИP:='BЫX';
+(*INITTAB;
+WRITE(OUT,'      ...BЫ B БЛOKE OTЧETA ПO ЗATPATAM...');PUTT;
+WHILE TRUE DO_(
+WRITE(OUT,'ПEЧ - BЫДAЧA OTЧETA HA ПEЧATЬ/',
+          'ЭKP - BЫДAЧA OTЧETA HA ЭKPAH/');
+MENU;
+SELECT
+  'ПEЧ'=ДИP:_(SCREEN:=124;EXPORT:=ПEЧ;ПOCЛEД_);
+  'ЭKP'=ДИP:_(SCREEN:=77;EXPORT:=ЭKP;ПOCЛEД_);
+  'KOH'=ДИP:_(KYДA:='HAPYЖY';EXIT_);
+  'BЫX'=ДИP:EXIT_);
+_);*)
+END;
+
+
+
+? .B *)
+BEGIN
+TAБЛЗAT;
+END.
+? .E *)
+.
+*EE
+*AREA:36
+*INCLUD:1,2
+*ROLL:2
+*REL:03
+*REL:05
+*PASEDIT:31,41
+*PASCAL
+*READ:41
+*INSALL
+DRUM
+*WHAT:66-S
+*END F
+
+

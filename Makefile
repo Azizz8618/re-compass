@@ -2,10 +2,10 @@ ARCHIVE ?= $(HOME)/Рабочий стол/БЭСМ-6/Ильин_дискеты_
 SCRATCH ?= /tmp/re-compass-ilyin
 IMAGES ?= /usr/local/share/besm6/2048 /usr/local/share/besm6/2053 /usr/local/share/besm6/2113 /usr/local/share/besm6/2248 /usr/local/share/besm6/2348
 
-.PHONY: help extract scan check
+.PHONY: help extract scan check mars-check
 
 help:
-	@printf 'цели: extract, scan, check\n'
+	@printf 'цели: extract, scan, check, mars-check\n'
 	@printf 'переменные: ARCHIVE, SCRATCH, IMAGES\n'
 
 extract:
@@ -17,4 +17,8 @@ scan:
 check:
 	bash -n tools/extract_ilyin.sh
 	bash -n tools/find_besm_artifacts.sh
+	bash -n tools/mars_check.sh
 	@printf 'синтаксис скриптов: OK\n'
+
+mars-check:
+	bash tools/mars_check.sh

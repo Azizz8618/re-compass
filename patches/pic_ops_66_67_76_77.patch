@@ -1,0 +1,48 @@
+--- a/src/comtup.pas
++++ b/src/comtup.pas
+@@ -24,6 +24,13 @@
+   sBdKeyRes = 24;       (* slot with address of CGetBdKey result R *)
+   sBdKeyTmp = 20;       (* scratch slot used by op53 *)
+   sBdKeyAddr = 30;    (* slot: address of current entry key word *)
++  (* PIC words with high byte op66/67/76/77. The value to store is
++     taken from BDVECT[21]; the four state slots are 26,27,28,23. *)
++  sPicVal = 21;
++  sTret = 26;           (* tretia, op66 mgfal *)
++  sNrec = 27;           (* n zapisi, op77 mgth *)
++  sNset = 28;           (* n nabora, op67 mgtrue *)
++  sNel = 23;            (* n elementa, op76 mgel *)
+ type
+   TPath = packed array [1..40] of char;
+   PicT = record
+@@ -87,6 +94,21 @@
+     q := BDVECT[161].pp2
+   _);
+ end;
++(* W(low,high) words emitted by UCOMPAS whose high byte is a PIC state
++   operation: 77 mgth, 66 mgfal, 67 mgtrue, 76 mgel. Low byte 00 is
++   bixod. The state is kept in BDVECT so that a deck can observe it.
++   MARS op53 words that perform the same moves are documented in the
++   report; an extra pasbd here disturbs later MARS microprograms,
++   so the integrated port writes the slots directly. *)
++procedure PicStateCode(j:integer);
++begin
++  _(
++  if j = 19712 then BDVECT[sNrec].i := BDVECT[sPicVal].i;
++  if j = 16896 then BDVECT[sTret].i := BDVECT[sPicVal].i;
++  if j = 17152 then BDVECT[sNset].i := BDVECT[sPicVal].i;
++  if j = 19456 then BDVECT[sNel].i := BDVECT[sPicVal].i
++  _);
++end;
+ (* PIC word W(low,high): low byte is the resident operation. *)
+ (* HYPOTHESIS: mapping of PIC operations to MARS microcode. *)
+ function PicCode(j:integer):integer;
+@@ -184,7 +206,8 @@
+   if q@.nc <= 382 then begin
+     q@.m[q@.nc] := j;
+     q@.nc := q@.nc + 2
+-  end
++  end;
++  PicStateCode(j)
+   _);
+ end;
+ (*=e+*)procedure TPCMPL1(j:integer);

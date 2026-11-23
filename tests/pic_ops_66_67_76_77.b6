@@ -1,0 +1,88 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program kdbtest(output, BDVECT, BDERRN);
+(* PIC ops 66/67/76/77 integration test.
+   T01 init, T03 op77 mgth, T04 op66 mgfal, T05 op67 mgtrue,
+   T06 op76 mgel, T07 find, T08 op90 CGetBdKey,
+   T09 op89 CPutBdKey descriptor. Catalog persistence needs slot 30
+   from a FIND before SSBF5 and is covered by cputbdkey_persist. *)
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+  PicT = record
+    nc, nm, na, smes, ssdmo: integer;
+    m: array [0..383] of integer;
+    l: array [0..383] of integer
+  end;
+var BDVECT: TBDVec; BDERRN:integer;
+    i:integer; m,n:array[1..4] of integer;
+    Number,NewKey,R:integer; p:@PicT;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function APIC:@PicT; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+BEGIN
+ (* area fixture: direct MARS, COMTUP has no NEWD entry *)
+ i := 1270000c; PASACD(i); PASSETAR(270000c);
+ i := 1270001c; newd('bdkey ', i); opend('bdkey ');
+ m[1]:=111111; m[2]:=222222; m[3]:=333333; m[4]:=444444;
+ putd('kbd001', m);
+ m[1]:=11; m[2]:=22; m[3]:=33; m[4]:=44;
+ putd('kbd002', m);
+ m[1]:=555; m[2]:=666; m[3]:=777; m[4]:=888;
+ putd('kbd003', m);
+ SSBF5;
+ writeln('T01 INIT EXN=',EXN);
+  (* op77 mgth: high byte of 19712, n zapisi -> slot 27 *)
+  BDVECT[21].i := 111;
+  TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+  writeln('T03 MGTH NREC=',BDVECT[27].i,' EXN=',EXN);
+  (* op66 mgfal: tretia -> slot 26 *)
+  BDVECT[21].i := 222;
+  TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896);
+  writeln('T04 MGFAL TRET=',BDVECT[26].i,' EXN=',EXN);
+  (* op67 mgtrue: n nabora -> slot 28 *)
+  BDVECT[21].i := 333;
+  TPCMPP1(36); TPCMPP1(0); TPCMPP1(17152);
+  writeln('T05 MGTRUE NSET=',BDVECT[28].i,' EXN=',EXN);
+  (* op76 mgel: n elementa -> slot 23 *)
+  BDVECT[21].i := 444;
+  TPCMPP1(36); TPCMPP1(512); TPCMPP1(19456);
+  writeln('T06 MGEL NEL=',BDVECT[23].i,' EXN=',EXN);
+  writeln('T07 TRET=',BDVECT[26].i,' NREC=',BDVECT[27].i);
+  writeln('T07 NSET=',BDVECT[28].i,' NEL=',BDVECT[23].i);
+  BDVECT[8].a := 'kbd001'; TPCMPIN1(7426);
+  writeln('T07 FIND EXN=',EXN,' S31=',BDVECT[31].a);
+  (* T08 op90: bd-key from FIND to R, after all PIC ops *)
+  Number:=0; R:=-1;
+  TPCMP1I(Number,22);
+  TPCMP1I(R,24);
+  TPCMPIN1(7514);
+  writeln('T08 BDKEY R=',R,' EXN=',EXN);
+  (* T09 op89: new bd-key descriptor *)
+  NewKey:=10000c;
+  TPCMP1I(Number,22);
+  TPCMP1I(NewKey,24);
+  TPCMPIN1(7513);
+  writeln('T09 S29=',BDVECT[29].i oct,' EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

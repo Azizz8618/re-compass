@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `f3f68ca`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `f3f68ca`.
+- HEAD: `f1040b3`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `f1040b3`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -45,13 +45,13 @@
 
 ## In progress
 
-По плану `docs/REPRODUCE-SEVEROV.md` запущено 5 субагентов (все в scratch, без правки репозитория):
+Запущены три субагента по интеграции результатов (scratch, без правки репозитория):
 
-1. Patched MARS в стандартный сценарий - завершено и интегрировано (`ses_df5cb547affexL1wUmcBIvCZgq`)
-2. Сохранение бд-ключа после FIND (`ses_df5cb547affdT7lgyv6vtC6r5D`)
-3. PIC op66/67/76/77 (`ses_df5cb5479ffeCaiGoR0s5wrutT`)
-4. Верхние слои UCOMPAS/TSSPPR (`ses_df5cb5479ffdbKJItIRFeyshYs`)
-5. Реестр кусков в SERVIS (`ses_df5cb5478ffewuDw9av3lh97Vn`)
+1. Регрессия после реестра кусков (`ses_df5b38e7effeMhv4eqqNAhi1lE`)
+2. Патч PIC 66/67/76/77 (`ses_df5b38e7bffeQiSNPYykT2JGjO`)
+3. Проверка UCOMPAS в зоне 3350 (`ses_df5b38e77ffeEfBhsn60B5wXTi`)
+
+GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута.
 
 ## Open items
 

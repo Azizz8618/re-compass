@@ -96,6 +96,10 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `servis_build4.b6` и `servis_ops4.b6` - расширенный тест этапа 4: 11 областей, дубли, журналы, ADMIN/ADA, эталон `servis_ops4.expected.txt`. Подробности: `docs/SERVIS-STAGE4.md`.
 
+`ucompas_build.b6` и `ucompas_test.b6` - порт верхнего слоя API COMPASS. Сначала собирается COMTUP (`comtup_final_build.b6`, зона 2570), затем UCOMPAS в свободную зону 3350; `2560₈` (GOSTLIB) не трогается. Тест проверяет `COpen`, `CClose`, `CGetBdK`, `CPutBdK`: `R=3072`, после PUT `R=4096`, `EXN=0`. Подробности: `docs/UCOMPAS-PORT.md`.
+
+`pic_ops_66_67_76_77.b6` - проверка четырёх PIC-операций через `comtup.pas`; `chunk_w1/w2/reader.b6` - реестр кусков для логической области 1750 зон.
+
 `gold_servis.b6` и `gold_servis_other.b6` - адаптированные подлинные SERVIS-операторы из `gold/`, с эталонами. `gold_servis.b6` создаёт 17 областей первой дека `\ПPOCTPAHCTBA HИCA`. Подробности: `docs/GOLD-SERVIS-RUN.md`.
 
 `predtgen.b6` и `predtgen.expected.txt` - порт предтранслятора ЯМД: 13 операций (PLACE, FIRST, NEXT, BYKEY, PREV, GET, MODIF, LAST, REMOVE, INSERT, BDGET/BDPUT), `EXN=0`. Подробности: `docs/PREDT-PORT.md`.

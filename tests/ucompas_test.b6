@@ -1,0 +1,56 @@
+шифр 419900 зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call yesmemory
+*perso:412570
+*perso:413350,cont
+*stand
+*call *pascal
+(*=y+,s0,s7*)program testuc(output, BDVECT, BDERRN, UCOMPST);
+const key='kbd001';
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+  TState = array [0..7] of word;
+  AnyPtr = @integer;
+var BDVECT: TBDVec; BDERRN: integer; UCOMPST: TState;
+    i, r: integer; m: array[1..4] of integer;
+    nm: word; sp: AnyPtr;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+function EXN:integer; external;
+function COpen(OpF:boolean; var OpNm:word;
+             var OpSP:AnyPtr):boolean; external;
+function CGetBdK(GbkNum:integer):integer; external;
+procedure CPutBdK(PbkNum,PbkKey:integer); external;
+procedure CClose; external;
+BEGIN
+  i := 1270000c; PASACD(i); PASSETAR(270000c);
+  i := 1270001c; newd('bdkey ', i); opend('bdkey ');
+  m[1]:=111111; m[2]:=222222; m[3]:=333333; m[4]:=444444;
+  putd(key, m);
+  BDVECT[8].a := key; BDVECT[3].i := 11c; pasbd;
+  writeln('FIX S29=', BDVECT[29].i oct);
+  writeln('SET AREA NAME FOR OPEN');
+  BDVECT[8].a := 'bdkey ';
+  nm.a := key;
+  writeln('COPEN=', COpen(false, nm, sp));
+  r := CGetBdK(3072);
+  writeln('CGET R=', r, ' EXN=', EXN, ' BDERRN=', BDERRN);
+  CPutBdK(3072, 4096);
+  r := CGetBdK(3072);
+  writeln('AFTER PUT R=', r, ' EXN=', EXN);
+  CClose;
+  writeln('DONE EXN=', EXN)
+END.
+*no load list
+*execute
+*end file
+``````
+ЕКОНЕЦ
+

@@ -1,0 +1,134 @@
+шифр 419999зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+ее в1а3
+*name
+*call yesmemory
+*perso:412570
+*perso:413350,cont
+*perso:413260,cont
+*stand
+*call *pascal
+(*=y+,s0,s7*)program dmlall(output,BDVECT,BDERRN);
+(* 13 operations from docs/PREDT-PORT.md driven through DML(TRUE). *)
+type word = record case integer of
+  0:(I:integer); 1:(A:alfa); 2:(P:@integer); 3:(C:char) end;
+  TBDVec = array [0..167] of word;
+  TYPEM = packed array [1..1344] of char;
+var BDVECT:TBDVec; BDERRN:integer;
+  a:alfa; i:integer;
+  m,n:array[1..4] of integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPL1(j:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+procedure DML(PERV:boolean); external;
+procedure PutBuf(s:alfa);
+var k:integer;
+begin
+  for k:=1 to 6 do
+  begin
+    BDVECT[139].I:=BDVECT[139].I+1;
+    BDVECT[139+BDVECT[139].I].C:=s[k]
+  end
+end;
+procedure NewStep;
+begin
+  BDVECT[139].I:=0
+end;
+procedure SetKey(k:alfa);
+begin
+  BDVECT[8].A:=k
+end;
+procedure SetData(var d:integer; len:integer);
+begin
+  TPCMP1I(d,11);
+  BDVECT[13].I:=len
+end;
+procedure Show(s:alfa);
+begin
+  writeln('DML ',s,' EXN=',EXN,' BDERRN=',BDERRN)
+end;
+begin
+  i:=1270000c; PASACD(i); PASSETAR(270000c);
+  i:=1270001c; newd('bdkey ',i); opend('bdkey ');
+  m[1]:=111111; m[2]:=222222; m[3]:=333333;
+  m[4]:=444444;
+  putd('kbd001',m);
+  m[1]:=11; m[2]:=22; m[3]:=33; m[4]:=44;
+  putd('kbd002',m);
+  m[1]:=555; m[2]:=666; m[3]:=777;
+  m[4]:=888;
+  putd('kbd003',m);
+  SSBF5;
+  writeln('T00 SETUP EXN=',EXN);
+  NewStep; SetKey('kbd004');
+  n[1]:=7; n[2]:=8; n[3]:=9; n[4]:=10;
+  SetData(n[1],41c);
+  writeln('STEP PLACE');
+  a:='ПOCTAB'; PutBuf(a); DML(TRUE);
+  Show('PLACE ');
+  NewStep; a:='HAЙTИ '; PutBuf(a);
+  writeln('STEP FIRST');
+  a:='ПEPBYЮ'; PutBuf(a); DML(TRUE);
+  Show('FIRST ');
+  NewStep; a:='HAЙTИ '; PutBuf(a);
+  writeln('STEP NEXT');
+  a:='CЛEДYЮ'; PutBuf(a); DML(TRUE);
+  Show('NEXT  ');
+  NewStep; SetKey('kbd003');
+  a:='HAЙTИ '; PutBuf(a);
+  writeln('STEP BYKEY');
+  a:='ПO-KЛЮ'; PutBuf(a); DML(TRUE);
+  Show('BYKEY ');
+  NewStep; a:='HAЙTИ '; PutBuf(a);
+  writeln('STEP PREV');
+  a:='ПPEДЫД'; PutBuf(a); DML(TRUE);
+  Show('PREV  ');
+  m[1]:=-1; m[2]:=-1; m[3]:=-1; m[4]:=-1;
+  NewStep; SetKey('kbd002'); SetData(m[1],4);
+  writeln('STEP GET');
+  a:='BЗЯTЬ '; PutBuf(a); DML(TRUE);
+  Show('GET   ');
+  m[1]:=101; m[2]:=202; m[3]:=303;
+  m[4]:=404;
+  NewStep; SetKey('kbd002'); SetData(m[1],41c);
+  writeln('STEP MODIF');
+  a:='ЗAMEHИ'; PutBuf(a); DML(TRUE);
+  Show('MODIF ');
+  NewStep; SetKey('kbd001');
+  a:='HAЙTИ '; PutBuf(a);
+  writeln('STEP LAST');
+  a:='ПOCЛEД'; PutBuf(a); DML(TRUE);
+  Show('LAST  ');
+  NewStep; writeln('STEP REMOVE');
+  a:='YБPATЬ'; PutBuf(a); DML(TRUE);
+  Show('REMOVE');
+  NewStep; writeln('STEP INSERT');
+  a:='BKЛЮЧИ'; PutBuf(a); DML(TRUE);
+  Show('INSERT');
+  NewStep;
+  writeln('STEP BDGET');
+  a:='БДGET '; PutBuf(a); DML(TRUE);
+  writeln('DML BDGET R=',BDVECT[151].I,' EXN=',EXN);
+  NewStep; a:='БДPUT '; PutBuf(a); DML(TRUE);
+  writeln('DML BDPUT S29=',BDVECT[29].I oct,' EXN=',EXN);
+  NewStep; a:='БД-KЛЮ'; PutBuf(a);
+  writeln('STEP GET');
+  a:='BЗЯTЬ '; PutBuf(a); DML(TRUE);
+  Show('BDKEYG');
+  writeln('DML ALL 13 EXN=',EXN,' BDERRN=',BDERRN)
+end.
+
+*execute
+*end file
+``````
+ЕКОНЕЦ

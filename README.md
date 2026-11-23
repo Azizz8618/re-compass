@@ -92,6 +92,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/TSS-W5A-PREP.md` - подготовка 18 дек приложений, `tools/severov/extract_and_gen.py` - генератор.
 - `docs/severov-apps/` - карта 345 сниппетов и 54 пар макрос -> вызовы COMTUP.
 - `docs/TSS-W5B-RUNBOOK.md` - порядок финального прогона 18 программ.
+- `docs/TSS-W3-DML.md` - порт TSSDML в зоне 3260 и известный отказ повторного `DML(TRUE)`.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

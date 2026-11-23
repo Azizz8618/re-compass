@@ -22,10 +22,14 @@ const
   cDeld = 27231411c;        (* DELD 27-23-14-11 *)
   cOpend = 2512141131c;     (* OPEND 25-12-14-11-31 *)
   cNewd = 2621151131c;      (* NEWD 26-21-15-11-31 *)
+  cFirst = 01c;         (* MARS 01: position at beginning *)
   cLast = 02c;
   cPrev = 03c;
   cNext = 04c;
   cFind = 11c;
+  cBdKeyGet = 352453c;  (* MARS op53: BDVECT[20] := BDVECT[29] *)
+  sBdKeyRes = 24;       (* slot with address of CGetBdKey result R *)
+  sBdKeyTmp = 20;       (* scratch slot used by op53 *)
 type
   TPath = packed array [1..40] of char;
   PicT = record
@@ -100,7 +104,7 @@ begin
   if op = 1 then PicCode := cPutd;
   if op = 2 then PicCode := cFind;
   if op = 3 then PicCode := cModd;
-  if op = 4 then PicCode := cLast;
+  if op = 4 then PicCode := cFirst;
   if op = 7 then PicCode := cDeld;
   if op = 11 then PicCode := cLast;
   if op = 12 then PicCode := cNext;
@@ -198,8 +202,11 @@ begin
   _);
 end;
 (*=e+*)procedure TPCMPIN1(j:integer);
-(* HYPOTHESIS: decoded microcode into COMMON BDVECT[3], then pasbd. *)
-var q:@PicT; code:integer;
+(* HYPOTHESIS: decoded microcode into COMMON BDVECT[3], then pasbd.
+   op90 (7514, CGetBdKey) is verified: op53 copies the bd-key from
+   slot 29 into the scratch slot 20, then the value is written to
+   the address kept in slot 24. Callers must use those slots. *)
+var q:@PicT; code:integer; rp:@integer;
 begin
   _(
   GetPic(q);
@@ -211,6 +218,12 @@ begin
   if code <> 0 then begin
     BDVECT[3].i := code;
     pasbd
+  end;
+  if j = 7514 then begin
+    BDVECT[3].i := cBdKeyGet;
+    pasbd;
+    rp := BDVECT[sBdKeyRes].p;
+    rp@ := BDVECT[sBdKeyTmp].i
   end
   _);
 end;

@@ -69,3 +69,9 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 `comtup_final_build.b6` собирает `src/comtup.pas` (18 входов), `comtup_final_test.b6` проверяет разрешение всех внешних имён, `comtup_state_test.b6` проверяет COMMON-состояние, адрес переменной и `*BDERRN*`. Эталоны: `comtup_final_build.expected.txt`, `comtup_final_test.expected.txt`, `comtup_state_test.expected.txt`.
 
 Дека сборки открывает 2348 на запись (`лен 40(2348-wr)^`) и увеличивает библиотеку до `032 ЗОН`. Запускать только на рабочей копии с резервом, как описано выше. Результаты и оговорки: `docs/COMTUP-IMPLEMENTATION.md`.
+
+## cgetbdkey: фикстура и интеграционный тест
+
+`cgetbdkey_fixture.b6` создаёт запись `kbd001` с бд-ключом `6000₈ = 3072`. `cgetbdkey.b6` воспроизводит каноническую последовательность `UCOMPAS.PAS:103-111` на процедурах `COMTUP` и проверяет, что `R` стал равен бд-ключу. Эталоны: `cgetbdkey_fixture.expected.txt`, `cgetbdkey.expected.txt`.
+
+Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`.

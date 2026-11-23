@@ -1,0 +1,46 @@
+шифр 419900зс5^
+лен 40(2048-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name 
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=p-,t-*)PROGRAM main (OUTPUT,bdvect);
+const key='kbd001';
+type word = record case integer of
+ 0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+var i,j:integer;
+ m:array[1..4] of integer;
+ bdvect: array[0..167] of word;
+
+PROCEDURE PASACD(var I: INTEGER); FORTRAN;
+PROCEDURE PASSETAR(I: INTEGER); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+
+BEGIN
+  i := 1270000c; PASACD(i);
+  PASSETAR(270000c);
+  i := 1270001c;
+  newd('bdkey ', i);
+  opend('bdkey ');
+  m[1]:=111111; m[2]:=222222; m[3]:=333333; m[4]:=444444;
+  putd(key, m);
+  bdvect[8].a := key; bdvect[3].i := 11c; pasbd;
+  writeln('AFTER FIND slot29=', bdvect[29].i oct);
+  writeln('AFTER FIND slot31=', bdvect[31].a);
+  writeln('BEFORE slot20=', bdvect[20].i oct);
+  bdvect[3].i := 352453c;
+  writeln('WORD=', bdvect[3].i oct);
+  pasbd;
+  writeln('AFTER slot20=', bdvect[20].i oct);
+  writeln('AFTER slot29=', bdvect[29].i oct);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

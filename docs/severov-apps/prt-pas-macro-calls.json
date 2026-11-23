@@ -1,0 +1,1176 @@
+{
+  "prt": "/home/azizz/Yandex.Disk/re-compass/gold/TSSPPR.PRT",
+  "pas": "/home/azizz/Yandex.Disk/re-compass/gold/TSSPPR.PAS",
+  "prt_encoding": "cp866",
+  "prt_macros": 57,
+  "pas_expansions": 54,
+  "aligned_pairs": 54,
+  "calls_by_name": {
+    "TPCMPP1": 305,
+    "TPCMPIN1": 54,
+    "TPCMPAD1": 40,
+    "TPCMPL1": 5
+  },
+  "pairs": [
+    {
+      "macro_id": 3,
+      "macro": "buf;oper 64",
+      "prt_lines": [
+        44,
+        44
+      ],
+      "pas_lines": [
+        44,
+        46
+      ],
+      "calls": [
+        "TPCMPP1(16470)",
+        "TPCMPIN1(29)"
+      ]
+    },
+    {
+      "macro_id": 4,
+      "macro": "найти по-клю @Imqtr в сисбиб",
+      "prt_lines": [
+        46,
+        46
+      ],
+      "pas_lines": [
+        49,
+        55
+      ],
+      "calls": [
+        "TPCMPAD1(Imqtr)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(2590)",
+        "TPCMPIN1(7426)"
+      ]
+    },
+    {
+      "macro_id": 5,
+      "macro": "найти первую в ситран",
+      "prt_lines": [
+        49,
+        49
+      ],
+      "pas_lines": [
+        59,
+        61
+      ],
+      "calls": [
+        "TPCMPP1(3358)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 6,
+      "macro": "найти по-клю *4 в подсхе;        найти по-клю @Imqtr в подбиб",
+      "prt_lines": [
+        52,
+        53
+      ],
+      "pas_lines": [
+        65,
+        75
+      ],
+      "calls": [
+        "TPCMPAD1(Imqtr)",
+        "TPCMPP1(44)",
+        "TPCMPP1(1029)",
+        "TPCMPP1(7746)",
+        "TPCMPP1(524)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(4126)",
+        "TPCMPIN1(7426)"
+      ]
+    },
+    {
+      "macro_id": 7,
+      "macro": "запрос trbib.trdlic=@pic1nm;    запрос      .trdlil=@pic1na;    запрос      .trdliv=@VarPoint;    ЗAMEHИ Trbib.TRDLIC ;    ЗAMEHИ .TRDLIL ;    замени .trdliv;    ЗAMEHИ .TRLIT HA @PIC1.L;    ЗAMEHИ .TRCOD HA @PIC1.M",
+      "prt_lines": [
+        64,
+        71
+      ],
+      "pas_lines": [
+        87,
+        129
+      ],
+      "calls": [
+        "TPCMPAD1(pic1nm)",
+        "TPCMPAD1(pic1na)",
+        "TPCMPAD1(VarPoint)",
+        "TPCMPAD1(PIC1.L)",
+        "TPCMPAD1(PIC1.M)",
+        "TPCMPP1(300)",
+        "TPCMPP1(1281)",
+        "TPCMPP1(9226)",
+        "TPCMPP1(0)",
+        "TPCMPP1(0)",
+        "TPCMPP1(307)",
+        "TPCMPP1(300)",
+        "TPCMPP1(1537)",
+        "TPCMPP1(9226)",
+        "TPCMPP1(0)",
+        "TPCMPP1(2)",
+        "TPCMPP1(307)",
+        "TPCMPP1(300)",
+        "TPCMPP1(1793)",
+        "TPCMPP1(9226)",
+        "TPCMPP1(0)",
+        "TPCMPP1(4)",
+        "TPCMPP1(307)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(1312)",
+        "TPCMPP1(9487)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(3846)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(1824)",
+        "TPCMPP1(9487)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9226)",
+        "TPCMPP1(0)",
+        "TPCMPP1(6)",
+        "TPCMPP1(834)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(2336)",
+        "TPCMPP1(36)",
+        "TPCMPP1(2048)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7427)"
+      ]
+    },
+    {
+      "macro_id": 8,
+      "macro": "замени trbib.trtrep на parep;    замени trbib.trtdli на padli",
+      "prt_lines": [
+        72,
+        73
+      ],
+      "pas_lines": [
+        131,
+        145
+      ],
+      "calls": [
+        "TPCMPAD1(parep)",
+        "TPCMPAD1(padli)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(2848)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9475)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9228)",
+        "TPCMPP1(0)",
+        "TPCMPP1(2)",
+        "TPCMPP1(834)",
+        "TPCMPIN1(285)"
+      ]
+    },
+    {
+      "macro_id": 9,
+      "macro": "BUF; Oper 64",
+      "prt_lines": [
+        75,
+        75
+      ],
+      "pas_lines": [
+        148,
+        150
+      ],
+      "calls": [
+        "TPCMPP1(16470)",
+        "TPCMPIN1(2845)"
+      ]
+    },
+    {
+      "macro_id": 10,
+      "macro": "BUF;OPER 64",
+      "prt_lines": [
+        91,
+        91
+      ],
+      "pas_lines": [
+        167,
+        169
+      ],
+      "calls": [
+        "TPCMPP1(16470)",
+        "TPCMPIN1(2845)"
+      ]
+    },
+    {
+      "macro_id": 11,
+      "macro": "HAЙTИ ПO-KЛЮ *11 B ПOДCXE",
+      "prt_lines": [
+        95,
+        95
+      ],
+      "pas_lines": [
+        174,
+        179
+      ],
+      "calls": [
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(7746)",
+        "TPCMPP1(524)",
+        "TPCMPIN1(16925)"
+      ]
+    },
+    {
+      "macro_id": 12,
+      "macro": "PEЖИM 0;HAЙTИ ПO-KЛЮ *11 B ПOДБИБ",
+      "prt_lines": [
+        99,
+        99
+      ],
+      "pas_lines": [
+        184,
+        191
+      ],
+      "calls": [
+        "TPCMPP1(55)",
+        "TPCMPP1(807)",
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(7746)",
+        "TPCMPP1(528)",
+        "TPCMPIN1(8221)"
+      ]
+    },
+    {
+      "macro_id": 13,
+      "macro": "HAЙTИ B OTTPAH",
+      "prt_lines": [
+        102,
+        102
+      ],
+      "pas_lines": [
+        195,
+        197
+      ],
+      "calls": [
+        "TPCMPP1(3614)",
+        "TPCMPIN1(7429)"
+      ]
+    },
+    {
+      "macro_id": 14,
+      "macro": "HAЙTИ ПO-KЛЮ *11 B CИCБИБ",
+      "prt_lines": [
+        105,
+        105
+      ],
+      "pas_lines": [
+        201,
+        206
+      ],
+      "calls": [
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(7746)",
+        "TPCMPP1(522)",
+        "TPCMPIN1(7709)"
+      ]
+    },
+    {
+      "macro_id": 15,
+      "macro": "HAЙTИ ПEPBYЮ B CИTPAH",
+      "prt_lines": [
+        112,
+        112
+      ],
+      "pas_lines": [
+        214,
+        216
+      ],
+      "calls": [
+        "TPCMPP1(3358)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 16,
+      "macro": "BЗЯTЬ QU.QUT HA @SIMOPI.I",
+      "prt_lines": [
+        117,
+        117
+      ],
+      "pas_lines": [
+        222,
+        229
+      ],
+      "calls": [
+        "TPCMPAD1(SIMOPI.I)",
+        "TPCMPP1(1317)",
+        "TPCMPP1(544)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 17,
+      "macro": "BUF;OPER 64",
+      "prt_lines": [
+        134,
+        134
+      ],
+      "pas_lines": [
+        247,
+        249
+      ],
+      "calls": [
+        "TPCMPP1(16470)",
+        "TPCMPIN1(541)"
+      ]
+    },
+    {
+      "macro_id": 18,
+      "macro": "взять qu.qunm  на @VarNames[1];     взять qu.qurep на @parep[1];     взять qu.qudli на @padli[1];     взять qu.qufel на @FElFlag;     BЗЯTЬ QU.QUT   HA @tt;     взять trbib.trn на @dlic",
+      "prt_lines": [
+        157,
+        162
+      ],
+      "pas_lines": [
+        273,
+        313
+      ],
+      "calls": [
+        "TPCMPAD1(VarNames[1])",
+        "TPCMPAD1(parep[1])",
+        "TPCMPAD1(padli[1])",
+        "TPCMPAD1(FElFlag)",
+        "TPCMPAD1(tt)",
+        "TPCMPAD1(dlic)",
+        "TPCMPP1(1317)",
+        "TPCMPP1(288)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8197)",
+        "TPCMPP1(9220)",
+        "TPCMPP1(0)",
+        "TPCMPP1(2)",
+        "TPCMPP1(3650)",
+        "TPCMPP1(1317)",
+        "TPCMPP1(1312)",
+        "TPCMPP1(36)",
+        "TPCMPP1(1024)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8197)",
+        "TPCMPP1(9219)",
+        "TPCMPP1(0)",
+        "TPCMPP1(6)",
+        "TPCMPP1(3650)",
+        "TPCMPP1(1317)",
+        "TPCMPP1(544)",
+        "TPCMPP1(36)",
+        "TPCMPP1(2048)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9218)",
+        "TPCMPP1(0)",
+        "TPCMPP1(10)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(29)"
+      ]
+    },
+    {
+      "macro_id": 19,
+      "macro": "взять trbib.trnmq на @mname;         взять trbib.trn   на @trnum;         взять trbib.trnump на @numpar;         взять trbib.trtrep на @MParsRep[csh];         взять trbib.trtdli на @MParsDli[csh]",
+      "prt_lines": [
+        242,
+        246
+      ],
+      "pas_lines": [
+        394,
+        427
+      ],
+      "calls": [
+        "TPCMPAD1(mname)",
+        "TPCMPAD1(trnum)",
+        "TPCMPAD1(numpar)",
+        "TPCMPAD1(MParsRep[csh])",
+        "TPCMPAD1(MParsDli[csh])",
+        "TPCMPP1(2597)",
+        "TPCMPP1(288)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9218)",
+        "TPCMPP1(0)",
+        "TPCMPP1(2)",
+        "TPCMPP1(3650)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(2080)",
+        "TPCMPP1(36)",
+        "TPCMPP1(1024)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9227)",
+        "TPCMPP1(0)",
+        "TPCMPP1(6)",
+        "TPCMPP1(3650)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(3104)",
+        "TPCMPP1(36)",
+        "TPCMPP1(2048)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 20,
+      "macro": "BUF;HAЙTИ ПO-KЛЮ *4 B ПOДCXE",
+      "prt_lines": [
+        296,
+        296
+      ],
+      "pas_lines": [
+        478,
+        483
+      ],
+      "calls": [
+        "TPCMPP1(11350)",
+        "TPCMPP1(1280)",
+        "TPCMPP1(16900)",
+        "TPCMPP1(3102)",
+        "TPCMPIN1(7426)"
+      ]
+    },
+    {
+      "macro_id": 21,
+      "macro": "BЗЯTЬ .SBLEN HA *21",
+      "prt_lines": [
+        302,
+        302
+      ],
+      "pas_lines": [
+        490,
+        496
+      ],
+      "calls": [
+        "TPCMPP1(1829)",
+        "TPCMPP1(1824)",
+        "TPCMPP1(300)",
+        "TPCMPP1(5381)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(9501)"
+      ]
+    },
+    {
+      "macro_id": 22,
+      "macro": "BЗЯTЬ .SBMOD HA *11",
+      "prt_lines": [
+        303,
+        303
+      ],
+      "pas_lines": [
+        498,
+        504
+      ],
+      "calls": [
+        "TPCMPP1(1829)",
+        "TPCMPP1(2080)",
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(9501)"
+      ]
+    },
+    {
+      "macro_id": 23,
+      "macro": "BЗЯTЬ .SBPEJ HA *11",
+      "prt_lines": [
+        309,
+        309
+      ],
+      "pas_lines": [
+        511,
+        517
+      ],
+      "calls": [
+        "TPCMPP1(1829)",
+        "TPCMPP1(2336)",
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(9501)"
+      ]
+    },
+    {
+      "macro_id": 24,
+      "macro": "HAЙTИ ПO-KЛЮ *4 B HA-ПOД;      ECЛИ COC=0 TO BЗЯTЬ .PRASB HA *11",
+      "prt_lines": [
+        312,
+        313
+      ],
+      "pas_lines": [
+        521,
+        541
+      ],
+      "calls": [
+        "TPCMPL1(0)",
+        "TPCMPP1(44)",
+        "TPCMPP1(1029)",
+        "TPCMPP1(7746)",
+        "TPCMPP1(519)",
+        "TPCMPP1(11352)",
+        "TPCMPP1(1793)",
+        "TPCMPP1(11264)",
+        "TPCMPP1(1)",
+        "TPCMPP1(256)",
+        "TPCMPP1(19015)",
+        "TPCMPP1(5888)",
+        "TPCMPP1(19278)",
+        "TPCMPP1(9216)",
+        "TPCMPP1(805)",
+        "TPCMPP1(800)",
+        "TPCMPP1(300)",
+        "TPCMPP1(2821)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(9245)"
+      ]
+    },
+    {
+      "macro_id": 25,
+      "macro": "BЗЯTЬ SUBCX.SBLC HA *12",
+      "prt_lines": [
+        319,
+        319
+      ],
+      "pas_lines": [
+        548,
+        554
+      ],
+      "calls": [
+        "TPCMPP1(1829)",
+        "TPCMPP1(544)",
+        "TPCMPP1(44)",
+        "TPCMPP1(3077)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(1821)"
+      ]
+    },
+    {
+      "macro_id": 26,
+      "macro": "BЗЯTЬ SUBCX.MDESF1 HA @ROCH.CXCXTL",
+      "prt_lines": [
+        325,
+        325
+      ],
+      "pas_lines": [
+        561,
+        568
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.CXCXTL)",
+        "TPCMPP1(1829)",
+        "TPCMPP1(3616)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 27,
+      "macro": "BЗЯTЬ.MDESR2 HA @ROCH.XBOCT.INT[1]",
+      "prt_lines": [
+        326,
+        326
+      ],
+      "pas_lines": [
+        570,
+        577
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.XBOCT.INT[1])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(3872)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 28,
+      "macro": "НАЙТИ ПЕРВУЮ В SBI",
+      "prt_lines": [
+        331,
+        331
+      ],
+      "pas_lines": [
+        583,
+        585
+      ],
+      "calls": [
+        "TPCMPP1(2846)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 29,
+      "macro": "ВЗЯТЬ .SIF HA @ROCH.XBOCT.INT[KONNAB]",
+      "prt_lines": [
+        334,
+        334
+      ],
+      "pas_lines": [
+        589,
+        596
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.XBOCT.INT[KONNAB])",
+        "TPCMPP1(1573)",
+        "TPCMPP1(1056)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 30,
+      "macro": "НАЙТИ СЛЕДУЮ",
+      "prt_lines": [
+        336,
+        336
+      ],
+      "pas_lines": [
+        599,
+        600
+      ],
+      "calls": [
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 31,
+      "macro": "BЗЯTЬ SUBCX.MDESS4 HA @ROCH.XBOCT.INT[KONNAB]",
+      "prt_lines": [
+        342,
+        342
+      ],
+      "pas_lines": [
+        607,
+        614
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.XBOCT.INT[KONNAB])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(4384)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 32,
+      "macro": "BЗЯTЬ.MDESV5 HA @ROCH.XBOCT.INT[KONNAB]",
+      "prt_lines": [
+        344,
+        344
+      ],
+      "pas_lines": [
+        617,
+        624
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.XBOCT.INT[KONNAB])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(4640)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 33,
+      "macro": "BЗЯTЬ.MDESP6 HA @ROCH.XBOCT.INT[KONNAB]",
+      "prt_lines": [
+        346,
+        346
+      ],
+      "pas_lines": [
+        627,
+        634
+      ],
+      "calls": [
+        "TPCMPAD1(ROCH.XBOCT.INT[KONNAB])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(4896)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 34,
+      "macro": "BЗЯTЬ.NAMER1 HA TABCX.INT[1]",
+      "prt_lines": [
+        348,
+        348
+      ],
+      "pas_lines": [
+        637,
+        644
+      ],
+      "calls": [
+        "TPCMPAD1(TABCX.INT[1])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(5152)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 35,
+      "macro": "НАЙТИ ПЕРВУЮ В SBI",
+      "prt_lines": [
+        351,
+        351
+      ],
+      "pas_lines": [
+        648,
+        650
+      ],
+      "calls": [
+        "TPCMPP1(2846)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 36,
+      "macro": "ВЗЯТЬ .NIF HA @TABCX.INT[KONNAB]",
+      "prt_lines": [
+        354,
+        354
+      ],
+      "pas_lines": [
+        654,
+        661
+      ],
+      "calls": [
+        "TPCMPAD1(TABCX.INT[KONNAB])",
+        "TPCMPP1(1573)",
+        "TPCMPP1(800)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 37,
+      "macro": "НАЙТИ СЛЕДУЮ",
+      "prt_lines": [
+        356,
+        356
+      ],
+      "pas_lines": [
+        664,
+        665
+      ],
+      "calls": [
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 38,
+      "macro": "BЗЯTЬ SUBCX.NAMES3 HA TABCX.INT[KONNAB]",
+      "prt_lines": [
+        359,
+        359
+      ],
+      "pas_lines": [
+        669,
+        676
+      ],
+      "calls": [
+        "TPCMPAD1(TABCX.INT[KONNAB])",
+        "TPCMPP1(1829)",
+        "TPCMPP1(5664)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 39,
+      "macro": "найти первую в сисбиб",
+      "prt_lines": [
+        378,
+        378
+      ],
+      "pas_lines": [
+        696,
+        698
+      ],
+      "calls": [
+        "TPCMPP1(2590)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 40,
+      "macro": "найти первую в ситран;       взять trbib.trfel на @FElFlag",
+      "prt_lines": [
+        381,
+        382
+      ],
+      "pas_lines": [
+        702,
+        711
+      ],
+      "calls": [
+        "TPCMPAD1(FElFlag)",
+        "TPCMPP1(3358)",
+        "TPCMPP1(9476)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9220)",
+        "TPCMPP1(0)",
+        "TPCMPP1(0)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(29)"
+      ]
+    },
+    {
+      "macro_id": 41,
+      "macro": "найти следую в сисбиб",
+      "prt_lines": [
+        385,
+        385
+      ],
+      "pas_lines": [
+        715,
+        717
+      ],
+      "calls": [
+        "TPCMPP1(2590)",
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 42,
+      "macro": "найти первую в подбиб",
+      "prt_lines": [
+        387,
+        387
+      ],
+      "pas_lines": [
+        720,
+        722
+      ],
+      "calls": [
+        "TPCMPP1(4126)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 43,
+      "macro": "взять trbib.trrecn на @ReCo;       взять trbib.trfel на @FElFlag",
+      "prt_lines": [
+        390,
+        391
+      ],
+      "pas_lines": [
+        726,
+        740
+      ],
+      "calls": [
+        "TPCMPAD1(ReCo)",
+        "TPCMPAD1(FElFlag)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(800)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(9486)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9220)",
+        "TPCMPP1(0)",
+        "TPCMPP1(2)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(19229)"
+      ]
+    },
+    {
+      "macro_id": 44,
+      "macro": "найти следую в подбиб",
+      "prt_lines": [
+        396,
+        396
+      ],
+      "pas_lines": [
+        746,
+        748
+      ],
+      "calls": [
+        "TPCMPP1(4126)",
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 45,
+      "macro": "найти первую в сисбиб",
+      "prt_lines": [
+        404,
+        404
+      ],
+      "pas_lines": [
+        757,
+        759
+      ],
+      "calls": [
+        "TPCMPP1(2590)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 46,
+      "macro": "найти первую в ситран;       взять trbib.trdlic на @dlic",
+      "prt_lines": [
+        407,
+        408
+      ],
+      "pas_lines": [
+        763,
+        772
+      ],
+      "calls": [
+        "TPCMPAD1(dlic)",
+        "TPCMPP1(3358)",
+        "TPCMPP1(9476)",
+        "TPCMPP1(8202)",
+        "TPCMPP1(9221)",
+        "TPCMPP1(0)",
+        "TPCMPP1(0)",
+        "TPCMPP1(3650)",
+        "TPCMPIN1(9245)"
+      ]
+    },
+    {
+      "macro_id": 47,
+      "macro": "взять trbib.trnmq  на @nm",
+      "prt_lines": [
+        411,
+        411
+      ],
+      "pas_lines": [
+        776,
+        783
+      ],
+      "calls": [
+        "TPCMPAD1(nm)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(288)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 48,
+      "macro": "взять trbib.trrecn на @MethOwner",
+      "prt_lines": [
+        416,
+        416
+      ],
+      "pas_lines": [
+        789,
+        796
+      ],
+      "calls": [
+        "TPCMPAD1(MethOwner)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(800)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 49,
+      "macro": "найти следую в сисбиб",
+      "prt_lines": [
+        423,
+        423
+      ],
+      "pas_lines": [
+        804,
+        806
+      ],
+      "calls": [
+        "TPCMPP1(2590)",
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 50,
+      "macro": "найти первую в подбиб",
+      "prt_lines": [
+        425,
+        425
+      ],
+      "pas_lines": [
+        809,
+        811
+      ],
+      "calls": [
+        "TPCMPP1(4126)",
+        "TPCMPIN1(7428)"
+      ]
+    },
+    {
+      "macro_id": 51,
+      "macro": "взять trbib.trdlic на @dlic",
+      "prt_lines": [
+        428,
+        428
+      ],
+      "pas_lines": [
+        815,
+        822
+      ],
+      "calls": [
+        "TPCMPAD1(dlic)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(1312)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 52,
+      "macro": "взять trbib.trnmq  на @nm",
+      "prt_lines": [
+        431,
+        431
+      ],
+      "pas_lines": [
+        826,
+        833
+      ],
+      "calls": [
+        "TPCMPAD1(nm)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(288)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPIN1(7438)"
+      ]
+    },
+    {
+      "macro_id": 53,
+      "macro": "взять trbib.trrecn на @MethOwner;                найти в оттран",
+      "prt_lines": [
+        436,
+        437
+      ],
+      "pas_lines": [
+        839,
+        848
+      ],
+      "calls": [
+        "TPCMPAD1(MethOwner)",
+        "TPCMPP1(2597)",
+        "TPCMPP1(800)",
+        "TPCMPP1(36)",
+        "TPCMPP1(0)",
+        "TPCMPP1(16896)",
+        "TPCMPP1(7694)",
+        "TPCMPP1(1294)",
+        "TPCMPIN1(9245)"
+      ]
+    },
+    {
+      "macro_id": 54,
+      "macro": "найти следую в подбиб",
+      "prt_lines": [
+        444,
+        444
+      ],
+      "pas_lines": [
+        856,
+        858
+      ],
+      "calls": [
+        "TPCMPP1(4126)",
+        "TPCMPIN1(7436)"
+      ]
+    },
+    {
+      "macro_id": 55,
+      "macro": "без-ss;компас",
+      "prt_lines": [
+        484,
+        484
+      ],
+      "pas_lines": [
+        899,
+        915
+      ],
+      "calls": [
+        "TPCMPL1(1255)",
+        "TPCMPL1(18771)",
+        "TPCMPL1(8224)",
+        "TPCMPL1(8224)",
+        "TPCMPAD1(SI)",
+        "TPCMPP1(34)",
+        "TPCMPP1(5415)",
+        "TPCMPP1(55)",
+        "TPCMPP1(2599)",
+        "TPCMPP1(823)",
+        "TPCMPP1(2343)",
+        "TPCMPP1(290)",
+        "TPCMPP1(1063)",
+        "TPCMPP1(1058)",
+        "TPCMPP1(4647)",
+        "TPCMPIN1(7506)"
+      ]
+    },
+    {
+      "macro_id": 57,
+      "macro": "ЗABEPШ",
+      "prt_lines": [
+        520,
+        520
+      ],
+      "pas_lines": [
+        942,
+        944
+      ],
+      "calls": [
+        "TPCMPP1(1339)",
+        "TPCMPIN1(5405)"
+      ]
+    }
+  ]
+}

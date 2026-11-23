@@ -1,0 +1,33 @@
+program pairs dmlcall_tokens source_lines deck_lines
+SKLMON      17    17   415   433
+AMOHED       2     2    41    58
+ZATHED       2     2    41    58
+SKLOTD      13    13   259   279
+SKLCAR      59    59  1014  1040
+SKLOTC      40    40   899   922
+AMOMON       4     4   257   276
+AMOOTD      12    12   238   257
+AMOCAR      39    39   859   886
+AMOOTC      40    40   816   838
+AMOGRU       8     8   240   258
+ZATMON       7     7   408   440
+ZATOTD      13    13   270   290
+ZATCOF      11    11   306   325
+ZATZAT      22    22   511   529
+ZATNAK       9     9   274   294
+ZATRTE      28    28   555   574
+ZATTAB      19    19   815   835
+TOTAL      345   345
+
+WARNINGS:
+SKLOTD: 1 cards still >72 bytes: [(244, 81)]
+SKLCAR: 3 cards still >72 bytes: [(741, 79), (832, 79), (915, 73)]
+SKLOTC: 3 cards still >72 bytes: [(652, 73), (667, 73), (768, 73)]
+AMOCAR: 3 cards still >72 bytes: [(648, 74), (751, 75), (838, 89)]
+AMOOTC: 2 cards still >72 bytes: [(740, 78), (780, 78)]
+AMOGRU: 1 cards still >72 bytes: [(209, 79)]
+ZATOTD: 2 cards still >72 bytes: [(208, 75), (251, 78)]
+ZATCOF: 2 cards still >72 bytes: [(234, 77), (297, 80)]
+ZATZAT: 1 cards still >72 bytes: [(503, 78)]
+ZATNAK: 2 cards still >72 bytes: [(224, 77), (268, 77)]
+ZATTAB: 1 cards still >72 bytes: [(361, 75)]

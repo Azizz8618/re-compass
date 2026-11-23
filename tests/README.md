@@ -106,6 +106,8 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `tsspr-v12-linked.b6` - объединённая версия с диагностикой `ERROUT`, `SLANGM` на 100 операторов и рабочим `dml`; `tsspr-v12-probe.b6` - автономная проверка печати кодов 40/705 и `DML OP=4`. Исходники: `src/tsspr-v12-linked.pas`, `src/tsspr-v12-probe.pas`. Подробности: `docs/TSS-W2-GUI.md`.
 
+`tests/severov-apps/*.b6` - 18 дек прикладных программ дек 12-14, сгенерированных из `src/generated/*.pas`; 345 вызовов `DMLCALL` вместо пар `&&...&&`. Подключают `COMTUP/SERVIS` (2570), `UCOMPAS` (3350), `TSSDML` (3260) и `TSSPPR` (3300). Пока ожидают готовых библиотек 3260/3300. Генератор: `tools/severov/extract_and_gen.py`, проверка: `tools/severov/check_decks.sh`. Подробности: `docs/TSS-W5A-PREP.md`.
+
 `gold_servis.b6` и `gold_servis_other.b6` - адаптированные подлинные SERVIS-операторы из `gold/`, с эталонами. `gold_servis.b6` создаёт 17 областей первой дека `\ПPOCTPAHCTBA HИCA`. Подробности: `docs/GOLD-SERVIS-RUN.md`.
 
 `predtgen.b6` и `predtgen.expected.txt` - порт предтранслятора ЯМД: 13 операций (PLACE, FIRST, NEXT, BYKEY, PREV, GET, MODIF, LAST, REMOVE, INSERT, BDGET/BDPUT), `EXN=0`. Подробности: `docs/PREDT-PORT.md`.

@@ -89,6 +89,8 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/TSS-W1-LINKAGE.md` - отчёт по линковке `TSSPPR` с COMTUP/UCOMPAS (14 входов).
 - `docs/TSS-W2-GUI.md` - замена GUI-заглушек, `docs/TSS-W4-PIC.md` и `docs/PIC-SLOT-MAP.md` - сверка PIC-слотов.
 - `gold/TSSPPR.PRT` - историческая форма `TSSPPR` с макросами `&&...&&`.
+- `docs/TSS-W5A-PREP.md` - подготовка 18 дек приложений, `tools/severov/extract_and_gen.py` - генератор.
+- `docs/severov-apps/` - карта 345 сниппетов и 54 пар макрос -> вызовы COMTUP.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

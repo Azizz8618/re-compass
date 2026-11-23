@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `dc550de`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `dc550de`.
+- HEAD: `870a44d`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `870a44d`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -50,9 +50,9 @@
 По плану `docs/TSS-PORT-PLAN.md` запущено 5 субагентов (scratch, без правки репозитория):
 
 1. W1 линковка 14 входов COMTUP - завершена, интегрирована и запушена (`dc550de`)
-2. W2 замена GUI-заглушек (`ses_df58c4b46ffeCRMLOJpIULb945`)
+2. W2 замена GUI-заглушек - завершена, объединена с W1 и запушена (`870a44d`)
 3. W3 порт TSSDML и `DML(TRUE)` (`ses_df58c4b46ffdUsWptUS36kt9Aw`)
-4. W4 таблица PIC-слотов (`ses_df58c4b46ffcuWe0GyWW5ink3O`)
+4. W4 таблица PIC-слотов - отчёт интегрирован (`870a44d`), патч comtup не применялся; найден `gold/TSSPPR.PRT`
 5. W5a подготовка 18 дек и инструмента извлечения (`ses_df58c4b45ffenTTddzO5WwCdGR`)
 
 Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w4-pic`, `tss-w5-prep` в `~/.local/share/vifm/Trash/`. Каждый с резервными копиями дисков и md5-манифестом. После W1-W4 - финальный прогон 18 программ (W5b).

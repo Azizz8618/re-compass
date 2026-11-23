@@ -1,0 +1,88 @@
+шифр 419999 зс5^
+лен 40(2348)^
+лен 41(2196)^
+eeв1а3
+*name
+*call yesmemory
+*perso:402570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program comtupt(output, BDVECT, BDERRN);
+(* Test loader for COMTUP: forces linkage of all 18 external names.
+   MARS side effects are suppressed by flag = false, so only the
+   loader resolution is exercised. *)
+type
+  TPath = packed array [1..40] of char;
+  PicT = record
+    nc, nm, na, smes, ssdmo: integer;
+    m: array [0..383] of integer;
+    l: array [0..383] of integer
+  end;
+  Pic2T = record
+    x128, x129, x130, x131: integer;
+    path: TPath
+  end;
+  word = record case integer of
+    0:(i:integer);
+    1:(a:alfa);
+    2:(p:@integer);
+    3:(c:char);
+    4:(pp:@PicT);
+    5:(pp2:@Pic2T)
+  end;
+  TBDVec = array [0..167] of word;
+  AnyPtr = @integer;
+var
+  ok, i: integer;
+  BDVECT: TBDVec;
+  BDERRN: integer;
+  p1: @PicT;
+  p2: @Pic2T;
+  ap: AnyPtr;
+  b1, flag: boolean;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMP1A(var p:alfa; k:integer); external;
+procedure TPCMP1B(var p:boolean; k:integer); external;
+procedure TPCMP1P(var p:AnyPtr; k:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPL1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function APIC:@PicT; external;
+function APIC2:@Pic2T; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+procedure WPASRA; external;
+procedure VPASR6; external;
+function SSREZK:boolean; external;
+procedure TPCMPNNA(j:integer); external;
+procedure TCMPIN; external;
+procedure TCMPINP; external;
+begin
+  flag := false;
+  if flag then begin
+    SSBF5;
+    TPCMP1I(ok, 10);
+    TPCMP1A(BDVECT[20].a, 10);
+    TPCMP1B(b1, 10);
+    TPCMP1P(ap, 10);
+    TPCMPP1(1);
+    TPCMPL1(2);
+    TPCMPIN1(3);
+    p1 := APIC;
+    p2 := APIC2;
+    ok := EXN;
+    ok := ITLEN;
+    WPASRA;
+    VPASR6;
+    b1 := SSREZK;
+    TPCMPNNA(4);
+    TCMPIN;
+    TCMPINP
+  end;
+  writeln('ВСЕ 18 ВНЕШНИХ ИМЕН РАЗРЕШЕНЫ')
+end.
+*execute
+*end file
+``````
+ЕКОНЕЦ

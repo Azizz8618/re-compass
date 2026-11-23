@@ -1,0 +1,57 @@
+шифр 419999 зс5^
+лен 40(2348)^
+лен 41(2196)^
+eeв1а3
+*name
+*call yesmemory
+*perso:402570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program comtupst(output, BDVECT, BDERRN);
+(* Functional check: PIC pointer persists in COMMON BDVECT between
+   calls, typed TPCMP1I writes the real address, TPCMPL1 updates PIC. *)
+type
+  TPath = packed array [1..40] of char;
+  PicT = record
+    nc, nm, na, smes, ssdmo: integer;
+    m: array [0..383] of integer;
+    l: array [0..383] of integer
+  end;
+  Pic2T = record
+    x128, x129, x130, x131: integer;
+    path: TPath
+  end;
+  word = record case integer of
+    0:(i:integer);
+    1:(a:alfa);
+    2:(p:@integer);
+    3:(c:char);
+    4:(pp:@PicT);
+    5:(pp2:@Pic2T)
+  end;
+  TBDVec = array [0..167] of word;
+var
+  BDVECT: TBDVec;
+  BDERRN: integer;
+  x: integer;
+  p1, p2: @PicT;
+function APIC:@PicT; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPL1(j:integer); external;
+function EXN:integer; external;
+begin
+  p1 := APIC;
+  p2 := APIC;
+  if p1 = p2 then writeln('APIC-STABLE') else writeln('APIC-DIFF');
+  x := 12345;
+  TPCMP1I(x, 10);
+  if BDVECT[10].i = ord(ref(x)) then writeln('TPCMP1I-ADDR-OK')
+  else writeln('TPCMP1I-ADDR-BAD');
+  TPCMPL1(42);
+  writeln('PIC-L0=', p1@.l[0], ' PIC-NA=', p1@.na);
+  writeln('EXN=', EXN)
+end.
+*execute
+*end file
+``````
+ЕКОНЕЦ

@@ -63,3 +63,9 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 ```
 
 Проверка каталога рабочей копии требует `BESM6_PATH=.`. Полные criteria и результаты: `docs/BUILD-VERIFICATION.md`.
+
+## comtup_final: рабочий модуль
+
+`comtup_final_build.b6` собирает `src/comtup.pas` (18 входов), `comtup_final_test.b6` проверяет разрешение всех внешних имён, `comtup_state_test.b6` проверяет COMMON-состояние, адрес переменной и `*BDERRN*`. Эталоны: `comtup_final_build.expected.txt`, `comtup_final_test.expected.txt`, `comtup_state_test.expected.txt`.
+
+Дека сборки открывает 2348 на запись (`лен 40(2348-wr)^`) и увеличивает библиотеку до `032 ЗОН`. Запускать только на рабочей копии с резервом, как описано выше. Результаты и оговорки: `docs/COMTUP-IMPLEMENTATION.md`.

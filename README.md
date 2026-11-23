@@ -61,6 +61,8 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/EXTERNAL-PROCEDURES.md` - рецепт внешних процедур по образцу `arfalib`.
 - `docs/BDVECT-ADDRESS.md` - проверенная передача адреса переменной через `BDVECT`.
 - `docs/BUILD-VERIFICATION.md` - проверка сборки 17 входов и предел в 19.
+- `docs/COMTUP-IMPLEMENTATION.md` - рабочий модуль `src/comtup.pas`, 18 входов, COMMON и `*BDERRN*`.
+- `docs/CGETBDKEY-TEST.md` - критерии интеграционного теста `CGetBdKey`.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

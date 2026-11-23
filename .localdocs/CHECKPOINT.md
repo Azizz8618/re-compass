@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `a9f4785`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `a9f4785`.
+- HEAD: `dc550de`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `dc550de`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -49,7 +49,7 @@
 
 По плану `docs/TSS-PORT-PLAN.md` запущено 5 субагентов (scratch, без правки репозитория):
 
-1. W1 линковка 14 входов COMTUP (`ses_df58c4b47ffeQ9XapOE0UY2I24`)
+1. W1 линковка 14 входов COMTUP - завершена, интегрирована и запушена (`dc550de`)
 2. W2 замена GUI-заглушек (`ses_df58c4b46ffeCRMLOJpIULb945`)
 3. W3 порт TSSDML и `DML(TRUE)` (`ses_df58c4b46ffdUsWptUS36kt9Aw`)
 4. W4 таблица PIC-слотов (`ses_df58c4b46ffcuWe0GyWW5ink3O`)

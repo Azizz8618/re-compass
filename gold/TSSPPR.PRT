@@ -1,0 +1,529 @@
+unit tssppr;
+       && ЯЗЫК TURBOP;для-мо;подсхе si &&
+interface
+uses tssbas,
+     comtup,
+     tslm,
+     tssdmpr,
+{     tssdmr6,}
+     tspic,
+     tsszt,
+     tsserr,
+     tssdml;
+VAR SSCH  : ARRAY[0..&&LSSCH&&] OF INTEGER;
+    Perv2 : boolean; {** была ли "подсхе"  ***}
+
+{   procedure savebib(imqtr:alf6);}
+
+   PROCEDURE OPBIB(NAM:ALF6; VAR SIMOP:TYPEM; TEKOP,TRN:INTEGER);
+
+   PROCEDURE ISPVIP;
+
+   PROCEDURE PODSHE;
+
+   PROCEDURE SSBEG(A:ALF6);
+   (**# BЫДAЧA ИДEHTИФИKAЦИИ MOДYЛЯ*)
+
+   PROCEDURE SSHALT (ELEVEL : INTEGER);
+
+
+
+implementation
+
+{!*
+procedure savebib(imqtr:alf6);
+label 13;
+var Pic1na,pic1nm:Integer;
+PIC1:  TYPPIC;
+begin
+     Pic1:=Pic^;
+     Pic^.nc:=0;
+     Pic^.na:=0;
+Pic1na:=Pic1.na*2;
+pic1nm:=pic1.nm div 2;
+&& buf;oper 64 &&
+wpasra;
+&& найти по-клю @Imqtr в сисбиб &&
+if exn=0 then
+  begin
+    && найти первую в ситран &&
+  end else
+  begin
+    && найти по-клю *4 в подсхе;
+       найти по-клю @Imqtr в подбиб &&
+    IF EXN <> 0 THEN
+      BEGIN
+        PUTEOL;
+        PUTALF('ER.40:');
+        PUTALF(slangm[64]);
+        PUTALF(Imqtr);
+        PUTPOL; ERROR:=40;
+        goto 13;
+      end;
+  end;
+&& запрос trbib.trdlic=@pic1nm;
+   запрос      .trdlil=@pic1na;
+   запрос      .trdliv=@VarPoint;
+   ЗAMEHИ Trbib.TRDLIC ;
+   ЗAMEHИ .TRDLIL ;
+   замени .trdliv;
+   ЗAMEHИ .TRLIT HA @PIC1.L;
+   ЗAMEHИ .TRCOD HA @PIC1.M &&
+&& замени trbib.trtrep на parep;
+   замени trbib.trtdli на padli &&
+13 :
+&&BUF; Oper 64 &&
+vpasr6;
+end;
+*!}
+
+   PROCEDURE OPBIB;(** (NAM:ALF6;VAR SIMOP:TYPEM; TEKOP,TRN:INTEGER);***)
+
+LABEL 3;
+
+VAR PIC1   : TYPPIC;
+    TEKOPL,
+    I,j    : INTEGER;
+    SIMOPI : TYPEMI;
+
+BEGIN (* OPBIB *)
+ PIC1 := PIC^; PIC^.NC := 0; PIC^.NA := 0; TEKOPL:=TEKOP;
+ && BUF;OPER 64 &&
+
+  WPASRA;
+  PIC^.X.AA:=PIC1.IPCX;
+  && HAЙTИ ПO-KЛЮ *11 B ПOДCXE &&
+ IF TRN = 0 THEN
+ BEGIN
+  PIC^.X.AA := NAM;
+  && PEЖИM 0;HAЙTИ ПO-KЛЮ *11 B ПOДБИБ &&
+  IF EXN = 0 THEN
+  BEGIN
+   && HAЙTИ B OTTPAH &&
+  END ELSE
+  BEGIN
+   && HAЙTИ ПO-KЛЮ *11 B CИCБИБ &&
+   IF EXN <> 0 THEN
+   BEGIN
+    PUTEOL;PUTALF('ER.40:');
+    PUTALF(slangm[64]); PUTALF(PIC^.X.AA);  PUTPOL; ERROR:=40;
+    GOTO 3
+   END ELSE
+   && HAЙTИ ПEPBYЮ B CИTPAH &&
+  END;
+ END;
+ IF TEKOPL = 171 then
+ BEGIN
+   &&BЗЯTЬ QU.QUT HA @SIMOPI.I&&
+   SIMOP := SIMOPI.A;
+ END;
+
+
+ IF TEKOPL = 175 then BEGIN
+{         FOR I:=1 TO 40 DO BEGIN PUTINT(PIC1.M[I]);PUTEOL END;}
+{ & & взять trbib.trdlic на @i;
+     взять      .trdlil на @j;
+     BЗЯTЬ TRBIB.TRCOD HA @PIC1.M;
+     BЗЯTЬ      .TRLIT HA @PIC1.L & &}
+{         FOR I:=1 TO 40 DO BEGIN PUTINT(PIC1.M[I]);PUTEOL END;
+         FOR I:=0 TO 9 DO BEGIN PUTINT(PIC1.L.I[I]);PUTEOL END;}
+
+        END;
+
+ 3 :
+ && BUF;OPER 64 &&
+ PIC^:=PIC1;
+ vPASR6
+END; (* OPBIB *)
+
+
+       PROCEDURE ISPVIP;
+
+BEGIN (* ISPVIP *)
+ BUF.D:=BUF.I+1;
+ BUF.M:=BUF.MV;
+ BUF.M[BUF.D]:=CHR(C255);
+ BUF.H:=0;
+ BUF.I:=0;
+ C:=' ';
+END; (* ISPVIP *)
+
+procedure Compile_Method;
+var dlic,stp:integer;
+    cc:byte;
+    tt:typem;
+    pic4:typpic;
+begin
+  &&взять qu.qunm  на @VarNames[1];
+    взять qu.qurep на @parep[1];
+    взять qu.qudli на @padli[1];
+    взять qu.qufel на @FElFlag;
+    BЗЯTЬ QU.QUT   HA @tt;
+    взять trbib.trn на @dlic&&
+  write(mf,dlic);
+  pic4:=pic^;
+  dlic:=1;
+  while tt[dlic]<>chr(C255) do
+    begin
+      putchr(tt[dlic]);
+      inc(dlic);
+    end;
+  ispvip;
+  VarAmount:=1;
+  VarPoint:=1;
+  {writeln('Compiling of ',VarNames[1]);}
+  dml(true);
+  dlic:=pic^.nm div 2;
+  write(mf,dlic);
+  for dlic:=1 to pic^.nm div 2 do
+    begin
+      stp:=256*pic^.m[dlic*2]+pic^.m[dlic*2-1];
+      write(mf,stp);
+    end;
+  write(mf,pic^.nc);
+  for dlic:=0 to (pic^.nc+1) div 2 do
+    begin
+      stp:=256*byte(pic^.l.c[dlic*2+1])+byte(pic^.l.c[dlic*2]);
+      write(mf,stp);
+    end;
+  dlic:=0;
+  for cc:=1 to VarAmount do
+    dlic:=dlic+VarLength(cc);
+  write(mf,dlic);
+{  for dlic:=1 to VarPoint do
+    write(mf,parep[dlic]);
+  for dlic:=1 to VarPoint do
+    write(mf,padli[dlic]);}
+  pic^:=pic4;
+end;
+
+procedure Print_Methods;
+var reco,csh:integer;cm:desmeth;f:text;
+begin
+assign(f,'methods.ret');
+rewrite(f);
+for reco:=1 to roch.nomzp do
+ if recmeths[reco]<>nil then
+  begin
+    writeln(f,'  Rec number ',reco,' , ',tabcx.alf[reco],' :');
+    cm:=recmeths[reco];
+    while cm<>nil do
+      begin
+        writeln(f,' Method number ',cm^.trnum,' , ',cm^.mname,' :');
+        writeln(f,'Par amount : ',cm^.numpar);
+        writeln(f,'Variables  :   rep  &  dli');
+        writeln(f,'--------------------------');
+        writeln(f,'Main value : ',mparsrep[cm^.begpar]:5,
+                            '   ',mparsdli[cm^.begpar]:5);
+        for csh:=2 to cm^.numpar do
+          writeln(f,'Par ',csh-1:6,' : ',mparsrep[cm^.begpar+csh-1]:5,
+                                   '   ',mparsdli[cm^.begpar+csh-1]:5);
+        cm:=cm^.mref;
+        writeln(f,'====================================');
+      end;
+    writeln(f,'**************************************');
+  end;
+close(f);
+end;
+
+          PROCEDURE PODSHE;
+LABEL 1;
+VAR PIC3:TYPPIC;
+    PSSDMO,DliC,ReCo,csh,hc : INTEGER;
+    nm:alf6;
+    wac:boolean;
+
+function SMeth : desmeth;
+var dmeth:desmeth;
+begin
+  new(dmeth);
+  with dmeth^ do
+    begin
+      &&взять trbib.trnmq на @mname;
+        взять trbib.trn   на @trnum;
+        взять trbib.trnump на @numpar;
+        взять trbib.trtrep на @MParsRep[csh];
+        взять trbib.trtdli на @MParsDli[csh] &&
+{      numpar:=itlen div 2;}
+      begpar:=csh;
+      csh:=csh+numpar;
+      mref:=nil;
+    end;
+  if dmeth^.numpar=0 then
+    begin
+      dispose(dmeth);
+      dmeth:=nil; 
+    end;
+  SMeth:=dmeth;
+end;
+procedure Map_Method(NomRec:integer);
+var cmeth:desmeth;
+begin
+  if RecMeths[NomRec]=nil then
+    RecMeths[NomRec]:=SMeth else
+    begin
+      cmeth:=RecMeths[NomRec];
+      while cmeth^.mref<>nil do
+        cmeth:=cmeth^.mref;
+      cmeth^.mref:=SMeth;
+    end;
+end;
+
+BEGIN (* PODSHE *)
+ PIC3:=PIC^;
+ PIC^.NC:=0;
+ PIC^.NA:=0;
+  IF NKO THEN
+ BEGIN
+  IMQ;
+  PIC^.IPCX:=IMQ1;
+ END ELSE
+ BEGIN
+  IF SSSDM THEN
+    SSPERE:=1;
+  PIC^.IPCX:=PIC3.IPCX
+ END;
+ PSSDMO:=0;
+ IF (PIC^.SSDMO)>3 THEN
+   BEGIN
+     PSSDMO:=PIC^.SSDMO;
+     PIC^.SSDMO:=0
+   END;
+
+{ IF PIC^.ZAV=1 THEN & & ЗABEPШ & &}
+
+ WPASRA;
+ && BUF;HAЙTИ ПO-KЛЮ *4 B ПOДCXE &&
+ IF EXN<>0 THEN  BEGIN ERM(14);GOTO 1 END;
+ PIC3.IPCX:=PIC^.IPCX;
+
+ PIC^.X.II:=6;
+
+ && BЗЯTЬ .SBLEN HA *21 &&
+ && BЗЯTЬ .SBMOD HA *11 &&
+
+   IF PIC^.X.II<PIC^.SSPED THEN
+ BEGIN
+  ERM(15);PIC^.SSPED:=PIC^.X.II
+ END;
+ && BЗЯTЬ .SBPEJ HA *11 &&
+ IF PIC^.X.II<>0 THEN
+ BEGIN
+  && HAЙTИ ПO-KЛЮ *4 B HA-ПOД;
+     ECЛИ COC=0 TO BЗЯTЬ .PRASB HA *11 &&
+  IF(EXN<>0)OR(PIC^.SSPED>PIC^.X.II) THEN
+  BEGIN
+   ERM(16);GOTO 1
+  END
+ END;
+ && BЗЯTЬ SUBCX.SBLC HA *12 &&
+ IF (PIC^.X2 <> XLAM) AND (PIC^.X2 <> PIC^.SSPRIV) THEN
+ BEGIN ERM(17);GOTO 1 END;
+
+
+
+ && BЗЯTЬ SUBCX.MDESF1 HA @ROCH.CXCXTL &&
+ && BЗЯTЬ.MDESR2 HA @ROCH.XBOCT.INT[1] &&
+ KONNAB :=1+ ITLEN DIV 2;
+
+Pbegel:= Addr(roch.xboct.int[konnab-5]);
+
+&& НАЙТИ ПЕРВУЮ В SBI &&
+  WHILE EXN = 0 DO
+BEGIN
+ && ВЗЯТЬ .SIF HA @ROCH.XBOCT.INT[KONNAB] &&
+ KONNAB := KONNAB + ITLEN DIV 2;
+ && НАЙТИ СЛЕДУЮ &&
+END;
+
+Pbegnab:= Addr(roch.xboct.int[konnab-7]);
+
+
+ && BЗЯTЬ SUBCX.MDESS4 HA @ROCH.XBOCT.INT[KONNAB] &&
+ KONNAB := KONNAB+ITLEN DIV 2;
+ && BЗЯTЬ.MDESV5 HA @ROCH.XBOCT.INT[KONNAB] &&
+ KONNAB := KONNAB+ITLEN DIV 2;
+ && BЗЯTЬ.MDESP6 HA @ROCH.XBOCT.INT[KONNAB] &&
+
+ && BЗЯTЬ.NAMER1 HA TABCX.INT[1] &&
+ KONNAB := 1+ITLEN DIV 2;
+
+&& НАЙТИ ПЕРВУЮ В SBI &&
+  WHILE EXN = 0 DO
+BEGIN
+ && ВЗЯТЬ .NIF HA @TABCX.INT[KONNAB] &&
+ KONNAB := KONNAB + ITLEN DIV 2;
+ && НАЙТИ СЛЕДУЮ &&
+END;
+
+ && BЗЯTЬ SUBCX.NAMES3 HA TABCX.INT[KONNAB] &&
+ KONNAB := KONNAB+ITLEN DIV 2-1;
+
+ KONZAP := ROCH.NOMZP;
+ BEGNAB := ROCH.TH+KONZAP+1;
+ KONNAB := KONNAB DIV 3;
+
+ {   SSLIN(ROCH.CXCXTL); !!! }
+ if SSSDM then
+   PIC3.SDL:=sizeof(roch)-10 else
+   PIC3.SDL:=PIC^.SDL;
+
+for ReCo:=1 to roch.nomzp do
+  begin
+    if odd(roch.xboct.rec[ReCo].persys) then
+      nomsys:=ReCo; { !! }
+    RecMeths[ReCo]:=nil;
+  end;
+csh:=1;
+&&найти первую в сисбиб&&
+while exn=0 do
+  begin
+    &&найти первую в ситран;
+      взять trbib.trfel на @FElFlag&&
+    if not FElFlag then
+    Map_Method(nomsys);
+    &&найти следую в сисбиб&&
+  end;
+&&найти первую в подбиб&&
+while exn=0 do
+  begin
+    &&взять trbib.trrecn на @ReCo;
+      взять trbib.trfel на @FElFlag&&
+    if not FElFlag then
+    if ReCo=0 then
+      Map_Method(nomsys) else
+      Map_Method(ReCo);
+    &&найти следую в подбиб&&
+  end;
+Print_Methods;
+
+assign(mf,'methods.tmp');
+rewrite(mf);
+wac:=false;
+hc:=0;
+&&найти первую в сисбиб&&
+while exn=0 do
+  begin
+    &&найти первую в ситран;
+      взять trbib.trdlic на @dlic &&
+    if dlic=0 then
+      begin
+        && взять trbib.trnmq  на @nm &&
+        if hc=0 then
+          hc:=howcom(nm);
+        if hc in [1,2] then
+          begin
+            && взять trbib.trrecn на @MethOwner&&
+            Compile_Method;
+            wac:=true;
+          end;
+        if hc in [2,3] then
+          hc:=0;
+      end;
+    &&найти следую в сисбиб&&
+  end;
+&&найти первую в подбиб&&
+while exn=0 do
+  begin
+    &&взять trbib.trdlic на @dlic &&
+    if dlic=0 then
+      begin
+        && взять trbib.trnmq  на @nm &&
+        if hc=0 then
+          hc:=howcom(nm);
+        if hc in [1,2] then
+          begin
+            && взять trbib.trrecn на @MethOwner;
+               найти в оттран &&
+            Compile_Method;
+            wac:=true;
+          end;
+        if hc in [2,3] then
+          hc:=0;
+      end;
+    &&найти следую в подбиб&&
+  end;
+close(mf);
+if wac then
+  zamtrb;
+erase(mf);
+VarAmount:=0;
+
+ PIC^:=PIC3;
+ PIC^.ZAV:=0;
+IF PSSDMO>0 THEN
+  BEGIN
+    PIC^.SSDMO:=PSSDMO;
+    PSSDMO:=0
+  END;
+IF SSSDM THEN
+  BEGIN
+    INKOMP;
+    INBPEM
+  END;
+1: END; (* PODSHE *)
+
+      PROCEDURE  SSBEG;
+var SI :  Pointer;
+
+BEGIN (* SSBEG *)
+
+ {OLDTIMES := TIMES;}
+ STOBM    := 0;   (* старое ЧИCЛO OБMEHOB *)
+ SSVERK('8F2709',A);
+ SSON     := 0;
+ NEMAD    := FALSE;
+ RABORT   := TRUE;
+ Konzap :=0;
+ Konnab :=0;
+ Begnab :=0;
+
+ (* OTKPЫTИE ПOДCXEMЫ CCД *)
+ SSBF5;
+
+ &&без-ss;компас&&
+
+ PIC := APIC;
+ Pic2:= apic2;{ Ptr (Seg( PIC^.L),Pic^.Y2);}
+
+ (* ИДEHTИФИKAЦИЯ ПOЛЬЗOBATEЛЯ *)
+{ (*+B+!)
+ PIC.X.II := SHIFR;
+ && !*ECЛИ 'XXXXXX'<>*7 TO HA M;
+ HAЙTИ ПO-KЛЮ *11 B ШИФP;
+ ECЛИ COC=0 TO HA M4;
+ M:  HAЙTИ ПO-KЛЮ *7 B ПOЛЬЗO;
+ ECЛИ COC=0 TO HA M4;
+ M1: OШИБKA 25;
+ HAЙTИ ПO-KЛЮ'XXXXXX' B ПOЛЬЗO;
+ M4: BЗЯTЬ.UID HA *7;BЗЯTЬ.UPID HA *13;
+ ECЛИ *13=*20 TO HA M5;
+ ECЛИ *8<>*13 TO _( OШИБKA 17;HA M1 _);
+ M5:;*!&&
+ (!--*)}
+ PTABCX   := addr( TABCX);
+ PIC^.SSD  := 0;   (*PEЖИM HA ДYБЛЯX*)
+ PIC^.SSPED:= 3;   (*PEЖИM ДЛЯ-MO *)
+ PAIMC := addr (roch);
+ {     PIC^.AIMC := SEG( ROCH);   }
+END; (* SSBEG *)
+
+
+PROCEDURE SSHALT (ELEVEL : INTEGER);
+
+BEGIN {* SSHALT *}
+ PIC^.NM := 1;
+ PIC^.NC := 0;
+ PIC^.NA := 0;
+ if Perv2 then
+   begin
+     && ЗABEPШ &&
+   end;
+ { CLMAG; }
+ BUF.I := 0;
+ Obmeny:=pic2^.x129;
+ SSENDM;
+ HALT(ELEVEL);
+END; {* SSHALT *}
+
+end.

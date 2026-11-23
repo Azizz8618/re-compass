@@ -24,6 +24,7 @@ check:
 	python3 -m py_compile tools/are_to_mars.py
 	python3 -m py_compile tools/are_to_mars_multi.py
 	python3 -m py_compile tools/check_zone_changes.py
+	python3 -m py_compile tools/severov/analyze_tsspr.py
 	python3 -m py_compile tools/mars/parse_words.py
 	python3 -m py_compile tools/severov/mkfront.py
 	python3 -m py_compile tools/severov/extract_gold.py

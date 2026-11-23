@@ -1,0 +1,115 @@
+шифр 419900зс5^
+лен 40(2048-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name 
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=p-,t-*)PROGRAM main (OUTPUT,bdvect);
+% микрокоманды - 6-битовые, размещаются в слове с младших разрядов
+% после определения констант процедуры с теми же именами уже недоступны
+const zero='_000_000_000_000_000_000';
+      deld=27231411c;
+
+type word = record case integer of
+ 0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+ 
+var i,j,len:integer;key:alfa;
+s3:packed array [1..18] of char;
+s4:packed array [1..24] of char;
+s5:packed array [1..30] of char;
+a:array [1..1234b] _of integer;
+m:array [1..4] of integer;
+bdvect, sav: array[0..167] of word;
+PROCEDURE PASACD(var I: INTEGER); FORTRAN; 
+PROCEDURE PASSETAR(I: INTEGER); EXTERNAL; 
+procedure pasbdi; external;
+procedure pasbd; external;
+procedure dump;
+_var j:integer;
+_( 
+    for j := 0 to 167 do 
+        if bdvect[j] <> sav[j] then
+            writeln(' word ', j : 3,
+                ' changed from ', sav[j] oct,
+                ' to ', bdvect[j] oct, '(', bdvect[j].a, ')');
+    sav := bdvect;
+_);
+function last: alfa;
+_(
+        bdvect[3].i := 02c;
+        pasbd;
+        last := bdvect[31].a;
+_);
+
+function prev: alfa;
+_(
+        bdvect[3].i := 03c;
+        pasbd;
+        prev := bdvect[31].a;
+_);
+
+function find(a: alfa): alfa;
+_(
+        bdvect[8].a := a;
+        bdvect[3].i := 11c;        
+        pasbd;
+        find := bdvect[31].a;
+_);
+
+procedure printn(key: alfa; var s:packed array[1..30] of char);
+var len:integer; 
+_(
+        write(key);
+        len := ord(bdvect[39].c)*6;
+        for i to len do write(s[i]);
+        writeln
+_);
+BEGIN
+        i := 1270000c; PASACD(i);
+        PASSETAR(270000c);
+        i := 1270001c;
+        newd('проба', i);
+        opend('проба');
+        s4 := 'он уважать себя заставил';       putd('iii. ', s4);
+        s5 := 'мой дядя самых честных правил '; putd('i. ', s5);
+        s4 := 'и лучше выдумать не мог ';       putd('iv. ', s4);
+        s4 := 'когда не в шутку занемог';       putd('ii. ', s4);
+        key := last;
+        while key <> zero do _(
+              getd(key, s5);
+              printn(key, s5);
+              key := prev;        
+        _);
+        key := find('ii.   ');
+        writeln('Искали ii.  - нашли ', key);
+        key := find('v.    ');
+        writeln('Искали v.  - нашли ', key);
+% MODD из example.b6: меняем значение записи iii.
+        m[1]:=111111; m[2]:=222222;
+        m[3]:=333333; m[4]:=444444;
+        modd('iii. ', m);
+        getd('iii. ', m);
+        writeln('После MODD ', m[1], m[2], m[3], m[4]);
+% DELD через микрокоманду из experiment.b6: удаляем запись iv.
+        bdvect[3].i := deld;
+        bdvect[8].a := 'iv.   ';
+        pasbd;
+        key := find('iv.   ');
+        writeln('После DELD ищем iv.  - нашли ', key);
+% проверяем, что записи iv. больше нет, проходом по всем записям
+        key := last;
+        while key <> zero do _(
+              getd(key, s5);
+              printn(key, s5);
+              key := prev;
+        _);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

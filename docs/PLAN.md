@@ -16,26 +16,28 @@
 
 Критерий: лог `mars-check` с совпадающими контрольными суммами обеих копий.
 
-## Этап 2. Дымовой тест МАРС из Pascal (не начат)
+## Этап 2. Дымовой тест МАРС из Pascal (завершён)
 
 - Взять за основу `besm6.github.io/sources/mars/sorucom.b6`: `PASACD`, `PASSETAR`, `NEWD`, `OPEND`, `PUTD`, `GETD`, итераторы `LAST`/`PREV`.
 - Добавить `MODD` из `example.b6` и `DELD` через микрокоманду из `experiment.b6`.
 - Собрать дек с `лен 40(2048-630)^` (код МАРС), `лен 41(2348)^`, `*perso:412570`, `*stand`, `*call *pascal`.
 - Запустить `dispak -p -o tests/mars_smoke.run tests/mars_smoke.b6`, сохранить эталонный вывод.
 
-Критерий: воспроизводимый вывод Pascal-программы, содержащий результаты чтения записанных записей, без ошибок МАРС (`errors.md`).
+Критерий выполнен: два прогона дали байтово идентичный вывод (md5 `c035b5f940c9eaa4b0f157fa394f4510`), баннер `PASCAL COMPILER 15.1 (28.10.26)`, ошибок МАРС нет. Дек и эталон: `tests/`. Подробности: `tests/README.md`.
+
+Дополнительно выполнены: декодирование констант `UCOMPAS` (`PIC-MICROCODE.md`), таблица соответствия `COMTUP` (`COMTUP-MAPPING.md`), рецепт внешних процедур (`EXTERNAL-PROCEDURES.md`).
 
 ## Этап 3. Выделение переносимого ядра КОМПАС (в работе)
 
 - Отобрать машинно-независимые модули: `TYPES.PAS`, `UNIOBJ.PAS`, `UTEXT.PAS`, `CMPSNO.PAS`, `UCMPSN.PAS`, `TSPIC.PAS`, `UNPIC.PAS`, `UACTIONS.PAS`, `UCOMPIL.PAS`.
 - Отбросить PC/GUI-зависимые: `STARTUP.PAS`, `EDITORS.PAS`, `CMPSW.PAS`, оверлеи.
-- Свести вызовы верхних слоёв к 16 процедурам `COMTUP` как к контракту нижнего уровня.
+- Свести вызовы верхних слоёв к 17 процедурам `COMTUP` как к контракту нижнего уровня.
 
 Критерий: таблица «модуль - зависимости - замена» в `PASCAL-SOURCES.md`.
 
 ## Этап 4. Реализация нижнего уровня поверх МАРС (не начат)
 
-- Реализовать каждую из 16 `EXTERNAL`-процедур `COMTUP.PAS` (`SSBF5`, `SSREZK`, `TPCMPADR`, `TPCMPAD1`, `TPCMPP1`, `TPCMPIN1`, `TPCMPNNA`, `TPCMPL1`, `AROP`, `APIC`, `EXN`, `ITLEN`, `APIC2`, `TCMPIN`, `TCMPINP`, `WPASRA`, `VPASR6`) через `NEWD/OPEND/PUTD/GETD/MODD/DELD` и `PASBDI`/`PASBD`.
+- Реализовать каждую из 17 `EXTERNAL`-процедур `COMTUP.PAS` (`SSBF5`, `SSREZK`, `TPCMPADR`, `TPCMPAD1`, `TPCMPP1`, `TPCMPIN1`, `TPCMPNNA`, `TPCMPL1`, `AROP`, `APIC`, `EXN`, `ITLEN`, `APIC2`, `TCMPIN`, `TCMPINP`, `WPASRA`, `VPASR6`) через `NEWD/OPEND/PUTD/GETD/MODD/DELD` и `PASBDI`/`PASBD`.
 - Переписать `UCOMPAS.PAS` тонкой обёрткой: числовые коды PC-ядра (36, 19712, 19456, 7439) заменить операциями МАРС.
 - Портировать `TSERVIS.PAS` (области): область КОМПАС отображается на архив/зону МАРС-6, а не на файл ОС.
 - Сохранить структуру `PIC` (`ALF6`, `LENLIT=383`, `LENOP=384`) как совместимую с `MICROCOD.TXT`.

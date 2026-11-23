@@ -13,34 +13,50 @@ make mars-check
 
 ## Дека ДИСПАК
 
+Проверенный вариант: `tests/mars_smoke.b6`.
+
 ```text
-user 419999 зс5^
-лен 40(2348)^
-eeв1а3
+шифр 419900зс5^
+лен 40(2048-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
 *name
-*call yesmemory
-*perso:402570
+*call ficmemory
+*perso:412570
 *stand
 *call *pascal
-<Pascal-текст, фигурные скобки заменяются на _( _)>
+(*=p-,t-*)PROGRAM main (OUTPUT,bdvect);
+<текст Pascal>
 *execute
 *end file
 ``````
-ЕКОНЕЦ
+еконец
 ```
 
-`*STAND` обязательна: без неё `*CALL *PASCAL` берёт штатный оверлей 15.0, игнорируя `PASCOMPL` из временной библиотеки. Для МАРС добавляют `лен 40(2048-630)^` (код МАРС) и используют `*perso:412570`, если 2348 на LU 41.
+Карты, проверенные снятием по одной:
 
-Готовый сценарий: `~/Yandex.Disk/pascal-re/tools/perso-run.sh program.pas --zone=2570`.
+- `лен 40(2048-630)^` - критична: без неё `ОШ.В ИНФ.СЛ.ЭКСТ`, код МАРС не загружен.
+- `*perso:412570` - критична: без неё `ОТСУТСТВУЕТ Р/6А`, нет `PASACD`, `PASSETAR`, `PAIB`.
+- `*stand` - в текущей среде баннер остаётся `PASCAL COMPILER 15.1 (28.10.26)` и без неё; карта сохранена для совместимости с правилами `pascal-re`.
+- Образы `2053` и `2099` должны быть в `--path`: иначе `НЕТ СТПАСП` и `Error loading supervisor`.
+
+`лен 40(2048-630)^` монтирует код МАРС с тома 2048, зона `630₈`. `*perso:402570` применяется, если 2348 смонтирован на LU 40. Готовый сценарий: `~/Yandex.Disk/pascal-re/tools/perso-run.sh program.pas --zone=2570`.
 
 ## Компиляция и запуск
 
 ```sh
-dispak -p -o tests/mars_smoke.run tests/mars_smoke.b6
-~/Yandex.Disk/pascal-re/tools/perso-run.sh tests/mars_smoke.pas --zone=2570
+mkdir -p /tmp/re-compass-run
+cp ~/.besm6/{2048,2053,2099,2148,2348} /tmp/re-compass-run/
+cp tests/mars_smoke.b6 /tmp/re-compass-run/
+cd /tmp/re-compass-run
+dispak --path=. -p mars_smoke.b6 > output.run 2> output.err
+diff -u <путь-к-репозиторию>/tests/mars_smoke.expected.txt output.run
 ```
 
-Вывод содержит печать монитора, листинг компилятора, `LINES STRUCTURE`, каталог модулей и вывод программы. Эталоны: `~/Yandex.Disk/dispak/tests/pascal-monitor/output.txt`, `~/Yandex.Disk/dispak/tests/arfalib/output.txt`.
+Вывод содержит печать монитора, листинг компилятора, каталог модулей и вывод программы. `dispak -o file` без `-x` не создаёт файл; с `-x -o` файл не содержит `КОНЕЦ ЗАДАЧИ` и `*74`. Полный вывод сохраняется перенаправлением stdout.
+
+`MODD` принимает `array [1..4] of integer`, но не `packed array [1..24] of char`: строка даёт ошибку компиляции 33. Подробности и эталон: `tests/README.md`.
 
 ## Запись модуля в библиотеку
 

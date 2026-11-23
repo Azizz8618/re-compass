@@ -31,7 +31,7 @@
 
 | Модуль | Проблема | Замена |
 |---|---|---|
-| `COMTUP.PAS` | 16 `EXTERNAL`-процедур, вызов TSR через `INT 12h` и DOS-файлы | реализовать те же сигнатуры через МАРС (`MARS-INTERFACE.md`) |
+| `COMTUP.PAS` | 17 `EXTERNAL`-процедур, вызов TSR через `INT 12h` и DOS-файлы | реализовать те же сигнатуры через МАРС (`MARS-INTERFACE.md`) |
 | `COMPASST.OBJ`, `COMPASST.ASM` | резидент PC, `BORLAND TURBO PASCAL ... INTERFACE TO COMPASS-tsr` | `NEWD/OPEND/PUTD/GETD/MODD/DELD`, `PASBDI`/`PASBD` |
 | `UCOMPAS.PAS` | зашиты числовые коды PC-ядра: `TPCMPP1(36)`, `TPCMPP1(19712)`, `TPCMPP1(19456)`, `TPCMPIN1(7439)` | тонкая обёртка над новым `COMTUP` на операциях МАРС |
 | `TSERVIS.PAS` | `PAROBL`, `novOBL`, `ustOBL`, `OCB` целиком на `COMTUP`, область - файл ОС | область - архив/зона МАРС-6 |
@@ -40,7 +40,7 @@
 
 ## Контракт нижнего уровня
 
-`COMTUP.PAS` объявляет 16 внешних процедур:
+`COMTUP.PAS` объявляет 17 внешних процедур:
 
 ```
 SSBF5, SSREZK, TPCMPADR, TPCMPAD1, TPCMPP1, TPCMPIN1, TPCMPNNA, TPCMPL1,
@@ -48,6 +48,8 @@ AROP, APIC, EXN, ITLEN, APIC2, TCMPIN, TCMPINP, WPASRA, VPASR6
 ```
 
 `UCOMPAS.PAS` показывает, как высокий уровень превращается в низкоуровневые коды: `COpen`, `CClose`, `CPlace`, `CReplace`, `CRemove`, `CFindFirst/Next/Preceding/End`, `CFindByKeyElement`, `CGetBdKey`, `CPutBdKey`, `CGetKnotByKey`, `CInclude/CExclude/CReinclude`, `CompassInstalled`.
+
+В версии `10_14/FILES/COMTUP.PAS` (13810 байт, 18.07.1995) эти процедуры объявлены как `far; EXTERNAL 'compass' index N`, где индексы идут от 2 до 19; ранняя версия из `SYS.ARJ/SYSTECH/COMTUP.PAS` объявляет только 9 внешних процедур. Контрактом для порта считается более новая версия с 17 точками входа, которая укладывается в лимит 18 дополнительных входов Паскаль-Монитора.
 
 Сохранив сигнатуры `COMTUP`, можно оставить верхние слои нетронутыми и заменить только реализацию.
 

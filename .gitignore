@@ -4,6 +4,7 @@ build/
 # Крупные бинарники и образы
 *.bin
 *.b6
+!tests/*.b6
 *.ima
 *.img
 *.zip

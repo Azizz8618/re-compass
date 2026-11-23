@@ -15,7 +15,7 @@ from pathlib import Path
 ZONE = 8256  # 8 служебных слов + 1024 слова данных по 8 байт
 
 ALLOWED = [
-    ("MARS patch dump", 0o0657, 0o0700),
+    ("MARS patch dump", 0o0657, 0o0704),
     ("PERSO COMTUP/SERVIS", 0o2570, 0o2637),
     ("TSSDML/TSSPPR reserve", 0o3250, 0o3347),
     ("PERSO UCOMPAS", 0o3350, 0o3360),

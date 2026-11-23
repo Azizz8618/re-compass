@@ -26,29 +26,29 @@ Scratch: `/home/azizz/.local/share/vifm/Trash/tss-w2-gui`.
 `build/tsspr-v12.pas` получен из `src/tsspr.pas` (v11) сценарием
 `tools/make_v12.py`. Все сигнатуры заменяемых процедур сохранены:
 
-- `ERROUT(A:INTEGER; B3:ALF6; NEJT:INTEGER)` — чтобы убрать `OpRoot/OpCmd/
+- `ERROUT(A:INTEGER; B3:ALF6; NEJT:INTEGER)` - чтобы убрать `OpRoot/OpCmd/
   OpFrame/OpWindow/OpMenu/OpPick/OpString`, печать переведена на `WRITE/
   WRITELN` в `OUTPUT`. Печатает код, `B3`, `NEJT`, `IMQCT -> IMQ1`;
   `ERROR:=A`, `BDERRN:=A`. Сканирование `COERR.TXT` (как в `TSSERR.PAS`)
   сохранено, но защищено флагом `FFerrReady`: в противном случае `RESET`
   несуществующего файла уронил бы probe. `fferr:text` объявлен явно.
-- `ERM(A:integer)` — как в `TSSDML.PAS`: `ERROUT(700+A,'K3T5CO',1)`.
-- `SSENDM` — печать контекста (`SSNPRO`, `Ident`, `Obmeny`) вместо окна и
+- `ERM(A:integer)` - как в `TSSDML.PAS`: `ERROUT(700+A,'K3T5CO',1)`.
+- `SSENDM` - печать контекста (`SSNPRO`, `Ident`, `Obmeny`) вместо окна и
   `textcolor` из `TSSDMPR.PAS`.
-- `INKOMP`, `INBPEM` — печать контекста (`SDL/SSD/SSPED/IPCX`, записи
+- `INKOMP`, `INBPEM` - печать контекста (`SDL/SSD/SSPED/IPCX`, записи
   `SYS---`) вместо вызовов GUI/визуального вывода.
-- `VarLength(VarNumber:BYTE):integer` — полностью перенесена функция `lrep`
+- `VarLength(VarNumber:BYTE):integer` - полностью перенесена функция `lrep`
   из `TSSDML.PAS` (0,3->1; 1,11,12,13->2; 2,5->4; 6->8; 7->0), результат
   умножается на `padli[VarNumber]`.
-- `howcom(N:alfa):BYTE` — печать меню 1..4 и чтение выбора через `READLN`
+- `howcom(N:alfa):BYTE` - печать меню 1..4 и чтение выбора через `READLN`
   вместо `readkeyword` и окна; значение по умолчанию 1.
-- `dml(PERV:BOOLEAN)` — рабочий минимальный токенайзер: пропуск пробелов
+- `dml(PERV:BOOLEAN)` - рабочий минимальный токенайзер: пропуск пробелов
   `BUF.M`, выделение первых 6 символов, поиск в `SLANGM[1..100]`, печать
   распознанного номера операции. Полный интерпретатор ЯМД остаётся за W3.
-- `zamtrb` — проход по `mf` (`RESET/EOF/READ`), чтение `trn`, `trdlic`,
+- `zamtrb` - проход по `mf` (`RESET/EOF/READ`), чтение `trn`, `trdlic`,
   `trdlil`, `trdliv` и буфера `AA`, печать итога. Вызовы COMTUP из `TSSZT.PAS`
   пока не перенесены (нет структуры `ZZSS` в порту).
-- `FAssign/FAssignI/FClose/FCloseI/ERASE` — сохраняют имена файлов и флаг
+- `FAssign/FAssignI/FClose/FCloseI/ERASE` - сохраняют имена файлов и флаг
   `FFerrReady`; собственно `RESET/REWRITE/READ/WRITE` работают с переменной
   файла, переданной вызывающим.
 - `SLANGM` инициализирован 100 операторами `SLANGM[i]:='...'` в главном блоке;
@@ -94,14 +94,14 @@ DМL LЕN=         6 ОР=         4 НАЙТИ
 
 ## 4. Что осталось заглушкой / не проверено (факт)
 
-- Полная семантика `DML` (13 операций ЯМД, работа с `BDVECT`) — поток W3.
+- Полная семантика `DML` (13 операций ЯМД, работа с `BDVECT`) - поток W3.
 - Генерация кода в `INKOMP/INBPEM` (`VPIC`, `VPIC2`, `VPICTR`) и вызовы
-  COMTUP в `zamtrb` — требуют полного `TSSDML`/`ZZSS`.
+  COMTUP в `zamtrb` - требуют полного `TSSDML`/`ZZSS`.
 - Реальное связывание имён файлов: `ASSIGN/CLOSE` отсутствуют в 15.1,
   поэтому `FAssign` только записывает имя. Ни `COERR.TXT`, ни
   `methods.tmp` в probe не создавались.
 - Линковка 14 внешних входов (`TPCMPP1`, `SSBF5`, ...), три адреса `nil`,
-  `SSVERK`, `IMQ`, `SSSDMF`, `SIZEOF` — вне объёма W2 (потоки W1/W3/W4).
+  `SSVERK`, `IMQ`, `SSSDMF`, `SIZEOF` - вне объёма W2 (потоки W1/W3/W4).
 
 ## 5. Гипотезы
 
@@ -117,6 +117,6 @@ DМL LЕN=         6 ОР=         4 НАЙТИ
 
 Работа останавливается здесь: цель W2 (0 синтаксических диагностик,
 отсутствие `******`, печать кода и контекста, `SLANGM`, сигнатуры, зонный
-контроль) достигнута в scratch. Дальнейшие шаги — W1 (линковка COMTUP), W3 (полный
-`DML`) и W4 (сверка PIC) — требуют отдельного задания. Ни один файл в
+контроль) достигнута в scratch. Дальнейшие шаги - W1 (линковка COMTUP), W3 (полный
+`DML`) и W4 (сверка PIC) - требуют отдельного задания. Ни один файл в
 репозиторий не скопирован, коммитов и push нет.

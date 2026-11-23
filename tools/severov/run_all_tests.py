@@ -24,7 +24,7 @@ SESSIONS = [
      ['comtup_final_build', 'servis_build4'],
      ['original_deck_front', 'gold_servis', 'gold_servis_other', 'ttc15',
       'genmad', 'predtgen', 'gold_shtamp', 'gold_shtamp_v']),
-    ('standalone', [],
+    ('standalone', ['comtup_final_build'],
      ['mars_smoke', 'adatars', 'aremars', 'bpmars', 'scmars',
       'deck03', 'deck04-schema-am', 'deck05-fortran-startup', 'deck08',
       'deck09', 'deck10-schema-zat']),

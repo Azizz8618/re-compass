@@ -42,5 +42,7 @@ mars-check:
 smoke:
 	bash tools/run_smoke.sh
 
+WORK ?= /tmp/.private/azizz/severov-all
+
 test-all:
-	python3 tools/severov/run_all_tests.py
+	python3 tools/severov/run_all_tests.py --work $(WORK)

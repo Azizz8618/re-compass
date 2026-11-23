@@ -1,5 +1,7 @@
 # Отчёт: этап 4 плана SERVIS-RESTORATION-PLAN
 
+Обновление после этапа 5: три правки из scratch перенесены в `src/servis.pas` (778 строк): массивы `ades`/`zlo`/`zhi` увеличены с 16 до 24, в `Names(cmd)` добавлено `k2 := cmd`, в `Stmt` добавлен переход на `Names(k2)` для нераспознанных строк. Подлинная SERVIS-дека из `gold/` выполняется в адаптированном виде: `docs/GOLD-SERVIS-RUN.md`.
+
 Дата: 23.11.2026. Работа выполнена только в scratch
 `/home/azizz/.local/share/vifm/Trash/servis-stage4/`. Репозиторий
 `/home/azizz/Yandex.Disk/re-compass` не изменялся, коммитов и push не было.

@@ -74,6 +74,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/ARE-DATA.md` - формат и инвентарь областей БД `.ARE`, декодер `tools/are_decode.py`.
 - `docs/SERVIS-PORT.md` - порт `TSERVIS.PAS` на Паскаль-Монитор и процессор операторов SERVIS.
 - `docs/SERVIS-STAGE4.md` - расширение: дубли, журналы, ADMIN/ADA, 11 областей.
+- `docs/GOLD-SERVIS-RUN.md` - прогон подлинной SERVIS-деки из `gold/`.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

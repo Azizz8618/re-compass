@@ -21,9 +21,9 @@ var
   k, k2, kw, kw2: alfa;
   p, ncode, ncnt, dl, cur, lasterr: integer;
   nms: array [1..64] of alfa;
-  ades: array [1..16] of RecT;
+  ades: array [1..24] of RecT;
   p0, p1, p2, p3: array [0..7] of integer;
-  zlo, zhi: array [1..16] of integer;
+  zlo, zhi: array [1..24] of integer;
   unms, rnms, robj, rtyp: array [1..16] of alfa;
   un, rn: integer;
   lastinfo: integer;
@@ -672,6 +672,7 @@ procedure Names(cmd:alfa);
 var nm:alfa;
 begin
   _(
+  k2 := cmd;
   repeat
     Skip;
     if (p <= 72) and (ln[p] = ',') then p := p + 1;
@@ -708,7 +709,13 @@ begin
       else if (kw = 'ЖУРНАЛ') then Journal
       else if (kw = 'УБРАТЬ') then Ubrat
       else if (kw = 'B     ') then p := 73
-      else if (kw <> 'КОНЕЦ ') and (kw <> 'КОНЕЦ.') then Err(84)
+      else if (kw = 'КОНЕЦ ') or (kw = 'КОНЕЦ.') then p := 73
+      else if k2 <> '      ' then begin
+        p := 1;
+        Skip;
+        Names(k2)
+      end
+      else Err(84)
     end
   end
   _);

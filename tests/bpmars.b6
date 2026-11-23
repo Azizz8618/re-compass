@@ -1,0 +1,354 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program aremars(output, BDVECT, BDERRN);
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+var BDVECT: TBDVec; BDERRN:integer;
+  m:array[1..1] of integer; k:alfa; i,j:integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbd; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+function find(a:alfa):alfa;
+begin
+  BDVECT[8].a := a;
+  BDVECT[3].i := 11c;
+  pasbd;
+  find := BDVECT[31].a
+end;
+procedure p01;
+begin
+  m[1]:=8;
+  putd('BP0001', m);
+  m[1]:=24;
+  putd('BP0002', m);
+  m[1]:=32;
+  putd('BP0003', m);
+  m[1]:=48;
+  putd('BP0004', m);
+  m[1]:=56;
+  putd('BP0005', m);
+  m[1]:=64;
+  putd('BP0006', m);
+  m[1]:=72;
+  putd('BP0007', m);
+  m[1]:=80;
+  putd('BP0008', m);
+end;
+procedure c01;
+begin
+  k := find('BP0001');
+  getd('BP0001', m);
+  j := 0;
+  if k <> 'BP0001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('BP0001 OK')
+  else writeln('BP0001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('BP0002');
+  getd('BP0002', m);
+  j := 0;
+  if k <> 'BP0002' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('BP0002 OK')
+  else writeln('BP0002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('BP0003');
+  getd('BP0003', m);
+  j := 0;
+  if k <> 'BP0003' then j := 1;
+  if m[1] <> 32 then j := 1;
+  if j = 0 then writeln('BP0003 OK')
+  else writeln('BP0003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',32);
+  k := find('BP0004');
+  getd('BP0004', m);
+  j := 0;
+  if k <> 'BP0004' then j := 1;
+  if m[1] <> 48 then j := 1;
+  if j = 0 then writeln('BP0004 OK')
+  else writeln('BP0004 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',48);
+  k := find('BP0005');
+  getd('BP0005', m);
+  j := 0;
+  if k <> 'BP0005' then j := 1;
+  if m[1] <> 56 then j := 1;
+  if j = 0 then writeln('BP0005 OK')
+  else writeln('BP0005 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',56);
+  k := find('BP0006');
+  getd('BP0006', m);
+  j := 0;
+  if k <> 'BP0006' then j := 1;
+  if m[1] <> 64 then j := 1;
+  if j = 0 then writeln('BP0006 OK')
+  else writeln('BP0006 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',64);
+  k := find('BP0007');
+  getd('BP0007', m);
+  j := 0;
+  if k <> 'BP0007' then j := 1;
+  if m[1] <> 72 then j := 1;
+  if j = 0 then writeln('BP0007 OK')
+  else writeln('BP0007 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',72);
+  k := find('BP0008');
+  getd('BP0008', m);
+  j := 0;
+  if k <> 'BP0008' then j := 1;
+  if m[1] <> 80 then j := 1;
+  if j = 0 then writeln('BP0008 OK')
+  else writeln('BP0008 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',80);
+end;
+procedure p02;
+begin
+  m[1]:=88;
+  putd('BP0009', m);
+  m[1]:=96;
+  putd('BP0010', m);
+  m[1]:=104;
+  putd('BP0011', m);
+  m[1]:=112;
+  putd('BP0012', m);
+  m[1]:=120;
+  putd('BP0013', m);
+  m[1]:=128;
+  putd('BP0014', m);
+  m[1]:=136;
+  putd('BP0015', m);
+  m[1]:=144;
+  putd('BP0016', m);
+end;
+procedure c02;
+begin
+  k := find('BP0009');
+  getd('BP0009', m);
+  j := 0;
+  if k <> 'BP0009' then j := 1;
+  if m[1] <> 88 then j := 1;
+  if j = 0 then writeln('BP0009 OK')
+  else writeln('BP0009 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',88);
+  k := find('BP0010');
+  getd('BP0010', m);
+  j := 0;
+  if k <> 'BP0010' then j := 1;
+  if m[1] <> 96 then j := 1;
+  if j = 0 then writeln('BP0010 OK')
+  else writeln('BP0010 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',96);
+  k := find('BP0011');
+  getd('BP0011', m);
+  j := 0;
+  if k <> 'BP0011' then j := 1;
+  if m[1] <> 104 then j := 1;
+  if j = 0 then writeln('BP0011 OK')
+  else writeln('BP0011 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',104);
+  k := find('BP0012');
+  getd('BP0012', m);
+  j := 0;
+  if k <> 'BP0012' then j := 1;
+  if m[1] <> 112 then j := 1;
+  if j = 0 then writeln('BP0012 OK')
+  else writeln('BP0012 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',112);
+  k := find('BP0013');
+  getd('BP0013', m);
+  j := 0;
+  if k <> 'BP0013' then j := 1;
+  if m[1] <> 120 then j := 1;
+  if j = 0 then writeln('BP0013 OK')
+  else writeln('BP0013 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',120);
+  k := find('BP0014');
+  getd('BP0014', m);
+  j := 0;
+  if k <> 'BP0014' then j := 1;
+  if m[1] <> 128 then j := 1;
+  if j = 0 then writeln('BP0014 OK')
+  else writeln('BP0014 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',128);
+  k := find('BP0015');
+  getd('BP0015', m);
+  j := 0;
+  if k <> 'BP0015' then j := 1;
+  if m[1] <> 136 then j := 1;
+  if j = 0 then writeln('BP0015 OK')
+  else writeln('BP0015 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',136);
+  k := find('BP0016');
+  getd('BP0016', m);
+  j := 0;
+  if k <> 'BP0016' then j := 1;
+  if m[1] <> 144 then j := 1;
+  if j = 0 then writeln('BP0016 OK')
+  else writeln('BP0016 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',144);
+end;
+procedure p03;
+begin
+  m[1]:=152;
+  putd('BP0017', m);
+  m[1]:=160;
+  putd('BP0018', m);
+  m[1]:=80;
+  putd('BP0019', m);
+  m[1]:=0;
+  putd('BP0020', m);
+  m[1]:=0;
+  putd('BP0021', m);
+  m[1]:=56;
+  putd('BP0022', m);
+  m[1]:=104;
+  putd('BP0023', m);
+  m[1]:=32;
+  putd('BP0024', m);
+end;
+procedure c03;
+begin
+  k := find('BP0017');
+  getd('BP0017', m);
+  j := 0;
+  if k <> 'BP0017' then j := 1;
+  if m[1] <> 152 then j := 1;
+  if j = 0 then writeln('BP0017 OK')
+  else writeln('BP0017 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',152);
+  k := find('BP0018');
+  getd('BP0018', m);
+  j := 0;
+  if k <> 'BP0018' then j := 1;
+  if m[1] <> 160 then j := 1;
+  if j = 0 then writeln('BP0018 OK')
+  else writeln('BP0018 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',160);
+  k := find('BP0019');
+  getd('BP0019', m);
+  j := 0;
+  if k <> 'BP0019' then j := 1;
+  if m[1] <> 80 then j := 1;
+  if j = 0 then writeln('BP0019 OK')
+  else writeln('BP0019 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',80);
+  k := find('BP0020');
+  getd('BP0020', m);
+  j := 0;
+  if k <> 'BP0020' then j := 1;
+  if m[1] <> 0 then j := 1;
+  if j = 0 then writeln('BP0020 OK')
+  else writeln('BP0020 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',0);
+  k := find('BP0021');
+  getd('BP0021', m);
+  j := 0;
+  if k <> 'BP0021' then j := 1;
+  if m[1] <> 0 then j := 1;
+  if j = 0 then writeln('BP0021 OK')
+  else writeln('BP0021 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',0);
+  k := find('BP0022');
+  getd('BP0022', m);
+  j := 0;
+  if k <> 'BP0022' then j := 1;
+  if m[1] <> 56 then j := 1;
+  if j = 0 then writeln('BP0022 OK')
+  else writeln('BP0022 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',56);
+  k := find('BP0023');
+  getd('BP0023', m);
+  j := 0;
+  if k <> 'BP0023' then j := 1;
+  if m[1] <> 104 then j := 1;
+  if j = 0 then writeln('BP0023 OK')
+  else writeln('BP0023 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',104);
+  k := find('BP0024');
+  getd('BP0024', m);
+  j := 0;
+  if k <> 'BP0024' then j := 1;
+  if m[1] <> 32 then j := 1;
+  if j = 0 then writeln('BP0024 OK')
+  else writeln('BP0024 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',32);
+end;
+procedure p04;
+begin
+  m[1]:=40;
+  putd('BP0025', m);
+end;
+procedure c04;
+begin
+  k := find('BP0025');
+  getd('BP0025', m);
+  j := 0;
+  if k <> 'BP0025' then j := 1;
+  if m[1] <> 40 then j := 1;
+  if j = 0 then writeln('BP0025 OK')
+  else writeln('BP0025 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',40);
+end;
+begin
+  if BDVECT[36].i + 0 = 0 then begin
+    for j := 0 to 167 do BDVECT[j].i := 0;
+    i := 1270000c; PASACD(i);
+    PASSETAR(270000c)
+  end;
+  writeln('INIT EX=',EXN);
+  i := 1270001c;
+  newd('BPEMEH', i);
+  opend('BPEMEH');
+  writeln('OPEN EX=',EXN);
+  p01;
+  p02;
+  p03;
+  p04;
+  writeln('PUTD EX=',EXN);
+  c01;
+  c02;
+  c03;
+  c04;
+  writeln('FINAL EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

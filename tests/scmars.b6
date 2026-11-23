@@ -1,0 +1,527 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program aremars(output, BDVECT, BDERRN);
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+var BDVECT: TBDVec; BDERRN:integer;
+  m:array[1..1] of integer; k:alfa; i,j:integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbd; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+function find(a:alfa):alfa;
+begin
+  BDVECT[8].a := a;
+  BDVECT[3].i := 11c;
+  pasbd;
+  find := BDVECT[31].a
+end;
+procedure p01;
+begin
+  m[1]:=8;
+  putd('SC0001', m);
+  m[1]:=8;
+  putd('SC1001', m);
+  m[1]:=8;
+  putd('SC2001', m);
+  m[1]:=8;
+  putd('SC3001', m);
+  m[1]:=8;
+  putd('SC4001', m);
+  m[1]:=8;
+  putd('SC5001', m);
+  m[1]:=8;
+  putd('SC6001', m);
+  m[1]:=8;
+  putd('SC7001', m);
+end;
+procedure c01;
+begin
+  k := find('SC0001');
+  getd('SC0001', m);
+  j := 0;
+  if k <> 'SC0001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC0001 OK')
+  else writeln('SC0001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC1001');
+  getd('SC1001', m);
+  j := 0;
+  if k <> 'SC1001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC1001 OK')
+  else writeln('SC1001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC2001');
+  getd('SC2001', m);
+  j := 0;
+  if k <> 'SC2001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC2001 OK')
+  else writeln('SC2001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC3001');
+  getd('SC3001', m);
+  j := 0;
+  if k <> 'SC3001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC3001 OK')
+  else writeln('SC3001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC4001');
+  getd('SC4001', m);
+  j := 0;
+  if k <> 'SC4001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC4001 OK')
+  else writeln('SC4001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC5001');
+  getd('SC5001', m);
+  j := 0;
+  if k <> 'SC5001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC5001 OK')
+  else writeln('SC5001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC6001');
+  getd('SC6001', m);
+  j := 0;
+  if k <> 'SC6001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC6001 OK')
+  else writeln('SC6001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC7001');
+  getd('SC7001', m);
+  j := 0;
+  if k <> 'SC7001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC7001 OK')
+  else writeln('SC7001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+end;
+procedure p02;
+begin
+  m[1]:=8;
+  putd('SC8001', m);
+  m[1]:=8;
+  putd('SC9001', m);
+  m[1]:=8;
+  putd('SCA001', m);
+  m[1]:=8;
+  putd('SCB001', m);
+  m[1]:=8;
+  putd('SCC001', m);
+  m[1]:=8;
+  putd('SCD001', m);
+  m[1]:=8;
+  putd('SCE001', m);
+  m[1]:=8;
+  putd('SCF001', m);
+end;
+procedure c02;
+begin
+  k := find('SC8001');
+  getd('SC8001', m);
+  j := 0;
+  if k <> 'SC8001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC8001 OK')
+  else writeln('SC8001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC9001');
+  getd('SC9001', m);
+  j := 0;
+  if k <> 'SC9001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SC9001 OK')
+  else writeln('SC9001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCA001');
+  getd('SCA001', m);
+  j := 0;
+  if k <> 'SCA001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCA001 OK')
+  else writeln('SCA001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCB001');
+  getd('SCB001', m);
+  j := 0;
+  if k <> 'SCB001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCB001 OK')
+  else writeln('SCB001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCC001');
+  getd('SCC001', m);
+  j := 0;
+  if k <> 'SCC001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCC001 OK')
+  else writeln('SCC001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCD001');
+  getd('SCD001', m);
+  j := 0;
+  if k <> 'SCD001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCD001 OK')
+  else writeln('SCD001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCE001');
+  getd('SCE001', m);
+  j := 0;
+  if k <> 'SCE001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCE001 OK')
+  else writeln('SCE001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCF001');
+  getd('SCF001', m);
+  j := 0;
+  if k <> 'SCF001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCF001 OK')
+  else writeln('SCF001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+end;
+procedure p03;
+begin
+  m[1]:=8;
+  putd('SCG001', m);
+  m[1]:=8;
+  putd('SCH001', m);
+  m[1]:=8;
+  putd('SCI001', m);
+  m[1]:=8;
+  putd('SCJ001', m);
+  m[1]:=8;
+  putd('SCK001', m);
+  m[1]:=8;
+  putd('SCL001', m);
+  m[1]:=8;
+  putd('SCM001', m);
+  m[1]:=8;
+  putd('SCN001', m);
+end;
+procedure c03;
+begin
+  k := find('SCG001');
+  getd('SCG001', m);
+  j := 0;
+  if k <> 'SCG001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCG001 OK')
+  else writeln('SCG001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCH001');
+  getd('SCH001', m);
+  j := 0;
+  if k <> 'SCH001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCH001 OK')
+  else writeln('SCH001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCI001');
+  getd('SCI001', m);
+  j := 0;
+  if k <> 'SCI001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCI001 OK')
+  else writeln('SCI001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCJ001');
+  getd('SCJ001', m);
+  j := 0;
+  if k <> 'SCJ001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCJ001 OK')
+  else writeln('SCJ001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCK001');
+  getd('SCK001', m);
+  j := 0;
+  if k <> 'SCK001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCK001 OK')
+  else writeln('SCK001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCL001');
+  getd('SCL001', m);
+  j := 0;
+  if k <> 'SCL001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCL001 OK')
+  else writeln('SCL001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCM001');
+  getd('SCM001', m);
+  j := 0;
+  if k <> 'SCM001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCM001 OK')
+  else writeln('SCM001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCN001');
+  getd('SCN001', m);
+  j := 0;
+  if k <> 'SCN001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCN001 OK')
+  else writeln('SCN001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+end;
+procedure p04;
+begin
+  m[1]:=8;
+  putd('SCO001', m);
+  m[1]:=8;
+  putd('SCP001', m);
+  m[1]:=8;
+  putd('SCQ001', m);
+  m[1]:=24;
+  putd('SC0002', m);
+  m[1]:=16;
+  putd('SC1002', m);
+  m[1]:=16;
+  putd('SC2002', m);
+  m[1]:=16;
+  putd('SC3002', m);
+  m[1]:=16;
+  putd('SC4002', m);
+end;
+procedure c04;
+begin
+  k := find('SCO001');
+  getd('SCO001', m);
+  j := 0;
+  if k <> 'SCO001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCO001 OK')
+  else writeln('SCO001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCP001');
+  getd('SCP001', m);
+  j := 0;
+  if k <> 'SCP001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCP001 OK')
+  else writeln('SCP001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SCQ001');
+  getd('SCQ001', m);
+  j := 0;
+  if k <> 'SCQ001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('SCQ001 OK')
+  else writeln('SCQ001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('SC0002');
+  getd('SC0002', m);
+  j := 0;
+  if k <> 'SC0002' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('SC0002 OK')
+  else writeln('SC0002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('SC1002');
+  getd('SC1002', m);
+  j := 0;
+  if k <> 'SC1002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC1002 OK')
+  else writeln('SC1002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC2002');
+  getd('SC2002', m);
+  j := 0;
+  if k <> 'SC2002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC2002 OK')
+  else writeln('SC2002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC3002');
+  getd('SC3002', m);
+  j := 0;
+  if k <> 'SC3002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC3002 OK')
+  else writeln('SC3002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC4002');
+  getd('SC4002', m);
+  j := 0;
+  if k <> 'SC4002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC4002 OK')
+  else writeln('SC4002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+end;
+procedure p05;
+begin
+  m[1]:=16;
+  putd('SC5002', m);
+  m[1]:=16;
+  putd('SC6002', m);
+  m[1]:=16;
+  putd('SC7002', m);
+  m[1]:=16;
+  putd('SC8002', m);
+  m[1]:=16;
+  putd('SC9002', m);
+  m[1]:=16;
+  putd('SCA002', m);
+  m[1]:=16;
+  putd('SCB002', m);
+  m[1]:=16;
+  putd('SCC002', m);
+end;
+procedure c05;
+begin
+  k := find('SC5002');
+  getd('SC5002', m);
+  j := 0;
+  if k <> 'SC5002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC5002 OK')
+  else writeln('SC5002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC6002');
+  getd('SC6002', m);
+  j := 0;
+  if k <> 'SC6002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC6002 OK')
+  else writeln('SC6002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC7002');
+  getd('SC7002', m);
+  j := 0;
+  if k <> 'SC7002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC7002 OK')
+  else writeln('SC7002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC8002');
+  getd('SC8002', m);
+  j := 0;
+  if k <> 'SC8002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC8002 OK')
+  else writeln('SC8002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SC9002');
+  getd('SC9002', m);
+  j := 0;
+  if k <> 'SC9002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SC9002 OK')
+  else writeln('SC9002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SCA002');
+  getd('SCA002', m);
+  j := 0;
+  if k <> 'SCA002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SCA002 OK')
+  else writeln('SCA002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SCB002');
+  getd('SCB002', m);
+  j := 0;
+  if k <> 'SCB002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SCB002 OK')
+  else writeln('SCB002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('SCC002');
+  getd('SCC002', m);
+  j := 0;
+  if k <> 'SCC002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('SCC002 OK')
+  else writeln('SCC002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+end;
+begin
+  if BDVECT[36].i + 0 = 0 then begin
+    for j := 0 to 167 do BDVECT[j].i := 0;
+    i := 1270000c; PASACD(i);
+    PASSETAR(270000c)
+  end;
+  writeln('INIT EX=',EXN);
+  i := 33270001c;
+  newd('SC    ', i);
+  opend('SC    ');
+  writeln('OPEN EX=',EXN);
+  p01;
+  p02;
+  p03;
+  p04;
+  p05;
+  writeln('PUTD EX=',EXN);
+  c01;
+  c02;
+  c03;
+  c04;
+  c05;
+  writeln('FINAL EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

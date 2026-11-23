@@ -1,0 +1,239 @@
+{
+  "file": "BPEMEH.ARE",
+  "area_id": 3,
+  "pages": 1,
+  "valid_descriptors_total": 25,
+  "max_keys": 40,
+  "selected": 25,
+  "chunk_size": 8,
+  "newd_info_word": "1270001c",
+  "newd_length_zones_decimal": 1,
+  "newd_length_field_octal": "1",
+  "records": [
+    {
+      "key": "BP0001",
+      "page": 0,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 19,
+      "length": 28,
+      "address": 2019
+    },
+    {
+      "key": "BP0002",
+      "page": 0,
+      "ordinal": 2,
+      "number": 24,
+      "knot": 0,
+      "length": 52,
+      "address": 1967
+    },
+    {
+      "key": "BP0003",
+      "page": 0,
+      "ordinal": 3,
+      "number": 32,
+      "knot": 19,
+      "length": 28,
+      "address": 1939
+    },
+    {
+      "key": "BP0004",
+      "page": 0,
+      "ordinal": 4,
+      "number": 48,
+      "knot": 11,
+      "length": 64,
+      "address": 1651
+    },
+    {
+      "key": "BP0005",
+      "page": 0,
+      "ordinal": 5,
+      "number": 56,
+      "knot": 0,
+      "length": 2,
+      "address": 1937
+    },
+    {
+      "key": "BP0006",
+      "page": 0,
+      "ordinal": 6,
+      "number": 64,
+      "knot": 0,
+      "length": 52,
+      "address": 1885
+    },
+    {
+      "key": "BP0007",
+      "page": 0,
+      "ordinal": 7,
+      "number": 72,
+      "knot": 0,
+      "length": 52,
+      "address": 1833
+    },
+    {
+      "key": "BP0008",
+      "page": 0,
+      "ordinal": 8,
+      "number": 80,
+      "knot": 0,
+      "length": 52,
+      "address": 1781
+    },
+    {
+      "key": "BP0009",
+      "page": 0,
+      "ordinal": 9,
+      "number": 88,
+      "knot": 11,
+      "length": 64,
+      "address": 1717
+    },
+    {
+      "key": "BP0010",
+      "page": 0,
+      "ordinal": 10,
+      "number": 96,
+      "knot": 0,
+      "length": 2,
+      "address": 1715
+    },
+    {
+      "key": "BP0011",
+      "page": 0,
+      "ordinal": 11,
+      "number": 104,
+      "knot": 0,
+      "length": 2,
+      "address": 1649
+    },
+    {
+      "key": "BP0012",
+      "page": 0,
+      "ordinal": 12,
+      "number": 112,
+      "knot": 14,
+      "length": 84,
+      "address": 1565
+    },
+    {
+      "key": "BP0013",
+      "page": 0,
+      "ordinal": 13,
+      "number": 120,
+      "knot": 0,
+      "length": 2,
+      "address": 1563
+    },
+    {
+      "key": "BP0014",
+      "page": 0,
+      "ordinal": 14,
+      "number": 128,
+      "knot": 0,
+      "length": 52,
+      "address": 1511
+    },
+    {
+      "key": "BP0015",
+      "page": 0,
+      "ordinal": 15,
+      "number": 136,
+      "knot": 0,
+      "length": 52,
+      "address": 1459
+    },
+    {
+      "key": "BP0016",
+      "page": 0,
+      "ordinal": 16,
+      "number": 144,
+      "knot": 0,
+      "length": 52,
+      "address": 1407
+    },
+    {
+      "key": "BP0017",
+      "page": 0,
+      "ordinal": 17,
+      "number": 152,
+      "knot": 0,
+      "length": 52,
+      "address": 1355
+    },
+    {
+      "key": "BP0018",
+      "page": 0,
+      "ordinal": 18,
+      "number": 160,
+      "knot": 0,
+      "length": 52,
+      "address": 1303
+    },
+    {
+      "key": "BP0019",
+      "page": 0,
+      "ordinal": 19,
+      "number": 80,
+      "knot": 3,
+      "length": 24,
+      "address": 3
+    },
+    {
+      "key": "BP0020",
+      "page": 0,
+      "ordinal": 20,
+      "number": 0,
+      "knot": 0,
+      "length": 1404,
+      "address": 21
+    },
+    {
+      "key": "BP0021",
+      "page": 0,
+      "ordinal": 21,
+      "number": 0,
+      "knot": 0,
+      "length": 16,
+      "address": 6
+    },
+    {
+      "key": "BP0022",
+      "page": 0,
+      "ordinal": 22,
+      "number": 56,
+      "knot": 1,
+      "length": 24,
+      "address": 6
+    },
+    {
+      "key": "BP0023",
+      "page": 0,
+      "ordinal": 23,
+      "number": 104,
+      "knot": 5,
+      "length": 136,
+      "address": 1
+    },
+    {
+      "key": "BP0024",
+      "page": 0,
+      "ordinal": 24,
+      "number": 32,
+      "knot": 6,
+      "length": 152,
+      "address": 1
+    },
+    {
+      "key": "BP0025",
+      "page": 0,
+      "ordinal": 25,
+      "number": 40,
+      "knot": 6,
+      "length": 64,
+      "address": 2
+    }
+  ]
+}

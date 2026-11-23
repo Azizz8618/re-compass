@@ -1,0 +1,374 @@
+{
+  "file": "SC.ARE",
+  "area_id": 2,
+  "pages": 27,
+  "valid_descriptors_total": 1378,
+  "max_keys": 40,
+  "selected": 40,
+  "chunk_size": 8,
+  "newd_info_word": "33270001c",
+  "newd_length_zones_decimal": 27,
+  "newd_length_field_octal": "33",
+  "records": [
+    {
+      "key": "SC0001",
+      "page": 0,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 19,
+      "length": 28,
+      "address": 2019
+    },
+    {
+      "key": "SC1001",
+      "page": 1,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SC2001",
+      "page": 2,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 154,
+      "address": 789
+    },
+    {
+      "key": "SC3001",
+      "page": 3,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 11,
+      "length": 64,
+      "address": 451
+    },
+    {
+      "key": "SC4001",
+      "page": 4,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SC5001",
+      "page": 5,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 11,
+      "length": 64,
+      "address": 1983
+    },
+    {
+      "key": "SC6001",
+      "page": 6,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SC7001",
+      "page": 7,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SC8001",
+      "page": 8,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SC9001",
+      "page": 9,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SCA001",
+      "page": 10,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 106,
+      "address": 1329
+    },
+    {
+      "key": "SCB001",
+      "page": 11,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SCC001",
+      "page": 12,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SCD001",
+      "page": 13,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 136,
+      "address": 289
+    },
+    {
+      "key": "SCE001",
+      "page": 14,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 14,
+      "length": 84,
+      "address": 1963
+    },
+    {
+      "key": "SCF001",
+      "page": 15,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 14,
+      "length": 84,
+      "address": 1963
+    },
+    {
+      "key": "SCG001",
+      "page": 16,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 58,
+      "address": 1989
+    },
+    {
+      "key": "SCH001",
+      "page": 17,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 14,
+      "length": 84,
+      "address": 1963
+    },
+    {
+      "key": "SCI001",
+      "page": 18,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 14,
+      "length": 84,
+      "address": 1963
+    },
+    {
+      "key": "SCJ001",
+      "page": 19,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 11,
+      "length": 64,
+      "address": 1983
+    },
+    {
+      "key": "SCK001",
+      "page": 20,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SCL001",
+      "page": 21,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SCM001",
+      "page": 22,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SCN001",
+      "page": 23,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SCO001",
+      "page": 24,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 154,
+      "address": 959
+    },
+    {
+      "key": "SCP001",
+      "page": 25,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SCQ001",
+      "page": 26,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "SC0002",
+      "page": 0,
+      "ordinal": 2,
+      "number": 24,
+      "knot": 0,
+      "length": 52,
+      "address": 1967
+    },
+    {
+      "key": "SC1002",
+      "page": 1,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 6,
+      "length": 50,
+      "address": 1945
+    },
+    {
+      "key": "SC2002",
+      "page": 2,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 6,
+      "length": 50,
+      "address": 1997
+    },
+    {
+      "key": "SC3002",
+      "page": 3,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 11,
+      "length": 64,
+      "address": 1983
+    },
+    {
+      "key": "SC4002",
+      "page": 4,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 18,
+      "address": 1979
+    },
+    {
+      "key": "SC5002",
+      "page": 5,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 40,
+      "address": 1943
+    },
+    {
+      "key": "SC6002",
+      "page": 6,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 19,
+      "length": 28,
+      "address": 1967
+    },
+    {
+      "key": "SC7002",
+      "page": 7,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 34,
+      "address": 1963
+    },
+    {
+      "key": "SC8002",
+      "page": 8,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 2,
+      "address": 1995
+    },
+    {
+      "key": "SC9002",
+      "page": 9,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 10,
+      "address": 1987
+    },
+    {
+      "key": "SCA002",
+      "page": 10,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 32,
+      "address": 2015
+    },
+    {
+      "key": "SCB002",
+      "page": 11,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 52,
+      "address": 1943
+    },
+    {
+      "key": "SCC002",
+      "page": 12,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 14,
+      "length": 84,
+      "address": 1911
+    }
+  ]
+}

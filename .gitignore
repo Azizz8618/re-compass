@@ -1,0 +1,25 @@
+# Рабочие копии
+build/
+
+# Крупные бинарники и образы
+*.bin
+*.b6
+*.ima
+*.img
+*.zip
+*.arj
+*.exe
+*.dll
+*.tpu
+*.tpw
+*.obj
+*.arj~
+*.zip~
+
+# Временные и служебные файлы
+*.log
+*.bak
+*~
+__pycache__/
+*.pyc
+.localdocs/

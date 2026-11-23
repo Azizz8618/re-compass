@@ -80,6 +80,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/MARS-PATCHED-KERNEL.md` - исправление дефекта `BDBUF` патчем на 4 слова.
 - `docs/PASSPORT-SWEEP.md` - перебор 31 паспорта, почему `ЗMП` не МС «Дубна».
 - `docs/REPRODUCE-SEVEROV.md` - пошаговый план воспроизведения задачи Северова.
+- `docs/REPRODUCE-SEVEROV-ALL.md` - план полного воспроизведения всех 14 дек, включая 18 программ.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

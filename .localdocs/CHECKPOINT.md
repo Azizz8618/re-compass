@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `f1040b3`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `f1040b3`.
+- HEAD: `712b2c5`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `712b2c5`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -45,13 +45,9 @@
 
 ## In progress
 
-Запущены три субагента по интеграции результатов (scratch, без правки репозитория):
+Все субагенты завершены, результаты интегрированы и запушены (`712b2c5`).
 
-1. Регрессия после реестра кусков (`ses_df5b38e7effeMhv4eqqNAhi1lE`)
-2. Патч PIC 66/67/76/77 (`ses_df5b38e7bffeQiSNPYykT2JGjO`)
-3. Проверка UCOMPAS в зоне 3350 (`ses_df5b38e77ffeEfBhsn60B5wXTi`)
-
-GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута.
+GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 
 ## Open items
 

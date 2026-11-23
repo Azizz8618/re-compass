@@ -78,6 +78,9 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/MARS-DIAGNOSTICS.md` - устранение ошибки LU КОБЛЫ и диагностики МАРС.
 - `docs/MARS-CORE-LIMITS.md` - почему ядро МАРС не выделяет 1750 зон одним вызовом.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
+- `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
+- `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.
+- `docs/ORIGINAL-GOLD-DECK.md` - прогон оригинальной деки Северова через front-end.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

@@ -100,4 +100,6 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `predtgen.b6` и `predtgen.expected.txt` - порт предтранслятора ЯМД: 13 операций (PLACE, FIRST, NEXT, BYKEY, PREV, GET, MODIF, LAST, REMOVE, INSERT, BDGET/BDPUT), `EXN=0`. Подробности: `docs/PREDT-PORT.md`.
 
+`ttc15.b6` - схема CX-CK0 (2 типа, 8 записей, 13 наборов, 79 `PUTD`); `genmad.b6` - 26 форматов, 102 блока, 110 `PUTD` и MAD-запросы; `original_deck_front.b6` - подлинные 41 строка деки Северова с пропуском системных карт. Эталоны - одноимённые `.expected.txt`. Подробности: `docs/TTC-PORT.md`, `docs/GEN-MAD-PORT.md`, `docs/ORIGINAL-GOLD-DECK.md`.
+
 Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`, `docs/DISK-2348.md`.

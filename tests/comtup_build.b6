@@ -1,0 +1,53 @@
+шифр 419999 зс5^
+лен 40(2348-wr)^
+лен 41(2196-wr)^
+eeв1а3
+*name
+*call yesmemory
+*perso:402570
+*stand
+*call *pascal
+(*=y+,s7*)program comtup(output);
+(* COMTUP STUB - 17 ENTRY POINTS FOR PASCAL MONITOR BUILD CHECK.
+   BODIES ARE PLACEHOLDERS: OK := 0. NO GLOBAL VARIABLES.
+   NAMES FROM COMTUP-MAPPING.MD, ALL NOT LONGER THAN 8 LETTERS. *)
+(*=e+*)procedure SSBF5(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure SSREZK(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPADR(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPAD1(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPP1(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPL1(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPIN1(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TPCMPNNA(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure AROP(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure APIC(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure EXN(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure ITLEN(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure APIC2(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TCMPIN(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure TCMPINP(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure WPASRA(var ok: integer);
+begin ok := 0 end;
+(*=e+*)procedure VPASR6(var ok: integer);
+begin ok := 0 end;
+begin
+end.
+*to perso:402570
+*end file
+``````
+ЕКОНЕЦ

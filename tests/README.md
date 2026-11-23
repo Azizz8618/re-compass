@@ -44,3 +44,22 @@ diff -u tests/mars_smoke.expected.txt output.run
 Вывод программы содержит четыре исходные записи, результат поиска по ключу, значения после `MODD` (`111111 222222 333333 444444`) и проверку удаления `DELD` повторным проходом `LAST`/`PREV`. Кодов ошибок МАРС из `sources/mars/errors.md` нет. Два последовательных прогона дали байтово идентичный вывод.
 
 `find` после `DELD` вернул ключ предыдущей записи, а не `zero`. Гипотеза: микрокоманда оставляет в `bdvect[31]` ближайший ключ. Само удаление подтверждено отдельным проходом.
+
+## comtup_build: проверка оснастки сборки
+
+`comtup_build.b6` собирает `src/comtup.stub.pas` (17 заглушек) в PERSO-библиотеку зоны `2570₈`; `comtup_test.b6` вызывает все 17 внешних имён. Эталоны: `comtup_build.expected.txt`, `comtup_test.expected.txt`, `comtup30_limit.expected.txt`.
+
+**Внимание: дека открывает 2348 на запись (`лен 40(2348-wr)^`)**. Запускать только на рабочей копии:
+
+```sh
+SCRATCH=/tmp/.private/azizz/comtup-check
+mkdir -p "$SCRATCH/disks"
+cp ~/.besm6/{2048,2053,2099,2148,2348} "$SCRATCH/disks/"
+cp ~/Yandex.Disk/dispak/tests/arfalib/2196 "$SCRATCH/disks/"
+cp "$SCRATCH/disks/2348" "$SCRATCH/disks/2348.orig.bak"
+cd "$SCRATCH/disks"
+dispak --path=. -p <путь-к-репозиторию>/tests/comtup_build.b6 > build.run 2> build.err
+dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > test.run 2> test.err
+```
+
+Проверка каталога рабочей копии требует `BESM6_PATH=.`. Полные criteria и результаты: `docs/BUILD-VERIFICATION.md`.

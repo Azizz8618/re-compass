@@ -1,0 +1,52 @@
+шифр 419999 зс5^
+лен 40(2348)^
+лен 41(2196)^
+eeв1а3
+*name
+*call yesmemory
+*perso:402570
+*stand
+*call *pascal
+(*=y+,s7*)program comtupt(output);
+var ok: integer;
+procedure SSBF5(var ok: integer); external;
+procedure SSREZK(var ok: integer); external;
+procedure TPCMPADR(var ok: integer); external;
+procedure TPCMPAD1(var ok: integer); external;
+procedure TPCMPP1(var ok: integer); external;
+procedure TPCMPL1(var ok: integer); external;
+procedure TPCMPIN1(var ok: integer); external;
+procedure TPCMPNNA(var ok: integer); external;
+procedure AROP(var ok: integer); external;
+procedure APIC(var ok: integer); external;
+procedure EXN(var ok: integer); external;
+procedure ITLEN(var ok: integer); external;
+procedure APIC2(var ok: integer); external;
+procedure TCMPIN(var ok: integer); external;
+procedure TCMPINP(var ok: integer); external;
+procedure WPASRA(var ok: integer); external;
+procedure VPASR6(var ok: integer); external;
+begin
+  SSBF5(ok); writeln('SSBF5=', ok);
+  SSREZK(ok); writeln('SSREZK=', ok);
+  TPCMPADR(ok); writeln('TPCMPADR=', ok);
+  TPCMPAD1(ok); writeln('TPCMPAD1=', ok);
+  TPCMPP1(ok); writeln('TPCMPP1=', ok);
+  TPCMPL1(ok); writeln('TPCMPL1=', ok);
+  TPCMPIN1(ok); writeln('TPCMPIN1=', ok);
+  TPCMPNNA(ok); writeln('TPCMPNNA=', ok);
+  AROP(ok); writeln('AROP=', ok);
+  APIC(ok); writeln('APIC=', ok);
+  EXN(ok); writeln('EXN=', ok);
+  ITLEN(ok); writeln('ITLEN=', ok);
+  APIC2(ok); writeln('APIC2=', ok);
+  TCMPIN(ok); writeln('TCMPIN=', ok);
+  TCMPINP(ok); writeln('TCMPINP=', ok);
+  WPASRA(ok); writeln('WPASRA=', ok);
+  VPASR6(ok); writeln('VPASR6=', ok);
+  writeln('ВСЕ 17 ВНЕШНИХ ИМЕН РАЗРЕШЕНЫ')
+end.
+*execute
+*end file
+``````
+ЕКОНЕЦ

@@ -8,13 +8,13 @@
 |---:|---|---|---|---|
 | 1 | 1-41 | `? .ПP` | `ПPOCTPAHCTBA HИCA`, `SERVIS` | готово |
 | 2 | 42-168 | `? .CKCX` | `CXEMA CKЛAДA`, `TTC` | готово |
-| 3 | 169-190 | `? .CKBЫ` | `BЫДAЧA ДAHHЫX ИЗ MAD` | частично: 5 MAD-команд |
+| 3 | 169-190 | `? .CKBЫ` | `BЫДAЧA ДAHHЫX ИЗ MAD` | готово: `deck03-mad-output.out`, `EXN=0` |
 | 4 | 191-318 | `? .AMCX` | `CXEMA AMOPTИЗAЦИИ` | готово: `deck04-schema-am.out`, 1/11/13, `EXN=0` |
 | 5 | 319-377 | `? .CTAPT` | Fortran-стартап | готово на заглушках: `deck05-fortran-startup.out`, подлинные SKL/AMO/ZAT-программы отсутствуют |
 | 6 | 378-497 | `? .CKЗA` | `ЗAГPYЗKA CKЛAДA`, `GENZAG` | готово через `genmad` |
 | 7 | 498-636 | `? .AMЗA` | `ЗAГPYЗKA AMOPTИЗAЦИИ` | готово через `genmad` |
-| 8 | 637-668 | `? .AMBЫ` | `PAЗГPYЗKA CXE-AM`, MAD | частично |
-| 9 | 669-696 | `? .ЗTBЫ` | `BЫДAЧA CXE-ПЛ`, MAD | частично |
+| 8 | 637-668 | `? .AMBЫ` | `PAЗГPYЗKA CXE-AM`, MAD | готово: `deck08-mad-unload.out`, `EXN=0` |
+| 9 | 669-696 | `? .ЗTBЫ` | `BЫДAЧA CXE-ПЛ`, MAD | готово: `deck09-mad-unload.out`, `EXN=0` |
 | 10 | 697-879 | `? .ЗTCX` | `CXEMA ЗATPAT ПO TEMAM` | готово: `deck10-schema-zat.out`, 2/16/19, `EXN=0` |
 | 11 | 880-1111 | `? .ЗTЗA` | `ЗAГPYЗЧИK ЗATPAT` | готово через `genmad` |
 | 12 | 1112-2297 | `?.CK` | 4 программы: `SKLMON`, `SKLOTD`, `SKLCAR`, `SKLOTC` | не запускались |

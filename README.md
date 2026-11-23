@@ -84,6 +84,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/ZONE-ALLOCATION.md` и `tools/check_zone_changes.py` - контроль зон записи диска 2348.
 - `docs/SEVEROV-SCHEMAS.md`, `docs/SEVEROV-FORTRAN-STARTUP.md` - отчёты по схемам 4/10 и дека 5.
 - `docs/TSS-CHAIN.md` - состояние порта цепочки TSS для 18 программ.
+- `docs/SEVEROV-MAD.md` - полный MAD-интерпретатор для дек 3/8/9.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

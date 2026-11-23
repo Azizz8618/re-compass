@@ -737,7 +737,7 @@ begin
   (* PASCOMPL 15.1 miscompiles a plain '= 0' test here. *)
   if BDVECT[36].i + 0 = 0 then begin
     for j := 0 to 167 do BDVECT[j].i := 0;
-    i := 2070000c;
+    i := 20270000c;
     PASACD(i);
     PASSETAR(270000c)
   end;

@@ -75,6 +75,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/SERVIS-PORT.md` - порт `TSERVIS.PAS` на Паскаль-Монитор и процессор операторов SERVIS.
 - `docs/SERVIS-STAGE4.md` - расширение: дубли, журналы, ADMIN/ADA, 11 областей.
 - `docs/GOLD-SERVIS-RUN.md` - прогон подлинной SERVIS-деки из `gold/`.
+- `docs/MARS-DIAGNOSTICS.md` - устранение ошибки LU КОБЛЫ и диагностики МАРС.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

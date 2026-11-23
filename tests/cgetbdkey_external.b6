@@ -1,0 +1,36 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program cgetext(output, BDVECT, BDERRN);
+type word = record case integer of
+ 0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+ TBDVec = array [0..167] of word;
+var BDVECT: TBDVec; BDERRN:integer;
+    Number,R:integer;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function EXN:integer; external;
+BEGIN
+ SSBF5;
+ Number:=3072; R:=-1;
+ TPCMP1I(Number,22);
+ TPCMP1I(R,24);
+ TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+ TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896);
+ TPCMPIN1(7514);
+ writeln('EXT R=',R,' BDERRN=',BDERRN,' EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

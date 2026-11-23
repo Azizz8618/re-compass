@@ -92,4 +92,6 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `bpmars.b6` (25 ключей `BPEMEH.ARE`) и `scmars.b6` (40 ключей `SC.ARE`) - продолжение импорта служебных областей того же выпуска, с эталонами и файлами ключей. Подробности: `docs/ARE-DATA.md`.
 
+`servis_build.b6` и `servis_ops.b6` - сборка модуля `src/servis.pas` и тест из 11 операторов SERVIS с эталоном `servis_ops.expected.txt`. Подробности: `docs/SERVIS-PORT.md`.
+
 Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`, `docs/DISK-2348.md`.

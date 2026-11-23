@@ -16,6 +16,10 @@
 | 13 операций ЯМД из gold | `PLACE`..`BDPUT`, `EXN=0` | `gold/output/yam-predtgen.out` |
 | подпрограмма `SHTAMP` из `raznoe.txt` | 44/58 координат совпали с расчётом | `gold/output/raznoe-shtamp-*.out` |
 
+Полный автоматический прогон всех дек, включая suites, TSS и Fortran, выполняется одной командой: `make test-all` (или `python3 tools/severov/run_all_tests.py --work <каталог>`). Скрипт для каждой сессии создаёт свежие копии образов, накладывает стандартный патч МАРС, собирает нужные PERSO-библиотеки и сравнивает вывод с эталонами с нормализацией даты. Логи сохраняются в `<каталог>/logs`.
+
+Эталоны `tests/comtup_final_build.expected.txt`, `comtup_final_test.expected.txt`, `comtup_state_test.expected.txt` и `comtup_test.expected.txt` пересозданы 24.11.2026 после добавления в `src/comtup.pas` PIC-операций и слотов: функциональный вывод сохранился (`ВСЕ 18 ВНЕШНИХ ИМЕН РАЗРЕШЕНЫ`, `APIC-STABLE`, `EXN=0`), изменился только листинг и адреса загрузки.
+
 ## 2. Подготовка рабочего стенда
 
 Все команды выполняются в отдельном scratch-каталоге, который можно удалить. Оригинальные образы в `~/.besm6` и `/usr/local/share/besm6` не изменяются.

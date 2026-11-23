@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `0a86f89`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `0a86f89`.
+- HEAD: `eca2881`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `eca2881`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -51,11 +51,13 @@
 
 1. W1 линковка 14 входов COMTUP - завершена, интегрирована и запушена (`dc550de`)
 2. W2 замена GUI-заглушек - завершена, объединена с W1 и запушена (`870a44d`)
-3. W3 порт TSSDML - интегрирован (`eb3e410`): зона 3260, 13 операций прямыми вызовами, повторный `DML(TRUE)` блокирован `STACK OVERRANGE`. Продолжение W3b в том же сеансе (`tss-w3b-stack`)
+3. W3 порт TSSDML - интегрирован (`eb3e410`): зона 3260, 13 операций прямыми вызовами, повторный `DML(TRUE)` блокирован `STACK OVERRANGE`. W3b завершён (`eca2881`): 11 гипотез не помогли; выбран путь переиспользования `genmad_full` через вход `MADRUN`
 4. W4 таблица PIC-слотов - отчёт интегрирован (`870a44d`), патч comtup не применялся; найден `gold/TSSPPR.PRT`
 5. W5a подготовка 18 дек и инструмента извлечения - завершена, интегрирована (`c96e0a7`): 18 дек, 18 исходников, 345 DMLCALL, карта 54 макросов
 
-Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w4-pic`, `tss-w5-prep` в `~/.local/share/vifm/Trash/`. Каждый с резервными копиями дисков и md5-манифестом. После W1-W4 - финальный прогон 18 программ (W5b).
+Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w3b-stack`, `tss-w4-pic`, `tss-w5-prep`, `tss-w5b-run` в `~/.local/share/vifm/Trash/`. Каждый с резервными копиями дисков и md5-манифестом.
+
+Активный субагент: W5b прогон 18 программ через вход `MADRUN` из `src/genmad_full.pas` (`ses_df5521a84ffeeytFKiyrzeI5m8`), scratch `tss-w5b-run`.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

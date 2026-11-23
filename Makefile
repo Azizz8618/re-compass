@@ -32,6 +32,7 @@ check:
 	python3 -m py_compile tools/severov/mkfront.py
 	python3 -m py_compile tools/severov/extract_gold.py
 	python3 -m py_compile tools/severov/genmad_make_deck.py
+	python3 -m py_compile tools/severov/run_all_tests.py
 	python3 -m py_compile tools/severov/ttc_make_deck.py
 	@printf 'синтаксис скриптов: OK\n'
 
@@ -40,3 +41,6 @@ mars-check:
 
 smoke:
 	bash tools/run_smoke.sh
+
+test-all:
+	python3 tools/severov/run_all_tests.py

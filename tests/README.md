@@ -108,7 +108,7 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `tests/severov-apps/*.b6` - 18 дек прикладных программ дек 12-14, сгенерированных из `src/generated/*.pas`; 345 вызовов `DMLCALL` вместо пар `&&...&&`. Подключают `COMTUP/SERVIS` (2570), `UCOMPAS` (3350), `TSSDML` (3260) и `TSSPPR` (3300). Пока ожидают готовой библиотеки 3300 и исправления повторного входа в `DML`. Генератор: `tools/severov/extract_and_gen.py`, проверка: `tools/severov/check_decks.sh`. Подробности: `docs/TSS-W5A-PREP.md`.
 
-`tests/tssdml_build.b6` собирает `src/tssdml.pas` в зону 3260; `tests/direct13_3260.b6` проверяет 13 операций прямыми вызовами `TPCMPIN1` (эталон совпадает); `tests/dmlall13.b6` фиксирует известный отказ `STACK OVERRANGE` на втором `DML(TRUE)`. Сборка библиотек в одной копии диска: `comtup_final_build.b6`, `ucompas_build.b6`, `tssdml_build.b6`. Подробности: `docs/TSS-W3-DML.md`.
+`tests/tsspr3300_build.b6` собирает `src/tsspr-v12-linked.pas` в зону 3300 (`036 ЗОН`, фактические зоны 3304..3341). `tests/tssdml_build.b6` собирает `src/tssdml.pas` в зону 3260; `tests/direct13_3260.b6` проверяет 13 операций прямыми вызовами `TPCMPIN1` (эталон совпадает); `tests/dmlall13.b6` фиксирует известный отказ `STACK OVERRANGE` на втором `DML(TRUE)`. Сборка библиотек в одной копии диска: `comtup_final_build.b6`, `ucompas_build.b6`, `tssdml_build.b6`. Подробности: `docs/TSS-W3-DML.md`.
 
 `gold_servis.b6` и `gold_servis_other.b6` - адаптированные подлинные SERVIS-операторы из `gold/`, с эталонами. `gold_servis.b6` создаёт 17 областей первой дека `\ПPOCTPAHCTBA HИCA`. Подробности: `docs/GOLD-SERVIS-RUN.md`.
 

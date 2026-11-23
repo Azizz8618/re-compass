@@ -10,10 +10,10 @@
 |---|---|---|---|
 | `COMTUP` + `SERVIS` | 2570 | `tests/comtup_final_build.b6` | `src/comtup.pas`, `src/servis.pas` |
 | `UCOMPAS` | 3350 | `tests/ucompas_build.b6` | `src/ucompas.pas` |
-| `TSSDML` | 3260 | дека W3 `*to perso:403260` | `src/tssdml.pas` |
-| `TSSPPR` | 3300 | дека сборки `*to perso:403300` | `src/tsspr-v12-linked.pas` |
+| `TSSDML` | 3260 | `tests/tssdml_build.b6` | `src/tssdml.pas` |
+| `TSSPPR` | 3300 | `tests/tsspr3300_build.b6` | `src/tsspr-v12-linked.pas` |
 
-Не восстанавливать диск между сборками. `2560₈` (GOSTLIB) не трогать. После каждой записи: `python3 tools/check_zone_changes.py <scratch>/2348`, только разрешённые зоны из `docs/ZONE-ALLOCATION.md`.
+Не восстанавливать диск между сборками. Проверено из репозитория на свежих копиях: все четыре сборки дают 0 `******`, `ДЛИНА LIBRARY 036 ЗОН` для TSSPPR; фактические зоны 3264..3266 и 3304..3341, зонный контроль PASS с расширенным диапазоном 3250..3347. `2560₈` (GOSTLIB) не трогать. После каждой записи: `python3 tools/check_zone_changes.py <scratch>/2348`, только разрешённые зоны из `docs/ZONE-ALLOCATION.md`.
 
 ## 2. Пилоты
 

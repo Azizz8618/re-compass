@@ -29,7 +29,11 @@ cp "$ROOT/tests/kompas_suite.b6" "$RUN/"
     dispak --path=. -p kompas_suite.b6 > out.run 2> out.err
 )
 
-if diff -u "$ROOT/tests/kompas_suite.expected.txt" "$RUN/out.run"; then
+normalize() {
+    sed -E 's/[0-9]{2}\.[0-9]{2}\.26/DD.MM.26/g' "$1"
+}
+
+if diff -u <(normalize "$ROOT/tests/kompas_suite.expected.txt") <(normalize "$RUN/out.run"); then
     printf 'kompas_suite: PASS\n'
 else
     printf 'kompas_suite: FAIL, вывод отличается от эталона\n'

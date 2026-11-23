@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `9f485d0`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `9f485d0`.
+- HEAD: `a27b874`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `a27b874`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -42,6 +42,16 @@
 - Падение на 1025 зон: было в ядре МАРС, исправлено патчем.
 - Диагностика `05/02`: была из-за LU 07 вместо LU 27, исправлена.
 - «Компилятора КОМПАС нет»: неверная формулировка, PC-контур найден и частично портирован.
+
+## In progress
+
+По плану `docs/REPRODUCE-SEVEROV.md` запущено 5 субагентов (все в scratch, без правки репозитория):
+
+1. Patched MARS в стандартный сценарий - завершено и интегрировано (`ses_df5cb547affexL1wUmcBIvCZgq`)
+2. Сохранение бд-ключа после FIND (`ses_df5cb547affdT7lgyv6vtC6r5D`)
+3. PIC op66/67/76/77 (`ses_df5cb5479ffeCaiGoR0s5wrutT`)
+4. Верхние слои UCOMPAS/TSSPPR (`ses_df5cb5479ffdbKJItIRFeyshYs`)
+5. Реестр кусков в SERVIS (`ses_df5cb5478ffewuDw9av3lh97Vn`)
 
 ## Open items
 

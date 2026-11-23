@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `712b2c5`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `712b2c5`.
+- HEAD: `7ba054d`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `7ba054d`.
 - Рабочее дерево чисто.
 
 ## Done

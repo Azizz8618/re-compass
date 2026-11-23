@@ -81,6 +81,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/PASSPORT-SWEEP.md` - перебор 31 паспорта, почему `ЗMП` не МС «Дубна».
 - `docs/REPRODUCE-SEVEROV.md` - пошаговый план воспроизведения задачи Северова.
 - `docs/REPRODUCE-SEVEROV-ALL.md` - план полного воспроизведения всех 14 дек, включая 18 программ.
+- `docs/ZONE-ALLOCATION.md` и `tools/check_zone_changes.py` - контроль зон записи диска 2348.
 - `docs/SEVEROV-SCHEMAS.md`, `docs/SEVEROV-FORTRAN-STARTUP.md` - отчёты по схемам 4/10 и дека 5.
 - `docs/TSS-CHAIN.md` - состояние порта цепочки TSS для 18 программ.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.

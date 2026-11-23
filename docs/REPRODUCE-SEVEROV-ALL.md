@@ -10,7 +10,7 @@
 | 2 | 42-168 | `? .CKCX` | `CXEMA CKЛAДA`, `TTC` | готово |
 | 3 | 169-190 | `? .CKBЫ` | `BЫДAЧA ДAHHЫX ИЗ MAD` | частично: 5 MAD-команд |
 | 4 | 191-318 | `? .AMCX` | `CXEMA AMOPTИЗAЦИИ` | не запускалась |
-| 5 | 319-377 | `? .CTAPT` | Fortran-стартап | не запускалась |
+| 5 | 319-377 | `? .CTAPT` | Fortran-стартап | готово на заглушках: `deck05-fortran-startup.out`, подлинные SKL/AMO/ZAT-программы отсутствуют |
 | 6 | 378-497 | `? .CKЗA` | `ЗAГPYЗKA CKЛAДA`, `GENZAG` | готово через `genmad` |
 | 7 | 498-636 | `? .AMЗA` | `ЗAГPYЗKA AMOPTИЗAЦИИ` | готово через `genmad` |
 | 8 | 637-668 | `? .AMBЫ` | `PAЗГPYЗKA CXE-AM`, MAD | частично |

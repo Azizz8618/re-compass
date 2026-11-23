@@ -10,6 +10,7 @@
 | та же дека с адаптацией системных карт | 17 областей, `EXN=0` | `gold/output/deck01-servis-adapted.out` |
 | SERVIS-операторы из строк 456-458, 593-594, 986-988 | 13 освобождений, 13 очисток, 3 сброса журнала | `gold/output/deck01-servis-extra-ops.out` |
 | дека 2 `CXEMA CKЛAДA` | 2 типа, 8 записей, 13 наборов, 79 `PUTD` | `gold/output/deck02-ttc-schema.out` |
+| дека 5 `CTAPT` (Fortran) | проход `ENTRY CK/AM/ЗT` и ветвей `BЫX`/`KOH` на заглушках подпрограмм | `gold/output/deck05-fortran-startup.out` |
 | деки 6, 7, 11 и MAD-деки 3/8/9 | 26 форматов, 102 блока, 110 `PUTD`, 19 справочников | `gold/output/deck06-07-11-genmad.out` |
 | 13 операций ЯМД из gold | `PLACE`..`BDPUT`, `EXN=0` | `gold/output/yam-predtgen.out` |
 | подпрограмма `SHTAMP` из `raznoe.txt` | 44/58 координат совпали с расчётом | `gold/output/raznoe-shtamp-*.out` |

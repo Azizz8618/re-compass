@@ -1,0 +1,148 @@
+шифр 419999 зс5^
+лен 41(2048)^
+EEB1A3
+*name CTAPT
+*call yesmemory
+*no list
+*super
+*system
+      PROGRAM CTAPT
+      CALL CK
+      CALL AM
+      CALL ЗT
+      CALL SKLSTA
+      END
+      SUBROUTINE SKLSTA
+      CALL SKLHED
+      CALL IPSSTA('SKLMON',.TRUE.)
+      ENTRY CK
+      CALL SKLHED
+      CALL IPSSTA('SKLMON',.FALSE.)
+      END
+      SUBROUTINE AMOSTA
+      CALL AMOHED
+      CALL IPSSTA('AMOMON',.TRUE.)
+      ENTRY AM
+      CALL AMOHED
+      CALL IPSSTA('AMOMON',.FALSE.)
+      END
+*     SUBROUTINE PLASTA
+*     CALL PLAHED
+*     CALL IPSSTA('PLAMON',.TRUE.)
+*     ENTRY ПЛ
+*     CALL PLAHED
+*     CALL IPSSTA('PLAMON',.FALSE.)
+*     END
+      SUBROUTINE ZATSTA
+      CALL ZATHED
+      CALL IPSSTA('ZATMON',.TRUE.)
+      ENTRY ЗT
+      CALL ZATHED
+      CALL IPSSTA('ZATMON',.FALSE.)
+      END
+      SUBROUTINE IPSSTA(HAЧAЛO,CTOП)
+      COMMON/KYДA/KUDA  /ДИP/DIR
+      INTEGER WAY(10),NW,HAЧAЛO
+      LOGICAL EQUAL,CTOП
+C
+      NW=1 $ WAY(NW)=HAЧAЛO $ DIR='      ' $ KUDA='HAЧAЛO'
+C
+    1 CALL LOADGO(WAY(NW))
+C
+      IF(EQUAL(KUDA,'ЭTOBCE').AND.CTOП) STOP
+      IF(EQUAL(KUDA,'ЭTOBCE')) RETURN
+C
+      IF(EQUAL(DIR,'BЫX')) GOTO 10
+      IF(EQUAL(DIR,'KOH')) GOTO 11
+      GOTO 19
+ 10   NW=NW-1 $ GOTO 2
+ 11   NW=1 $ GOTO 2
+ 19   NW=NW+1 $ WAY(NW)=KUDA $ GOTO 2
+C
+    2 GOTO 1
+      END
+      SUBROUTINE SKLHED
+      COMMON/STCNT/NS
+      INTEGER NS
+      NS=0
+      PRINT 1
+    1 FORMAT(1X,'=== SKLHED stub ===')
+      END
+      SUBROUTINE AMOHED
+      COMMON/STCNT/NS
+      INTEGER NS
+      NS=0
+      PRINT 1
+    1 FORMAT(1X,'=== AMOHED stub ===')
+      END
+      SUBROUTINE ZATHED
+      COMMON/STCNT/NS
+      INTEGER NS
+      NS=0
+      PRINT 1
+    1 FORMAT(1X,'=== ZATHED stub ===')
+      END
+      LOGICAL FUNCTION EQUAL(A,B)
+      INTEGER A,B
+      EQUAL = A.EQ.B
+      END
+      SUBROUTINE NAVSET(NEXT)
+      COMMON/KYДA/KUDA  /ДИP/DIR
+      COMMON/STCNT/NS
+      INTEGER KUDA,DIR,NS,NEXT
+      NS=NS+1
+      IF(NS.EQ.4) GOTO 20
+      KUDA=NEXT $ DIR='      '
+      IF(NS.EQ.3) DIR='BЫX   '
+      RETURN
+   20 KUDA='ЭTOBCE' $ DIR='KOH   '
+      END
+      SUBROUTINE SKLMON
+      PRINT 1
+    1 FORMAT(1X,'SKLMON stub')
+      CALL NAVSET('SKLCAR')
+      END
+      SUBROUTINE SKLCAR
+      PRINT 1
+    1 FORMAT(1X,'SKLCAR stub')
+      CALL NAVSET('SKLOTD')
+      END
+      SUBROUTINE SKLOTD
+      PRINT 1
+    1 FORMAT(1X,'SKLOTD stub')
+      CALL NAVSET('SKLMON')
+      END
+      SUBROUTINE AMOMON
+      PRINT 1
+    1 FORMAT(1X,'AMOMON stub')
+      CALL NAVSET('AMOCAR')
+      END
+      SUBROUTINE AMOCAR
+      PRINT 1
+    1 FORMAT(1X,'AMOCAR stub')
+      CALL NAVSET('AMOOTD')
+      END
+      SUBROUTINE AMOOTD
+      PRINT 1
+    1 FORMAT(1X,'AMOOTD stub')
+      CALL NAVSET('AMOMON')
+      END
+      SUBROUTINE ZATMON
+      PRINT 1
+    1 FORMAT(1X,'ZATMON stub')
+      CALL NAVSET('ZATCOF')
+      END
+      SUBROUTINE ZATCOF
+      PRINT 1
+    1 FORMAT(1X,'ZATCOF stub')
+      CALL NAVSET('ZATOTD')
+      END
+      SUBROUTINE ZATOTD
+      PRINT 1
+    1 FORMAT(1X,'ZATOTD stub')
+      CALL NAVSET('ZATMON')
+      END
+*execute
+*end file
+``````
+еконец

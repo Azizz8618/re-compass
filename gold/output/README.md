@@ -8,6 +8,7 @@
 | `deck01-servis-adapted.out` | та же дека с заменой системных карт на вызов SERVIS | 17 областей, `EXN=0` | `6385bb58…` |
 | `deck01-servis-extra-ops.out` | SERVIS-операторы из строк 456-458, 593-594, 986-988 | 13 освобождений, 13 очисток, 3 сброса журнала, `EXN=0` | `4b66f84d…` |
 | `deck02-ttc-schema.out` | схема `CX-CK0` из деки 2 (`*CMP:CXEMA CKЛAДA`), порт `TTC` | 2 типа, 8 записей, 13 наборов, 79 `PUTD`, `EXN=0` | `7b1df63c…` |
+| `deck05-fortran-startup.out` | дека 5 `CTAPT`, Fortran-стартап; оригинальный текст 49 строк не изменён, добавлены `PROGRAM CTAPT`, заглушки heads и подпрограмм | проход `ENTRY CK/AM/ЗT`, `BЫX`/`KOH`, `STOP`, `КОНЕЦ ЗАДАЧИ`; `EXN` не проверяется (Fortran) | `cf705582…` |
 | `deck06-07-11-genmad.out` | загрузчики дек 6, 7, 11 и MAD-деки 3/8/9, порт `GEN`/`MAD` | 26 форматов, 102 блока, 110 `PUTD`, 19 справочников, 4 MAD-запроса, `GEN EX=0`, `MAD EX=0` | `b7286a0b…` |
 | `yam-predtgen.out` | 13 операций ЯМД из gold, порт `TPREDT` | `PLACE/FIRST/NEXT/BYKEY/PREV/GET/MODIF/LAST/REMOVE/INSERT/BDGET/BDPUT`, `EXN=0` | `246e0dc9…` |
 | `raznoe-shtamp-ns0.out` | подпрограмма `SHTAMP` из `raznoe.txt:52-116`, `NS=0` | 44 координаты совпали с расчётом | `67122452…` |

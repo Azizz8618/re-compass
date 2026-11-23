@@ -45,7 +45,12 @@
 
 ## In progress
 
-Все субагенты завершены, результаты интегрированы и запушены (`712b2c5`).
+По плану `docs/REPRODUCE-SEVEROV-ALL.md` запущены 4 субагента (scratch):
+
+1. MAD-деки 3/8/9 целиком (`ses_df5a50972ffeAQjB43r8eey1jm`)
+2. Схемы 4/10 (`ses_df5a5096fffes3PwatdUlBeFXl`)
+3. Fortran-стартап, дека 5 (`ses_df5a50969ffe1xsNT7JLuREfCO`)
+4. Цепочка TSS для 18 программ (`ses_df5a50967ffe6Ub2Dm0bQpjYri`)
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

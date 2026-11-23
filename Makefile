@@ -22,6 +22,7 @@ check:
 	bash -n tools/run_kompas_suite.sh
 	python3 -m py_compile tools/are_decode.py
 	python3 -m py_compile tools/are_to_mars.py
+	python3 -m py_compile tools/are_to_mars_multi.py
 	@printf 'синтаксис скриптов: OK\n'
 
 mars-check:

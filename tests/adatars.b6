@@ -1,0 +1,527 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program aremars(output, BDVECT, BDERRN);
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+var BDVECT: TBDVec; BDERRN:integer;
+  m:array[1..1] of integer; k:alfa; i,j:integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbd; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+function find(a:alfa):alfa;
+begin
+  BDVECT[8].a := a;
+  BDVECT[3].i := 11c;
+  pasbd;
+  find := BDVECT[31].a
+end;
+procedure p01;
+begin
+  m[1]:=8;
+  putd('AD0001', m);
+  m[1]:=8;
+  putd('AD1001', m);
+  m[1]:=8;
+  putd('AD2001', m);
+  m[1]:=8;
+  putd('AD3001', m);
+  m[1]:=8;
+  putd('AD4001', m);
+  m[1]:=8;
+  putd('AD5001', m);
+  m[1]:=8;
+  putd('AD6001', m);
+  m[1]:=8;
+  putd('AD7001', m);
+end;
+procedure c01;
+begin
+  k := find('AD0001');
+  getd('AD0001', m);
+  j := 0;
+  if k <> 'AD0001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD0001 OK')
+  else writeln('AD0001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD1001');
+  getd('AD1001', m);
+  j := 0;
+  if k <> 'AD1001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD1001 OK')
+  else writeln('AD1001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD2001');
+  getd('AD2001', m);
+  j := 0;
+  if k <> 'AD2001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD2001 OK')
+  else writeln('AD2001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD3001');
+  getd('AD3001', m);
+  j := 0;
+  if k <> 'AD3001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD3001 OK')
+  else writeln('AD3001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD4001');
+  getd('AD4001', m);
+  j := 0;
+  if k <> 'AD4001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD4001 OK')
+  else writeln('AD4001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD5001');
+  getd('AD5001', m);
+  j := 0;
+  if k <> 'AD5001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD5001 OK')
+  else writeln('AD5001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD6001');
+  getd('AD6001', m);
+  j := 0;
+  if k <> 'AD6001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD6001 OK')
+  else writeln('AD6001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD7001');
+  getd('AD7001', m);
+  j := 0;
+  if k <> 'AD7001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD7001 OK')
+  else writeln('AD7001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+end;
+procedure p02;
+begin
+  m[1]:=8;
+  putd('AD8001', m);
+  m[1]:=8;
+  putd('AD9001', m);
+  m[1]:=8;
+  putd('ADA001', m);
+  m[1]:=8;
+  putd('ADB001', m);
+  m[1]:=8;
+  putd('ADC001', m);
+  m[1]:=8;
+  putd('ADD001', m);
+  m[1]:=16;
+  putd('AD0002', m);
+  m[1]:=16;
+  putd('AD1002', m);
+end;
+procedure c02;
+begin
+  k := find('AD8001');
+  getd('AD8001', m);
+  j := 0;
+  if k <> 'AD8001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD8001 OK')
+  else writeln('AD8001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD9001');
+  getd('AD9001', m);
+  j := 0;
+  if k <> 'AD9001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('AD9001 OK')
+  else writeln('AD9001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('ADA001');
+  getd('ADA001', m);
+  j := 0;
+  if k <> 'ADA001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('ADA001 OK')
+  else writeln('ADA001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('ADB001');
+  getd('ADB001', m);
+  j := 0;
+  if k <> 'ADB001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('ADB001 OK')
+  else writeln('ADB001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('ADC001');
+  getd('ADC001', m);
+  j := 0;
+  if k <> 'ADC001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('ADC001 OK')
+  else writeln('ADC001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('ADD001');
+  getd('ADD001', m);
+  j := 0;
+  if k <> 'ADD001' then j := 1;
+  if m[1] <> 8 then j := 1;
+  if j = 0 then writeln('ADD001 OK')
+  else writeln('ADD001 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',8);
+  k := find('AD0002');
+  getd('AD0002', m);
+  j := 0;
+  if k <> 'AD0002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD0002 OK')
+  else writeln('AD0002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD1002');
+  getd('AD1002', m);
+  j := 0;
+  if k <> 'AD1002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD1002 OK')
+  else writeln('AD1002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+end;
+procedure p03;
+begin
+  m[1]:=16;
+  putd('AD2002', m);
+  m[1]:=16;
+  putd('AD3002', m);
+  m[1]:=16;
+  putd('AD4002', m);
+  m[1]:=16;
+  putd('AD5002', m);
+  m[1]:=16;
+  putd('AD6002', m);
+  m[1]:=16;
+  putd('AD7002', m);
+  m[1]:=16;
+  putd('AD8002', m);
+  m[1]:=16;
+  putd('AD9002', m);
+end;
+procedure c03;
+begin
+  k := find('AD2002');
+  getd('AD2002', m);
+  j := 0;
+  if k <> 'AD2002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD2002 OK')
+  else writeln('AD2002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD3002');
+  getd('AD3002', m);
+  j := 0;
+  if k <> 'AD3002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD3002 OK')
+  else writeln('AD3002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD4002');
+  getd('AD4002', m);
+  j := 0;
+  if k <> 'AD4002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD4002 OK')
+  else writeln('AD4002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD5002');
+  getd('AD5002', m);
+  j := 0;
+  if k <> 'AD5002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD5002 OK')
+  else writeln('AD5002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD6002');
+  getd('AD6002', m);
+  j := 0;
+  if k <> 'AD6002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD6002 OK')
+  else writeln('AD6002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD7002');
+  getd('AD7002', m);
+  j := 0;
+  if k <> 'AD7002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD7002 OK')
+  else writeln('AD7002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD8002');
+  getd('AD8002', m);
+  j := 0;
+  if k <> 'AD8002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD8002 OK')
+  else writeln('AD8002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD9002');
+  getd('AD9002', m);
+  j := 0;
+  if k <> 'AD9002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('AD9002 OK')
+  else writeln('AD9002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+end;
+procedure p04;
+begin
+  m[1]:=16;
+  putd('ADA002', m);
+  m[1]:=16;
+  putd('ADB002', m);
+  m[1]:=16;
+  putd('ADC002', m);
+  m[1]:=16;
+  putd('ADD002', m);
+  m[1]:=24;
+  putd('AD0003', m);
+  m[1]:=24;
+  putd('AD1003', m);
+  m[1]:=24;
+  putd('AD2003', m);
+  m[1]:=24;
+  putd('AD3003', m);
+end;
+procedure c04;
+begin
+  k := find('ADA002');
+  getd('ADA002', m);
+  j := 0;
+  if k <> 'ADA002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('ADA002 OK')
+  else writeln('ADA002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('ADB002');
+  getd('ADB002', m);
+  j := 0;
+  if k <> 'ADB002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('ADB002 OK')
+  else writeln('ADB002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('ADC002');
+  getd('ADC002', m);
+  j := 0;
+  if k <> 'ADC002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('ADC002 OK')
+  else writeln('ADC002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('ADD002');
+  getd('ADD002', m);
+  j := 0;
+  if k <> 'ADD002' then j := 1;
+  if m[1] <> 16 then j := 1;
+  if j = 0 then writeln('ADD002 OK')
+  else writeln('ADD002 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',16);
+  k := find('AD0003');
+  getd('AD0003', m);
+  j := 0;
+  if k <> 'AD0003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD0003 OK')
+  else writeln('AD0003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD1003');
+  getd('AD1003', m);
+  j := 0;
+  if k <> 'AD1003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD1003 OK')
+  else writeln('AD1003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD2003');
+  getd('AD2003', m);
+  j := 0;
+  if k <> 'AD2003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD2003 OK')
+  else writeln('AD2003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD3003');
+  getd('AD3003', m);
+  j := 0;
+  if k <> 'AD3003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD3003 OK')
+  else writeln('AD3003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+end;
+procedure p05;
+begin
+  m[1]:=24;
+  putd('AD4003', m);
+  m[1]:=24;
+  putd('AD5003', m);
+  m[1]:=24;
+  putd('AD6003', m);
+  m[1]:=24;
+  putd('AD7003', m);
+  m[1]:=24;
+  putd('AD8003', m);
+  m[1]:=24;
+  putd('AD9003', m);
+  m[1]:=24;
+  putd('ADA003', m);
+  m[1]:=24;
+  putd('ADB003', m);
+end;
+procedure c05;
+begin
+  k := find('AD4003');
+  getd('AD4003', m);
+  j := 0;
+  if k <> 'AD4003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD4003 OK')
+  else writeln('AD4003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD5003');
+  getd('AD5003', m);
+  j := 0;
+  if k <> 'AD5003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD5003 OK')
+  else writeln('AD5003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD6003');
+  getd('AD6003', m);
+  j := 0;
+  if k <> 'AD6003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD6003 OK')
+  else writeln('AD6003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD7003');
+  getd('AD7003', m);
+  j := 0;
+  if k <> 'AD7003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD7003 OK')
+  else writeln('AD7003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD8003');
+  getd('AD8003', m);
+  j := 0;
+  if k <> 'AD8003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD8003 OK')
+  else writeln('AD8003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('AD9003');
+  getd('AD9003', m);
+  j := 0;
+  if k <> 'AD9003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('AD9003 OK')
+  else writeln('AD9003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('ADA003');
+  getd('ADA003', m);
+  j := 0;
+  if k <> 'ADA003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('ADA003 OK')
+  else writeln('ADA003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+  k := find('ADB003');
+  getd('ADB003', m);
+  j := 0;
+  if k <> 'ADB003' then j := 1;
+  if m[1] <> 24 then j := 1;
+  if j = 0 then writeln('ADB003 OK')
+  else writeln('ADB003 MISMATCH');
+  writeln('  ITLEN=',ITLEN,' EXN=',EXN);
+  if j <> 0 then writeln('  GOT ',m[1],' EXPECTED ',24);
+end;
+begin
+  if BDVECT[36].i + 0 = 0 then begin
+    for j := 0 to 167 do BDVECT[j].i := 0;
+    i := 1270000c; PASACD(i);
+    PASSETAR(270000c)
+  end;
+  writeln('INIT EX=',EXN);
+  i := 16270001c;
+  newd('ADA   ', i);
+  opend('ADA   ');
+  writeln('OPEN EX=',EXN);
+  p01;
+  p02;
+  p03;
+  p04;
+  p05;
+  writeln('PUTD EX=',EXN);
+  c01;
+  c02;
+  c03;
+  c04;
+  c05;
+  writeln('FINAL EXN=',EXN);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

@@ -82,4 +82,8 @@ dispak --path=. -p <путь-к-репозиторию>/tests/comtup_test.b6 > t
 
 `gold_shtamp.b6` и `gold_shtamp_v.b6` - рабочие деки на основе подлинного текста `SHTAMP` из `gold/…raznoe.txt:52-116` с добавленной главной программой и заглушками `GRID`/`MOVE`. Проверяют кодировку, формат деки и Дубнинский ФОРТРАН-компилятор. `NS=0`: 44 точки, `NS=1`: 58 точек; все координаты совпали с расчётом по константам исходника. Это не тест КОМПАС. Подробности: `docs/GOLD-MATERIALS.md`, `docs/GOLD-RUN-REPORT.md`.
 
+## kompas_suite: интеграционный тест уровня СУБД
+
+`kompas_suite.b6` проверяет 10 операций через внешние точки `COMTUP`: инициализацию, `CPlace`, `CFindFirst/Next/ByKey/Preceding`, `CGetKnot`, `CReplace`, `CGetBdKey`, `CPutBdKey`, `ITLEN`. Эталон `kompas_suite.expected.txt` байтово стабилен. Запуск: `bash tools/run_kompas_suite.sh` (скрипт сам собирает `COMTUP` на рабочей копии 2348). Подробности: `docs/KOMPAS-SUITE.md`.
+
 Обе деки работают на рабочих копиях дисков. Перед каждым прогоном `newd` нужно восстанавливать образ 2048, иначе МАРС выдаёт `10 НЕТ ИМЕНИ`. Подробности: `docs/CGETBDKEY-TEST.md`, `docs/DISK-2348.md`.

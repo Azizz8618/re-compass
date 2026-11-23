@@ -68,6 +68,9 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `patches/` - минимальные патчи для `UCOMPAS`, `UNPIC`, `TSSPPR`.
 - `docs/GOLD-MATERIALS.md` - изучение и оценка материалов `gold/` (реальная система Компас-БЭСМ 1988-89).
 - `docs/GOLD-RUN-REPORT.md` - протокол запуска дек из `gold/` на эмуляторе.
+- `docs/KOMPAS-SUITE.md` - интеграционный тест уровня СУБД (10 проверок T01-T10).
+- `docs/FREE-ZONES-2348.md` - карта свободных зон 2348 и размещение КОМПАС.
+- `docs/SERVIS-RESTORATION-PLAN.md` - план восстановления работоспособности SERVIS.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.

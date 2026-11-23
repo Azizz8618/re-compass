@@ -19,6 +19,7 @@ check:
 	bash -n tools/find_besm_artifacts.sh
 	bash -n tools/mars_check.sh
 	bash -n tools/run_smoke.sh
+	bash -n tools/run_kompas_suite.sh
 	@printf 'синтаксис скриптов: OK\n'
 
 mars-check:

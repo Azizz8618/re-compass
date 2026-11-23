@@ -1,0 +1,126 @@
+шифр 419900зс5^
+лен 40(2348-630)^
+лен 41(2348)^
+ОЗУ 32^
+еев1а3
+*name
+*call ficmemory
+*perso:412570
+*stand
+*call *pascal
+(*=y+,s0,s7*)program kdbtest(output, BDVECT, BDERRN);
+(* Database-level scenario on external COMTUP entries.
+   T01 init, T02 CPlace, T03 CFindFirst/Next, T04 CFindByKey,
+   T05 CFindPreceding, T06 CGetKnot, T07 CReplace,
+   T08 CGetBdKey, T09 CPutBdKey, T10 PIC/ITLEN. *)
+type word = record case integer of
+  0:(i:integer); 1:(a:alfa); 2:(p:@integer); 3:(c:char) end;
+  TBDVec = array [0..167] of word;
+  PicT = record
+    nc, nm, na, smes, ssdmo: integer;
+    m: array [0..383] of integer;
+    l: array [0..383] of integer
+  end;
+var BDVECT: TBDVec; BDERRN:integer;
+    i:integer; m,n:array[1..4] of integer;
+    Number,NewKey,R:integer; p:@PicT;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
+procedure pasbd; external;
+procedure SSBF5; external;
+procedure TPCMP1I(var p:integer; k:integer); external;
+procedure TPCMPP1(j:integer); external;
+procedure TPCMPIN1(j:integer); external;
+function APIC:@PicT; external;
+function EXN:integer; external;
+function ITLEN:integer; external;
+BEGIN
+ (* area fixture: direct MARS, COMTUP has no NEWD entry *)
+ i := 1270000c; PASACD(i); PASSETAR(270000c);
+ i := 1270001c; newd('bdkey ', i); opend('bdkey ');
+ m[1]:=111111; m[2]:=222222; m[3]:=333333; m[4]:=444444;
+ putd('kbd001', m);
+ m[1]:=11; m[2]:=22; m[3]:=33; m[4]:=44;
+ putd('kbd002', m);
+ m[1]:=555; m[2]:=666; m[3]:=777; m[4]:=888;
+ putd('kbd003', m);
+ SSBF5;
+ writeln('T01 INIT EXN=',EXN);
+ (* T02 CPlace via PIC 7425 -> MARS PUTD *)
+ n[1]:=7; n[2]:=8; n[3]:=9; n[4]:=10;
+ BDVECT[8].a := 'kbd004';
+ TPCMP1I(n[1], 11);
+ BDVECT[13].i := 41c;
+ TPCMPIN1(7425);
+ writeln('T02 PLACE EXN=',EXN);
+ (* T03 CFindFirst, CFindNext via 7428/7436 *)
+ TPCMPIN1(7428);
+ writeln('T03 FIRST S31=',BDVECT[31].a);
+ TPCMPIN1(7436);
+ writeln('T03 NEXT S31=',BDVECT[31].a);
+ TPCMPIN1(7436);
+ writeln('T03 NEXT S31=',BDVECT[31].a);
+ TPCMPIN1(7436);
+ writeln('T03 NEXT S31=',BDVECT[31].a);
+ TPCMPIN1(7436);
+ writeln('T03 NEXT S31=',BDVECT[31].a);
+ (* T04 CFindByKey via 7426 *)
+ BDVECT[8].a := 'kbd003';
+ TPCMPIN1(7426);
+ writeln('T04 FIND S31=',BDVECT[31].a);
+ (* T05 CFindPreceding via 7437 *)
+ TPCMPIN1(7437);
+ writeln('T05 PREV S31=',BDVECT[31].a);
+ (* T06 CGetKnot via 7440 *)
+ m[1]:=-1; m[2]:=-1; m[3]:=-1; m[4]:=-1;
+ BDVECT[8].a := 'kbd002';
+ TPCMP1I(m[1], 11);
+ BDVECT[13].i := 4;
+ TPCMPIN1(7440);
+ writeln('T06 GET=',m[1],m[2],m[3],m[4]);
+ writeln('T06 ITLEN=',ITLEN,' EXN=',EXN);
+ (* T07 CReplace via 7439 *)
+ m[1]:=101; m[2]:=202; m[3]:=303; m[4]:=404;
+ BDVECT[8].a := 'kbd002';
+ TPCMP1I(m[1], 11);
+ BDVECT[13].i := 41c;
+ TPCMPIN1(7439);
+ writeln('T07 REPLACE EXN=',EXN);
+ m[1]:=-1; m[2]:=-1; m[3]:=-1; m[4]:=-1;
+ TPCMP1I(m[1], 11);
+ BDVECT[13].i := 4;
+ TPCMPIN1(7440);
+ writeln('T07 GET=',m[1],m[2],m[3],m[4]);
+ (* T08 CGetBdKey: canonical UCOMPAS sequence *)
+ BDVECT[8].a := 'kbd001';
+ TPCMPIN1(7426);
+ Number:=0; R:=-1;
+ TPCMP1I(Number,22);
+ TPCMP1I(R,24);
+ TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+ TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896);
+ TPCMPIN1(7514);
+ writeln('T08 BDKEY R=',R,' EXN=',EXN);
+ (* T09 CPutBdKey, then read back *)
+ NewKey:=10000c;
+ TPCMP1I(NewKey,24);
+ TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+ TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896);
+ TPCMPIN1(7513);
+ writeln('T09 S29=',BDVECT[29].i oct);
+ R:=-1;
+ TPCMP1I(R,24);
+ TPCMPP1(36); TPCMPP1(0); TPCMPP1(19712);
+ TPCMPP1(36); TPCMPP1(512); TPCMPP1(16896);
+ TPCMPIN1(7514);
+ writeln('T09 BDKEY R=',R,' EXN=',EXN);
+ (* T10 PIC state *)
+ p := APIC;
+ writeln('T10 PIC NC=',p@.nc,' NA=',p@.na);
+END.
+*no load list
+*execute
+*end file
+``````
+еконец

@@ -18,6 +18,7 @@ ALLOWED = [
     ("MARS patch dump", 0o0657, 0o0704),
     ("PERSO COMTUP/SERVIS", 0o2570, 0o2637),
     ("TSSDML/TSSPPR reserve", 0o3250, 0o3347),
+    ("MADX interpreter", 0o3370, 0o3430),
     ("PERSO UCOMPAS", 0o3350, 0o3360),
     ("REGIST catalog", 0o4100, 0o4130),
     ("REGIST data", 0o4200, 0o4230),

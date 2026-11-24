@@ -47,6 +47,7 @@ PROGRAMS = [
 # are deliberately left alone.
 ZONE_TSSDML = 0o3260
 ZONE_TSSPPR = 0o3300
+ZONE_MADX = 0o3370
 
 DECK_HEADER = [
     'шифр 419999зс5^',
@@ -60,19 +61,28 @@ DECK_HEADER = [
     '*perso:413350,cont',   # UCOMPAS, zone 3350
     '*perso:41%04o,cont' % ZONE_TSSDML,
     '*perso:41%04o,cont' % ZONE_TSSPPR,
+    '*perso:41%04o,cont' % ZONE_MADX,
     '*stand',
     '*call *pascal',
 ]
 
+INLINE_MADX = (Path(__file__).resolve().parents[1] / 'src' / 'madx_inline.pas')\
+    .read_text(encoding='utf-8').splitlines()
+
 PRELUDE = [
     'type',
     '  alfa = packed array[1..6] of char;',
-    '  TYPEM = packed array[1..1344] of char;',
-    '  ZZBUFT = record LEN,H,D,I:integer; M,MV:TYPEM end;',
+    '  word = record case integer of',
+    '    0:(i:integer); 1:(a:alfa); 2:(c:char) end;',
+    '  TBDVec = array[0..167] of word;',
+    '  TYPEM = packed array[1..160] of char;',
+    '  ZZBUFT = record LEN,H,D,I:integer; M:TYPEM end;',
     'var',
+    '  BDVECT: TBDVec;',
+    '  BDERRN: integer;',
     '  BUF: ZZBUFT;',
     '  C: char;',
-    'procedure DML(B:boolean); external;',
+    *INLINE_MADX,
 ]
 
 PAIR_RE = re.compile(r'&&.*?&&', re.S)
@@ -210,7 +220,7 @@ def build_source(name, body_lines, snippets):
     dml.append('procedure DmlCall(N:integer);')
     dml.append('var J:integer;')
     dml.append('begin')
-    dml.append('  for J:=1 to 1344 do BUF.M[J]:=\' \';')
+    dml.append('  for J:=1 to 160 do BUF.M[J]:=\' \';')
     dml.append('  case N of')
     for s in snippets:
         text = s['text'].replace('\n', ' ').strip()
@@ -228,9 +238,14 @@ def build_source(name, body_lines, snippets):
         dml.append('    end;')
     dml.append('  end;')
     dml.append('  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=\' \';')
-    dml.append('  DML(TRUE)')
+    dml.append('  QMADX(0)')
     dml.append('end;')
 
+    # Program parameters are the Pascal-Monitor common area: BUF must be
+    # declared in both the caller and the MADX PERSO module.
+    head[1] = re.sub(
+        r'(?i)(\bPROGRAM\s+)([A-Za-z][A-Za-z0-9]*)',
+        r'\1\2(output,BUF,BDVECT,BDERRN);', head[1], count=1)
     prelude = head + dml
     # The original HEAD body for SKLMON is kept as an ordinary procedure so
     # that its DMLCALL is syntactically live rather than buried in a comment.
@@ -242,7 +257,16 @@ def build_source(name, body_lines, snippets):
         ids = [i for i in ids if i != head_snippet['id']]
 
     tail = body_lines[1:]
-    return prelude + tail, ids
+    source = prelude + tail
+    # A '(*=L0 ...*)' card ends the compiler's source listing: the remaining
+    # Pascal main block would never be compiled.  Make it an ordinary card.
+    source = [x.replace('(*=L0 ', '(* L0 ') for x in source]
+    # Cards left after the final END. are fed to the next (Fortran) compiler
+    # by the monitor.  The last END. must be the final Pascal card.
+    ends = [i for i, x in enumerate(source) if 'END.' in x.upper()]
+    if not ends:
+        raise RuntimeError('no final END. for ' + name)
+    return source[:ends[-1] + 1], ids
 
 
 def build_deck(name, source_lines, warnings):
@@ -281,6 +305,7 @@ def main():
             'UCOMPAS': '3350 (perso:413350,cont)',
             'TSSDML': '%04o (perso:41%04o,cont)' % (ZONE_TSSDML, ZONE_TSSDML),
             'TSSPPR': '%04o (perso:41%04o,cont)' % (ZONE_TSSPPR, ZONE_TSSPPR),
+            'MADX': '%04o (perso:41%04o,cont)' % (ZONE_MADX, ZONE_MADX),
         },
         'programs': {},
     }

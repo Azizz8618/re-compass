@@ -17,9 +17,9 @@
 | 9 | 669-696 | `? .ЗTBЫ` | `BЫДAЧA CXE-ПЛ`, MAD | готово: `deck09-mad-unload.out`, `EXN=0` |
 | 10 | 697-879 | `? .ЗTCX` | `CXEMA ЗATPAT ПO TEMAM` | готово: `deck10-schema-zat.out`, 2/16/19, `EXN=0` |
 | 11 | 880-1111 | `? .ЗTЗA` | `ЗAГPYЗЧИK ЗATPAT` | готово через `genmad` |
-| 12 | 1112-2297 | `?.CK` | 4 программы: `SKLMON`, `SKLOTD`, `SKLCAR`, `SKLOTC` | не запускались |
-| 13 | 2299-3555 | `?.AM` | 6 программ: `AMOHED`, `AMOMON`, `AMOOTD`, `AMOCAR`, `AMOOTC`, `AMOGRU` | не запускались |
-| 14 | 3557-5392 | `?.ЗT` | 8 программ: `ZATHED`, `ZATMON`, `ZATOTD`, `ZATCOF`, `ZATZAT`, `ZATNAK`, `ZATRTE`, `ZATTAB` | не запускались |
+| 12 | 1112-2297 | `?.CK` | 4 программы: `SKLMON`, `SKLOTD`, `SKLCAR`, `SKLOTC` | декы запускаются, трансляция 4 программ блокирована неопределёнными идентификаторами |
+| 13 | 2299-3555 | `?.AM` | 6 программ: `AMOHED`, `AMOMON`, `AMOOTD`, `AMOCAR`, `AMOOTC`, `AMOGRU` | `AMOHED` работает полностью; остальные 5 блокированы трансляцией |
+| 14 | 3557-5392 | `?.ЗT` | 8 программ: `ZATHED`, `ZATMON`, `ZATOTD`, `ZATCOF`, `ZATZAT`, `ZATNAK`, `ZATRTE`, `ZATTAB` | `ZATHED` работает полностью; остальные 7 блокированы трансляцией |
 
 ## 2. Принципы
 

@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `074cba0`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `074cba0`.
+- HEAD: `cc03998`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `cc03998`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -68,7 +68,7 @@ W5e завершён и интегрирован (`cc93c05`): **18/18 прило
 Формальная цель достигнута, но продолжается работа по полной семантической портировке: восстановление исходной логики ZATTAB и SELECT-ветвлений в ZATMON/ZATZAT/ZATNAK/ZATRTE.
 
 Активные субагенты:
-1. W6a `ZATTAB` по gold 4791-5392 (`ses_df48b3a1effeC2CD59237n7mwY`), scratch `w6a-zattab`.
+1. W6a `ZATTAB` по gold 4791-5392 - завершён и интегрирован (`cc03998`): полная исполняемая логика, 19 сниппетов в коде, `ZATTABKEEP` удалён; оговорка - данные синтетические через `APPLYMAD`.
 2. W6b SELECT-ветвления четырёх ZAT-программ - интегрированы (`074cba0`): 19 SELECT/97 ветвей восстановлены в исходниках, но цикл меню пока выключен.
 3. W6c исполнение восстановленных ветвей (`ses_df47a08b5ffe0QAxnHTNAa3yVg`), scratch `w6c-select-run`.
 

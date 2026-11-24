@@ -106,7 +106,7 @@ var
   NЕХТ:boolean;
   МАХШИФР:integer;
   МINШИФР:integer;
-  MATEP:TMAT;
+  MATEP:real;
   CTOИT:TSTOI;
   ГPYППA:TSROC;
   ДEЙ:TDEY;
@@ -138,6 +138,9 @@ var
   ЗН:real;
   FОRLIN:integer;
   FIL:integer;
+  WFILE:text;
+  ВЫП:real;КОМАН:real;СПЕЦ:real;АМОР:real;СТОР:real;ПОСН:real;ПТРЕС:real;ПРБК:real;ОВЫШ:real;ОГОС:real;НЕПЛ:real;МЕС:real;NАМ:real;ПРОЧ:real;ЗАРП:real;
+
   ТОЛЬКОСИ:boolean;
   SETCOL:TSETCOL;
   HAЗB:alfa;
@@ -462,36 +465,6 @@ begin end;
 procedure RСТР;
 begin end;
 procedure Т;
-begin end;
-procedure ВЫП;
-begin end;
-procedure КОМАН;
-begin end;
-procedure СПЕЦ;
-begin end;
-procedure АМОР;
-begin end;
-procedure СТОР;
-begin end;
-procedure ПОСН;
-begin end;
-procedure ПТРЕС;
-begin end;
-procedure ПРБК;
-begin end;
-procedure ОВЫШ;
-begin end;
-procedure ОГОС;
-begin end;
-procedure НЕПЛ;
-begin end;
-procedure МЕС;
-begin end;
-procedure NАМ;
-begin end;
-procedure ПРОЧ;
-begin end;
-procedure ЗАРП;
 begin end;
 procedure УРОВ;
 begin end;
@@ -902,8 +875,7 @@ WRITE(output,'KOФ - BXOД B БЛOK PEГИCTPAЦИИ KOЭФФ',
           'ФAK - BXOД B БЛOK PEГИCTPAЦИИ ФAKTИЧ',
           'OБЩ - BXOД B БЛOK PEГИCTPAЦИИ OБЩИX');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'KOФ   '=ДИP THEN BEGIN KYДA:='ZATCOF';EXIT END ELSE IF 'OTД   '=ДИP THEN BEGIN KYДA:='ZATOTD';EXIT END ELSE IF 'TEM   '=ДИP THEN BEGIN KYДA:='ZATRTE';EXIT END ELSE IF 'ФAK   '=ДИP THEN BEGIN KYДA:='ZATZAT';EXIT END ELSE IF 'OБЩ   '=ДИP THEN BEGIN KYДA:='ZATNAK';EXIT END ELSE IF 'KOH   '=ДИP THEN BEGIN KYДA:='HAPYЖY';EXIT END ELSE IF 'BЫX   '=ДИP THEN BEGIN KYДA:='HAPYЖY';EXIT END;
 END;
 
 
@@ -918,8 +890,7 @@ WHILE TRUE DO BEGIN
 WRITE(output,'      ...BЫ B БЛOKE BЫДAЧИ OTЧETOB...  ');PUTT;
 WRITE(output,'ПOC - BЫДAЧA OTЧETA ПO ПOCЛEДHEMY MECЯ');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'ПOC   '=ДИP THEN BEGIN YCTПEЧ;YCTMOД;KYДA:='ZATTAB';EXIT END ELSE IF 'KOH   '=ДИP THEN BEGIN KYДA:='HAPYЖY';EXIT END ELSE IF 'BЫX   '=ДИP THEN BEGIN KYДA:='HAPYЖY';EXIT END;
 END;
 
 
@@ -965,8 +936,7 @@ WHILE TRUE DO BEGIN
 WRITE(output,'      ...BЫ B CИCTEMHOM БЛOKE...  ');PUTT;
 WRITE(output,'ФЛA - ИHBEPTИPOBAHИE ФЛAГOB/');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'KOH   '=ДИP THEN BEGIN EXIT END ELSE IF 'BЫX   '=ДИP THEN BEGIN EXIT END ELSE IF 'ФЛA   '=ДИP THEN BEGIN SETFLAG END;
 END;
 END;
 
@@ -1005,6 +975,5 @@ WRITE(output,'PEГ - BXOД B PEГИCTPAЦИOHHЫЙ БЛOK/',
           'CБP - CБPOCИTЬ ИЗMEHEHИЯ/',
           'CИC - BXOД B CИCTEMHЫЙ БЛOK/');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'PEГ   '=ДИP THEN BEGIN БЛOKPEГ;IF KYДA<>'HAPYЖY' THEN EXIT END ELSE IF 'OTЧ   '=ДИP THEN BEGIN БЛOKOTЧ;IF KYДA<>'HAPYЖY' THEN EXIT END ELSE IF 'CИC   '=ДИP THEN BEGIN БЛOKCИC;IF KYДA<>'HAPYЖY' THEN EXIT END ELSE IF 'ЗAK   '=ДИP THEN BEGIN ЖYPHAЛ('ЗAK   ',0) END ELSE IF 'CБP   '=ДИP THEN BEGIN ЖYPHAЛ('CБP   ',0) END ELSE IF 'ПAP   '=ДИP THEN BEGIN ПAPOЛЬ END ELSE IF 'KOH   '=ДИP THEN BEGIN ZKOHEЦ(0);IF NOT HAЧ THEN BEGIN ДИP:='KOH   ';EXIT END; END ELSE IF 'BЫX   '=ДИP THEN BEGIN WRITE(output,              'ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE ');              PUTT END;
 END; END.

@@ -106,7 +106,7 @@ var
   NЕХТ:boolean;
   МАХШИФР:integer;
   МINШИФР:integer;
-  MATEP:TMAT;
+  MATEP:real;
   CTOИT:TSTOI;
   ГPYППA:TSROC;
   ДEЙ:TDEY;
@@ -138,6 +138,9 @@ var
   ЗН:real;
   FОRLIN:integer;
   FIL:integer;
+  WFILE:text;
+  ВЫП:real;КОМАН:real;СПЕЦ:real;АМОР:real;СТОР:real;ПОСН:real;ПТРЕС:real;ПРБК:real;ОВЫШ:real;ОГОС:real;НЕПЛ:real;МЕС:real;NАМ:real;ПРОЧ:real;ЗАРП:real;
+
   ТОЛЬКОСИ:boolean;
   SETCOL:TSETCOL;
   HAЗB:alfa;
@@ -463,36 +466,6 @@ procedure RСТР;
 begin end;
 procedure Т;
 begin end;
-procedure ВЫП;
-begin end;
-procedure КОМАН;
-begin end;
-procedure СПЕЦ;
-begin end;
-procedure АМОР;
-begin end;
-procedure СТОР;
-begin end;
-procedure ПОСН;
-begin end;
-procedure ПТРЕС;
-begin end;
-procedure ПРБК;
-begin end;
-procedure ОВЫШ;
-begin end;
-procedure ОГОС;
-begin end;
-procedure НЕПЛ;
-begin end;
-procedure МЕС;
-begin end;
-procedure NАМ;
-begin end;
-procedure ПРОЧ;
-begin end;
-procedure ЗАРП;
-begin end;
 procedure УРОВ;
 begin end;
 procedure АТХ;
@@ -752,8 +725,7 @@ END;
 PROCEDURE ПOCTAB;
 BEGIN
 RESETCON;
-REPEAT WITH CULX.CUCX DO WITH HAKЛ DO BEGIN
-END;
+REPEAT WITH CULX.CUCX DO WITH HAKЛ DO IF BOSX.NAM='NMEC  ' THEN BEGIN MEC:=ЦX END ELSE IF BOSX.NAM='NПPOЧ ' THEN BEGIN ПPOЧ:=ЦX END ELSE IF BOSX.NAM='NHAKЛ ' THEN BEGIN HAKЛ:=ЦX END ELSE IF BOSX.NAM='NЗAHAK' THEN BEGIN ЗAHAK:=ЦX END ELSE IF BOSX.NAM='NЗAPП ' THEN BEGIN ЗAPП:=ЦX END;
 UNTIL NEXTCON;
 DMLCALL(294);YCTMOД;
 WRITE(output,'KAPTA ЗAPEГИCTPИPOBAHA');PUTT;
@@ -784,9 +756,7 @@ NEXT:=TRUE;
 WITH CULX.CUPX DO REPEAT
 READCON(NEXT);IF HAЧ THEN EXIT;
 NEXT:=TRUE;
-WITH CULX.CUCX DO BEGIN
-DMLCALL(296);
-END;
+WITH CULX.CUCX DO IF NAM='NMEC  ' THEN BEGIN DMLCALL(296);   IF MOЖHO THEN EXIT ELSE BEGIN      WRITE(output,'HET TAKOГO MECЯЦA');PUTT;NEXT:=FALSE END; END;
 UNTIL NEXT;UNTIL NEXTPAR;
 END;
 
@@ -809,9 +779,7 @@ IF NAM='NЗAPП ' THEN BEGIN
 (**)
 READCON(NEXT);IF HAЧ THEN EXIT;
 NEXT:=TRUE;
-WITH CULX.CUCX DO BEGIN
-DMLCALL(297);
-END;
+WITH CULX.CUCX DO IF NAM='NMEC  ' THEN BEGIN MES:=ЦX;   DMLCALL(297);   IF NOT ПYCTO THEN BEGIN      WRITE(output,'YЖE ECTЬ ЭTOT MECЯЦ');     PUTT;NEXT:=FALSE END; END;
 UNTIL NEXT;UNTIL NEXTPAR;
 (**)
 IF CONFIRM THEN ПOCTAB;
@@ -849,8 +817,7 @@ WRITE(output,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
           'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',
           'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'ПPO   '=ДИP THEN BEGIN ПPO END ELSE IF 'HOB   '=ДИP THEN BEGIN HOB END ELSE IF 'ИCK   '=ДИP THEN BEGIN ИCK END ELSE IF 'KOH   '=ДИP THEN BEGIN KYДA:='HAPYЖY';EXIT END ELSE IF 'BЫX   '=ДИP THEN BEGIN EXIT END;
  END ;
 END;
 

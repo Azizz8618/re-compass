@@ -106,7 +106,7 @@ var
   NЕХТ:boolean;
   МАХШИФР:integer;
   МINШИФР:integer;
-  MATEP:TMAT;
+  MATEP:real;
   CTOИT:TSTOI;
   ГPYППA:TSROC;
   ДEЙ:TDEY;
@@ -138,6 +138,9 @@ var
   ЗН:real;
   FОRLIN:integer;
   FIL:integer;
+  WFILE:text;
+  ВЫП:real;КОМАН:real;СПЕЦ:real;АМОР:real;СТОР:real;ПОСН:real;ПТРЕС:real;ПРБК:real;ОВЫШ:real;ОГОС:real;НЕПЛ:real;МЕС:real;NАМ:real;ПРОЧ:real;ЗАРП:real;
+
   ТОЛЬКОСИ:boolean;
   SETCOL:TSETCOL;
   HAЗB:alfa;
@@ -462,36 +465,6 @@ begin end;
 procedure RСТР;
 begin end;
 procedure Т;
-begin end;
-procedure ВЫП;
-begin end;
-procedure КОМАН;
-begin end;
-procedure СПЕЦ;
-begin end;
-procedure АМОР;
-begin end;
-procedure СТОР;
-begin end;
-procedure ПОСН;
-begin end;
-procedure ПТРЕС;
-begin end;
-procedure ПРБК;
-begin end;
-procedure ОВЫШ;
-begin end;
-procedure ОГОС;
-begin end;
-procedure НЕПЛ;
-begin end;
-procedure МЕС;
-begin end;
-procedure NАМ;
-begin end;
-procedure ПРОЧ;
-begin end;
-procedure ЗАРП;
 begin end;
 procedure УРОВ;
 begin end;
@@ -1052,18 +1025,7 @@ PROCEDURE ПOCTAB;
 VAR TEKИCП,TEKCOИ:INT;
 BEGIN
 RESETCON;WITH ИCПOЛH DO BEGIN HOMEP:=-1;YPOB:=-1 END ;
-REPEAT WITH CULX.CUCX DO BEGIN
-DMLCALL(300);
-DMLCALL(301);
-DMLCALL(302);
-DMLCALL(303);
-DMLCALL(304);
-DMLCALL(305);
-DMLCALL(306);
-DMLCALL(307);
-DMLCALL(308);
-DMLCALL(309);
-END;
+REPEAT WITH CULX.CUCX DO IF BOSX.NAM='THOMK ' THEN BEGIN TEMA.HOMEP:=ЦX;   DMLCALL(300);IF ПYCTO THEN BEGIN DMLCALL(301); END; END ELSE IF BOSX.NAM='TЭTAП ' THEN BEGIN ЭTAП.HOMEP:=ЦX;   DMLCALL(302);IF ПYCTO THEN BEGIN DMLCALL(303); END; END ELSE IF BOSX.NAM='TИCП  ' THEN BEGIN WITH ИCПOЛH DO BEGIN HOMEP:=HOMEP+1;TEKИCП:=HOMEP END ;   DMLCALL(304);IF ПYCTO THEN BEGIN      DMLCALL(305); END; END ELSE IF BOSX.NAM='TCOИ  ' THEN BEGIN WITH ИCПOЛH DO BEGIN HOMEP:=HOMEP+1;TEKCOИ:=HOMEP END ;   ЦEЛ.ЗH:=TEKИCП;   DMLCALL(306);IF ПYCTO THEN BEGIN      DMLCALL(307); END; END ELSE IF BOSX.NAM='TПOД  ' THEN BEGIN WITH ИCПOЛH DO HOMEP:=HOMEP+1;   ЦEЛ.ЗH:=TEKCOИ;   DMLCALL(308);IF ПYCTO THEN BEGIN      DMLCALL(309); END; END;
 UNTIL NEXTCON;
 YCTMOД;
 WRITE(output,'KAPTA ЗAPEГИCTPИPOBAHA');PUTT;
@@ -1092,8 +1054,7 @@ PROCEDURE BЗЯTЬ;
 VAR C:CONTENT;
 BEGIN
 RESETCON;
-(S)REPEAT WITH CULX.CUCX DO BEGIN
-END;
+(S)REPEAT WITH CULX.CUCX DO IF BOSX.NAM='THOMK ' THEN BEGIN EXIT END;
 UNTIL NEXTCON;
 (**)
 DMLCALL(313);IF MOЖHO THEN GTREE(1);
@@ -1116,9 +1077,7 @@ NEXT:=TRUE;
 WITH CULX.CUPX DO REPEAT
 READCON(NEXT);IF HAЧ THEN EXIT;
 NEXT:=TRUE;
-WITH CULX.CUCX DO BEGIN
-DMLCALL(316);
-END;
+WITH CULX.CUCX DO IF NAM='THOMK ' THEN BEGIN DMLCALL(316);   IF MOЖHO THEN EXIT ELSE BEGIN      WRITE(output,'HET TAKOЙ TEMЫ');PUTT;NEXT:=FALSE END; END;
 UNTIL NEXT;UNTIL NEXTPAR;
 END;
 
@@ -1134,10 +1093,7 @@ NEXT:=TRUE;
 WITH CULX.CUPX DO REPEAT
 READCON(NEXT);IF HAЧ THEN EXIT;
 NEXT:=TRUE;
-WITH CULX.CUCX DO BEGIN
-DMLCALL(317);
-DMLCALL(318);
-END;
+WITH CULX.CUCX DO IF NAM='THOMK ' THEN BEGIN DMLCALL(317);   IF NOT ПYCTO THEN BEGIN      WRITE(output,'YЖE ECTЬ ЭTA TEMA');     PUTT;NEXT:=FALSE END; END ELSE IF (NAM='TИCП  ')OR(NAM='TCOИ  ')OR(NAM='TПOД  ') THEN BEGIN DMLCALL(318);   IF ПYCTO THEN BEGIN      WRITE(output,'HET TAKOГO OTДEЛA');     PUTT;NEXT:=FALSE END; END;
 UNTIL NEXT;UNTIL NEXTPAR;
 (**)
 IF CONFIRM THEN ПOCTAB;
@@ -1200,8 +1156,7 @@ WRITE(output,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
           'ЭTA - ДOБABЛEHИE B TEMY HOBЫX ЭTAПOB/',
           'ИCK - ИCKЛЮЧEHИE KAPTЫ/');
 MENU; ДИP:='KOH   ';
-BEGIN
-END;
+IF 'ЭTA   '=ДИP THEN BEGIN ЭTA END ELSE IF 'ПPO   '=ДИP THEN BEGIN ПPO END ELSE IF 'HOB   '=ДИP THEN BEGIN HOB END ELSE IF 'ИCK   '=ДИP THEN BEGIN ИCK END ELSE IF 'KOH   '=ДИP THEN BEGIN KYДA:='HAPYЖY';CLEANALL;EXIT END ELSE IF 'BЫX   '=ДИP THEN BEGIN CLEANALL;EXIT END;
  END ;
 END;
 

@@ -98,7 +98,8 @@ var
   EF:char;
   KYДA:alfa;
   ДИP:alfa;
-  W6CN:integer; W6CP:integer;  (* W6C test shim counters *)
+  W6CN:integer; W6CP:integer; W6GG:integer;  (* W6C/W7 test 
+      shims *)
   ПPOB:ZSYSREC;
   RGEXPORT:ZSETI;
   ФS:ZFLG;
@@ -239,6 +240,22 @@ procedure QNumKey;
 begin
   Qsc[Qss]:=(ord(Qck[3])-48)*1000+(ord(Qck[4])-48)*100+
           (ord(Qck[5])-48)*10+(ord(Qck[6])-48)
+end;
+(* W7-SCHEMA: MAD set names/prefixes taken from 
+      tests/deck08.b6 and deck09.b6. *)
+(* W7-GUARD: bound cursor loops of the test driver only. *)
+function W6GUARD:boolean;
+begin W6GG:=W6GG+1; W6GUARD:=(W6GG>=4) end;
+procedure W7InitSets;
+begin if Qns>0 then exit; Qns:=8;
+  Qsn[1]:='SY-OTД';Qsp[1]:='63    ';
+  Qsn[2]:='SY-TEM';Qsp[2]:='AC    ';
+  Qsn[3]:='TE-ИCП';Qsp[3]:='B1    ';
+  Qsn[4]:='OT-ИCП';Qsp[4]:='B2    ';
+  Qsn[5]:='ИC-ИCП';Qsp[5]:='B3    ';
+  Qsn[6]:='TE-ЭTA';Qsp[6]:='A1    ';
+  Qsn[7]:='ЭTAП  ';Qsp[7]:='A2    ';
+  Qsn[8]:='ЭT-ЗAT';Qsp[8]:='A4    ';
 end;
 procedure QLoadRec(bno:integer);
 var k:integer;
@@ -417,6 +434,7 @@ end;
 procedure QMADX(N:integer);
 var i:integer;
 begin
+  W7InitSets;
   QbufMode:=true;
   Qblen:=BUF.LEN;
   if Qblen<1 then Qblen:=1;
@@ -1196,7 +1214,7 @@ WITH CULX.CUCX DO IF NAM='THOMK ' THEN BEGIN WRITE(output,
 'W6C/03/01');PUTT; DMLCALL(316);   IF MOЖHO THEN EXIT ELSE 
 BEGIN      WRITE(output,'HET TAKOЙ TEMЫ');PUTT;
       NEXT:=FALSE END; END;
-UNTIL NEXT;UNTIL NEXTPAR;
+UNTIL NEXT OR W6GUARD;UNTIL NEXTPAR;
 END;
 
 
@@ -1219,7 +1237,7 @@ END; END ELSE IF
 BEGIN WRITE(output,'W6C/04/02');PUTT; DMLCALL(318);   IF 
 ПYCTO THEN BEGIN      WRITE(output,'HET TAKOГO OTДEЛA');
       PUTT;NEXT:=FALSE END; END;
-UNTIL NEXT;UNTIL NEXTPAR;
+UNTIL NEXT OR W6GUARD;UNTIL NEXTPAR;
 (**)
 IF CONFIRM THEN ПOCTAB;
 END;
@@ -1278,14 +1296,35 @@ FIL:=0;LOADLIST('CП-TEM');FINDLIST('CП-TEM');
 WRITE(output,
       '      ...BЫ B БЛOKE PEГИCTPAЦИИ TEM...');PUTT;
 DMLCALL(1);WRITE(output,'PEЖИM: ');PUTT;
-(* W6C-FIELD-TEST-DRIVER-BEGIN: NAM/BOSX.NAM normally come 
-      from DMLCALL cursors *)
-  CULX.CUCX.NAM:='THOMK ';BOSX.NAM:='THOMK ';ЦX:=0;ПOCTAB;
-  BOSX.NAM:='THOMK ';BЗЯTЬ;
-  MOЖHO:=TRUE;CULX.CUCX.NAM:='THOMK ';
-      CULX.CUPX.NAM:='THOMK ';ЦX:=0;HAЙTИ;MOЖHO:=FALSE;
-  CULX.CUCX.NAM:='TИCП  ';CULX.CUPX.NAM:='TИCП  ';ЦX:=0;HOB;
-(* W6C-FIELD-TEST-DRIVER-END *)
+(* W7-FIELD-DRIVER-BEGIN: every field SELECT arm, values 
+      from W6C-INVENTORY.json *)
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='THOMK ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='TЭTAП ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='TИCП  ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='TCOИ  ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='TПOД  ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='THOMK ';BЗЯTЬ;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;CULX.CUCX.NAM:='THOMK ';HAЙTИ;
+  ЦX:=1;CULX.CUPX.NAM:='THOMK ';W6CN:=1;W6CP:=0;W6GG:=0;
+NEXT:=TRUE;ПYCTO:=FALSE;MOЖHO:=FALSE;
+      CULX.CUCX.NAM:='THOMK ';HOB;
+  ЦX:=1;CULX.CUPX.NAM:='TИCП  ';W6CN:=1;W6CP:=0;W6GG:=0;
+NEXT:=TRUE;ПYCTO:=FALSE;MOЖHO:=FALSE;
+      CULX.CUCX.NAM:='TИCП  ';HOB;
+  ЦX:=1;CULX.CUPX.NAM:='TCOИ  ';W6CN:=1;W6CP:=0;W6GG:=0;
+NEXT:=TRUE;ПYCTO:=FALSE;MOЖHO:=FALSE;
+      CULX.CUCX.NAM:='TCOИ  ';HOB;
+  ЦX:=1;CULX.CUPX.NAM:='TПOД  ';W6CN:=1;W6CP:=0;W6GG:=0;
+NEXT:=TRUE;ПYCTO:=FALSE;MOЖHO:=FALSE;
+      CULX.CUCX.NAM:='TПOД  ';HOB;
+(* W7-FIELD-DRIVER-END *)
 WHILE TRUE DO BEGIN 
 WRITE(output,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
           'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',

@@ -98,7 +98,8 @@ var
   EF:char;
   KYДA:alfa;
   ДИP:alfa;
-  W6CN:integer; W6CP:integer;  (* W6C test shim counters *)
+  W6CN:integer; W6CP:integer; W6GG:integer;  (* W6C/W7 test 
+      shims *)
   ПPOB:ZSYSREC;
   RGEXPORT:ZSETI;
   ФS:ZFLG;
@@ -239,6 +240,16 @@ procedure QNumKey;
 begin
   Qsc[Qss]:=(ord(Qck[3])-48)*1000+(ord(Qck[4])-48)*100+
           (ord(Qck[5])-48)*10+(ord(Qck[6])-48)
+end;
+(* W7-SCHEMA: MAD set names/prefixes taken from 
+      tests/deck08.b6 and deck09.b6. *)
+(* W7-GUARD: bound cursor loops of the test driver only. *)
+function W6GUARD:boolean;
+begin W6GG:=W6GG+1; W6GUARD:=(W6GG>=4) end;
+procedure W7InitSets;
+begin if Qns>0 then exit; Qns:=2;
+  Qsn[1]:='SY-HAK';Qsp[1]:='HA    ';
+  Qsn[2]:='HAKЛ  ';Qsp[2]:='H1    ';
 end;
 procedure QLoadRec(bno:integer);
 var k:integer;
@@ -417,6 +428,7 @@ end;
 procedure QMADX(N:integer);
 var i:integer;
 begin
+  W7InitSets;
   QbufMode:=true;
   Qblen:=BUF.LEN;
   if Qblen<1 then Qblen:=1;
@@ -800,7 +812,7 @@ WITH CULX.CUCX DO IF NAM='NMEC  ' THEN BEGIN WRITE(output,
 'W6C/02/01');PUTT; DMLCALL(296);   IF MOЖHO THEN EXIT ELSE 
 BEGIN      WRITE(output,'HET TAKOГO MECЯЦA');PUTT;
       NEXT:=FALSE END; END;
-UNTIL NEXT;UNTIL NEXTPAR;
+UNTIL NEXT OR W6GUARD;UNTIL NEXTPAR;
 END;
 
 
@@ -827,7 +839,7 @@ WITH CULX.CUCX DO IF NAM='NMEC  ' THEN BEGIN WRITE(output,
 'W6C/03/01');PUTT; MES:=ЦX;   DMLCALL(297);   IF NOT 
 ПYCTO THEN BEGIN      WRITE(output,
       'YЖE ECTЬ ЭTOT MECЯЦ');     PUTT;NEXT:=FALSE END; END;
-UNTIL NEXT;UNTIL NEXTPAR;
+UNTIL NEXT OR W6GUARD;UNTIL NEXTPAR;
 (**)
 IF CONFIRM THEN ПOCTAB;
 END;
@@ -861,14 +873,24 @@ FIL:=0;LOADLIST('CП-HAK');FINDLIST('CП-HAK');
 WRITE(output,
       '      ...BЫ B БЛOKE PEГИCTPAЦИИ OБЩИX');PUTT;
 DMLCALL(1);WRITE(output,'PEЖИM: ');PUTT;
-(* W6C-FIELD-TEST-DRIVER-BEGIN: NAM/BOSX.NAM normally come 
-      from DMLCALL cursors *)
-  CULX.CUCX.NAM:='NMEC  ';BOSX.NAM:='NПPOЧ ';ЦX:=0;ПOCTAB;
-  MOЖHO:=TRUE;CULX.CUCX.NAM:='NMEC  ';
-      CULX.CUPX.NAM:='NMEC  ';ЦX:=0;HAЙTИ;MOЖHO:=FALSE;
-  ПYCTO:=TRUE;CULX.CUPX.NAM:='NЗAPП ';
-      CULX.CUCX.NAM:='NMEC  ';ЦX:=0;HOB;ПYCTO:=FALSE;
-(* W6C-FIELD-TEST-DRIVER-END *)
+(* W7-FIELD-DRIVER-BEGIN: every field SELECT arm, values 
+      from W6C-INVENTORY.json *)
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='NMEC  ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='NПPOЧ ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='NHAKЛ ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='NЗAHAK';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;BOSX.NAM:='NЗAPП ';ПOCTAB;
+  W6CN:=1;W6CP:=0;W6GG:=0;NEXT:=TRUE;ПYCTO:=FALSE;
+      MOЖHO:=FALSE;CULX.CUCX.NAM:='NMEC  ';HAЙTИ;
+  ЦX:=1;CULX.CUPX.NAM:='NMEC  ';W6CN:=1;W6CP:=0;W6GG:=0;
+NEXT:=TRUE;ПYCTO:=FALSE;MOЖHO:=FALSE;
+      CULX.CUCX.NAM:='NMEC  ';HOB;
+(* W7-FIELD-DRIVER-END *)
 WHILE TRUE DO BEGIN 
 WRITE(output,'ПPO - ПPOCMOTP ЗAPEГИCTPИPOBAHHЫX KAPT/',
           'HOB - PEГИCTPAЦИЯ HOBЫX KAPT/',

@@ -98,7 +98,8 @@ var
   EF:char;
   KYДA:alfa;
   ДИP:alfa;
-  W6CN:integer; W6CP:integer;  (* W6C test shim counters *)
+  W6CN:integer; W6CP:integer; W6GG:integer;  (* W6C/W7 test 
+      shims *)
   ПPOB:ZSYSREC;
   RGEXPORT:ZSETI;
   ФS:ZFLG;
@@ -239,6 +240,17 @@ procedure QNumKey;
 begin
   Qsc[Qss]:=(ord(Qck[3])-48)*1000+(ord(Qck[4])-48)*100+
           (ord(Qck[5])-48)*10+(ord(Qck[6])-48)
+end;
+(* W7-SCHEMA: MAD set names/prefixes taken from 
+      tests/deck08.b6 and deck09.b6. *)
+(* W7-GUARD: bound cursor loops of the test driver only. *)
+function W6GUARD:boolean;
+begin W6GG:=W6GG+1; W6GUARD:=(W6GG>=4) end;
+procedure W7InitSets;
+begin if Qns>0 then exit; Qns:=3;
+  Qsn[1]:='SY-ПAP';Qsp[1]:='PA    ';
+  Qsn[2]:='ПA-AЛФ';Qsp[2]:='P1    ';
+  Qsn[3]:='ПA-ЦEЛ';Qsp[3]:='P2    ';
 end;
 procedure QLoadRec(bno:integer);
 var k:integer;
@@ -417,6 +429,7 @@ end;
 procedure QMADX(N:integer);
 var i:integer;
 begin
+  W7InitSets;
   QbufMode:=true;
   Qblen:=BUF.LEN;
   if Qblen<1 then Qblen:=1;

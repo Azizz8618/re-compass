@@ -1,0 +1,374 @@
+{
+  "file": "ADA.ARE",
+  "area_id": 1,
+  "pages": 14,
+  "valid_descriptors_total": 379,
+  "max_keys": 40,
+  "selected": 40,
+  "chunk_size": 8,
+  "newd_info_word": "16270001c",
+  "newd_length_zones_decimal": 14,
+  "newd_length_field_octal": "16",
+  "records": [
+    {
+      "key": "AD0001",
+      "page": 0,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 17,
+      "length": 46,
+      "address": 2001
+    },
+    {
+      "key": "AD1001",
+      "page": 1,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 880,
+      "address": 1167
+    },
+    {
+      "key": "AD2001",
+      "page": 2,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 336,
+      "address": 1711
+    },
+    {
+      "key": "AD3001",
+      "page": 3,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 1380,
+      "address": 667
+    },
+    {
+      "key": "AD4001",
+      "page": 4,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 2,
+      "length": 166,
+      "address": 1881
+    },
+    {
+      "key": "AD5001",
+      "page": 5,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "AD6001",
+      "page": 6,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 528,
+      "address": 1519
+    },
+    {
+      "key": "AD7001",
+      "page": 7,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 2,
+      "length": 166,
+      "address": 501
+    },
+    {
+      "key": "AD8001",
+      "page": 8,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 828,
+      "address": 1219
+    },
+    {
+      "key": "AD9001",
+      "page": 9,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 268,
+      "address": 1779
+    },
+    {
+      "key": "ADA001",
+      "page": 10,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 4,
+      "length": 68,
+      "address": 1979
+    },
+    {
+      "key": "ADB001",
+      "page": 11,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 0,
+      "length": 52,
+      "address": 1995
+    },
+    {
+      "key": "ADC001",
+      "page": 12,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 7,
+      "length": 22,
+      "address": 2025
+    },
+    {
+      "key": "ADD001",
+      "page": 13,
+      "ordinal": 1,
+      "number": 8,
+      "knot": 7,
+      "length": 22,
+      "address": 2025
+    },
+    {
+      "key": "AD0002",
+      "page": 0,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 2,
+      "length": 166,
+      "address": 1835
+    },
+    {
+      "key": "AD1002",
+      "page": 1,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 266,
+      "address": 901
+    },
+    {
+      "key": "AD2002",
+      "page": 2,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 700,
+      "address": 1011
+    },
+    {
+      "key": "AD3002",
+      "page": 3,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 7,
+      "length": 22,
+      "address": 275
+    },
+    {
+      "key": "AD4002",
+      "page": 4,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 2,
+      "address": 1879
+    },
+    {
+      "key": "AD5002",
+      "page": 5,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 3,
+      "length": 16,
+      "address": 1979
+    },
+    {
+      "key": "AD6002",
+      "page": 6,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 336,
+      "address": 1183
+    },
+    {
+      "key": "AD7002",
+      "page": 7,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 1380,
+      "address": 667
+    },
+    {
+      "key": "AD8002",
+      "page": 8,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 2,
+      "length": 166,
+      "address": 1053
+    },
+    {
+      "key": "AD9002",
+      "page": 9,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 10,
+      "length": 32,
+      "address": 1747
+    },
+    {
+      "key": "ADA002",
+      "page": 10,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 20,
+      "address": 1959
+    },
+    {
+      "key": "ADB002",
+      "page": 11,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 52,
+      "address": 1943
+    },
+    {
+      "key": "ADC002",
+      "page": 12,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 52,
+      "address": 1973
+    },
+    {
+      "key": "ADD002",
+      "page": 13,
+      "ordinal": 2,
+      "number": 16,
+      "knot": 0,
+      "length": 52,
+      "address": 1973
+    },
+    {
+      "key": "AD0003",
+      "page": 0,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 2,
+      "address": 1833
+    },
+    {
+      "key": "AD1003",
+      "page": 1,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 7,
+      "length": 22,
+      "address": 303
+    },
+    {
+      "key": "AD2003",
+      "page": 2,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 6,
+      "address": 83
+    },
+    {
+      "key": "AD3003",
+      "page": 3,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 52,
+      "address": 223
+    },
+    {
+      "key": "AD4003",
+      "page": 4,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 112,
+      "address": 1767
+    },
+    {
+      "key": "AD5003",
+      "page": 5,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 192,
+      "address": 1787
+    },
+    {
+      "key": "AD6003",
+      "page": 6,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 700,
+      "address": 483
+    },
+    {
+      "key": "AD7003",
+      "page": 7,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 2,
+      "address": 499
+    },
+    {
+      "key": "AD8003",
+      "page": 8,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 2,
+      "address": 1051
+    },
+    {
+      "key": "AD9003",
+      "page": 9,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 0,
+      "length": 268,
+      "address": 1479
+    },
+    {
+      "key": "ADA003",
+      "page": 10,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 8,
+      "length": 22,
+      "address": 1937
+    },
+    {
+      "key": "ADB003",
+      "page": 11,
+      "ordinal": 3,
+      "number": 24,
+      "knot": 18,
+      "length": 48,
+      "address": 1895
+    }
+  ]
+}

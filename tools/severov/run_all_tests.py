@@ -18,6 +18,9 @@ import subprocess
 from pathlib import Path
 
 DISKS = ['2048', '2053', '2099', '2148', '2348', '2196']
+REPO = Path(__file__).resolve().parents[2]
+BRANCH_DIR = REPO / 'tests/severov-apps/branches'
+BRANCH_DECKS = sorted(p.stem for p in BRANCH_DIR.glob('*.b6')) if BRANCH_DIR.exists() else []
 
 SESSIONS = [
     ('gold-phase1',
@@ -46,10 +49,7 @@ SESSIONS = [
      ['SKLMON', 'AMOHED', 'ZATHED', 'SKLOTD', 'SKLCAR', 'SKLOTC',
       'AMOMON', 'AMOOTD', 'AMOCAR', 'AMOOTC', 'AMOGRU', 'ZATMON',
       'ZATOTD', 'ZATCOF', 'ZATZAT', 'ZATNAK', 'ZATRTE', 'ZATTAB']),
-    ('apps-branches', [],
-     [f'{p}-{v}' for p in ('ZATMON', 'ZATZAT', 'ZATNAK', 'ZATRTE')
-      for v in ('a', 'b', 'c', 'd') if (Path(__file__).resolve().parents[2]
-      / 'tests/severov-apps/branches' / f'{p}-{v}.b6').exists()]),
+    ('apps-branches', [], BRANCH_DECKS),
 ]
 
 

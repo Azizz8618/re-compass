@@ -14,6 +14,24 @@
 | `deck04-schema-am.out` | схема `CX-AM0` из деки 4, расширенный порт `TTC` | 1 тип, 11 записей, 13 наборов, 25 `PUTD`, `EXN=0` | `cff02300…` |
 | `deck05-fortran-startup.out` | дека 5 `CTAPT`, Fortran-стартап; оригинальный текст 49 строк не изменён, добавлены `PROGRAM CTAPT`, заглушки heads и подпрограмм | проход `ENTRY CK/AM/ЗT`, `BЫX`/`KOH`, `STOP`, `КОНЕЦ ЗАДАЧИ`; `EXN` не проверяется (Fortran) | `cf705582…` |
 | `deck10-schema-zat.out` | схема `CX-ЗT0` из деки 10, расширенный порт `TTC` | 2 типа, 16 записей, 19 наборов, 37 `PUTD`, `EXN=0` | `da988f9d…` |
+| `deck12-skmon.out` | дека 12-14, программа `SKLMON` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `2c75095c` |
+| `deck12-skl-otd.out` | дека 12-14, программа `SKLOTD` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `6227ef3d` |
+| `deck12-skl-car.out` | дека 12-14, программа `SKLCAR` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `69d152bb` |
+| `deck12-skl-otc.out` | дека 12-14, программа `SKLOTC` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `0402b22d` |
+| `deck13-amhed.out` | дека 12-14, программа `AMOHED` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `35e5b3ba` |
+| `deck13-ammon.out` | дека 12-14, программа `AMOMON` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `db1e9ad7` |
+| `deck13-amo-otd.out` | дека 12-14, программа `AMOOTD` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `7c321308` |
+| `deck13-amo-car.out` | дека 12-14, программа `AMOCAR` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `c6a453cc` |
+| `deck13-amo-otc.out` | дека 12-14, программа `AMOOTC` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `18777a66` |
+| `deck13-amgru.out` | дека 12-14, программа `AMOGRU` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `48461e5f` |
+| `deck14-zathed.out` | дека 12-14, программа `ZATHED` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `d1b53c1d` |
+| `deck14-zatmon.out` | дека 12-14, программа `ZATMON` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `9c1549d0` |
+| `deck14-zat-otd.out` | дека 12-14, программа `ZATOTD` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `5832b261` |
+| `deck14-zatcof.out` | дека 12-14, программа `ZATCOF` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `14b94e70` |
+| `deck14-zatzat.out` | дека 12-14, программа `ZATZAT` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `03d1e540` |
+| `deck14-zatnak.out` | дека 12-14, программа `ZATNAK` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `2b117828` |
+| `deck14-zatrte.out` | дека 12-14, программа `ZATRTE` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `6b966a20` |
+| `deck14-zattab.out` | дека 12-14, программа `ZATTAB` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `f32fef43` |
 | `deck06-07-11-genmad.out` | загрузчики дек 6, 7, 11 и MAD-деки 3/8/9, порт `GEN`/`MAD` | 26 форматов, 102 блока, 110 `PUTD`, 19 справочников, 4 MAD-запроса, `GEN EX=0`, `MAD EX=0` | `b7286a0b…` |
 | `yam-predtgen.out` | 13 операций ЯМД из gold, порт `TPREDT` | `PLACE/FIRST/NEXT/BYKEY/PREV/GET/MODIF/LAST/REMOVE/INSERT/BDGET/BDPUT`, `EXN=0` | `246e0dc9…` |
 | `raznoe-shtamp-ns0.out` | подпрограмма `SHTAMP` из `raznoe.txt:52-116`, `NS=0` | 44 координаты совпали с расчётом | `67122452…` |

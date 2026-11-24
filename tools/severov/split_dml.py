@@ -7,10 +7,61 @@ single CASE, so long programs exceed the cap.  The split keeps all 345 call
 sites and the single QMADX entry per sub-dispatcher.
 """
 import re
+from itertools import count
 
 BRANCH = re.compile(r'^    (\d+): begin$')
 ASSIGN = re.compile(r"^\s*BUF\.M\[\d+\]:=.*$")
 END_BRANCH = re.compile(r'^    end;$')
+
+
+def chunk_branches(src, limit=55):
+    """Keep every CASE branch below the 15.1 per-block command cap."""
+    lines = src.splitlines()
+    starts = [i for i, l in enumerate(lines) if BRANCH.match(l)]
+    if not starts:
+        return src
+    helpers, replacements = [], {}
+    serial = count(1)
+    for k, i in enumerate(starts):
+        j = i + 1
+        while j < len(lines) and not END_BRANCH.match(lines[j]):
+            j += 1
+        if j >= len(lines):
+            continue
+        body = lines[i + 1:j]
+        if sum(l.count(';') for l in body) <= limit:
+            continue
+        chunks, cur, used = [], [], 0
+        for line in body:
+            n = line.count(';')
+            if cur and used + n > limit:
+                chunks.append(cur)
+                cur, used = [], 0
+            cur.append(line)
+            used += n
+        if cur:
+            chunks.append(cur)
+        calls = []
+        for chunk in chunks:
+            name = 'DmlP%d' % next(serial)
+            helpers.extend(['procedure %s;' % name, 'begin'] + chunk + ['end;'])
+            calls.append('      %s;' % name)
+        replacements[i] = (j, [lines[i]] + calls + [lines[j]])
+    if not helpers:
+        return src
+    out, i = [], 0
+    while i < len(lines):
+        if i in replacements:
+            end, new = replacements[i]
+            out.extend(new)
+            i = end + 1
+            continue
+        if i == next((k for k, l in enumerate(lines)
+                      if re.match(r'procedure DmlCall[A-Z]?\(', l)), -1):
+            out.extend(helpers)
+        out.append(lines[i])
+        i += 1
+    return '\n'.join(out)
 
 
 def split_source(src, per=6):
@@ -44,6 +95,7 @@ def split_source(src, per=6):
         branches.append((int(m.group(1)), block[i:j + 1]))
         i = j + 1
     if len(branches) <= per:
+        return chunk_branches('\n'.join(lines))
         return src
     groups = [branches[k:k + per] for k in range(0, len(branches), per)]
     tail = [l for l in block
@@ -75,4 +127,4 @@ def split_source(src, per=6):
         if gi < len(groups) - 1:
             out[-1] += ' else'
     out.append('end;')
-    return '\n'.join(lines[:start] + out + lines[end + 1:])
+    return chunk_branches('\n'.join(lines[:start] + out + lines[end + 1:]))

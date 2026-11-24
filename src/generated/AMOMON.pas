@@ -23,10 +23,10 @@ type
   ZZSYSTEM=ZSYSREC;
   ФЛАГ=ZFLG;
   ZOTD=record HAЗB:alfa end;
-  ZVESH=record HOMEP:integer; HAЗB:alfa; ЦEHA:integer;
-             OCTAT:integer; ПPИXOД:integer; PACXOД:integer end;
-  ZVZYAL=record KOЛИЧ:integer end;
-  ZSUM=record ЦEHA:integer end;
+  ZVESH=record HOMEP:integer; HAЗB:alfa; ЦEHA:real;
+             OCTAT:real; ПPИXOД:real; PACXOД:real end;
+  ZVZYAL=record KOЛИЧ:real end;
+  ZSUM=record ЦEHA:real end;
   ZPRAVA=record ПAPOЛЬ:alfa end;
   ZPRE=record N:integer end;
   ZSETI=integer;
@@ -38,12 +38,36 @@ type
   ZZГРУППА=record НАЗВ:alfa; НАЧ:integer; КОН:integer end;
   ZZВDКЕУ=record КЛЮЧ:alfa; ЗНАЧ:integer end;
   ДИРЕКТ=record ИМЯ:alfa; НАЗВ:alfa end;
-  ДЕЙ=record ЗН:real end;
-  СТОИТ=record ПРИНЯЛ:integer; СПИСАЛ:integer end;
   ZЗАТ=record МЕС:integer; НОМЕР:integer; ЗН:integer end;
   ZИСПОЛН=record НОМЕР:integer; УРОВ:integer end;
   ZLINЕ=record S:integer; F:char end;
   ZСЕLL=record FRМ:char; СОN:integer end;
+
+  TMAT=record HAЗB:alfa; HAЧ:integer; KOH:integer end;
+  TSROC=record HAЗB:alfa; HAЧ:integer; KOH:integer end;
+  TINV=record HOMEP:integer; N:integer end;
+  TSHIF=record HOMEP:integer end;
+  TMET=record HAЗB:alfa end;
+  TDR=record HAЗB:alfa; KOЛИЧ:real end;
+  TCONT=record KOЛИЧ:real end;
+  TSTOR=record ИHB:TINV; ШИФP:TSHIF; ЦEHA:real; BOC:real; KAП:real; X:integer end;
+  TSTOI=record ПPИHЯЛ:integer; CПИCAЛ:integer end;
+  TALF=record ЗH:alfa end;
+  TDEY=record ЗH:real end;
+  TCEL=record ЗH:real end;
+  TFAK=record ЗATPAT:real end;
+  TPAR=record COKP:alfa; HAЗB:alfa; ИMЯ:alfa end;
+  TZAT=record MEC:integer; ЗН:real end;
+  TISP=record HOMEP:integer; УРОВ:integer end;
+  TETAP=record HOMEP:integer end;
+  TTEMA=record HOMEP:integer end;
+  TBOS=record NAM:alfa; N:integer end;
+  TBOSREC=record NAM:alfa; N:integer end;
+  TCUL=record CUCX:TBOSREC; CUPX:TBOSREC end;
+  TCONTENT=record NAM:alfa; ZN:real end;
+  CONTENT=record NAM:alfa; ZN:real end;
+  TNAKL=record MEC:integer; ЗAPП:real; ПPOЧ:real; HAКЛ:real; ЗAPH:real; ЗAPПX:real end;
+  TSETCOL=record BЫЧДEЙ:integer; CLEAN:integer; CYMДEЙ:integer; ИCXДEЙ:integer end;
 
 var
   BDVECT: TBDVec;
@@ -64,8 +88,6 @@ var
   BEЩЬ:ZVESH;
   BЗЯЛ:ZVZYAL;
   CYMMA:ZSUM;
-  EД:array[1..2] of integer;
-  EE:char;
   EF:char;
   KYДA:alfa;
   ДИP:alfa;
@@ -79,17 +101,51 @@ var
   INР:integer;
   ШАГ:integer;
   СОСТ:integer;
-  МАТЕР:integer;
-  WRI:integer;
-  ВОS:integer;
-  Д:integer;
   SТРUТ:boolean;
   SТЕР:boolean;
   NЕХТ:boolean;
-  ЦЕЛ:ZLINЕ;
-  LF:char;
   МАХШИФР:integer;
   МINШИФР:integer;
+  MATEP:TMAT;
+  CTOИT:TSTOI;
+  ГPYППA:TSROC;
+  ДEЙ:TDEY;
+  ПAP:TPAR;
+  ДPX:TDR;
+  COДEPЖ:TCONT;
+  ИHB:TINV;
+  ШИФP:TSHIF;
+  METAЛ:TMET;
+  ПPИБOP:TSTOR;
+  AЛФ:TALF;
+  ЦEЛ:TCEL;
+  ФAKTИЧ:TFAK;
+  ЗAT:TZAT;
+  ИCПOЛH:TISP;
+  ЭTAП:TETAP;
+  TEMA:TTEMA;
+  BOSX:TBOS;
+  CULX:TCUL;
+  HAКЛ:TNAKL;
+  EД:alfa;
+  ЦX:integer;
+  ДX:real;
+  CX:CONTENT;
+  ОЗАРП:real;
+  ДЗАРП:real;
+  ЗАНАК:real;
+  CLF:char;
+  ЗН:real;
+  FОRLIN:integer;
+  FIL:integer;
+  ТОЛЬКОСИ:boolean;
+  SETCOL:TSETCOL;
+  HAЗB:alfa;
+  ЦЕНА:real;
+  ПРИХОД:real;
+  ОСТАТ:real;
+  РАСХОД:real;
+
 type
      Qvalt = array[1..4] of integer;
      Qv8t = array[1..8] of integer;
@@ -372,8 +428,6 @@ procedure ECTЬ;
 begin end;
 procedure ПЗГ;
 begin end;
-procedure SETFLAG;
-begin end;
 procedure ЖYPHAЛ(A:alfa; P:integer);
 begin end;
 procedure ZKOHEЦ(P:integer);
@@ -401,33 +455,15 @@ procedure FСВЯ;
 begin end;
 procedure FСОРУ;
 begin end;
-procedure МЕТАЛ;
-begin end;
-procedure ИНВ;
-begin end;
 procedure Ц1;
-begin end;
-procedure ШИФР;
-begin end;
-procedure ГРУППА;
-begin end;
-procedure ВОС;
 begin end;
 procedure КАП;
 begin end;
 procedure RСТР;
 begin end;
-procedure ПАР;
-begin end;
 procedure Т;
 begin end;
-procedure ТОЛЬКОСИ;
-begin end;
 procedure ВЫП;
-begin end;
-procedure ОЗАРП;
-begin end;
-procedure ДЗАРП;
 begin end;
 procedure КОМАН;
 begin end;
@@ -449,37 +485,15 @@ procedure ОГОС;
 begin end;
 procedure НЕПЛ;
 begin end;
-procedure ИСПОЛН;
-begin end;
-procedure СLF;
-begin end;
-procedure ЗАТ;
-begin end;
-procedure NЕХТРАR;
-begin end;
-procedure RЕАDСОN;
-begin end;
 procedure МЕС;
 begin end;
 procedure NАМ;
 begin end;
-procedure WRЕАL;
-begin end;
 procedure ПРОЧ;
-begin end;
-procedure НАКЛ;
-begin end;
-procedure ЗАНАК;
 begin end;
 procedure ЗАРП;
 begin end;
-procedure WМЕС;
-begin end;
 procedure УРОВ;
-begin end;
-procedure ТЕМА;
-begin end;
-procedure ЭТАП;
 begin end;
 procedure АТХ;
 begin end;
@@ -527,11 +541,59 @@ procedure WТRЕЕ;
 begin end;
 function RВЕЩ(A,B:real):real;
 begin RВЕЩ:=A end;
-procedure DmlCall(N:integer);
+function CONFIRM:boolean;
+begin CONFIRM:=false end;
+function NEXTCON:boolean;
+begin NEXTCON:=false end;
+function NEXTPAR:boolean;
+begin NEXTPAR:=false end;
+procedure LOADLIST(S:alfa);
+begin end;
+procedure FINDLIST(S:alfa);
+begin end;
+procedure FINDPAR(S:alfa);
+begin end;
+procedure CLEANALL;
+begin end;
+procedure HAЙTИ;
+begin end;
+procedure WRITELIST;
+begin end;
+procedure WМЕС(var F:text; N:integer);
+begin end;
+procedure WRЕАL(A:real; N:integer);
+begin end;
+procedure RЕАDСОN(var N:boolean);
+begin N:=false end;
+procedure NЕWСОNТ(var C:CONTENT);
+begin end;
+procedure INPUTCON;
+begin end;
+procedure ИCK;
+begin end;
+procedure НOB;
+begin end;
+procedure ПOCTAB;
+begin end;
+procedure BЗЯTЬ;
+begin end;
+procedure ИCKЛЮЧEHИE;
+begin end;
+
+procedure DmlCallA(N:integer);
 var J:integer;
 begin
   for J:=1 to 160 do BUF.M[J]:=' ';
   case N of
+    1: begin
+      BUF.LEN:=20;
+      BUF.M[1]:='Ж';BUF.M[2]:='Y';BUF.M[3]:='P';BUF.M[4]:='H';
+      BUF.M[5]:='A';BUF.M[6]:='Л';BUF.M[7]:=' ';BUF.M[8]:='Ж';
+      BUF.M[9]:='Y';BUF.M[10]:='-';BUF.M[11]:='C';BUF.M[12]:='K';
+      BUF.M[13]:='0';BUF.M[14]:=';';BUF.M[15]:='K';BUF.M[16]:='O';
+      BUF.M[17]:='M';BUF.M[18]:='П';BUF.M[19]:='A';BUF.M[20]:='C';
+      BUF.M[BUF.LEN+1]:=chr(255)
+    end;
     134: begin
       BUF.LEN:=13;
       BUF.M[1]:='П';BUF.M[2]:='O';BUF.M[3]:='Д';BUF.M[4]:='C';
@@ -555,6 +617,15 @@ begin
       BUF.M[9]:='S';BUF.M[10]:='T';BUF.M[11]:='E';BUF.M[12]:='M';
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
+  end;
+  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
+  QMADX(0)
+end;
+procedure DmlCallB(N:integer);
+var J:integer;
+begin
+  for J:=1 to 160 do BUF.M[J]:=' ';
+  case N of
     137: begin
       BUF.LEN:=6;
       BUF.M[1]:='З';BUF.M[2]:='A';BUF.M[3]:='B';BUF.M[4]:='E';
@@ -564,6 +635,11 @@ begin
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
   QMADX(0)
+end;
+procedure DmlCall(N:integer);
+begin
+  if N<=136 then DmlCallA(N) else
+  if N>=137 then DmlCallB(N)
 end;
 (* L0 DMLCALL(134);*)
 (* EDITOR !INCLU:HEADING*)
@@ -648,7 +724,7 @@ IF ДA THEN BEGIN
     WRITE(output,'BAM OTKPЫTЫ ПPABA HA ИЗMEHEHИE ДAHHЫX');PUTT;
     ФЛAГИ:=ФЛAГИ+[AДMИH] END 
   ELSE BEGIN 
-    WRITE(output,'HE ЗHAETE ПAPOЛЯ - HE БAЛYЙTECЬ');PUTT END  END ;
+    WRITE(output,'HE ЗHAETE ПAPOЛЯ - HE БAЛYЙTECЬ');PUTT END; END ;
 IF NOT (AДMИH IN ФЛAГИ) THEN BEGIN 
   WRITE(output,'BЫ - ПOЛЬЗOBATEЛЬ');PUTT;
   WRITE(output,'BAM MOЖHO TOЛЬKO BЫДABATЬ OTЧETЫ');PUTT END ;
@@ -734,9 +810,9 @@ IF ПYCTO THEN BEGIN
     WRITE(output,'COOБЩИTE AДMИHИCTPATOPY');PUTT;
     WRITE(output,'      ...ДO CBИДAHИЯ...');PUTT;
     DMLCALL(137);KYДA:='ЭTOBCE';EXIT END ;
-  ПPABA END END ELSE IF (KYДA<>'HAPYЖY') AND (KYДA<>'HAЧAЛO') THEN EXIT ELSE (**)
+  ПPABA END; END ELSE IF (KYДA<>'HAPYЖY') AND (KYДA<>'HAЧAЛO') THEN EXIT ELSE (**)
 (* SECTION ? .Д *)
-DMLCALL(1);WRITE(output,'PEЖИM: ');PUTT; WHILE FALSE DO BEGIN 
+PUTT;DMLCALL(1);WRITE(output,'PEЖИM: ');PUTT; WHILE FALSE DO BEGIN 
 IF ДИP<>'KOH   ' THEN BEGIN 
 WRITE(output,'      ...BЫ B OБЩEM БЛOKE...  ');PUTT;
 WRITE(output,'KAP - BXOД B БЛOK PEГИCTPAЦИИ KAPT/',
@@ -749,9 +825,9 @@ WRITE(output,'KAP - BXOД B БЛOK PEГИCTPAЦИИ KAPT/',
           'CБP - CБPOCИTЬ ИЗMEHEHИЯ/');
 MENU END ;
 IF (ДИP='KAP   ') THEN BEGIN IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN BEGIN 
-              KYДA:='AMOCAR';EXIT END END ELSE IF (ДИP='ГPY   ') THEN BEGIN IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN BEGIN 
-              KYДA:='AMOGRU';EXIT END END ELSE IF (ДИP='OTД   ') THEN BEGIN IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN BEGIN 
-              KYДA:='AMOOTD';EXIT END END ELSE IF (ДИP='OTЧ   ') THEN BEGIN IF NOT ЗAKPЫTO THEN BEGIN 
-              KYДA:='AMOOTC';EXIT END END ELSE IF (ДИP='CИC   ') THEN BEGIN БЛOKCИC END ELSE IF (ДИP='ЗAK   ') THEN BEGIN ЖYPHAЛ('ЗAK   ',0) END ELSE IF (ДИP='CБP   ') THEN BEGIN ЖYPHAЛ('CБP   ',0) END ELSE IF (ДИP='ПAP   ') THEN BEGIN ПAPOЛЬ END ELSE IF (ДИP='KOH   ') THEN BEGIN BEGIN ZKOHEЦ(0);IF NOT HAЧ THEN BEGIN ДИP:='KOH   ';EXIT END END END ELSE IF (ДИP='BЫX   ') THEN BEGIN BEGIN WRITE(output,
+              KYДA:='AMOCAR';EXIT END; END ELSE IF (ДИP='ГPY   ') THEN BEGIN IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN BEGIN 
+              KYДA:='AMOGRU';EXIT END; END ELSE IF (ДИP='OTД   ') THEN BEGIN IF NOT HEЛЬЗЯ AND NOT ЗAKPЫTO THEN BEGIN 
+              KYДA:='AMOOTD';EXIT END; END ELSE IF (ДИP='OTЧ   ') THEN BEGIN IF NOT ЗAKPЫTO THEN BEGIN 
+              KYДA:='AMOOTC';EXIT END; END ELSE IF (ДИP='CИC   ') THEN BEGIN БЛOKCИC END ELSE IF (ДИP='ЗAK   ') THEN BEGIN ЖYPHAЛ('ЗAK   ',0) END ELSE IF (ДИP='CБP   ') THEN BEGIN ЖYPHAЛ('CБP   ',0) END ELSE IF (ДИP='ПAP   ') THEN BEGIN ПAPOЛЬ END ELSE IF (ДИP='KOH   ') THEN BEGIN BEGIN ZKOHEЦ(0);IF NOT HAЧ THEN BEGIN ДИP:='KOH   ';EXIT END; END; END ELSE IF (ДИP='BЫX   ') THEN BEGIN BEGIN WRITE(output,
              'ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE ');
              PUTT END END; END; END.

@@ -17,9 +17,9 @@
 | 9 | 669-696 | `? .ЗTBЫ` | `BЫДAЧA CXE-ПЛ`, MAD | готово: `deck09-mad-unload.out`, `EXN=0` |
 | 10 | 697-879 | `? .ЗTCX` | `CXEMA ЗATPAT ПO TEMAM` | готово: `deck10-schema-zat.out`, 2/16/19, `EXN=0` |
 | 11 | 880-1111 | `? .ЗTЗA` | `ЗAГPYЗЧИK ЗATPAT` | готово через `genmad` |
-| 12 | 1112-2297 | `?.CK` | 4 программы: `SKLMON`, `SKLOTD`, `SKLCAR`, `SKLOTC` | декы запускаются, трансляция 4 программ блокирована неопределёнными идентификаторами |
-| 13 | 2299-3555 | `?.AM` | 6 программ: `AMOHED`, `AMOMON`, `AMOOTD`, `AMOCAR`, `AMOOTC`, `AMOGRU` | `AMOHED` работает полностью; остальные 5 блокированы трансляцией |
-| 14 | 3557-5392 | `?.ЗT` | 8 программ: `ZATHED`, `ZATMON`, `ZATOTD`, `ZATCOF`, `ZATZAT`, `ZATNAK`, `ZATRTE`, `ZATTAB` | `ZATHED` работает полностью; остальные 7 блокированы трансляцией |
+| 12 | 1112-2297 | `?.CK` | 4 программы: `SKLMON`, `SKLOTD`, `SKLCAR`, `SKLOTC` | готово: все 4 с `MAD FULL EX=0`, эталоны `tests/severov-apps/*.expected.txt` |
+| 13 | 2299-3555 | `?.AM` | 6 программ: `AMOHED`, `AMOMON`, `AMOOTD`, `AMOCAR`, `AMOOTC`, `AMOGRU` | готово: все 6 с `MAD FULL EX=0`, эталоны `tests/severov-apps/*.expected.txt` |
+| 14 | 3557-5392 | `?.ЗT` | 8 программ: `ZATHED`, `ZATMON`, `ZATOTD`, `ZATCOF`, `ZATZAT`, `ZATNAK`, `ZATRTE`, `ZATTAB` | готово: все 8 с `MAD FULL EX=0`, эталоны `tests/severov-apps/*.expected.txt` |
 
 ## 2. Принципы
 

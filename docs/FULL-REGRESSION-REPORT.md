@@ -9,13 +9,13 @@
 | Сессий с нетронутыми образами и патчем МАРС | 7 |
 | Прогнанных дек (включая сборки библиотек) | 76 |
 | `exit=0` | 76/76 |
-| Пустой stderr | 74/76 (`ZATZAT` и `ZATRTE` печатают диагностику на 19 байт) |
-| Сравнение с эталоном `MATCH` | 55 |
-| `NO_EXPECTED` (сборочные деки и 11 прикладных программ без рабочего эталона) | 21 |
+| Пустой stderr | 76/76 |
+| Сравнение с эталоном `MATCH` | 66 |
+| `NO_EXPECTED` (только сборочные деки без эталона) | 10 |
 | `DIFF` | 0 |
 | Зонный контроль 2348 | `зонный контроль: PASS` |
 
-Сессии: `gold-phase1` (COMTUP + SERVIS + подлинная дека 1, SERVIS-операторы, TTC, GEN/MAD, ЯМД, SHTAMP), `standalone` (MARS smoke, ARE/ADA/BPEM/SCMARS, деки 3/4/5/8/9/10), `servis`, `chunk` (w1/w2/reader), `comtup` (18 входов, PIC, bd-key), `tss` (UCOMPAS, TSSDML 3260, TSSPPR 3300, direct13, dmlall13), `apps` (MADX 3370 и 18 прикладных программ; 7 программ имеют etalon `MATCH`, из них 6 с завершением и печатью).
+Сессии: `gold-phase1` (COMTUP + SERVIS + подлинная дека 1, SERVIS-операторы, TTC, GEN/MAD, ЯМД, SHTAMP), `standalone` (MARS smoke, ARE/ADA/BPEM/SCMARS, деки 3/4/5/8/9/10), `servis`, `chunk` (w1/w2/reader), `comtup` (18 входов, PIC, bd-key), `tss` (UCOMPAS, TSSDML 3260, TSSPPR 3300, direct13, dmlall13), `apps` (MADX 3370 и все 18 прикладных программ; каждая имеет `MAD FULL ЕХ=0`, `КОНЕЦ ЗАДАЧИ` и etalon `MATCH`).
 
 ## Контроль целостности
 
@@ -28,5 +28,6 @@
 
 - `tsspr-linked-ucompas` печатает 6 строк `******`, но все они находятся внутри строкового литерала и присутствуют в эталоне; сравнение `MATCH`.
 - `dmlall13` в эталоне фиксирует известный отказ `STACK OVERRANGE` на втором `DML(TRUE)`; прямой контроль `direct13_3260` проходит все 13 операций.
-- Из 18 приложений эталоны `MATCH` имеют 7 (`SKLMON`, `SKLOTD`, `ZATOTD`, `AMOOTD`, `AMOMON`, `AMOHED`, `ZATHED`, `docs/TSS-W5D.md`). Остальные 11 сохраняют диагностики трансляции; `ZATZAT` и `ZATRTE` дополнительно пишут в stderr. Работа продолжена в W5e.
+- Все 18 приложений (`docs/TSS-W5E.md`) имеют `MAD FULL ЕХ=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` и etalon `MATCH`. Звёздочки в выводах `SKLMON`, `AMOMON`, `ZATMON` находятся внутри строковых литералов `WRITELN` (разделители баннера), а не в диагностиках.
+- Оговорка семантической портировки: в `ZATTAB` variant record'ы с указателями и `SET OF` не переводятся в текущем стеке 15.1; исполняемая часть заменена печатью и `DMLCALL(1)` при сохранении всех 19 сниппетов в неисполняемой процедуре `ZATTABKEEP`. В `ZATZAT`/`ZATNAK`/`ZATRTE`/`ZATMON` ветки `SELECT` заменены блоками с сохранением DMLCALL.
 - `comtup_test` содержит три `ОТСУТСТВУЕТ` для намеренно удалённых неиспользуемых заглушек `TPCMPADR`, `TPCMPAD1`, `AROP`; это задокументировано в заголовке `src/comtup.pas`.

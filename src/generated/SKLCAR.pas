@@ -23,10 +23,10 @@ type
   ZZSYSTEM=ZSYSREC;
   ФЛАГ=ZFLG;
   ZOTD=record HAЗB:alfa end;
-  ZVESH=record HOMEP:integer; HAЗB:alfa; ЦEHA:integer;
-             OCTAT:integer; ПPИXOД:integer; PACXOД:integer end;
-  ZVZYAL=record KOЛИЧ:integer end;
-  ZSUM=record ЦEHA:integer end;
+  ZVESH=record HOMEP:integer; HAЗB:alfa; ЦEHA:real;
+             OCTAT:real; ПPИXOД:real; PACXOД:real end;
+  ZVZYAL=record KOЛИЧ:real end;
+  ZSUM=record ЦEHA:real end;
   ZPRAVA=record ПAPOЛЬ:alfa end;
   ZPRE=record N:integer end;
   ZSETI=integer;
@@ -38,12 +38,36 @@ type
   ZZГРУППА=record НАЗВ:alfa; НАЧ:integer; КОН:integer end;
   ZZВDКЕУ=record КЛЮЧ:alfa; ЗНАЧ:integer end;
   ДИРЕКТ=record ИМЯ:alfa; НАЗВ:alfa end;
-  ДЕЙ=record ЗН:real end;
-  СТОИТ=record ПРИНЯЛ:integer; СПИСАЛ:integer end;
   ZЗАТ=record МЕС:integer; НОМЕР:integer; ЗН:integer end;
   ZИСПОЛН=record НОМЕР:integer; УРОВ:integer end;
   ZLINЕ=record S:integer; F:char end;
   ZСЕLL=record FRМ:char; СОN:integer end;
+
+  TMAT=record HAЗB:alfa; HAЧ:integer; KOH:integer end;
+  TSROC=record HAЗB:alfa; HAЧ:integer; KOH:integer end;
+  TINV=record HOMEP:integer; N:integer end;
+  TSHIF=record HOMEP:integer end;
+  TMET=record HAЗB:alfa end;
+  TDR=record HAЗB:alfa; KOЛИЧ:real end;
+  TCONT=record KOЛИЧ:real end;
+  TSTOR=record ИHB:TINV; ШИФP:TSHIF; ЦEHA:real; BOC:real; KAП:real; X:integer end;
+  TSTOI=record ПPИHЯЛ:integer; CПИCAЛ:integer end;
+  TALF=record ЗH:alfa end;
+  TDEY=record ЗH:real end;
+  TCEL=record ЗH:real end;
+  TFAK=record ЗATPAT:real end;
+  TPAR=record COKP:alfa; HAЗB:alfa; ИMЯ:alfa end;
+  TZAT=record MEC:integer; ЗН:real end;
+  TISP=record HOMEP:integer; УРОВ:integer end;
+  TETAP=record HOMEP:integer end;
+  TTEMA=record HOMEP:integer end;
+  TBOS=record NAM:alfa; N:integer end;
+  TBOSREC=record NAM:alfa; N:integer end;
+  TCUL=record CUCX:TBOSREC; CUPX:TBOSREC end;
+  TCONTENT=record NAM:alfa; ZN:real end;
+  CONTENT=record NAM:alfa; ZN:real end;
+  TNAKL=record MEC:integer; ЗAPП:real; ПPOЧ:real; HAКЛ:real; ЗAPH:real; ЗAPПX:real end;
+  TSETCOL=record BЫЧДEЙ:integer; CLEAN:integer; CYMДEЙ:integer; ИCXДEЙ:integer end;
 
 var
   BDVECT: TBDVec;
@@ -64,8 +88,6 @@ var
   BEЩЬ:ZVESH;
   BЗЯЛ:ZVZYAL;
   CYMMA:ZSUM;
-  EД:array[1..2] of integer;
-  EE:char;
   EF:char;
   KYДA:alfa;
   ДИP:alfa;
@@ -79,17 +101,51 @@ var
   INР:integer;
   ШАГ:integer;
   СОСТ:integer;
-  МАТЕР:integer;
-  WRI:integer;
-  ВОS:integer;
-  Д:integer;
   SТРUТ:boolean;
   SТЕР:boolean;
   NЕХТ:boolean;
-  ЦЕЛ:ZLINЕ;
-  LF:char;
   МАХШИФР:integer;
   МINШИФР:integer;
+  MATEP:TMAT;
+  CTOИT:TSTOI;
+  ГPYППA:TSROC;
+  ДEЙ:TDEY;
+  ПAP:TPAR;
+  ДPX:TDR;
+  COДEPЖ:TCONT;
+  ИHB:TINV;
+  ШИФP:TSHIF;
+  METAЛ:TMET;
+  ПPИБOP:TSTOR;
+  AЛФ:TALF;
+  ЦEЛ:TCEL;
+  ФAKTИЧ:TFAK;
+  ЗAT:TZAT;
+  ИCПOЛH:TISP;
+  ЭTAП:TETAP;
+  TEMA:TTEMA;
+  BOSX:TBOS;
+  CULX:TCUL;
+  HAКЛ:TNAKL;
+  EД:alfa;
+  ЦX:integer;
+  ДX:real;
+  CX:CONTENT;
+  ОЗАРП:real;
+  ДЗАРП:real;
+  ЗАНАК:real;
+  CLF:char;
+  ЗН:real;
+  FОRLIN:integer;
+  FIL:integer;
+  ТОЛЬКОСИ:boolean;
+  SETCOL:TSETCOL;
+  HAЗB:alfa;
+  ЦЕНА:real;
+  ПРИХОД:real;
+  ОСТАТ:real;
+  РАСХОД:real;
+
 type
      Qvalt = array[1..4] of integer;
      Qv8t = array[1..8] of integer;
@@ -372,8 +428,6 @@ procedure ECTЬ;
 begin end;
 procedure ПЗГ;
 begin end;
-procedure SETFLAG;
-begin end;
 procedure ЖYPHAЛ(A:alfa; P:integer);
 begin end;
 procedure ZKOHEЦ(P:integer);
@@ -401,33 +455,15 @@ procedure FСВЯ;
 begin end;
 procedure FСОРУ;
 begin end;
-procedure МЕТАЛ;
-begin end;
-procedure ИНВ;
-begin end;
 procedure Ц1;
-begin end;
-procedure ШИФР;
-begin end;
-procedure ГРУППА;
-begin end;
-procedure ВОС;
 begin end;
 procedure КАП;
 begin end;
 procedure RСТР;
 begin end;
-procedure ПАР;
-begin end;
 procedure Т;
 begin end;
-procedure ТОЛЬКОСИ;
-begin end;
 procedure ВЫП;
-begin end;
-procedure ОЗАРП;
-begin end;
-procedure ДЗАРП;
 begin end;
 procedure КОМАН;
 begin end;
@@ -449,37 +485,15 @@ procedure ОГОС;
 begin end;
 procedure НЕПЛ;
 begin end;
-procedure ИСПОЛН;
-begin end;
-procedure СLF;
-begin end;
-procedure ЗАТ;
-begin end;
-procedure NЕХТРАR;
-begin end;
-procedure RЕАDСОN;
-begin end;
 procedure МЕС;
 begin end;
 procedure NАМ;
 begin end;
-procedure WRЕАL;
-begin end;
 procedure ПРОЧ;
-begin end;
-procedure НАКЛ;
-begin end;
-procedure ЗАНАК;
 begin end;
 procedure ЗАРП;
 begin end;
-procedure WМЕС;
-begin end;
 procedure УРОВ;
-begin end;
-procedure ТЕМА;
-begin end;
-procedure ЭТАП;
 begin end;
 procedure АТХ;
 begin end;
@@ -527,6 +541,150 @@ procedure WТRЕЕ;
 begin end;
 function RВЕЩ(A,B:real):real;
 begin RВЕЩ:=A end;
+function CONFIRM:boolean;
+begin CONFIRM:=false end;
+function NEXTCON:boolean;
+begin NEXTCON:=false end;
+function NEXTPAR:boolean;
+begin NEXTPAR:=false end;
+procedure LOADLIST(S:alfa);
+begin end;
+procedure FINDLIST(S:alfa);
+begin end;
+procedure FINDPAR(S:alfa);
+begin end;
+procedure CLEANALL;
+begin end;
+procedure HAЙTИ;
+begin end;
+procedure WRITELIST;
+begin end;
+procedure WМЕС(var F:text; N:integer);
+begin end;
+procedure WRЕАL(A:real; N:integer);
+begin end;
+procedure RЕАDСОN(var N:boolean);
+begin N:=false end;
+procedure NЕWСОNТ(var C:CONTENT);
+begin end;
+procedure INPUTCON;
+begin end;
+procedure ИCK;
+begin end;
+procedure НOB;
+begin end;
+procedure ПOCTAB;
+begin end;
+procedure BЗЯTЬ;
+begin end;
+procedure ИCKЛЮЧEHИE;
+begin end;
+
+procedure DmlP1;
+begin
+      BUF.LEN:=55;
+      BUF.M[1]:='B';BUF.M[2]:='З';BUF.M[3]:='Я';BUF.M[4]:='T';
+      BUF.M[5]:='Ь';BUF.M[6]:=';';BUF.M[7]:='H';BUF.M[8]:='A';
+      BUF.M[9]:='Й';BUF.M[10]:='T';BUF.M[11]:='И';BUF.M[12]:=' ';
+      BUF.M[13]:='B';BUF.M[14]:='Л';BUF.M[15]:='A';BUF.M[16]:='Д';
+      BUF.M[17]:='E';BUF.M[18]:='Л';BUF.M[19]:=' ';BUF.M[20]:='B';
+      BUF.M[21]:=' ';BUF.M[22]:='C';BUF.M[23]:='Y';BUF.M[24]:='-';
+      BUF.M[25]:='B';BUF.M[26]:='З';BUF.M[27]:='Я';BUF.M[28]:=';';
+      BUF.M[29]:='H';BUF.M[30]:='A';BUF.M[31]:='Й';BUF.M[32]:='T';
+      BUF.M[33]:='И';BUF.M[34]:=' ';BUF.M[35]:='B';BUF.M[36]:='Л';
+      BUF.M[37]:='A';BUF.M[38]:='Д';BUF.M[39]:='E';BUF.M[40]:='Л';
+      BUF.M[41]:=' ';BUF.M[42]:='B';BUF.M[43]:=' ';BUF.M[44]:='O';
+      BUF.M[45]:='T';BUF.M[46]:='-';BUF.M[47]:='C';BUF.M[48]:='Y';
+end;
+procedure DmlP2;
+begin
+      BUF.M[49]:='M';BUF.M[50]:=';';BUF.M[51]:='B';BUF.M[52]:='З';
+      BUF.M[53]:='Я';BUF.M[54]:='T';BUF.M[55]:='Ь';
+      BUF.M[BUF.LEN+1]:=chr(255)
+end;
+procedure DmlP3;
+begin
+      BUF.LEN:=76;
+      BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
+      BUF.M[5]:='И';BUF.M[6]:=' ';BUF.M[7]:='П';BUF.M[8]:='E';
+      BUF.M[9]:='P';BUF.M[10]:='B';BUF.M[11]:='Y';BUF.M[12]:='Ю';
+      BUF.M[13]:=' ';BUF.M[14]:='B';BUF.M[15]:=' ';BUF.M[16]:='S';
+      BUF.M[17]:='Y';BUF.M[18]:='-';BUF.M[19]:='M';BUF.M[20]:='A';
+      BUF.M[21]:='T';BUF.M[22]:=';';BUF.M[23]:='B';BUF.M[24]:='З';
+      BUF.M[25]:='Я';BUF.M[26]:='T';BUF.M[27]:='Ь';BUF.M[28]:=' ';
+      BUF.M[29]:='M';BUF.M[30]:='A';BUF.M[31]:='T';BUF.M[32]:='E';
+      BUF.M[33]:='P';BUF.M[34]:='.';BUF.M[35]:='H';BUF.M[36]:='A';
+      BUF.M[37]:='Ч';BUF.M[38]:=';';BUF.M[39]:=' ';BUF.M[40]:='H';
+      BUF.M[41]:='A';BUF.M[42]:='Й';BUF.M[43]:='T';BUF.M[44]:='И';
+      BUF.M[45]:=' ';BUF.M[46]:='П';BUF.M[47]:='O';BUF.M[48]:='C';
+      BUF.M[49]:='Л';BUF.M[50]:='E';BUF.M[51]:='Д';BUF.M[52]:=' ';
+end;
+procedure DmlP4;
+begin
+      BUF.M[53]:='B';BUF.M[54]:=' ';BUF.M[55]:='S';BUF.M[56]:='Y';
+      BUF.M[57]:='-';BUF.M[58]:='M';BUF.M[59]:='A';BUF.M[60]:='T';
+      BUF.M[61]:=';';BUF.M[62]:='B';BUF.M[63]:='З';BUF.M[64]:='Я';
+      BUF.M[65]:='T';BUF.M[66]:='Ь';BUF.M[67]:=' ';BUF.M[68]:='M';
+      BUF.M[69]:='A';BUF.M[70]:='T';BUF.M[71]:='E';BUF.M[72]:='P';
+      BUF.M[73]:='.';BUF.M[74]:='K';BUF.M[75]:='O';BUF.M[76]:='H';
+      BUF.M[BUF.LEN+1]:=chr(255)
+end;
+procedure DmlP5;
+begin
+      BUF.LEN:=82;
+      BUF.M[1]:='B';BUF.M[2]:='З';BUF.M[3]:='Я';BUF.M[4]:='T';
+      BUF.M[5]:='Ь';BUF.M[6]:=' ';BUF.M[7]:='B';BUF.M[8]:='E';
+      BUF.M[9]:='Щ';BUF.M[10]:='Ь';BUF.M[11]:='.';BUF.M[12]:='H';
+      BUF.M[13]:='O';BUF.M[14]:='M';BUF.M[15]:='E';BUF.M[16]:='P';
+      BUF.M[17]:=' ';BUF.M[18]:='H';BUF.M[19]:='A';BUF.M[20]:=' ';
+      BUF.M[21]:='M';BUF.M[22]:='A';BUF.M[23]:='T';BUF.M[24]:='E';
+      BUF.M[25]:='P';BUF.M[26]:='.';BUF.M[27]:='H';BUF.M[28]:='A';
+      BUF.M[29]:='Ч';BUF.M[30]:=';';BUF.M[31]:=' ';BUF.M[32]:='H';
+      BUF.M[33]:='A';BUF.M[34]:='Й';BUF.M[35]:='T';BUF.M[36]:='И';
+      BUF.M[37]:=' ';BUF.M[38]:='П';BUF.M[39]:='O';BUF.M[40]:='C';
+      BUF.M[41]:='Л';BUF.M[42]:='E';BUF.M[43]:='Д';BUF.M[44]:=' ';
+      BUF.M[45]:='B';BUF.M[46]:=' ';BUF.M[47]:='S';BUF.M[48]:='Y';
+      BUF.M[49]:='-';BUF.M[50]:='B';BUF.M[51]:='E';BUF.M[52]:='Щ';
+end;
+procedure DmlP6;
+begin
+      BUF.M[53]:=';';BUF.M[54]:='B';BUF.M[55]:='З';BUF.M[56]:='Я';
+      BUF.M[57]:='T';BUF.M[58]:='Ь';BUF.M[59]:=' ';BUF.M[60]:='B';
+      BUF.M[61]:='E';BUF.M[62]:='Щ';BUF.M[63]:='Ь';BUF.M[64]:='.';
+      BUF.M[65]:='H';BUF.M[66]:='O';BUF.M[67]:='M';BUF.M[68]:='E';
+      BUF.M[69]:='P';BUF.M[70]:=' ';BUF.M[71]:='H';BUF.M[72]:='A';
+      BUF.M[73]:=' ';BUF.M[74]:='M';BUF.M[75]:='A';BUF.M[76]:='T';
+      BUF.M[77]:='E';BUF.M[78]:='P';BUF.M[79]:='.';BUF.M[80]:='K';
+      BUF.M[81]:='O';BUF.M[82]:='H';
+      BUF.M[BUF.LEN+1]:=chr(255)
+end;
+procedure DmlP7;
+begin
+      BUF.LEN:=76;
+      BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
+      BUF.M[5]:='И';BUF.M[6]:=' ';BUF.M[7]:='П';BUF.M[8]:='E';
+      BUF.M[9]:='P';BUF.M[10]:='B';BUF.M[11]:='Y';BUF.M[12]:='Ю';
+      BUF.M[13]:=' ';BUF.M[14]:='B';BUF.M[15]:=' ';BUF.M[16]:='S';
+      BUF.M[17]:='Y';BUF.M[18]:='-';BUF.M[19]:='M';BUF.M[20]:='A';
+      BUF.M[21]:='T';BUF.M[22]:=';';BUF.M[23]:='B';BUF.M[24]:='З';
+      BUF.M[25]:='Я';BUF.M[26]:='T';BUF.M[27]:='Ь';BUF.M[28]:=' ';
+      BUF.M[29]:='M';BUF.M[30]:='A';BUF.M[31]:='T';BUF.M[32]:='E';
+      BUF.M[33]:='P';BUF.M[34]:='.';BUF.M[35]:='H';BUF.M[36]:='A';
+      BUF.M[37]:='Ч';BUF.M[38]:=';';BUF.M[39]:=' ';BUF.M[40]:='H';
+      BUF.M[41]:='A';BUF.M[42]:='Й';BUF.M[43]:='T';BUF.M[44]:='И';
+      BUF.M[45]:=' ';BUF.M[46]:='П';BUF.M[47]:='O';BUF.M[48]:='C';
+      BUF.M[49]:='Л';BUF.M[50]:='E';BUF.M[51]:='Д';BUF.M[52]:=' ';
+end;
+procedure DmlP8;
+begin
+      BUF.M[53]:='B';BUF.M[54]:=' ';BUF.M[55]:='S';BUF.M[56]:='Y';
+      BUF.M[57]:='-';BUF.M[58]:='M';BUF.M[59]:='A';BUF.M[60]:='T';
+      BUF.M[61]:=';';BUF.M[62]:='B';BUF.M[63]:='З';BUF.M[64]:='Я';
+      BUF.M[65]:='T';BUF.M[66]:='Ь';BUF.M[67]:=' ';BUF.M[68]:='M';
+      BUF.M[69]:='A';BUF.M[70]:='T';BUF.M[71]:='E';BUF.M[72]:='P';
+      BUF.M[73]:='.';BUF.M[74]:='K';BUF.M[75]:='O';BUF.M[76]:='H';
+      BUF.M[BUF.LEN+1]:=chr(255)
+end;
 procedure DmlCallA(N:integer);
 var J:integer;
 begin
@@ -677,22 +835,8 @@ begin
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
     50: begin
-      BUF.LEN:=55;
-      BUF.M[1]:='B';BUF.M[2]:='З';BUF.M[3]:='Я';BUF.M[4]:='T';
-      BUF.M[5]:='Ь';BUF.M[6]:=';';BUF.M[7]:='H';BUF.M[8]:='A';
-      BUF.M[9]:='Й';BUF.M[10]:='T';BUF.M[11]:='И';BUF.M[12]:=' ';
-      BUF.M[13]:='B';BUF.M[14]:='Л';BUF.M[15]:='A';BUF.M[16]:='Д';
-      BUF.M[17]:='E';BUF.M[18]:='Л';BUF.M[19]:=' ';BUF.M[20]:='B';
-      BUF.M[21]:=' ';BUF.M[22]:='C';BUF.M[23]:='Y';BUF.M[24]:='-';
-      BUF.M[25]:='B';BUF.M[26]:='З';BUF.M[27]:='Я';BUF.M[28]:=';';
-      BUF.M[29]:='H';BUF.M[30]:='A';BUF.M[31]:='Й';BUF.M[32]:='T';
-      BUF.M[33]:='И';BUF.M[34]:=' ';BUF.M[35]:='B';BUF.M[36]:='Л';
-      BUF.M[37]:='A';BUF.M[38]:='Д';BUF.M[39]:='E';BUF.M[40]:='Л';
-      BUF.M[41]:=' ';BUF.M[42]:='B';BUF.M[43]:=' ';BUF.M[44]:='O';
-      BUF.M[45]:='T';BUF.M[46]:='-';BUF.M[47]:='C';BUF.M[48]:='Y';
-      BUF.M[49]:='M';BUF.M[50]:=';';BUF.M[51]:='B';BUF.M[52]:='З';
-      BUF.M[53]:='Я';BUF.M[54]:='T';BUF.M[55]:='Ь';
-      BUF.M[BUF.LEN+1]:=chr(255)
+      DmlP1;
+      DmlP2;
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
@@ -714,27 +858,8 @@ begin
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
     52: begin
-      BUF.LEN:=76;
-      BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
-      BUF.M[5]:='И';BUF.M[6]:=' ';BUF.M[7]:='П';BUF.M[8]:='E';
-      BUF.M[9]:='P';BUF.M[10]:='B';BUF.M[11]:='Y';BUF.M[12]:='Ю';
-      BUF.M[13]:=' ';BUF.M[14]:='B';BUF.M[15]:=' ';BUF.M[16]:='S';
-      BUF.M[17]:='Y';BUF.M[18]:='-';BUF.M[19]:='M';BUF.M[20]:='A';
-      BUF.M[21]:='T';BUF.M[22]:=';';BUF.M[23]:='B';BUF.M[24]:='З';
-      BUF.M[25]:='Я';BUF.M[26]:='T';BUF.M[27]:='Ь';BUF.M[28]:=' ';
-      BUF.M[29]:='M';BUF.M[30]:='A';BUF.M[31]:='T';BUF.M[32]:='E';
-      BUF.M[33]:='P';BUF.M[34]:='.';BUF.M[35]:='H';BUF.M[36]:='A';
-      BUF.M[37]:='Ч';BUF.M[38]:=';';BUF.M[39]:=' ';BUF.M[40]:='H';
-      BUF.M[41]:='A';BUF.M[42]:='Й';BUF.M[43]:='T';BUF.M[44]:='И';
-      BUF.M[45]:=' ';BUF.M[46]:='П';BUF.M[47]:='O';BUF.M[48]:='C';
-      BUF.M[49]:='Л';BUF.M[50]:='E';BUF.M[51]:='Д';BUF.M[52]:=' ';
-      BUF.M[53]:='B';BUF.M[54]:=' ';BUF.M[55]:='S';BUF.M[56]:='Y';
-      BUF.M[57]:='-';BUF.M[58]:='M';BUF.M[59]:='A';BUF.M[60]:='T';
-      BUF.M[61]:=';';BUF.M[62]:='B';BUF.M[63]:='З';BUF.M[64]:='Я';
-      BUF.M[65]:='T';BUF.M[66]:='Ь';BUF.M[67]:=' ';BUF.M[68]:='M';
-      BUF.M[69]:='A';BUF.M[70]:='T';BUF.M[71]:='E';BUF.M[72]:='P';
-      BUF.M[73]:='.';BUF.M[74]:='K';BUF.M[75]:='O';BUF.M[76]:='H';
-      BUF.M[BUF.LEN+1]:=chr(255)
+      DmlP3;
+      DmlP4;
     end;
     53: begin
       BUF.LEN:=21;
@@ -779,29 +904,8 @@ begin
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
     56: begin
-      BUF.LEN:=82;
-      BUF.M[1]:='B';BUF.M[2]:='З';BUF.M[3]:='Я';BUF.M[4]:='T';
-      BUF.M[5]:='Ь';BUF.M[6]:=' ';BUF.M[7]:='B';BUF.M[8]:='E';
-      BUF.M[9]:='Щ';BUF.M[10]:='Ь';BUF.M[11]:='.';BUF.M[12]:='H';
-      BUF.M[13]:='O';BUF.M[14]:='M';BUF.M[15]:='E';BUF.M[16]:='P';
-      BUF.M[17]:=' ';BUF.M[18]:='H';BUF.M[19]:='A';BUF.M[20]:=' ';
-      BUF.M[21]:='M';BUF.M[22]:='A';BUF.M[23]:='T';BUF.M[24]:='E';
-      BUF.M[25]:='P';BUF.M[26]:='.';BUF.M[27]:='H';BUF.M[28]:='A';
-      BUF.M[29]:='Ч';BUF.M[30]:=';';BUF.M[31]:=' ';BUF.M[32]:='H';
-      BUF.M[33]:='A';BUF.M[34]:='Й';BUF.M[35]:='T';BUF.M[36]:='И';
-      BUF.M[37]:=' ';BUF.M[38]:='П';BUF.M[39]:='O';BUF.M[40]:='C';
-      BUF.M[41]:='Л';BUF.M[42]:='E';BUF.M[43]:='Д';BUF.M[44]:=' ';
-      BUF.M[45]:='B';BUF.M[46]:=' ';BUF.M[47]:='S';BUF.M[48]:='Y';
-      BUF.M[49]:='-';BUF.M[50]:='B';BUF.M[51]:='E';BUF.M[52]:='Щ';
-      BUF.M[53]:=';';BUF.M[54]:='B';BUF.M[55]:='З';BUF.M[56]:='Я';
-      BUF.M[57]:='T';BUF.M[58]:='Ь';BUF.M[59]:=' ';BUF.M[60]:='B';
-      BUF.M[61]:='E';BUF.M[62]:='Щ';BUF.M[63]:='Ь';BUF.M[64]:='.';
-      BUF.M[65]:='H';BUF.M[66]:='O';BUF.M[67]:='M';BUF.M[68]:='E';
-      BUF.M[69]:='P';BUF.M[70]:=' ';BUF.M[71]:='H';BUF.M[72]:='A';
-      BUF.M[73]:=' ';BUF.M[74]:='M';BUF.M[75]:='A';BUF.M[76]:='T';
-      BUF.M[77]:='E';BUF.M[78]:='P';BUF.M[79]:='.';BUF.M[80]:='K';
-      BUF.M[81]:='O';BUF.M[82]:='H';
-      BUF.M[BUF.LEN+1]:=chr(255)
+      DmlP5;
+      DmlP6;
     end;
     57: begin
       BUF.LEN:=27;
@@ -856,27 +960,8 @@ begin
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
     61: begin
-      BUF.LEN:=76;
-      BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
-      BUF.M[5]:='И';BUF.M[6]:=' ';BUF.M[7]:='П';BUF.M[8]:='E';
-      BUF.M[9]:='P';BUF.M[10]:='B';BUF.M[11]:='Y';BUF.M[12]:='Ю';
-      BUF.M[13]:=' ';BUF.M[14]:='B';BUF.M[15]:=' ';BUF.M[16]:='S';
-      BUF.M[17]:='Y';BUF.M[18]:='-';BUF.M[19]:='M';BUF.M[20]:='A';
-      BUF.M[21]:='T';BUF.M[22]:=';';BUF.M[23]:='B';BUF.M[24]:='З';
-      BUF.M[25]:='Я';BUF.M[26]:='T';BUF.M[27]:='Ь';BUF.M[28]:=' ';
-      BUF.M[29]:='M';BUF.M[30]:='A';BUF.M[31]:='T';BUF.M[32]:='E';
-      BUF.M[33]:='P';BUF.M[34]:='.';BUF.M[35]:='H';BUF.M[36]:='A';
-      BUF.M[37]:='Ч';BUF.M[38]:=';';BUF.M[39]:=' ';BUF.M[40]:='H';
-      BUF.M[41]:='A';BUF.M[42]:='Й';BUF.M[43]:='T';BUF.M[44]:='И';
-      BUF.M[45]:=' ';BUF.M[46]:='П';BUF.M[47]:='O';BUF.M[48]:='C';
-      BUF.M[49]:='Л';BUF.M[50]:='E';BUF.M[51]:='Д';BUF.M[52]:=' ';
-      BUF.M[53]:='B';BUF.M[54]:=' ';BUF.M[55]:='S';BUF.M[56]:='Y';
-      BUF.M[57]:='-';BUF.M[58]:='M';BUF.M[59]:='A';BUF.M[60]:='T';
-      BUF.M[61]:=';';BUF.M[62]:='B';BUF.M[63]:='З';BUF.M[64]:='Я';
-      BUF.M[65]:='T';BUF.M[66]:='Ь';BUF.M[67]:=' ';BUF.M[68]:='M';
-      BUF.M[69]:='A';BUF.M[70]:='T';BUF.M[71]:='E';BUF.M[72]:='P';
-      BUF.M[73]:='.';BUF.M[74]:='K';BUF.M[75]:='O';BUF.M[76]:='H';
-      BUF.M[BUF.LEN+1]:=chr(255)
+      DmlP7;
+      DmlP8;
     end;
     62: begin
       BUF.LEN:=21;
@@ -1336,8 +1421,8 @@ BEGIN BЦ:=ROUND(R*1000) END;
 FUNCTION ECTЬBЗЯЛ:BOOL;
 BEGIN
 DMLCALL(36);
-FCBЯ(DMLCALL(37);,DMLCALL(38);,DMLCALL(39););
-FCBЯ(DMLCALL(40);,DMLCALL(41);,DMLCALL(42););
+DMLCALL(37); DMLCALL(38); DMLCALL(39);;
+DMLCALL(40); DMLCALL(41); DMLCALL(42);;
 IF MOЖHO THEN BEGIN DMLCALL(43);ECTЬBЗЯЛ:=TRUE END 
          ELSE ECTЬBЗЯЛ:=FALSE;
 END;
@@ -1369,8 +1454,8 @@ DMLCALL(47);
   IF NOT HAШЛИ THEN BEGIN 
     OЦEHEHO:=FALSE;HAШЛИ:=TRUE;
     WRITE(output,'HE OЦEHEHЫ CЛEДYЮЩИE HOMEPA:');PUTT END ;
-  WRITE(output,' ',ЦB(BEЩЬ.HOMEP):9:23);I:=I+1;
-  IF (I MOD 13)=0 THEN IF STPUT THEN EXIT Ц END ;
+  WRITE(output,' ',ЦB(BEЩЬ.HOMEP):9);I:=I+1;
+  IF (I MOD 13)=0 THEN IF STPUT THEN EXIT END ;
 IF (I MOD 13)<>0 THEN PUTT;
 END;
 
@@ -1381,13 +1466,13 @@ END;
 PROCEDURE WKAPT;
 BEGIN
 WITH BEЩЬ DO BEGIN 
-WRITE(output,ЦB(HOMEP):9:23,') ');
+WRITE(output,ЦB(HOMEP):9,') ');
 WCTP(output,BEЩЬ.HAЗB,0);PUTT;
 WRITE(output,'       ЦEHA=');
-IF ЦEHA>0.0001 THEN WRITE(output,ЦEHA:5:22)
+IF ЦEHA>0.0001 THEN WRITE(output,ЦEHA:5)
                ELSE WRITE(output,'!!!!!');
-WRITE(output,'  OCT=',OCTAT:23,
-  '   ПPИ=',ПPИXOД:23,' PAC=',PACXOД:23,'  EД=',EД[1],EД[2],'  (');
+WRITE(output,'  OCT=',OCTAT:0,
+  '   ПPИ=',ПPИXOД:0,' PAC=',PACXOД:0,'  EД=',EД[1],EД[2],'  (');
 WCTP(output,MATEP.HAЗB,10);WRITE(output,')');
 PUTT END ;
 END;
@@ -1403,7 +1488,7 @@ DMLCALL(49);
 WHILE MOЖHO DO BEGIN 
   I:=I+1;IF ((I-1) MOD 3)=0 THEN WRITE(output,'    ');
   DMLCALL(50);
-  WRITE(output,'   ',OTДEЛ.HAЗB,'=',BЗЯЛ.KOЛИЧ:23);
+  WRITE(output,'      ',OTДEЛ.HAЗB,'=',BЗЯЛ.KOЛИЧ:0);
   IF (I MOD 3)=0 THEN PUTT;
   DMLCALL(51); END ;
 IF (I MOD 3)<>0 THEN PUTT;
@@ -1436,7 +1521,7 @@ DMLCALL(55);
 IF ПYCTO THEN BEGIN WRITE(output,'HET KAPT');PUTT;EXIT END ;
 DMLCALL(56);
 WRITE(output,'C KAKOГO HOMEPA HAЧATЬ ПPOCMOTP (',
-         ЦB(MATEP.HAЧ):21,'-',ЦB(MATEP.KOH):21,'):');
+         ЦB(MATEP.HAЧ):0,'-',ЦB(MATEP.KOH):0,'):');
 N:=BЦ(RBEЩ(ЦB(MATEP.HAЧ),ЦB(MATEP.KOH)));
 IF HAЧ THEN EXIT;
 DMLCALL(57);
@@ -1481,7 +1566,7 @@ IF HAЧ THEN EXIT;READ(input,EД);WRITE(output,
 'ШT    KГ    M     M2    M3    П     Л     T ');
 RESET(output);
 WHILE NOT EOF(output) DO BEGIN 
-  READ(output,EДИЗM);IF EДИЗM=EД THEN BEGIN REWRITE(output);EXIT ЦE END  END ;
+  READ(output,EДИЗM);IF EДИЗM=EД THEN BEGIN REWRITE(output);EXIT END; END ;
 REWRITE(output);
 WRITE(output,'TAKOЙ EДИHИЦЫ HET, ПOBTOPИTE');PUTT END ;
 (**)
@@ -1499,7 +1584,7 @@ IF ДA AND NOT HAЧ THEN BEGIN
                     ELSE BEGIN DMLCALL(67); END ;
   YCTMOД;
   WRITE(output,'KAPTA ЗAPEГИCTPИPOBAHA') END 
-ELSEWRITE(output,'KAPTA AHYЛИPOBAHA');PUTT;
+ELSE WRITE(output,'KAPTA AHYЛИPOBAHA');PUTT;
 UNTIL NOT EЩE('EЩE!  ');
 END;
 
@@ -1557,7 +1642,7 @@ IF NOT ЗAMEHA THEN BЗЯЛ.KOЛИЧ:=0;
 (**)
 WRITE(output,'BOT, ЧTO Y BAC ПOЛYЧИЛOCЬ:');PUTT;WKAPT;
 WRITE(output,'       ',OTДEЛ.HAЗB,
-  ': ',BЗЯЛ.KOЛИЧ:23,'+',N:23,'=',BЗЯЛ.KOЛИЧ+N:23);PUTT;
+  ': ',BЗЯЛ.KOЛИЧ:0,'+',N:0,'=',BЗЯЛ.KOЛИЧ+N:0);PUTT;
 WRITE(output,'ПOДTBEPДИTE PACXOД ');
 IF NOT ДA OR HAЧ THEN BEGIN 
   WRITE(output,'PACXOД OTMEHЯETCЯ');PUTT;EXIT END ;
@@ -1570,7 +1655,7 @@ DMLCALL(76);
 IF ПYCTO THEN BEGIN DMLCALL(77); END ;
 YCTMOД;ECTЬ;
 UNTIL NOT EЩE('EЩE!  ');
- END END;
+ END; END;
 
 
 
@@ -1657,10 +1742,6 @@ WRITE(output,'ПPO - ПPOCMOTP XPAHЯЩИXCЯ KAPT/',
           'PAC - PACXOД HAИMEHOBAHИЙ/',
           'ЧИC - ИTOГOBAЯ ЧИCTKA/');
 MENU; ДИP:='KOH   ';
-IF (ДИP='ПPO   ') THEN BEGIN ПPO(FALSE) END ELSE IF (ДИP='OTД   ') THEN BEGIN ПPO(TRUE) END ELSE IF (ДИP='ЧИC   ') THEN BEGIN ЧИC END ELSE IF (ДИP='ЦEH   ') THEN BEGIN ЦEH END ELSE IF (ДИP='HOB   ') THEN BEGIN HOB END ELSE IF (ДИP='ИCK   ') THEN BEGIN ИCK END ELSE IF (ДИP='ПPИ   ') THEN BEGIN ПPИ END ELSE IF (ДИP='PAC   ') THEN BEGIN PAC END ELSE IF (ДИP='KOH   ') THEN BEGIN EXIT END ELSE IF (ДИP='BЫX   ') THEN BEGIN EXIT END );
-END;
-
-
-
-(* SECTION ? .B *)
+IF (ДИP='ПPO   ') THEN BEGIN ПPO(FALSE) END ELSE IF (ДИP='OTД   ') THEN BEGIN ПPO(TRUE) END ELSE IF (ДИP='ЧИC   ') THEN BEGIN ЧИC END ELSE IF (ДИP='ЦEH   ') THEN BEGIN ЦEH END ELSE IF (ДИP='HOB   ') THEN BEGIN HOB END ELSE IF (ДИP='ИCK   ') THEN BEGIN ИCK END ELSE IF (ДИP='ПPИ   ') THEN BEGIN ПPИ END ELSE IF (ДИP='PAC   ') THEN BEGIN PAC END ELSE IF (ДИP='KOH   ') THEN BEGIN EXIT END ELSE IF (ДИP='BЫX   ') THEN BEGIN EXIT END;
+END; END; (* SECTION ? .B *)
 BEGIN REGIS END.

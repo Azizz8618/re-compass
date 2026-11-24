@@ -28,6 +28,12 @@ check:
 	python3 -m py_compile tools/severov/extract_and_gen.py
 	python3 -m py_compile tools/severov/prt_pas_map.py
 	python3 -m py_compile tools/severov/make_inline.py
+	python3 -m py_compile tools/severov/make_base2e.py
+	python3 -m py_compile tools/severov/w5e_patch.py
+	python3 -m py_compile tools/severov/zattab_pre.py
+	python3 -m py_compile tools/severov/gen_one.py
+	python3 -m py_compile tools/severov/verify.py
+	python3 -m py_compile tools/severov/classify_ids.py
 	bash -n tools/severov/check_decks.sh
 	python3 -m py_compile tools/mars/parse_words.py
 	python3 -m py_compile tools/severov/mkfront.py

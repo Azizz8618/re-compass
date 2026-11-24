@@ -31,7 +31,7 @@
 | `deck14-zatzat.out` | дека 12-14, программа `ZATZAT` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `acef581f` |
 | `deck14-zatnak.out` | дека 12-14, программа `ZATNAK` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `c596df26` |
 | `deck14-zatrte.out` | дека 12-14, программа `ZATRTE` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `4e08702d` |
-| `deck14-zattab.out` | дека 12-14, программа `ZATTAB` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `1330b9eb` |
+| `deck14-zattab.out` | дека 12-14, программа `ZATTAB` через MADX зоны 3370 | `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ` | `ad2c0cd1` |
 | `deck06-07-11-genmad.out` | загрузчики дек 6, 7, 11 и MAD-деки 3/8/9, порт `GEN`/`MAD` | 26 форматов, 102 блока, 110 `PUTD`, 19 справочников, 4 MAD-запроса, `GEN EX=0`, `MAD EX=0` | `b7286a0b…` |
 | `yam-predtgen.out` | 13 операций ЯМД из gold, порт `TPREDT` | `PLACE/FIRST/NEXT/BYKEY/PREV/GET/MODIF/LAST/REMOVE/INSERT/BDGET/BDPUT`, `EXN=0` | `246e0dc9…` |
 | `raznoe-shtamp-ns0.out` | подпрограмма `SHTAMP` из `raznoe.txt:52-116`, `NS=0` | 44 координаты совпали с расчётом | `67122452…` |

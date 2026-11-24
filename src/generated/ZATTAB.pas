@@ -907,6 +907,18 @@ begin end;
 procedure ИCKЛЮЧEHИE;
 begin end;
 
+(* ZATTAB-STUB: deterministic placeholders for the three absent KOMPAS
+   sets SY-HAK, ИC-ЗAT, ЭT-ЗAT. Approved stubs, not historical data. *)
+function STUBV(K:integer):real;
+begin
+  STUBV:=K;
+  case K of
+    1:STUBV:=10.0; 2:STUBV:=20.0; 3:STUBV:=15.0;
+    4:STUBV:=8.0; 5:STUBV:=5.0; 6:STUBV:=3.0;
+    7:STUBV:=2.0; 8:STUBV:=1.0
+  end
+end;
+
 procedure APPLYMAD(N:integer);
 var K:integer; FND:boolean;
 begin
@@ -932,20 +944,20 @@ begin
     ZTI:=1; MOЖHO:=ZTI<=NZAT
   end else
   IF N=333 THEN begin
-    ЗAT.MEC:=ZATME[ZTI]; ЗAT.BЫП:=W8NUM(Qbf[1])/1000.0+ZTI;
-    ЗAT.OЗAPП:=W8NUM(Qbf[6])/1000.0+ZTI; 
-      ЗAT.ДЗAPП:=W8NUM(Qbf[8])/1000.0+ZTI;
-    ЗAT.MATEP:=W8NUM(Qbf[5])/1000.0+ZTI; 
-      ЗAT.KOMAH:=W8NUM(Qbf[1])/10000.0+ZTI;
-    ЗAT.CПEЦ:=W8NUM(Qbf[6])/10000.0+ZTI; 
-      ЗAT.AMOP:=W8NUM(Qbf[8])/10000.0+ZTI;
-    ЗAT.CTOP:=W8NUM(Qbf[5])/10000.0+ZTI; 
-      ЗAT.ПOCH:=W8NUM(Qbf[2])/10000.0+ZTI;
-    ЗAT.ПTPEC:=W8NUM(Qbf[3])/10000.0+ZTI; 
-      ЗAT.ПPБK:=W8NUM(Qbf[4])/10000.0+ZTI;
-    ЗAT.OBЫШ:=W8NUM(Qbf[7])/10000.0+ZTI; 
-      ЗAT.OГOC:=W8NUM(Qbf[1])/100000.0+ZTI;
-    ЗAT.HEПЛ:=W8NUM(Qbf[6])/100000.0+ZTI; MOЖHO:=true
+    ЗAT.MEC:=ZATME[ZTI]; ЗAT.BЫП:=STUBV(1)+ZTI;
+    ЗAT.OЗAPП:=STUBV(6)+ZTI; 
+      ЗAT.ДЗAPП:=STUBV(8)+ZTI;
+    ЗAT.MATEP:=STUBV(5)+ZTI; 
+      ЗAT.KOMAH:=STUBV(1)+ZTI;
+    ЗAT.CПEЦ:=STUBV(6)+ZTI; 
+      ЗAT.AMOP:=STUBV(8)+ZTI;
+    ЗAT.CTOP:=STUBV(5)+ZTI; 
+      ЗAT.ПOCH:=STUBV(2)+ZTI;
+    ЗAT.ПTPEC:=STUBV(3)+ZTI; 
+      ЗAT.ПPБK:=STUBV(4)+ZTI;
+    ЗAT.OBЫШ:=STUBV(7)+ZTI; 
+      ЗAT.OГOC:=STUBV(1)+ZTI;
+    ЗAT.HEПЛ:=STUBV(6)+ZTI; MOЖHO:=true
   end else
   IF N=334 THEN begin ЭTAП.HOMEP:=ISPEP[ISI]; 
       MOЖHO:=true end else
@@ -956,11 +968,11 @@ begin
   IF N=336 THEN begin ZTI:=ZTI+1; MOЖHO:=ZTI<=NZAT end else
   IF N=337 THEN begin ISI:=ISI+1; MOЖHO:=ISI<=NISP end else
   IF N=338 THEN begin
-    HAКЛ.MEC:=3; HAКЛ.ЗAPП:=W8NUM(Qbf[1])/100.0; 
-      HAКЛ.ПPOЧ:=W8NUM(Qbf[6])/100.0;
-    HAКЛ.HAКЛ:=W8NUM(Qbf[8])/100.0; 
-HAКЛ.ЗAPH:=W8NUM(Qbf[5])/100.0; 
-      HAКЛ.ЗAHAK:=W8NUM(Qbf[6])/100.0;
+    HAКЛ.MEC:=3; HAКЛ.ЗAPП:=STUBV(1); 
+      HAКЛ.ПPOЧ:=STUBV(6);
+    HAКЛ.HAКЛ:=STUBV(8); 
+HAКЛ.ЗAPH:=STUBV(5); 
+      HAКЛ.ЗAHAK:=STUBV(6);
     ПYCTO:=false
   end else
   IF N=339 THEN begin ПYCTO:=false end else
@@ -1321,8 +1333,8 @@ begin
   ISPOT[1]:=Qbf[2]; ISPOT[2]:=Qbf[6]; ISPOT[3]:=Qbf[8];
   ISPEP[1]:=1; ISPEP[2]:=2; ISPEP[3]:=3;
   ZATME[1]:=3; ZATME[2]:=3; ZATME[3]:=3; ZATME[4]:=3;
-  ZATVL[1]:=W8NUM(Qbf[1])/100.0; ZATVL[2]:=W8NUM(Qbf[6])/100.0;
-  ZATVL[3]:=W8NUM(Qbf[8])/100.0; ZATVL[4]:=W8NUM(Qbf[5])/100.0;
+  ZATVL[1]:=STUBV(1); ZATVL[2]:=STUBV(6);
+  ZATVL[3]:=STUBV(8); ZATVL[4]:=STUBV(5);
   CN[1]:='ZKCC  '; CN[2]:='ZKПPOЧ'; CN[3]:='ZKHAKЛ';
   CN[4]:='ZKЗAPH'; CN[5]:='ZKЭФЗ '; CN[6]:='ZKФPEЗ';
   CN[7]:='ZKФMП '; CN[8]:='ZKФHT ';

@@ -1,0 +1,40 @@
+SKLMON   status=0 diags=14 stderr=0 banner=0
+0 end=1
+AMOHED   status=0 diags=0
+0 stderr=0 banner=0
+0 end=1
+ZATHED   status=0 diags=0
+0 stderr=0 banner=0
+0 end=1
+SKLOTD   status=0 diags=58 stderr=0 banner=0
+0 end=1
+SKLCAR   status=0 diags=61 stderr=0 banner=0
+0 end=1
+SKLOTC   status=0 diags=57 stderr=0 banner=0
+0 end=1
+AMOMON   status=0 diags=61 stderr=0 banner=0
+0 end=1
+AMOOTD   status=0 diags=58 stderr=0 banner=0
+0 end=1
+AMOCAR   status=124 diags=45 stderr=0 banner=0
+0 end=0
+0
+AMOOTC   status=0 diags=61 stderr=0 banner=0
+0 end=1
+AMOGRU   status=0 diags=61 stderr=0 banner=0
+0 end=1
+ZATMON   status=0 diags=61 stderr=0 banner=0
+0 end=1
+ZATOTD   status=0 diags=61 stderr=0 banner=0
+0 end=1
+ZATCOF   status=0 diags=34 stderr=29 banner=0
+0 end=1
+ZATZAT   status=0 diags=61 stderr=0 banner=0
+0 end=1
+ZATNAK   status=0 diags=61 stderr=0 banner=0
+0 end=1
+ZATRTE   status=124 diags=12 stderr=0 banner=0
+0 end=0
+0
+ZATTAB   status=0 diags=61 stderr=0 banner=0
+0 end=1

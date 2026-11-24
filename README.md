@@ -95,7 +95,8 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/TSS-W3-DML.md` - порт TSSDML в зоне 3260 и известный отказ повторного `DML(TRUE)`.
 - `docs/TSS-W3B-STACK.md` - 11 проверенных гипотез стековой ошибки и обоснование адаптации W5b.
 - `make test-all` - полный прогон всех дек на simh с автоматическим сравнением эталонов (`tools/severov/run_all_tests.py`).
-- `docs/FULL-REGRESSION-REPORT.md` - результаты полного прогона: 50 дек, 47 `MATCH`, 0 `DIFF`.
+- `docs/FULL-REGRESSION-REPORT.md` - результаты полного прогона: 76 дек, 50 `MATCH`, 0 `DIFF`.
+- `docs/TSS-W5C.md` - анализ 16 заблокированных приложений, GOST-написания и точки останова.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

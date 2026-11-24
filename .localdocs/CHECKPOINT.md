@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `9790dc0`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `9790dc0`.
+- HEAD: `cc7b616`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `cc7b616`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -100,3 +100,7 @@ GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зон�
 
 - План воспроизведения задачи Северова: `docs/REPRODUCE-SEVEROV.md`.
 - Дальше по открытым пунктам, если поступит команда.
+
+## 2026-11-24: заглушки по решению пользователя
+
+Подлинное содержимое `SY-HAK`/`ИC-ЗAT`/`ЭT-ЗAT` не требуется. ZATTAB использует детерминированные `STUBV(K)` (`docs/TSS-W10-STUBS.md`). Финальный `make test-all`: 122 деки, 112 MATCH, 0 DIFF, 224 MAD EX=0 в ZATTAB, зонный контроль PASS. Блокер снят.

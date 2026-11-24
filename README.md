@@ -97,6 +97,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `make test-all` - полный прогон всех дек на simh с автоматическим сравнением эталонов (`tools/severov/run_all_tests.py`).
 - `docs/FULL-REGRESSION-REPORT.md` - результаты полного прогона: 76 дек, 66 `MATCH`, 0 `DIFF`.
 - `docs/TSS-W5B.md`..`docs/TSS-W5E.md` - порт и полный прогон 18 приложений (18/18 `MAD FULL EX=0`).
+- `docs/TSS-W6A.md` - полный исполняемый порт `ZATTAB`.
 - `docs/TSS-W6B.md` - восстановление 19 `SELECT` в четырёх ZAT-программах.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.

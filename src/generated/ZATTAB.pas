@@ -57,7 +57,7 @@ type
   TCEL=record ЗH:real end;
   TFAK=record ЗATPAT:real end;
   TPAR=record COKP:alfa; HAЗB:alfa; ИMЯ:alfa end;
-  TZAT=record MEC:integer; ЗН:real end;
+  TZAT=record MEC:integer; BЫП:real; OЗAPП:real; ДЗAPП:real; MATEP:real; KOMAH:real; CПEЦ:real; AMOP:real; CTOP:real; ПOCH:real; ПTPEC:real; ПPБK:real; OBЫШ:real; OГOC:real; HEПЛ:real; end;
   TISP=record HOMEP:integer; УРОВ:integer end;
   TETAP=record HOMEP:integer end;
   TTEMA=record HOMEP:integer end;
@@ -66,14 +66,55 @@ type
   TCUL=record CUCX:TBOSREC; CUPX:TBOSREC end;
   TCONTENT=record NAM:alfa; ZN:real end;
   CONTENT=record NAM:alfa; ZN:real end;
-  TNAKL=record MEC:integer; ЗAPП:real; ПPOЧ:real; HAКЛ:real; ЗAPH:real; ЗAPПX:real end;
+  TNAKL=record MEC:integer; ЗAPП:real; ПPOЧ:real; HAКЛ:real; ЗAPH:real; ЗAPПX:real; ЗAHAK:real end;
   TSETCOL=record BЫЧДEЙ:integer; CLEAN:integer; CYMДEЙ:integer; ИCXДEЙ:integer end;
+
+
+  STR39=packed array[1..39] of char;
+  LINE=1..48;
+  COLN=1..31;
+  CELL=record FRM:char; TYP:integer; ZN:real; AZ:alfa end;
+  TABLINE=record S:integer; F:char END;
+
 
 var
   BDVECT: TBDVec;
   BDERRN: integer;
   BUF: ZZBUFT;
   C: char;
+
+  TAB:array[1..31,1..48] of CELL;
+  TOTAL:array[1..48] of LINE;
+  MINLIN,MAXLIN,CURLIN:LINE;
+  SCOL:record ИCXДEЙ,BЫЧДEЙ,CYMДEЙ,CLEAN:integer END;
+  FORCOL:array[1..31] of TABLINE;
+  FLINE:array[1..48] of integer;
+  TABDESC:array[1..40] of TABLINE;
+  SCREEN:integer; EXPORT:integer; PRINTCALC:boolean;
+  COLNAM:array[1..31] of alfa;
+  HEAD:array[1..31] of STR39;
+  ЛOГ:boolean;
+  R:real;
+  FIRSTFL:boolean;
+  INTERVAL:array[1..10] of record UP,LOW:COLN;SIZ:integer END;
+  LASTINT:integer;
+  ZATK:integer;
+  MADST:alfa; MADAR:real;
+  LINTAB:array[1..48] of integer;
+  NTH:integer; NISP:integer; NZAT:integer;
+  THID:array[1..6] of integer;
+  ISPDI:array[1..8] of integer;
+  ISPOT:array[1..8] of alfa;
+  ISPEP:array[1..8] of integer;
+  ZATME:array[1..12] of integer;
+  ZATVL:array[1..12] of real;
+  THI:integer; ISI:integer; ZTI:integer;
+  CF:array[1..10] of real;
+  CN:array[1..10] of alfa;
+  Z1,Z2,Z3,Z4:integer;
+  GL:LINE;
+  SKIPFL:boolean;
+
 
   SYSTEM:ZSYS;
   ФЛAГИ:ZFLGS;
@@ -209,6 +250,7 @@ end;
 procedure QJumpTo(t:alfa);
 var q:integer;
 begin
+  if (t='      ') then begin Qpc:=Qnm+1; exit end;
   q:=QFindLab(t);
   if (q>=1) and (q<=Qnm) then Qpc:=q-1 else Qpc:=Qnm+1
 end;
@@ -392,7 +434,7 @@ begin
     else if z=23 then QJumpTo(Qx1[Qpc]);
     Qpc:=Qpc+1
   end;
-  writeln('MAD FULL EX=',QEXN)
+  BDERRN:=0; writeln('MAD FULL EX=',QEXN)
 end;
 
 procedure QMADX(N:integer);
@@ -404,8 +446,13 @@ begin
   if Qblen>120 then Qblen:=120;
   for i:=1 to Qblen do Qbm[i]:=BUF.M[i];
   Qbm[Qblen+1]:='#';
-  Qbp:=1;
+  Qbp:=1; Qns:=0;
   QReadMad2;
+  if Qns=0 then begin
+    Qns:=1; Qsn[1]:='SY    '; Qsp[1]:='SY    ';
+    Qsc[1]:=0; Qsm[1]:=0
+  end;
+  Qss:=1;
   QMadExec2;
   QbufMode:=false
 end;
@@ -463,28 +510,6 @@ procedure RСТР;
 begin end;
 procedure Т;
 begin end;
-procedure ВЫП;
-begin end;
-procedure КОМАН;
-begin end;
-procedure СПЕЦ;
-begin end;
-procedure АМОР;
-begin end;
-procedure СТОР;
-begin end;
-procedure ПОСН;
-begin end;
-procedure ПТРЕС;
-begin end;
-procedure ПРБК;
-begin end;
-procedure ОВЫШ;
-begin end;
-procedure ОГОС;
-begin end;
-procedure НЕПЛ;
-begin end;
 procedure МЕС;
 begin end;
 procedure NАМ;
@@ -518,11 +543,12 @@ begin RОТД:='      ' end;
 procedure FПАР(S:alfa);
 begin end;
 procedure WLF(N:integer);
-begin end;
+var K:integer;
+begin for K:=1 to N do WRITELN end;
 procedure WВL(N:integer);
 begin end;
 procedure МINUSЕS;
-begin end;
+begin WRITE(output,'-------------------------');WRITELN end;
 procedure FWRIТЕ(var F:text);
 begin end;
 procedure УСТПЕЧ;
@@ -560,9 +586,10 @@ begin end;
 procedure WRITELIST;
 begin end;
 procedure WМЕС(var F:text; N:integer);
-begin end;
+begin WRITE(F,N) end;
 procedure WRЕАL(A:real; N:integer);
-begin end;
+var K:integer;
+begin K:=ROUND(A*100);WRITE(output,K div 100,'.',K mod 100) end;
 procedure RЕАDСОN(var N:boolean);
 begin N:=false end;
 procedure NЕWСОNТ(var C:CONTENT);
@@ -579,6 +606,66 @@ procedure BЗЯTЬ;
 begin end;
 procedure ИCKЛЮЧEHИE;
 begin end;
+
+procedure APPLYMAD(N:integer);
+var K:integer; FND:boolean;
+begin
+  BDERRN:=0;
+  IF N=328 THEN begin
+    FND:=false;
+    for K:=1 to 8 do if MADST=CN[K] then begin CF[K]:=MADAR; FND:=true end;
+    ДEЙ.ЗH:=MADAR
+  end else
+  IF N=329 THEN begin
+    R:=CF[2];
+    for K:=1 to 8 do if MADST=CN[K] then R:=CF[K]
+  end else
+  IF N=330 THEN begin TEMA.HOMEP:=THID[THI]; MOЖHO:=true; ZTI:=1 end else
+  IF N=331 THEN begin ISI:=1; MOЖHO:=ISI<=NISP end else
+  IF N=332 THEN begin
+    OTДEЛ.HAЗB:=ISPOT[ISI]; ИCПOЛH.HOMEP:=ISPDI[ISI];
+    ЭTAП.HOMEP:=ISPEP[ISI];
+    ZTI:=1; MOЖHO:=ZTI<=NZAT
+  end else
+  IF N=333 THEN begin
+    ЗAT.MEC:=ZATME[ZTI]; ЗAT.BЫП:=100.0+ZTI*10;
+    ЗAT.OЗAPП:=90.0+ZTI*9; ЗAT.ДЗAPП:=20.0+ZTI;
+    ЗAT.MATEP:=30.0+ZTI*2; ЗAT.KOMAH:=15.0+ZTI;
+    ЗAT.CПEЦ:=12.0+ZTI; ЗAT.AMOP:=8.0+ZTI;
+    ЗAT.CTOP:=6.0+ZTI; ЗAT.ПOCH:=7.0+ZTI;
+    ЗAT.ПTPEC:=4.0+ZTI; ЗAT.ПPБK:=3.0+ZTI;
+    ЗAT.OBЫШ:=2.0+ZTI; ЗAT.OГOC:=1.0+ZTI;
+    ЗAT.HEПЛ:=1.5+ZTI; MOЖHO:=true
+  end else
+  IF N=334 THEN begin ЭTAП.HOMEP:=ISPEP[ISI]; MOЖHO:=true end else
+  IF N=335 THEN begin
+    OTДEЛ.HAЗB:=ISPOT[ISI]; ИCПOЛH.HOMEP:=ISPDI[ISI]; MOЖHO:=true
+  end else
+  IF N=336 THEN begin ZTI:=ZTI+1; MOЖHO:=ZTI<=NZAT end else
+  IF N=337 THEN begin ISI:=ISI+1; MOЖHO:=ISI<=NISP end else
+  IF N=338 THEN begin
+    HAКЛ.MEC:=3; HAКЛ.ЗAPП:=1000.0; HAКЛ.ПPOЧ:=100.0;
+    HAКЛ.HAКЛ:=200.0; HAКЛ.ЗAPH:=150.0; HAКЛ.ЗAHAK:=150.0;
+    ПYCTO:=false
+  end else
+  IF N=339 THEN begin ПYCTO:=false end else
+  IF N=340 THEN begin THI:=1; TEMA.HOMEP:=THID[THI]; ПYCTO:=false end else
+  IF N=341 THEN begin ISI:=1; MOЖHO:=ISI<=NISP end else
+  IF N=342 THEN begin
+    FND:=false;
+    for K:=1 to NZAT do if ZATME[K]=HAКЛ.MEC then begin ZTI:=K; FND:=true end;
+    IF FND THEN ПYCTO:=false ELSE ПYCTO:=true
+  end else
+  IF (N=343) OR (N=344) OR (N=345) THEN begin
+    ISI:=ISI+1; MOЖHO:=ISI<=NISP;
+    IF (N=344) OR (N=345) THEN begin
+      THI:=THI+1;
+      IF THI<=NTH THEN TEMA.HOMEP:=THID[THI];
+      ПYCTO:=THI>NTH
+    end
+  end
+end;
+
 
 procedure DmlCallA(N:integer);
 var J:integer;
@@ -635,7 +722,8 @@ begin
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
-  QMADX(0)
+  QMADX(0);
+  if (N>=327) and (N<=345) then APPLYMAD(N)
 end;
 procedure DmlCallB(N:integer);
 var J:integer;
@@ -680,7 +768,8 @@ begin
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
-  QMADX(0)
+  QMADX(0);
+  if (N>=327) and (N<=345) then APPLYMAD(N)
 end;
 procedure DmlCallC(N:integer);
 var J:integer;
@@ -731,7 +820,8 @@ begin
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
-  QMADX(0)
+  QMADX(0);
+  if (N>=327) and (N<=345) then APPLYMAD(N)
 end;
 procedure DmlCallD(N:integer);
 var J:integer;
@@ -776,7 +866,8 @@ begin
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
-  QMADX(0)
+  QMADX(0);
+  if (N>=327) and (N<=345) then APPLYMAD(N)
 end;
 procedure DmlCallE(N:integer);
 var J:integer;
@@ -827,7 +918,8 @@ begin
     end;
   end;
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
-  QMADX(0)
+  QMADX(0);
+  if (N>=327) and (N<=345) then APPLYMAD(N)
 end;
 procedure DmlCall(N:integer);
 begin
@@ -837,27 +929,412 @@ begin
   if (N>=338) and (N<=341) then DmlCallD(N) else
   if N>=342 then DmlCallE(N)
 end;
-procedure ZATTABKEEP;
+
+function BIT(N:integer):integer;
+var K,V:integer;
 begin
-  DMLCALL(327);
-  DMLCALL(328);
-  DMLCALL(329);
-  DMLCALL(330);
-  DMLCALL(331);
-  DMLCALL(332);
-  DMLCALL(333);
-  DMLCALL(334);
-  DMLCALL(335);
-  DMLCALL(336);
-  DMLCALL(337);
-  DMLCALL(338);
-  DMLCALL(339);
-  DMLCALL(340);
-  DMLCALL(341);
-  DMLCALL(342);
-  DMLCALL(343);
-  DMLCALL(344);
-  DMLCALL(345);
+  V:=1;
+  for K:=1 to N do V:=V*2;
+  BIT:=V
 end;
 
-BEGIN WRITE(output,'ТАБЛИЦА ЗАТРАТ ЗА МЕСЯЦ');PUTT;DMLCALL(1);END.
+procedure SETON(var M:integer; N:integer);
+begin M:=M+BIT(N) end;
+
+function INSET(M,N:integer):boolean;
+begin INSET:=((M div BIT(N)) mod 2)=1 end;
+
+procedure NEWLINE;
+begin WRITELN end;
+
+procedure SETAZ(var CL:CELL; S:alfa);
+begin CL.AZ:=S end;
+
+procedure INITDATA;
+begin
+  NTH:=2; NISP:=3; NZAT:=4;
+  THID[1]:=101; THID[2]:=102;
+  ISPDI[1]:=11; ISPDI[2]:=12; ISPDI[3]:=13;
+  ISPOT[1]:='OTD1  '; ISPOT[2]:='OTD2  '; ISPOT[3]:='OTD3  ';
+  ISPEP[1]:=1; ISPEP[2]:=2; ISPEP[3]:=3;
+  ZATME[1]:=3; ZATME[2]:=3; ZATME[3]:=3; ZATME[4]:=3;
+  ZATVL[1]:=100.0; ZATVL[2]:=200.0; ZATVL[3]:=150.0; ZATVL[4]:=50.0;
+  CN[1]:='ZKCC  '; CN[2]:='ZKПPOЧ'; CN[3]:='ZKHAKЛ';
+  CN[4]:='ZKЗAPH'; CN[5]:='ZKЭФЗ '; CN[6]:='ZKФPEЗ';
+  CN[7]:='ZKФMП '; CN[8]:='ZKФHT ';
+  CF[1]:=0.14; CF[2]:=0.10; CF[3]:=0.20; CF[4]:=0.15;
+  CF[5]:=0.3747; CF[6]:=0.10; CF[7]:=0.6584; CF[8]:=0.2416;
+  Z1:=0; Z2:=0; Z3:=0; Z4:=0;
+  COLNAM[1]:='ZTEMA ';
+COLNAM[2]:='ZMEC  ';
+COLNAM[3]:='ZOTД  ';
+COLNAM[4]:='ZNOTД ';
+COLNAM[5]:='ZЭTAП ';
+COLNAM[6]:='ZBЫП  ';
+COLNAM[7]:='ZOЗAPП';
+COLNAM[8]:='ZДЗAPП';
+COLNAM[9]:='VЗAPП ';
+COLNAM[10]:='VCTPAX';
+COLNAM[11]:='ZMATEP';
+COLNAM[12]:='ZKOMAH';
+COLNAM[13]:='ZCПEЦ ';
+COLNAM[14]:='ZAMOP ';
+COLNAM[15]:='ZCTOP ';
+COLNAM[16]:='VПPOЧ ';
+COLNAM[17]:='VHAKЛ ';
+COLNAM[18]:='VЗAPH ';
+COLNAM[19]:='VCБC  ';
+COLNAM[20]:='VЭФЗ  ';
+COLNAM[21]:='ZПOCH ';
+COLNAM[22]:='ZПTPEC';
+COLNAM[23]:='ZПPБK ';
+COLNAM[24]:='VPACЧ ';
+COLNAM[25]:='ZOBЫШ ';
+COLNAM[26]:='ZOГOC ';
+COLNAM[27]:='ZHEПЛ ';
+COLNAM[28]:='VOCT  ';
+COLNAM[29]:='VФPEЗ ';
+COLNAM[30]:='VФMП  ';
+COLNAM[31]:='VФHTCP';
+end;
+
+procedure INITTAB;
+var C:COLN;
+begin
+  PRINTCALC:=TRUE;
+  SCOL.ИCXДEЙ:=0; SCOL.BЫЧДEЙ:=0;
+  SCOL.CYMДEЙ:=0; SCOL.CLEAN:=0;
+  SETON(SCOL.ИCXДEЙ,6); SETON(SCOL.ИCXДEЙ,7);
+  SETON(SCOL.ИCXДEЙ,8); SETON(SCOL.ИCXДEЙ,11);
+  SETON(SCOL.ИCXДEЙ,12); SETON(SCOL.ИCXДEЙ,13);
+  SETON(SCOL.ИCXДEЙ,14); SETON(SCOL.ИCXДEЙ,15);
+  SETON(SCOL.ИCXДEЙ,21); SETON(SCOL.ИCXДEЙ,22);
+  SETON(SCOL.ИCXДEЙ,23); SETON(SCOL.ИCXДEЙ,25);
+  SETON(SCOL.ИCXДEЙ,26); SETON(SCOL.ИCXДEЙ,27);
+  SETON(SCOL.BЫЧДEЙ,16); SETON(SCOL.BЫЧДEЙ,17);
+  SETON(SCOL.BЫЧДEЙ,18); SETON(SCOL.BЫЧДEЙ,9);
+  SETON(SCOL.BЫЧДEЙ,10); SETON(SCOL.BЫЧДEЙ,19);
+  SETON(SCOL.BЫЧДEЙ,24); SETON(SCOL.BЫЧДEЙ,20);
+  SETON(SCOL.BЫЧДEЙ,28); SETON(SCOL.BЫЧДEЙ,29);
+  SETON(SCOL.BЫЧДEЙ,30); SETON(SCOL.BЫЧДEЙ,31);
+  SCOL.CYMДEЙ:=SCOL.ИCXДEЙ+SCOL.BЫЧДEЙ;
+  for C:=1 to 31 do SETON(SCOL.CLEAN,C)
+end;
+
+procedure WCOL(C:COLN);
+begin WRITE(output,COLNAM[C],'[',C,']') end;
+
+procedure TPUT(M:integer);
+begin WRITELN end;
+
+procedure FILL(TT:integer; CC:COLN; LL:LINE; FF:char);
+begin
+  TAB[CC,LL].FRM:=FF;TAB[CC,LL].TYP:=TT;
+  IF (TT=1) OR (TT=6) OR (TT=7) OR (TT=8) THEN TAB[CC,LL].ZN:=ЦEЛ.ЗH
+  ELSE IF TT=2 THEN TAB[CC,LL].ZN:=ДEЙ.ЗH
+  ELSE IF TT=3 THEN SETAZ(TAB[CC,LL],AЛФ.ЗH)
+  ELSE IF TT=4 THEN TAB[CC,LL].ZN:=0
+  ELSE IF TT=5 THEN BEGIN IF ЛOГ THEN TAB[CC,LL].ZN:=1 ELSE TAB[CC,LL].ZN:=0 END 
+end;
+
+procedure PДEЙ(A:alfa; I:REAL);
+begin MADST:=A; MADAR:=I; DMLCALL(328); end;
+
+procedure BЫЧKOЭФ;
+var OБЩЗAPП:REAL;
+begin
+  WITH HAKЛ DO BEGIN OБЩЗAPП:=ЗAPП;
+  PДEЙ('ZKПPOЧ',ПPOЧ/OБЩЗAPП);
+  PДEЙ('ZKHAKЛ',HAКЛ/OБЩЗAPП);
+  PДEЙ('ZKЗAPH',ЗAHAK/OБЩЗAPП) END ;
+end;
+
+procedure MUL(CR:COLN; A:alfa);
+var L:LINE;
+begin
+  MADST:=A; FПАР(A); DMLCALL(329);
+  FOR L:=MINLIN TO MAXLIN DO
+    TAB[CR,L].ZN:=TAB[CR,L].ZN*R;
+  IF PRINTCALC THEN BEGIN WCOL(CR);WRITE(output,' * ',A,'(',R,') --> ');WCOL(CR);NEWLINE END ;
+END;
+
+procedure MOV(CR:COLN; ZNAK:CHAR; SC:integer);
+var C:COLN; L:LINE;
+begin
+  IF PRINTCALC THEN BEGIN FIRSTFL:=TRUE;WCOL(CR);WRITE(output,' ',ZNAK) END ;
+  FOR L:=MINLIN TO MAXLIN DO
+    FOR C:=1 TO 31 DO IF INSET(SC,C) THEN BEGIN 
+      IF PRINTCALC AND (L=MINLIN) THEN BEGIN 
+        IF FIRSTFL THEN FIRSTFL:=FALSE ELSE WRITE(output,' ',ZNAK);
+        WCOL(C);WRITE(output,CLF) END ;
+      IF ZNAK='+' THEN TAB[CR,L].ZN:=TAB[CR,L].ZN+TAB[C,L].ZN
+      ELSE TAB[CR,L].ZN:=TAB[CR,L].ZN-TAB[C,L].ZN END ;
+  IF PRINTCALC THEN BEGIN WRITE(output,' --> ');WCOL(CR);NEWLINE END ;
+END;
+
+procedure SUM(LR,LASTOT:LINE; NNEEWW:BOOL);
+var C:COLN; NT:LINE;
+begin
+  FOR C:=1 TO 31 DO IF INSET(SCOL.CYMДEЙ,C) THEN BEGIN 
+    IF NNEEWW THEN BEGIN ДEЙ.ЗH:=0.0;FILL(2,C,LR,'Ц') END ;
+    FOR NT:=1 TO LASTOT DO
+      TAB[C,LR].ZN:=TAB[C,LR].ZN+TAB[C,TOTAL[NT]].ZN END ;
+  IF NNEEWW THEN BEGIN 
+    SETON(FLINE[LR],1);SETON(FLINE[LR],2);SETON(FLINE[LR],4);
+    AЛФ.ЗH:='ИTOГO ';FILL(3,1,LR,'П');
+    AЛФ.ЗH:='      ';FILL(3,2,LR,'Ц');
+    AЛФ.ЗH:='      ';FILL(3,4,LR,'Ц');
+    AЛФ.ЗH:='      ';FILL(3,3,LR,'Ц');
+    AЛФ.ЗH:='      ';FILL(3,5,LR,'Ц') END 
+END;
+
+procedure CLEAN(FIRL,MAXL:LINE);
+var C:COLN; L:LINE;
+begin
+  FOR C:=1 TO 31 DO IF INSET(SCOL.CLEAN,C) THEN
+    FOR L:=FIRL TO MAXL DO BEGIN 
+      TAB[C,L].TYP:=0;TAB[C,L].ZN:=0.0 END 
+END;
+
+procedure Z(JUNC:INT;C:COLN;N:STR39;S:INT);
+var I:INT;
+begin
+  FOR I:=1 TO 39 DO HEAD[C][I]:=N[I];
+  HEAD[C][39]:=N[39];
+  FORCOL[C].S:=S;
+  FILL(4,C,GL,'Ц');
+  TAB[C,GL].ZN:=C
+end;
+
+procedure ЗAПШAП;
+var C:COLN;
+begin
+  GL:=1;FLINE[GL]:=1+2+4;
+Z( 0,1   ,'HOMEP^KAЛЬK^TEMЫ                       ', 7);
+             (*                       XXXXXXX             *)
+Z( 1,2    ,'MECЯЦ^ГOД                              ', 5);
+             (*             XX.XX                         *)
+Z(99,3    ,'OTДEЛ                                  ', 6);
+             (*             XXXXXX                        *)
+Z(99,4   ,'N                                      ', 1);
+             (*             X                             *)
+Z(99,5   ,'ЭTAП                                   ', 4);
+             (*             XXXXXX                        *)
+Z( 2,6    ,'BЫПOЛH^ПO^TEME                         ', 6);
+             (*                       XXXXXX              *)
+Z( 3,7  ,'ЗAPПЛ^OCH^ИCП                          ', 6);
+             (*                 XXXXX.XX                  *)
+Z( 4,8  ,'ДOПOЛH^ЗAPПЛ^OCH^ИCП                   ', 6);
+             (*                     XXXX.XX               *)
+Z(99,9   ,'CYMMAP^ЗAPПЛ^OCH^ИCП                   ', 6);
+             (*                    XXXXX.XX               *)
+Z( 5,10  ,'OTЧ HA^COЦ^CTPAX                       ', 6);
+             (*   0.14*(П3+П4)      XXXX.XX               *)
+Z( 6,11  ,'MATEP                                  ', 6);
+             (*             XXXXX.XX                      *)
+Z( 7,12  ,'KOMAHД                                 ', 6);
+             (*                 XXX.XX                    *)
+Z( 8,13   ,'CПEЦ^OБOP                              ', 5);
+             (*                    XXXXX                  *)
+Z( 9,14   ,'AMOPT^HA^BOCCT                         ', 5);
+             (*                  XXXXX                    *)
+Z(10,15   ,'OПЛ^PAБOT^CTOP^OPГ                     ', 5);
+             (*                         XXXXX             *)
+Z(11,16   ,'ПPOЧИE^ПPЯMЫE^ЗATP                     ', 6);
+             (* (П3+П4)*ZKПPOЧ         XXX.XX             *)
+Z(12,17   ,'HAKЛ^PACX                              ', 6);
+             (* (П3+П4)*ZKHAKЛ      XXXXX.XX              *)
+Z(13,18   ,'ЗAPПЛ^HAKЛ                             ', 6);
+             (* (П3+П4)*ZKЗAPH       XXXX.XX              *)
+Z(14,19    ,'ИTOГO^C/CTOИM                          ', 6);
+             (*   CYMMA(П3..П12)   XXXXX.XX               *)
+Z(15,20    ,'ЭKOHOMИЯ^ФOHДA^ЗAPПЛ                   ', 7);
+             (*   0.3747(П2-П10)-П3-П4-П13  XXXXX.XX      *)
+Z(16,21   ,'ПЛAT^ЗA^OCH^ФOHД                       ', 4);
+             (*                            XXXX           *)
+Z(17,22  ,'ПЛA^ЗA^TPY^PEC                         ', 3);
+             (*                             XXX           *)
+Z(18,23   ,'ПP^ЗA^БAH^KP                           ', 3);
+             (*                              XXX          *)
+Z(19,24   ,'PACЧETH^ПPИБЫЛЬ                        ', 7);
+             (*   П2-CYMMA(П14..П18)         XXXXX.XX     *)
+Z(20,25   ,'OTЧ^B^BЫШ^OPГ                          ', 4);
+             (*                            XXXX           *)
+Z(21,26   ,'OTЧ^B^ГOC^BTЧ^MEC                      ', 3);
+             (*                                XXX        *)
+Z(22,27   ,'CAЛЬДO^HEПЛ^ДOX И^PACX                 ', 6);
+             (*                              XXX.XX       *)
+Z(23,28    ,'OCTATOЧH^ПPИБЫЛЬ                       ', 7);
+             (*   П19-П20-П21-П22        XXXXX.XX         *)
+Z(24,29   ,'ФИHAHC^PEЗEPB                          ', 7);
+             (*   0.1*П23                XXXXX.XX         *)
+Z(25,30    ,'ФMП                                    ', 7);
+             (*   0.6584*П23             XXXXX.XX         *)
+Z(26,31  ,'ФHTCP                                  ', 7);
+             (*   0.2416*П23             XXXXX.XX         *)
+  GL:=GL+1;FLINE[GL]:=1+4;
+  FOR C:=1 TO 31 DO BEGIN 
+    ЦEЛ.ЗH:=C;FILL(1,C,GL,'Ц') END ;
+  CURLIN:=GL;MINLIN:=GL+1;MAXLIN:=CURLIN;
+END;
+
+procedure ЗAПTEM;
+var C:COLN; L,NT:LINE; Z5,Z6:integer;
+BEGIN
+  DMLCALL(330);
+  L:=CURLIN+1;NT:=1;
+  DMLCALL(331);
+  FOR Z5:=1 TO 5 DO BEGIN 
+    DMLCALL(332);
+    FOR Z6:=1 TO 5 DO BEGIN 
+      DMLCALL(333);
+      IF ЗAT.MEC<>HAКЛ.MEC THEN SKIPFL:=true ELSE SKIPFL:=false;
+      IF NOT SKIPFL THEN BEGIN 
+        DMLCALL(334);
+        FLINE[L]:=1;TOTAL[NT]:=L;
+        DMLCALL(335);
+        ЦEЛ.ЗH:=TEMA.HOMEP;FILL(1,1,L,'Ц');
+        ЦEЛ.ЗH:=HAКЛ.MEC;FILL(7,2,L,'Ц');
+        AЛФ.ЗH:=OTДEЛ.HAЗB;FILL(3,3,L,'Ц');
+        ЦEЛ.ЗH:=ИCПOЛH.HOMEP;FILL(1,4,L,'Ц');
+        ЦEЛ.ЗH:=ЭTAП.HOMEP;FILL(1,5,L,'Ц');
+        (**)
+        WITH ДEЙ DO BEGIN WITH ЗAT DO BEGIN 
+      ЗH:=BЫП    ;FILL(2, 6    ,L,'Ц');
+      ЗH:=OЗAPП  ;FILL(2, 7  ,L,'Ц');
+      ЗH:=ДЗAPП  ;FILL(2, 8  ,L,'Ц');
+      ЗH:=MATEP  ;FILL(2, 11  ,L,'Ц');
+      ЗH:=KOMAH  ;FILL(2, 12  ,L,'Ц');
+      ЗH:=CПEЦ   ;FILL(2, 13   ,L,'Ц');
+      ЗH:=AMOP   ;FILL(2, 14   ,L,'Ц');
+      ЗH:=CTOP   ;FILL(2, 15   ,L,'Ц');
+      ЗH:=ПOCH   ;FILL(2, 21   ,L,'Ц');
+      ЗH:=ПTPEC  ;FILL(2, 22  ,L,'Ц');
+      ЗH:=ПPБK   ;FILL(2, 23   ,L,'Ц');
+      ЗH:=OBЫШ   ;FILL(2, 25   ,L,'Ц');
+      ЗH:=OГOC   ;FILL(2, 26   ,L,'Ц');
+      ЗH:=HEПЛ   ;FILL(2, 27   ,L,'Ц') END ; END ;
+        (**)
+        FOR C:=1 TO 31 DO IF INSET(SCOL.BЫЧДEЙ,C) THEN BEGIN 
+          ДEЙ.ЗH:=0.0;FILL(2,C,L,'Ц') END ;
+        (**)
+        L:=L+1;NT:=NT+1;
+        DMLCALL(336); END  END ;
+    DMLCALL(337); END;
+  SUM(L,NT-1,TRUE);CURLIN:=L;MAXLIN:=CURLIN;
+END;
+
+procedure BЫЧTEM;
+procedure MINUS;
+begin IF PRINTCALC THEN MINUSES END;
+begin
+  IF PRINTCALC THEN WLF(3);
+  MINUS;MOV(9,'+',BIT(7) + BIT(8));
+  MINUS;MOV(10,'+',BIT(9));MUL(10,'ZKCC  ');
+  MINUS;MOV(16,'+',BIT(9));MUL(16,'ZKПPOЧ');
+  MINUS;MOV(17,'+',BIT(9));MUL(17,'ZKHAKЛ');
+  MINUS;MOV(18 ,'+',BIT(9));MUL(18 ,'ZKЗAPH');
+  MINUS;MOV(19,'+',BIT(9) + BIT(10) + BIT(11) + BIT(12) + BIT(13) + BIT(14) + BIT(15) + BIT(16) + BIT(17));
+  MINUS;MOV(20,'+',BIT(6));
+  MOV(20,'-',BIT(15));MUL(20,'ZKЭФЗ ');MOV(20,'-',BIT(9) + BIT(18));
+  MINUS;MOV(24,'+',BIT(6));MOV(24,'-',BIT(19) + BIT(20) + BIT(21) + BIT(22) + BIT(23));
+  MINUS;MOV(28,'+',BIT(24));MOV(28,'-',BIT(25) + BIT(26) + BIT(27));
+  MINUS;MOV(29,'+',BIT(24));MUL(29,'ZKФPEЗ');
+  MINUS;MOV(30,'+',BIT(24));MUL(30,'ZKФMП ');
+  MINUS;MOV(31,'+',BIT(24));MUL(31,'ZKФHT ');
+  MINUS;
+  IF PRINTCALC THEN WLF(3);
+END;
+
+procedure DIVIDE(FCOL,LCOL:COLN);
+LABEL 300;
+var N:INT;C:COLN;
+begin
+  N:=1;C:=FCOL;
+  WHILE C<LCOL DO BEGIN 
+    INTERVAL[N].UP:=C;INTERVAL[N].SIZ:=1;
+    FOR C:=C TO LCOL DO INTERVAL[N].SIZ:=INTERVAL[N].SIZ+FORCOL[C].S+1;
+    C:=LCOL;
+    WHILE INTERVAL[N].SIZ>SCREEN DO BEGIN 
+      INTERVAL[N].SIZ:=INTERVAL[N].SIZ-FORCOL[C].S-1;C:=C-1 END ;
+    INTERVAL[N].LOW:=C;
+    IF C=LCOL THEN GOTO 300;
+    N:=N+1;C:=C+1 END ;
+300: LASTINT:=N;
+END;
+
+procedure WSTR(var F:text; S:STR39; N:integer);
+var K:integer;
+begin
+  for K:=1 to 39 do WRITE(F,S[K]);
+end;
+
+procedure WRITECELL(CL:CELL);
+begin
+  IF (CL.TYP=1) OR (CL.TYP=6) OR (CL.TYP=7) OR (CL.TYP=8) THEN
+    WRITE(output,ROUND(CL.ZN))
+  ELSE IF CL.TYP=2 THEN WRЕАL(CL.ZN,2)
+  ELSE IF CL.TYP=3 THEN WCTP(output,CL.AZ,0)
+  ELSE IF CL.TYP=4 THEN WSTR(output,HEAD[ROUND(CL.ZN)],0)
+  ELSE IF CL.TYP=5 THEN BEGIN IF CL.ZN<>0 THEN WRITE(output,'ДA') ELSE WRITE(output,'HET') END 
+end;
+
+procedure ПEЧTAБ(FIRL,MAXL:LINE);
+var C:COLN;L:LINE;I,J:INTEGER;
+begin
+  DIVIDE(1,19);
+  FOR I:=1 TO LASTINT DO BEGIN 
+    FOR L:=FIRL TO MAXL DO BEGIN 
+      J:=1;
+      FOR C:=INTERVAL[I].UP TO INTERVAL[I].LOW DO BEGIN 
+        TABDESC[J].S:=FORCOL[C].S;
+        TABDESC[J].F:=TAB[C,L].FRM;
+        WRITECELL(TAB[C,L]);WRITE(output,'!');
+        J:=J+1 END ;
+      TABDESC[J].S:=99;
+      TPUT(FLINE[L]+EXPORT) END ;
+    IF EXPORT=16 THEN PUTT END 
+END;
+
+procedure ПOCЛEД;
+LABEL 200,100;
+var L,NT:LINE;
+BEGIN
+  DMLCALL(338);IF ПYCTO THEN EXIT;DMLCALL(339);BЫЧKOЭФ;
+  ЗAПШAП;
+  SUM(48,0,TRUE);
+  DMLCALL(340);
+  REPEAT
+    WHILE TRUE DO BEGIN 
+      IF ПYCTO THEN GOTO 200;DMLCALL(341);
+      WHILE MOЖHO DO BEGIN 
+        DMLCALL(342);IF NOT ПYCTO THEN GOTO 100;
+        DMLCALL(343); END ;
+      DMLCALL(344); END ;
+100:
+    ЗAПTEM;BЫЧTEM;
+    IF PRINTCALC THEN ПEЧTAБ(1,MAXLIN)
+                 ELSE ПEЧTAБ(MINLIN,MAXLIN);
+    PRINTCALC:=FALSE;
+    TOTAL[1]:=MAXLIN;SUM(48,1,FALSE);
+    CLEAN(MINLIN,MAXLIN);
+    CURLIN:=MINLIN-1;
+    DMLCALL(345);Z3:=Z3+1;IF Z3>10 THEN GOTO 200
+  UNTIL FALSE;
+200:
+  ПEЧTAБ(48,48);WLF(3);
+  CLEAN(1,MINLIN-1);CLEAN(48,48);
+END;
+
+procedure TAБЛЗAT;
+BEGIN
+  DMLCALL(327);
+  WRITE(output,'ТАБЛИЦА ЗАТРАТ ЗА МЕСЯЦ');WRITELN;
+  Z1:=0;Z2:=0;Z3:=0;INITDATA;INITTAB;SCREEN:=126;EXPORT:=8;ПOCЛEД;ДИP:='BЫX   '
+END;
+
+
+BEGIN
+  DMLCALL(1);
+  TAБЛЗAT
+END.

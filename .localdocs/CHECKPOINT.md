@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `d8a74af`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `d8a74af`.
+- HEAD: `91c2ac1`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `91c2ac1`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -78,7 +78,7 @@ W5e завершён и интегрирован (`cc93c05`): **18/18 прило
 1. W7 (`d8a74af`): реальная ADA-дека, 97/97 ветвей исполнено, 120 дек / 110 MATCH / 0 DIFF; EX=4 в 3 полевых драйверах и синтетика ZATTAB остаются с доказательством.
 2. W7c (`8d55693`): `SSVERK/IMQ/HALT/TPCMPAD1` недостижимы; `TPCMPAD1` заменён на `TPCMP1I(tt.I,93)`; PIC-зазоры не влияют.
 
-Активный субагент: W8 устранение EX=4 и синтетики ZATTAB (`ses_df42981dcffeRyedCtFVKLYy62`), scratch `w8-realdata`.
+W8 завершён и интегрирован (`91c2ac1`): реализован keyed lookup (opcode 24), area ZGEN с 21 подлинной записью, EX=0 во всех 49 MAD-прогонах, ZATTAB читает реальные записи. Итог: 120 дек, 110 MATCH, 0 DIFF, зонный контроль PASS. Остаточные ограничения: литеральная форма `ПО-КЛЮЧУ '...'` и отсутствие исторических стоимостных area (`W8-AREA-ABSENCE.txt`).
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

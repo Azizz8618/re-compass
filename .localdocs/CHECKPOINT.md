@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `333e6c5`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `333e6c5`.
+- HEAD: `8d55693`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `8d55693`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -76,7 +76,7 @@ W5e завершён и интегрирован (`cc93c05`): **18/18 прило
 
 Активные субагенты по устранению оговорок:
 1. W7 загрузка реальных таблиц KOMPAS, покрытие 67 ветвей и замена APPLYMAD (`ses_df44a84b9ffejJ125Ji7vFNj6Y`), scratch `w7-data`.
-2. W7c заглушки TSS/PIC (`ses_df44a5391ffedyKdK1LmwEX2PP`), scratch `w7c-stubs`.
+2. W7c заглушки TSS/PIC - интегрировано (`8d55693`): `SSVERK/IMQ/HALT/TPCMPAD1` недостижимы; `TPCMPAD1` заменён на `TPCMP1I(tt.I,93)`; PIC-зазоры не влияют; регресс 88/78/0.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

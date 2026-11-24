@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `4e98a4e`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `4e98a4e`.
+- HEAD: `cc93c05`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `cc93c05`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -63,7 +63,9 @@ W5c завершён (`292dc78`): 16 программ не удалось дов
 
 W5d завершён и интегрирован (`4e98a4e`): 6 приложений полностью рабочие, `AMOMON` завершается без MAD, 11 остаются с диагностиками.
 
-Активный субагент: W5e (`ses_df4c00503ffeRhaevNWKEEpQU7`), scratch `tss-w5e-fix`: 11 заблокированных приложений + вызов MAD в `AMOMON`.
+W5e завершён и интегрирован (`cc93c05`): **18/18 приложений с `MAD FULL EX=0`**, пустой stderr, эталоны в `tests/severov-apps/` и `gold/output/deck12-14-*.out`. Финальный `make test-all`: 76 дек, 66 MATCH, 0 DIFF, 76/76 rc=0, 76/76 пустой stderr, зонный контроль PASS. Оговорка: `ZATTAB` исполняет печать вместо variant record'ов, исходные 19 сниппетов сохранены в `ZATTABKEEP`.
+
+Цель достигнута: все декы и вспомогательные программы прогоняются на simh.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

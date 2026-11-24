@@ -238,11 +238,6 @@ end;
 procedure HALT(E:integer); begin end;
 
 procedure SSBF5; external;
-(* W1: COMTUP port dropped the untyped TPCMPAD1 entry in favour of
-   typed TPCMP1I/A/B/P wrappers (see patches/tsspr.patch). This last
-   call site has no slot number; keep the name local so it is not an
-   unresolved external. Slot mapping belongs to W4. *)
-procedure TPCMPAD1(var P:TYPEM); begin end;
 procedure TPCMP1I(var p:integer; k:integer); external;
 procedure TPCMP1A(var p:alfa;    k:integer); external;
 procedure TPCMP1B(var p:boolean; k:integer); external;
@@ -389,14 +384,14 @@ END; (* ISPVIP *)
 procedure CompileMethod;
 var dlic,stp:integer;
     cc:integer;
-    tt:typem;
+    tt:TYPEMI;
     pic4:typpic;
 begin
    BEGIN TPCMP1A(VarNames[1], 64);
 TPCMP1I(parep[1], 65);
 TPCMP1I(padli[1], 66);
 TPCMP1B(FElFlag, 67);
-TPCMPAD1 (tt);
+TPCMP1I(tt.I, 93);
 TPCMP1I(dlic, 68);
 TPCMPP1  (1317);
 TPCMPP1  (288);
@@ -437,9 +432,9 @@ TPCMPIN1 (29);
   write(mf,dlic);
   pic4:=pic@;
   dlic:=1;
-  while tt[dlic]<>chr(C255) do
+  while tt.A[dlic]<>chr(C255) do
     begin
-      putchr(tt[dlic]);
+      putchr(tt.A[dlic]);
       dlic:=dlic+1;
     end;
   ispvip;

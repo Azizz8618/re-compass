@@ -99,6 +99,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/TSS-W5B.md`..`docs/TSS-W5E.md` - порт и полный прогон 18 приложений (18/18 `MAD FULL EX=0`).
 - `docs/TSS-W6A.md` - полный исполняемый порт `ZATTAB`.
 - `docs/TSS-W6B.md`, `docs/TSS-W6C.md` - восстановление и исполнение 19 `SELECT` в четырёх ZAT-программах.
+- `docs/TSS-W7C.md` - proof невлияния TSS/PIC-заглушек и замена `TPCMPAD1`.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.

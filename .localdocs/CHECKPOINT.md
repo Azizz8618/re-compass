@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `4928b50`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `4928b50`.
+- HEAD: `c0dc1a3`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `c0dc1a3`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -57,7 +57,9 @@
 
 Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w3b-stack`, `tss-w4-pic`, `tss-w5-prep`, `tss-w5b-run` в `~/.local/share/vifm/Trash/`. Каждый с резервными копиями дисков и md5-манифестом.
 
-Активный субагент: W5b прогон 18 программ через вход `MADRUN` из `src/genmad_full.pas` (`ses_df5521a84ffeeytFKiyrzeI5m8`), scratch `tss-w5b-run`.
+W5b завершён и интегрирован (`c0dc1a3`): MADX в 3370, 18 дек/эталонов, полностью работают `AMOHED` и `ZATHED`, остальные 16 блокированы омоглифами и отсутствующими идентификаторами. Важно: изолированный `HOME` с пустым `.besm6/input_queue` обязателен для dispak.
+
+Активный субагент: W5c исправление 16 программ (`ses_df5117ac1ffek6EpNKGrBJdoic`), scratch `tss-w5c-fix`.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

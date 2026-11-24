@@ -40,6 +40,12 @@ SESSIONS = [
              'tsspr3300_build'],
      ['ucompas_test', 'tsspr-linked-ucompas', 'tsspr-v12-linked',
       'tsspr-v12-probe', 'direct13_3260', 'dmlall13']),
+    ('apps',
+     ['comtup_final_build', 'ucompas_build', 'tssdml_build',
+      'tsspr3300_build', 'madrun_final_build'],
+     ['SKLMON', 'AMOHED', 'ZATHED', 'SKLOTD', 'SKLCAR', 'SKLOTC',
+      'AMOMON', 'AMOOTD', 'AMOCAR', 'AMOOTC', 'AMOGRU', 'ZATMON',
+      'ZATOTD', 'ZATCOF', 'ZATZAT', 'ZATNAK', 'ZATRTE', 'ZATTAB']),
 ]
 
 
@@ -55,6 +61,8 @@ def main():
     args = ap.parse_args()
     work, repo = args.work, args.repo
     pristine, logs = work / 'pristine', work / 'logs'
+    home = work / 'home'
+    (home / '.besm6/input_queue').mkdir(parents=True, exist_ok=True)
     pristine.mkdir(parents=True, exist_ok=True)
     logs.mkdir(parents=True, exist_ok=True)
     for d in DISKS:
@@ -75,17 +83,27 @@ def main():
 
     def deck(name, tag=None):
         tag = tag or name
-        p = subprocess.run(['dispak', '--path=.', '-p', str(repo / 'tests' / (name + '.b6'))],
-                           cwd=work, input=b'', stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE, timeout=180)
-        (logs / (tag + '.run')).write_bytes(p.stdout)
-        (logs / (tag + '.err')).write_bytes(p.stderr)
+        deck_path = repo / 'tests' / (name + '.b6')
+        if not deck_path.exists():
+            deck_path = repo / 'tests/severov-apps' / (name + '.b6')
+        try:
+            p = subprocess.run(['dispak', '--path=.', '-p', str(deck_path)],
+                               cwd=work, input=b'', stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, timeout=60,
+                               env=dict(os.environ, HOME=str(home)))
+            out, err, rc = p.stdout, p.stderr, p.returncode
+        except subprocess.TimeoutExpired as e:
+            out, err, rc = e.stdout or b'', e.stderr or b'', 124
+        (logs / (tag + '.run')).write_bytes(out)
+        (logs / (tag + '.err')).write_bytes(err)
         exp = repo / 'tests' / (name + '.expected.txt')
+        if not exp.exists():
+            exp = repo / 'tests/severov-apps' / (name + '.expected.txt')
         status = 'NO_EXPECTED'
         if exp.exists():
-            status = 'MATCH' if norm(exp.read_bytes()) == norm(p.stdout) else 'DIFF'
-        print(f'{name:30s} rc={p.returncode:3d} stderr={len(p.stderr):4d} '
-              f'******={p.stdout.count(b"******"):3d} {status}', flush=True)
+            status = 'MATCH' if norm(exp.read_bytes()) == norm(out) else 'DIFF'
+        print(f'{name:30s} rc={rc:3d} stderr={len(err):4d} '
+              f'******={out.count(b"******"):3d} {status}', flush=True)
 
     for label, builds, tests in SESSIONS:
         print(f'=== {label} ===', flush=True)

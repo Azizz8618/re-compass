@@ -175,6 +175,7 @@ var
     Qnc,Qcur,Qmx:integer; Qloaded:boolean;
     Qo2:array[1..16] of integer;
     Qx1,Qx2,Ql2:array[1..16] of alfa;
+    Qky:array[1..16] of alfa;
     Qnm,Qns,Qss,Qcoc,Qpc:integer;
     Qsn:array[1..8] of alfa; Qsp:array[1..8] of alfa;
     Qsc:array[1..8] of integer; Qsm:array[1..8] of integer;
@@ -441,9 +442,27 @@ begin
   while i<=72 do begin Qln[i]:=' '; i:=i+1 end;
   ok:=true
 end;
+function QLitKey(var dest:alfa):boolean;
+var c:char; n:integer;
+begin
+  for n:=1 to 6 do dest[n]:=' ';
+  while (Qp<=72) and (Qln[Qp]=' ') do Qp:=Qp+1;
+  QLitKey:=false;
+  if Qp>72 then exit;
+  if Qln[Qp]<>chr(39) then exit;
+  Qp:=Qp+1; n:=0;
+  while (Qp<=72) and (Qln[Qp]<>chr(39)) do begin
+    c:=Qln[Qp];
+    if n<6 then begin n:=n+1; dest[n]:=c end;
+    Qp:=Qp+1
+  end;
+  if (Qp<=72) and (Qln[Qp]=chr(39)) then begin
+    Qp:=Qp+1; QLitKey:=true
+  end
+end;
 procedure QReadMad2;
 label 2,3;
-var z:integer; s:alfa; ok:boolean;
+var z:integer; s:alfa; ok:boolean; Qp0:integer;
 begin
   Qnm:=0;
   while Qbp<=Qblen do begin
@@ -462,21 +481,31 @@ begin
     if Qtok[1]='L' then begin
       QNext; Qnm:=Qnm+1; Qo2[Qnm]:=0; Ql2[Qnm]:=Qtok; goto 3
     end;
-    Qnm:=Qnm+1; Ql2[Qnm]:='      '; Qx2[Qnm]:='      ';
+    Qnm:=Qnm+1; Ql2[Qnm]:='      '; Qx2[Qnm]:='      '; 
+      Qky[Qnm]:='      ';
     if Qtok='HAЙTИ ' then begin
       QNext;
       if (Qtok[1]='П') and (Qtok[3]='-') then begin
         (* W8-BYKEY: keep the key variable and the set name 
       separately. *)
         Qo2[Qnm]:=24;
-        QNext;
-        if Qtok='B     ' then begin
-          Qx1[Qnm]:='      '; QNext
+        Qp0:=Qp;
+        if QLitKey(Qky[Qnm]) then begin
+          (* W9A-LITERAL: explicit key, Qx1 is left untouched. *)
+          QNext;
+          if Qtok='B     ' then QNext;
+          Qx2[Qnm]:=Qtok
         end else begin
-          Qx1[Qnm]:=Qtok; QNext;
-          if Qtok='B     ' then QNext
-        end;
-        Qx2[Qnm]:=Qtok
+          Qp:=Qp0;
+          QNext;
+          if Qtok='B     ' then begin
+            Qx1[Qnm]:='      '; QNext
+          end else begin
+            Qx1[Qnm]:=Qtok; QNext;
+            if Qtok='B     ' then QNext
+          end;
+          Qx2[Qnm]:=Qtok
+        end
       end else begin
         if Qtok='ПEPBYЮ' then Qo2[Qnm]:=1
         else if Qtok='CЛEДYЮ' then Qo2[Qnm]:=2
@@ -569,7 +598,8 @@ begin
       (* W8-BYKEY: key = set prefix + 4-digit value of MAD 
       Ц!/A!. *)
       Qss:=QFindSet(Qx2[Qpc]); if Qss=0 then Qss:=1;
-      if Qx1[Qpc]<>'      ' then QKeyAt(Qss,ЦX)
+      if Qky[Qpc]<>'      ' then Qck:=Qky[Qpc]
+      else if Qx1[Qpc]<>'      ' then QKeyAt(Qss,ЦX)
       else begin
         if Qsc[Qss]<1 then Qsc[Qss]:=1;
         QKeyAt(Qss,Qsc[Qss])

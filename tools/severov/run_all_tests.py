@@ -46,6 +46,10 @@ SESSIONS = [
      ['SKLMON', 'AMOHED', 'ZATHED', 'SKLOTD', 'SKLCAR', 'SKLOTC',
       'AMOMON', 'AMOOTD', 'AMOCAR', 'AMOOTC', 'AMOGRU', 'ZATMON',
       'ZATOTD', 'ZATCOF', 'ZATZAT', 'ZATNAK', 'ZATRTE', 'ZATTAB']),
+    ('apps-branches', [],
+     [f'{p}-{v}' for p in ('ZATMON', 'ZATZAT', 'ZATNAK', 'ZATRTE')
+      for v in ('a', 'b', 'c', 'd') if (Path(__file__).resolve().parents[2]
+      / 'tests/severov-apps/branches' / f'{p}-{v}.b6').exists()]),
 ]
 
 
@@ -86,6 +90,8 @@ def main():
         deck_path = repo / 'tests' / (name + '.b6')
         if not deck_path.exists():
             deck_path = repo / 'tests/severov-apps' / (name + '.b6')
+        if not deck_path.exists():
+            deck_path = repo / 'tests/severov-apps/branches' / (name + '.b6')
         try:
             p = subprocess.run(['dispak', '--path=.', '-p', str(deck_path)],
                                cwd=work, input=b'', stdout=subprocess.PIPE,
@@ -99,6 +105,8 @@ def main():
         exp = repo / 'tests' / (name + '.expected.txt')
         if not exp.exists():
             exp = repo / 'tests/severov-apps' / (name + '.expected.txt')
+        if not exp.exists():
+            exp = repo / 'tests/severov-apps/branches' / (name + '.expected.txt')
         status = 'NO_EXPECTED'
         if exp.exists():
             status = 'MATCH' if norm(exp.read_bytes()) == norm(out) else 'DIFF'

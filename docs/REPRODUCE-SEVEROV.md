@@ -15,7 +15,7 @@
 | деки 6, 7, 11 и MAD-деки 3/8/9 | 26 форматов, 102 блока, 110 `PUTD`, 19 справочников | `gold/output/deck06-07-11-genmad.out` |
 | 13 операций ЯМД из gold | `PLACE`..`BDPUT`, `EXN=0` | `gold/output/yam-predtgen.out` |
 | подпрограмма `SHTAMP` из `raznoe.txt` | 44/58 координат совпали с расчётом | `gold/output/raznoe-shtamp-*.out` |
-| деки 12-14: 18 прикладных Pascal-программ | все 18: `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ`, 345 исходных `DMLCALL` сохранены | `tests/severov-apps/<NAME>.expected.txt` |
+| деки 12-14: 18 прикладных Pascal-программ | все 18: `MAD FULL EX=0`, пустой stderr, `КОНЕЦ ЗАДАЧИ`, 345 исходных `DMLCALL` сохранены; 19 `SELECT` восстановлены и частично исполнены | `tests/severov-apps/<NAME>.expected.txt`, `tests/severov-apps/branches/` |
 
 Полный автоматический прогон всех дек, включая suites, TSS и Fortran, выполняется одной командой: `make test-all` (или `python3 tools/severov/run_all_tests.py --work <каталог>`). Скрипт для каждой сессии создаёт свежие копии образов, накладывает стандартный патч МАРС, собирает нужные PERSO-библиотеки и сравнивает вывод с эталонами с нормализацией даты. Логи сохраняются в `<каталог>/logs`.
 

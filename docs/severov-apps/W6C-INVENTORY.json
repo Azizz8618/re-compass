@@ -1,0 +1,1295 @@
+{
+ "ZATMON": [
+  {
+   "select": 1,
+   "anchor": "IF 'KOФ   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'KOФ   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/01"
+     ],
+     "marker": "01/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-c",
+       "ГИСТРАЦИИ ФАКТИЧОБЩ - ВХОД В БЛОК РЕГИСТРАЦИИ ОБЩИХW6С/01/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'OTД   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/02"
+     ],
+     "marker": "01/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'TEM   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/03"
+     ],
+     "marker": "01/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'ФAK   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/04"
+     ],
+     "marker": "01/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'OБЩ   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/05"
+     ],
+     "marker": "01/05",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/06"
+     ],
+     "marker": "01/06",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ГИСТРАЦИИ ФАКТИЧОБЩ - ВХОД В БЛОК РЕГИСТРАЦИИ ОБЩИХW6С/01/06"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/07"
+     ],
+     "marker": "01/07",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 2,
+   "anchor": "IF 'ПOC   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'ПOC   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/01"
+     ],
+     "marker": "02/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-d",
+       "ПОС - ВЫДАЧА ОТЧЕТА ПО ПОСЛЕДНЕМУ МЕСЯW6С/02/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/02"
+     ],
+     "marker": "02/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ПОС - ВЫДАЧА ОТЧЕТА ПО ПОСЛЕДНЕМУ МЕСЯW6С/02/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/03"
+     ],
+     "marker": "02/03",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 3,
+   "anchor": "IF 'KOH   '=ДИP THEN BEGIN EXIT END ELSE",
+   "arms": [
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/03/01"
+     ],
+     "marker": "03/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-b",
+       "ФЛА - ИНВЕРТИРОВАНИЕ ФЛАГОВ/W6С/03/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/03/02"
+     ],
+     "marker": "03/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'ФЛA   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/03/03"
+     ],
+     "marker": "03/03",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 4,
+   "anchor": "IF 'PEГ   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'PEГ   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/01"
+     ],
+     "marker": "04/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ЕНИЯ/СБР - СБРОСИТЬ ИЗМЕНЕНИЯ/СИС - ВХОД В СИСТЕМНЫЙ БЛОК/W6С/04/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'OTЧ   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/02"
+     ],
+     "marker": "04/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ЕНИЯ/СБР - СБРОСИТЬ ИЗМЕНЕНИЯ/СИС - ВХОД В СИСТЕМНЫЙ БЛОК/W6С/04/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'CИC   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/03"
+     ],
+     "marker": "04/03",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-b",
+       "ЕНИЯ/СБР - СБРОСИТЬ ИЗМЕНЕНИЯ/СИС - ВХОД В СИСТЕМНЫЙ БЛОК/W6С/04/03"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'ЗAK   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/04"
+     ],
+     "marker": "04/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'CБP   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/05"
+     ],
+     "marker": "04/05",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'ПAP   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/06"
+     ],
+     "marker": "04/06",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/07"
+     ],
+     "marker": "04/07",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ЕНИЯ/СБР - СБРОСИТЬ ИЗМЕНЕНИЯ/СИС - ВХОД В СИСТЕМНЫЙ БЛОК/W6С/04/07"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/08",
+      "ECЛИ XOTИTE ЗABEPШИTЬ PAБOTY HAБEPИTE "
+     ],
+     "marker": "04/08",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATMON-a",
+       "ЕНИЯ/СБР - СБРОСИТЬ ИЗМЕНЕНИЯ/СИС - ВХОД В СИСТЕМНЫЙ БЛОК/W6С/04/08"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "ZATZAT": [
+  {
+   "select": 1,
+   "anchor": "IF BOSX.NAM='ZMEC  ' THEN BEGIN ЗAT.MEC",
+   "arms": [
+    {
+     "condition": "IF BOSX.NAM='ZMEC  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/01"
+     ],
+     "marker": "01/01",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZTEMA '",
+     "dmlcall": [
+      274
+     ],
+     "prints": [
+      "W6C/01/02"
+     ],
+     "marker": "01/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "W6С/01/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOTД  '",
+     "dmlcall": [
+      275
+     ],
+     "prints": [
+      "W6C/01/03"
+     ],
+     "marker": "01/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZЭTAП '",
+     "dmlcall": [
+      276
+     ],
+     "prints": [
+      "W6C/01/04"
+     ],
+     "marker": "01/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZBЫП  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/05"
+     ],
+     "marker": "01/05",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOЗAPП'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/06"
+     ],
+     "marker": "01/06",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZДЗAPП'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/07"
+     ],
+     "marker": "01/07",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZMATEP'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/08"
+     ],
+     "marker": "01/08",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZKOMAH'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/09"
+     ],
+     "marker": "01/09",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZCПEЦ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/10"
+     ],
+     "marker": "01/10",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZAMOP '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/11"
+     ],
+     "marker": "01/11",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZCTOP '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/12"
+     ],
+     "marker": "01/12",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПOCH '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/13"
+     ],
+     "marker": "01/13",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПTPEC'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/14"
+     ],
+     "marker": "01/14",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПPБK '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/15"
+     ],
+     "marker": "01/15",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOBЫШ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/16"
+     ],
+     "marker": "01/16",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOГOC '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/17"
+     ],
+     "marker": "01/17",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZHEПЛ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/18"
+     ],
+     "marker": "01/18",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 2,
+   "anchor": "IF BOSX.NAM='ZBЫП  ' THEN BEGIN ДX:=BЫП",
+   "arms": [
+    {
+     "condition": "IF BOSX.NAM='ZBЫП  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/01"
+     ],
+     "marker": "02/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "W6С/02/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOЗAPП'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/02"
+     ],
+     "marker": "02/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZДЗAPП'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/03"
+     ],
+     "marker": "02/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZMATEP'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/04"
+     ],
+     "marker": "02/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZKOMAH'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/05"
+     ],
+     "marker": "02/05",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZCПEЦ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/06"
+     ],
+     "marker": "02/06",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZAMOP '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/07"
+     ],
+     "marker": "02/07",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZCTOP '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/08"
+     ],
+     "marker": "02/08",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПOCH '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/09"
+     ],
+     "marker": "02/09",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПTPEC'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/10"
+     ],
+     "marker": "02/10",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZПPБK '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/11"
+     ],
+     "marker": "02/11",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOBЫШ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/12"
+     ],
+     "marker": "02/12",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZOГOC '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/13"
+     ],
+     "marker": "02/13",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='ZHEПЛ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/14"
+     ],
+     "marker": "02/14",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 3,
+   "anchor": "IF NAM='ZMEC  ' THEN BEGIN ЗAT.MEC:=",
+   "arms": [
+    {
+     "condition": "IF NAM='ZMEC  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/03/01"
+     ],
+     "marker": "03/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "W6С/03/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF NAM='ZTEMA '",
+     "dmlcall": [
+      283
+     ],
+     "prints": [
+      "W6C/03/02",
+      "HET TAKOЙ TEMЫ"
+     ],
+     "marker": "03/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF NAM='ZOTД  '",
+     "dmlcall": [
+      284
+     ],
+     "prints": [
+      "W6C/03/03",
+      "HET TAKOГO ИCПOЛHИTELЯ"
+     ],
+     "marker": "03/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF NAM='ZЭTAП '",
+     "dmlcall": [
+      285
+     ],
+     "prints": [
+      "W6C/03/04",
+      "HET TAKOГO ЭTAПA"
+     ],
+     "marker": "03/04",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 4,
+   "anchor": "IF (NAM='ZMEC  ') AND (MEC<>0) THEN",
+   "arms": [
+    {
+     "condition": "IF (NAM='ZMEC  ') AND (MEC<>0)",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/01"
+     ],
+     "marker": "04/01",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF (NAM='ZTEMA ') AND (TEM<>0)",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/02"
+     ],
+     "marker": "04/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF (NAM='ZOTД  ') AND (OTД<>-1)",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/03"
+     ],
+     "marker": "04/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF TRUE",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/04"
+     ],
+     "marker": "04/04",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "W6С/04/04"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 5,
+   "anchor": "IF NAM='ZMEC  ' THEN BEGIN MEC:=ЦX",
+   "arms": [
+    {
+     "condition": "IF NAM='ZMEC  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/01"
+     ],
+     "marker": "05/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "W6С/05/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF NAM='ZTEMA '",
+     "dmlcall": [
+      286
+     ],
+     "prints": [
+      "W6C/05/02"
+     ],
+     "marker": "05/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF NAM='ZOTД  '",
+     "dmlcall": [
+      287
+     ],
+     "prints": [
+      "W6C/05/03"
+     ],
+     "marker": "05/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF NAM='ZЭTAП '",
+     "dmlcall": [
+      288
+     ],
+     "prints": [
+      "W6C/05/04",
+      "HET TAKOГO ЭTAПA"
+     ],
+     "marker": "05/04",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 6,
+   "anchor": "IF 'ПPO   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'ПPO   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/06/01"
+     ],
+     "marker": "06/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "ТЫ/W6С/06/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'HOB   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/06/02"
+     ],
+     "marker": "06/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-b",
+       "ТЫ/W6С/06/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'ИCK   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/06/03"
+     ],
+     "marker": "06/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/06/04"
+     ],
+     "marker": "06/04",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATZAT-a",
+       "ПРО - ПРОСМОТР ЗАРЕГИСТРИРОВАННЫХ КАРТ/НОВ - РЕГИСТРАЦИЯ НОВЫХ КАРТ/ИСК - ИСКЛЮЧЕНИЕ КАРТЫ/W6С/06/04"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/06/05"
+     ],
+     "marker": "06/05",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  }
+ ],
+ "ZATNAK": [
+  {
+   "select": 1,
+   "anchor": "WITH HAKЛ DO IF BOSX.NAM='NMEC  ' THEN",
+   "arms": [
+    {
+     "condition": "IF BOSX.NAM='NMEC  '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/01"
+     ],
+     "marker": "01/01",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='NПPOЧ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/02"
+     ],
+     "marker": "01/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATNAK-a",
+       "W6С/01/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF BOSX.NAM='NHAKЛ '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/03"
+     ],
+     "marker": "01/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='NЗAHAK'",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/04"
+     ],
+     "marker": "01/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='NЗAPП '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/01/05"
+     ],
+     "marker": "01/05",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 2,
+   "anchor": "IF NAM='NMEC  ' THEN BEGIN DMLCALL(296)",
+   "arms": [
+    {
+     "condition": "IF NAM='NMEC  '",
+     "dmlcall": [
+      296
+     ],
+     "prints": [
+      "W6C/02/01"
+     ],
+     "marker": "02/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATNAK-a",
+       "W6С/02/01"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 3,
+   "anchor": "IF NAM='NMEC  ' THEN BEGIN MES:=ЦX",
+   "arms": [
+    {
+     "condition": "IF NAM='NMEC  '",
+     "dmlcall": [
+      297
+     ],
+     "prints": [
+      "W6C/03/01",
+      "YЖE ECTЬ ЭTOT MECЯЦ"
+     ],
+     "marker": "03/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATNAK-a",
+       "W6С/03/01"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 4,
+   "anchor": "IF 'ПPO   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'ПPO   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/01"
+     ],
+     "marker": "04/01",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'HOB   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/02"
+     ],
+     "marker": "04/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'ИCK   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/03"
+     ],
+     "marker": "04/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/04"
+     ],
+     "marker": "04/04",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATNAK-a",
+       "ПРО - ПРОСМОТР ЗАРЕГИСТРИРОВАННЫХ КАРТ/НОВ - РЕГИСТРАЦИЯ НОВЫХ КАРТ/ИСК - ИСКЛЮЧЕНИЕ КАРТЫ/W6С/04/04"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/04/05"
+     ],
+     "marker": "04/05",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  }
+ ],
+ "ZATRTE": [
+  {
+   "select": 1,
+   "anchor": "REPEAT WITH CULX.CUCX DO IF BOSX.NAM='THOMK ' THEN BEGIN TEMA.HOMEP",
+   "arms": [
+    {
+     "condition": "IF BOSX.NAM='THOMK '",
+     "dmlcall": [
+      300,
+      301
+     ],
+     "prints": [
+      "W6C/01/01"
+     ],
+     "marker": "01/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "W6С/01/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF BOSX.NAM='TЭTAП '",
+     "dmlcall": [
+      302,
+      303
+     ],
+     "prints": [
+      "W6C/01/02"
+     ],
+     "marker": "01/02",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='TИCП  '",
+     "dmlcall": [
+      304,
+      305
+     ],
+     "prints": [
+      "W6C/01/03"
+     ],
+     "marker": "01/03",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='TCOИ  '",
+     "dmlcall": [
+      306,
+      307
+     ],
+     "prints": [
+      "W6C/01/04"
+     ],
+     "marker": "01/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF BOSX.NAM='TПOД  '",
+     "dmlcall": [
+      308,
+      309
+     ],
+     "prints": [
+      "W6C/01/05"
+     ],
+     "marker": "01/05",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  },
+  {
+   "select": 2,
+   "anchor": "(S)REPEAT WITH CULX.CUCX DO IF BOSX.NAM='THOMK '",
+   "arms": [
+    {
+     "condition": "IF BOSX.NAM='THOMK '",
+     "dmlcall": [],
+     "prints": [
+      "W6C/02/01"
+     ],
+     "marker": "02/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "W6С/02/01"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 3,
+   "anchor": "IF NAM='THOMK ' THEN BEGIN DMLCALL(316)",
+   "arms": [
+    {
+     "condition": "IF NAM='THOMK '",
+     "dmlcall": [
+      316
+     ],
+     "prints": [
+      "W6C/03/01"
+     ],
+     "marker": "03/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "W6С/03/01"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 4,
+   "anchor": "IF NAM='THOMK ' THEN BEGIN DMLCALL(317)",
+   "arms": [
+    {
+     "condition": "IF NAM='THOMK '",
+     "dmlcall": [
+      317
+     ],
+     "prints": [
+      "W6C/04/01",
+      "YЖE ECTЬ ЭTA TEMA"
+     ],
+     "marker": "04/01",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF (NAM='TИCП  ')OR(NAM='TCOИ  ')OR(NAM='TПOД  ')",
+     "dmlcall": [
+      318
+     ],
+     "prints": [
+      "W6C/04/02",
+      "HET TAKOГO OTДEЛA"
+     ],
+     "marker": "04/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "W6С/04/02"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "select": 5,
+   "anchor": "IF 'ЭTA   '=ДИP THEN",
+   "arms": [
+    {
+     "condition": "IF 'ЭTA   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/01"
+     ],
+     "marker": "05/01",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-c",
+       "Ы/W6С/05/01"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'ПPO   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/02"
+     ],
+     "marker": "05/02",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "Ы/W6С/05/02"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'HOB   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/03"
+     ],
+     "marker": "05/03",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-b",
+       "Ы/W6С/05/03"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'ИCK   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/04"
+     ],
+     "marker": "05/04",
+     "covered": false,
+     "evidence": []
+    },
+    {
+     "condition": "IF 'KOH   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/05"
+     ],
+     "marker": "05/05",
+     "covered": true,
+     "evidence": [
+      [
+       "w6c-ZATRTE-a",
+       "Ы/W6С/05/05"
+      ]
+     ]
+    },
+    {
+     "condition": "IF 'BЫX   '=ДИP",
+     "dmlcall": [],
+     "prints": [
+      "W6C/05/06"
+     ],
+     "marker": "05/06",
+     "covered": false,
+     "evidence": []
+    }
+   ]
+  }
+ ]
+}

@@ -27,7 +27,7 @@
 
 Диск 2348: `/usr/local/share/besm6/2348` и `~/.besm6/2348`. Различаются как файлы, но дамп зоны 0657 длиной 18 зон совпадает: `md5 = 1e0371b054f29adc7804d982bd8b3de6` (проверено 23.11.2026). Полный md5 образа не инвариант, инвариант - контрольные суммы зон.
 
-Код МАРС исторически монтируется `лен 40(2048-630)^`, библиотека Pascal на 2348 - `*perso:402570` (зона `2570₈`). Готовый пример дек: `besm6.github.io/sources/mars/sorucom.b6`.
+Код МАРС исторически монтируется `лен 40(2048-630)^`, библиотека Pascal на 2348 - `*perso:402570` (зона `2570₈`). Готовый пример колод: `besm6.github.io/sources/mars/sorucom.b6`.
 
 ## Структура репозитория
 
@@ -67,50 +67,50 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/PIC-BYTE-STREAM.md` - разбор старшего байта PIC-слов и байтового потока команд.
 - `patches/` - минимальные патчи для `UCOMPAS`, `UNPIC`, `TSSPPR`.
 - `docs/GOLD-MATERIALS.md` - изучение и оценка материалов `gold/` (реальная система Компас-БЭСМ 1988-89).
-- `docs/GOLD-RUN-REPORT.md` - протокол запуска дек из `gold/` на эмуляторе.
+- `docs/GOLD-RUN-REPORT.md` - протокол запуска колод из `gold/` на эмуляторе.
 - `docs/KOMPAS-SUITE.md` - интеграционный тест уровня СУБД (10 проверок T01-T10).
 - `docs/FREE-ZONES-2348.md` - карта свободных зон 2348 и размещение КОМПАС.
 - `docs/SERVIS-RESTORATION-PLAN.md` - план восстановления работоспособности SERVIS.
 - `docs/ARE-DATA.md` - формат и инвентарь областей БД `.ARE`, декодер `tools/are_decode.py`.
 - `docs/SERVIS-PORT.md` - порт `TSERVIS.PAS` на Паскаль-Монитор и процессор операторов SERVIS.
 - `docs/SERVIS-STAGE4.md` - расширение: дубли, журналы, ADMIN/ADA, 11 областей.
-- `docs/GOLD-SERVIS-RUN.md` - прогон подлинной SERVIS-деки из `gold/`.
+- `docs/GOLD-SERVIS-RUN.md` - прогон подлинной SERVIS-колоды из `gold/`.
 - `docs/MARS-DIAGNOSTICS.md` - устранение ошибки LU КОБЛЫ и диагностики МАРС.
 - `docs/MARS-CORE-LIMITS.md` - почему ядро МАРС не выделяет 1750 зон одним вызовом.
 - `docs/MARS-PATCHED-KERNEL.md` - исправление дефекта `BDBUF` патчем на 4 слова.
 - `docs/PASSPORT-SWEEP.md` - перебор 31 паспорта, почему `ЗMП` не МС «Дубна».
 - `docs/REPRODUCE-SEVEROV.md` - пошаговый план воспроизведения задачи Северова.
-- `docs/REPRODUCE-SEVEROV-ALL.md` - план полного воспроизведения всех 14 дек, включая 18 программ.
+- `docs/REPRODUCE-SEVEROV-ALL.md` - план полного воспроизведения всех 14 колод, включая 18 программ.
 - `docs/ZONE-ALLOCATION.md` и `tools/check_zone_changes.py` - контроль зон записи диска 2348.
-- `docs/SEVEROV-SCHEMAS.md`, `docs/SEVEROV-FORTRAN-STARTUP.md` - отчёты по схемам 4/10 и дека 5.
+- `docs/SEVEROV-SCHEMAS.md`, `docs/SEVEROV-FORTRAN-STARTUP.md` - отчёты по схемам 4/10 и колода 5.
 - `docs/TSS-CHAIN.md` - состояние порта цепочки TSS для 18 программ.
-- `docs/SEVEROV-MAD.md` - полный MAD-интерпретатор для дек 3/8/9.
+- `docs/SEVEROV-MAD.md` - полный MAD-интерпретатор для колод 3/8/9.
 - `docs/TSS-PORT-PLAN.md` - план порта цепочки TSS и запуска 18 программ.
 - `docs/TSS-W1-LINKAGE.md` - отчёт по линковке `TSSPPR` с COMTUP/UCOMPAS (14 входов).
 - `docs/TSS-W2-GUI.md` - замена GUI-заглушек, `docs/TSS-W4-PIC.md` и `docs/PIC-SLOT-MAP.md` - сверка PIC-слотов.
 - `gold/TSSPPR.PRT` - историческая форма `TSSPPR` с макросами `&&...&&`.
-- `docs/TSS-W5A-PREP.md` - подготовка 18 дек приложений, `tools/severov/extract_and_gen.py` - генератор.
+- `docs/TSS-W5A-PREP.md` - подготовка 18 колод приложений, `tools/severov/extract_and_gen.py` - генератор.
 - `docs/severov-apps/` - карта 345 сниппетов и 54 пар макрос -> вызовы COMTUP.
 - `docs/TSS-W5B-RUNBOOK.md` - порядок финального прогона 18 программ.
 - `docs/TSS-W3-DML.md` - порт TSSDML в зоне 3260 и известный отказ повторного `DML(TRUE)`.
 - `docs/TSS-W3B-STACK.md` - 11 проверенных гипотез стековой ошибки и обоснование адаптации W5b.
-- `make test-all` - полный прогон всех дек на simh с автоматическим сравнением эталонов (`tools/severov/run_all_tests.py`).
-- `docs/FULL-REGRESSION-REPORT.md` - результаты полного прогона: 122 дек, 112 `MATCH`, 0 `DIFF`.
+- `make test-all` - полный прогон всех колод на simh с автоматическим сравнением эталонов (`tools/severov/run_all_tests.py`).
+- `docs/FULL-REGRESSION-REPORT.md` - результаты полного прогона: 122 колод, 112 `MATCH`, 0 `DIFF`.
 - `docs/TSS-W5B.md`..`docs/TSS-W5E.md` - порт и полный прогон 18 приложений (18/18 `MAD FULL EX=0`).
 - `docs/TSS-W6A.md` - полный исполняемый порт `ZATTAB`.
 - `docs/TSS-W6B.md`, `docs/TSS-W6C.md` - восстановление и исполнение 19 `SELECT` в четырёх ZAT-программах.
-- `docs/TSS-W7.md` - реальная ADA-дека и исполнение 97/97 SELECT-ветвей.
+- `docs/TSS-W7.md` - реальная ADA-колода и исполнение 97/97 SELECT-ветвей.
 - `docs/TSS-W8.md` - keyed lookup, EX=0 во всех прогонах и реальные записи для ZATTAB.
 - `docs/COMPASS-JOB-TEMPLATE.md` - шапка задания и тесты создание/редакция/удаление БД.
 - `docs/COMPASS-USER-GUIDE.md` - руководство пользователя СУБД КОМПАС на simh.
 - `docs/TSS-W9A.md` - литеральная форма `ПО-КЛЮЧУ` и proof на подлинных ключах.
-- `docs/TSS-W9B.md` - каталог поиска исторических стоимостных area.
+- `docs/TSS-W9B.md` - каталог поиска исторических стоимостных областей.
 - `docs/TSS-W10-STUBS.md` - детерминированные заглушки ZATTAB по решению пользователя.
 - `docs/TSS-W7C.md` - proof невлияния TSS/PIC-заглушек и замена `TPCMPAD1`.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.
 - `docs/GEN-MAD-PORT.md` - порт генераторов загрузчиков и MAD.
-- `docs/ORIGINAL-GOLD-DECK.md` - прогон оригинальной деки Северова через front-end.
+- `docs/ORIGINAL-GOLD-DECK.md` - прогон оригинальной колоды Северова через адаптер.
 - `docs/MARS-INTERFACE.md` - процедуры и модули МАРС, микрокод, примеры вызовов.
 - `tests/` - проверенный дымовой тест МАРС из Pascal (`mars_smoke.b6` и эталон вывода).
 - `docs/DISK-2348.md` - карта зон и команды besmtool.
@@ -121,7 +121,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 
 | Проект | Роль |
 |---|---|
-| `~/Yandex.Disk/re-dispak` | реконструкция ДИСПАК, команды и форматы дек |
+| `~/Yandex.Disk/re-dispak` | реконструкция ДИСПАК, команды и форматы колод |
 | `~/Yandex.Disk/re-bemsh` | побайтовые сверки зон, manifest и верфикация |
 | `~/Yandex.Disk/pascal-re` | `perso-run.sh`, PASCOMPL 15.1, правила `*STAND` |
 | `~/Yandex.Disk/dispak/tests/arfalib` | самодостаточная библиотека 02570 |

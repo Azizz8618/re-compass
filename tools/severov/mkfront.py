@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build a front-end deck that feeds the ORIGINAL gold deck as INPUT.
+"""Build an adapter koloda that feeds the ORIGINAL gold koloda as INPUT.
 
-The Pascal front-end is the repository SERVIS processor with one small
+The Pascal adapter is the repository SERVIS processor with one small
 addition: a SysCard() filter in the main read loop.  The SERVIS operators
 are not touched; they come verbatim from the gold file lines 1-41.
 """

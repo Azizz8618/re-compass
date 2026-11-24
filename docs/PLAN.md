@@ -20,7 +20,7 @@
 
 - Взять за основу `besm6.github.io/sources/mars/sorucom.b6`: `PASACD`, `PASSETAR`, `NEWD`, `OPEND`, `PUTD`, `GETD`, итераторы `LAST`/`PREV`.
 - Добавить `MODD` из `example.b6` и `DELD` через микрокоманду из `experiment.b6`.
-- Собрать дек с `лен 40(2048-630)^` (код МАРС), `лен 41(2348)^`, `*perso:412570`, `*stand`, `*call *pascal`.
+- Собрать колод с `лен 40(2048-630)^` (код МАРС), `лен 41(2348)^`, `*perso:412570`, `*stand`, `*call *pascal`.
 - Запустить `dispak -p -o tests/mars_smoke.run tests/mars_smoke.b6`, сохранить эталонный вывод.
 
 Критерий выполнен: два прогона дали байтово идентичный вывод (md5 `c035b5f940c9eaa4b0f157fa394f4510`), баннер `PASCAL COMPILER 15.1 (28.10.26)`, ошибок МАРС нет. Дек и эталон: `tests/`. Подробности: `tests/README.md`.

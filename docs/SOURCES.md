@@ -42,7 +42,7 @@
 | `/home/azizz/besm6.github.io/sources/mars/sorucom.b6`, `example.b6`, `experiment.b6` | рабочие декы 2023 года |
 | `/home/azizz/besm6.github.io/wiki/pascal-monitor.txt` | §Г4, зоны 30 и 63, стандартные процедуры |
 | `/usr/local/share/besm6/2348`, `~/.besm6/2348` | рабочий диск, БАНДИТ в зоне 0657 |
-| `/usr/local/share/besm6/2048` | код МАРС в зоне 630₈ для исторических дек |
+| `/usr/local/share/besm6/2048` | код МАРС в зоне 630₈ для исторических колод |
 
 ## Смежные проекты и инструменты
 

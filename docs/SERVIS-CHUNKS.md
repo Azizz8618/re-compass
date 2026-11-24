@@ -17,7 +17,7 @@ Scratch: `/home/azizz/.local/share/vifm/Trash/servis-chunks/` (`disks/`, `backup
 Секреты не открывались, `env`/`printenv`/`set` не запускались.
 
 Инструменты: `dispak --path=. -p <deck>`, Паскаль-Монитор 15.1, генератор
-`tools/make_variant.py`. Все строки дек ≤72 символов.
+`tools/make_variant.py`. Все строки колод ≤72 символов.
 
 ## 1. Формат реестра (факт)
 
@@ -78,12 +78,12 @@ db-зависимые вызовы SERVIS (`PASACD`, `PASSETAR`, `pasbdi`) ос�
 Сверка: автоматические генераторы `chunk-registry/gen_scale.py` дают для
 двух физических областей 1000+750 зон ровно `LOGICAL_LENGTH=1750` и
 `CHECKSUM=912` (сумма 101+102+103+201+202+203). Контрольный прогон тех же
-исходных дек `scale_w1/w2/reader` на рабочей копии подтвердил 1750/912.
+исходных колод `scale_w1/w2/reader` на рабочей копии подтвердил 1750/912.
 Следовательно, SERVIS-версия воспроизводит эталон полностью.
 
 ## 4. Регрессия (факт)
 
-Оригинальные деки `tests/servis_ops4.b6` и `tests/gold_servis.b6` прогонялись
+Оригинальные колоды `tests/servis_ops4.b6` и `tests/gold_servis.b6` прогонялись
 на восстановленной из pristine рабочей копии после сборки COMTUP и
 стендового SERVIS 4 (`servis_build4.b6`). Оба `exit=0`, stderr пуст, `EXN=0`.
 Сравнение с `tests/servis_ops4.expected.txt` и

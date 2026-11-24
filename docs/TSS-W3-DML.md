@@ -8,7 +8,7 @@ Scratch: `/home/azizz/.local/share/vifm/Trash/tss-w3-dml/`.
 ## 1. Адрес сборки и зонный контроль (факт - главное)
 
 Ошибка адреса из interim-отчёта исправлена: `TSSDML` **собран в зону 3260₈**
-(дека `tssdml_build.b6`: `*perso:403260`, `*to perso:403260`), а не в 2570₈.
+(колода `tssdml_build.b6`: `*perso:403260`, `*to perso:403260`), а не в 2570₈.
 Итоговая последовательность на одной чистой копии 2348:
 
 1. `tests/comtup_build.b6` - COMTUP в **2570**, `ДЛИНА LIBRARY 032 ЗОН`;
@@ -52,12 +52,12 @@ REMOVE, INSERT, BDGET, BDPUT и модификатор `БД-KЛЮ` - 13 опе�
 ## 3. Эксперименты со стеком (факт)
 
 1. **Инлайнинг `GenOp`** в `DML`/`DM1` (убрал один фрейм вызова, исходник
-   `src/tssdml_inlinegen.pas`, дека `tests/tssdml_inlinegen_3260.b6`): сборка
+   `src/tssdml_inlinegen.pas`, колода `tests/tssdml_inlinegen_3260.b6`): сборка
    0 диагностик, но `dmlall13.b6` по-прежнему даёт
    `STACK OVERRANGE. LINЕ 146` на втором `DML(TRUE)`. Логи:
    `logs/inlinegen_build.run`, `logs/final-dml13.run`. Гипотеза не подтвердилась.
 2. **Пакетный вызов** `DML(TRUE)` со всеми 19 лексемами 13 операций в `BUF.M`
-   (`src/batch13.pas`, `tests/batch13_inline_buf.b6`): дек компилируется с
+   (`src/batch13.pas`, `tests/batch13_inline_buf.b6`): колод компилируется с
    0 диагностик, stderr пуст, но во время единственного `DML` получаем
    `ОVЕRАNGЕ IN 81` / `STACK LЕNGТН` по main-программе. Лог
    `logs/batch13g.run`. Гипотеза не подтвердилась.
@@ -87,6 +87,6 @@ main-программу. W5b может адаптироваться под па
 
 ## 5. Артефакты и воспроизведение
 
-`tssdml.pas`, `tssdml_build.b6`, `dmlall13.b6`, `REPORT.md`, `run.sh`, деки и
+`tssdml.pas`, `tssdml_build.b6`, `dmlall13.b6`, `REPORT.md`, `run.sh`, колоды и
 логи в `tests/`, `logs/`, md5-манифест в `artifacts/`. `bash run.sh` делает
-чистую копию дисков, три сборки, прогон деки и зонный контроль.
+чистую копию дисков, три сборки, прогон колоды и зонный контроль.

@@ -12,7 +12,7 @@
 | `run_smoke.sh` | воспроизведение `tests/mars_smoke.b6` |
 | `run_kompas_suite.sh` | сборка COMTUP и прогон `tests/kompas_suite.b6` |
 | `are_decode.py` | декодер страниц областей `.ARE` в JSON (`docs/ARE-DATA.md`) |
-| `are_to_mars.py` | генератор деки загрузки одностраничной области в МАРС |
+| `are_to_mars.py` | генератор колоды загрузки одностраничной области в МАРС |
 | `are_to_mars_multi.py` | то же для многостраничных областей, с разбиением на процедуры |
 
 ## `tools/mars/` - пересборка ядра
@@ -43,10 +43,10 @@
 
 | Файл | Назначение |
 |---|---|
-| `mkfront.py` | собирает `src/servis_front.pas` и `tests/original_deck_front*.b6`: подлинные 41 строка деки подаются как `INPUT`, системные карты пропускаются |
-| `extract_gold.py` | вырезает строки дек 6/7/11 и MAD-деков 3/8/9 из `gold/` в cards-файлы |
-| `genmad_make_deck.py` | генератор деки для `src/genmad.pas` |
-| `ttc_make_deck.py` | генератор деки для `src/ttc15.pas` |
+| `mkfront.py` | собирает `src/servis_front.pas` и `tests/original_deck_front*.b6`: подлинные 41 строка колоды подаются как `INPUT`, системные карты пропускаются |
+| `extract_gold.py` | вырезает строки колод 6/7/11 и MAD-деков 3/8/9 из `gold/` в cards-файлы |
+| `genmad_make_deck.py` | генератор колоды для `src/genmad.pas` |
+| `ttc_make_deck.py` | генератор колоды для `src/ttc15.pas` |
 | `predt_run.sh` | воспроизведение `tests/predtgen.b6` |
 | `chunk_*.py`, `chunk_*.sh` | генераторы и runners реестра кусков для логической области 1750 зон |
 

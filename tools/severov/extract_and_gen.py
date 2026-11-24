@@ -175,7 +175,7 @@ def comment_editor_lines(line):
 
 def brace_comments(line):
     """15.1 does not treat {...} as a comment; none occur in decks 12-14,
-    but the front-end performs the conversion for completeness."""
+    but the adapter performs the conversion for completeness."""
     return line.replace('{', '(*').replace('}', '*)')
 
 

@@ -16,7 +16,7 @@
 | tsspr, COMTUP + UCOMPAS | `tests/tsspr-linked-ucompas.b6` | 0 | 0 байт | 15.1 | 0 | 1 звездочка, внутри строкового литерала |
 | Функциональный тест UCOMPAS | `tests/ucompas_test.b6` | 0 | 0 байт | 15.1 | 0 | 0 |
 
-Рабочая дека: `tests/tsspr-linked-ucompas.b6`. Её заголовок:
+Рабочая колода: `tests/tsspr-linked-ucompas.b6`. Её заголовок:
 
 ```text
 шифр 419999 зс5^
@@ -53,7 +53,7 @@
 Резервы всех шести образов лежат в `backup/*.pristine.bak`.
 Манифесты: `artifacts/DISKS.md5` (рабочие копии на момент старта) и `artifacts/ORIGINALS.md5` (оригиналы).
 md5 эталонного 2348 совпадает с `docs/ZONE-ALLOCATION.md`: `b287267fe6163e7c5bf7fdd15a802ee0`.
-dispak запускался только как `dispak --path=/home/azizz/.local/share/vifm/Trash/tss-w1-linkage/disks -p <дека>`.
+dispak запускался только как `dispak --path=/home/azizz/.local/share/vifm/Trash/tss-w1-linkage/disks -p <колода>`.
 
 После КАЖДОЙ записи в 2348 и в конце прогонялся
 `python3 /home/azizz/Yandex.Disk/re-compass/tools/check_zone_changes.py /home/azizz/.local/share/vifm/Trash/tss-w1-linkage/disks/2348 /usr/local/share/besm6/2348`.
@@ -104,7 +104,7 @@ Stopping point не потребовался: задача W1 доведена �
 
 ## 6. Сохранённые артефакты
 
-- `src/tsspr-linked.pas` (1015 строк) и `tests/tsspr-linked.b6`, `tests/tsspr-linked-ucompas.b6` (рабочая дека).
+- `src/tsspr-linked.pas` (1015 строк) и `tests/tsspr-linked.b6`, `tests/tsspr-linked-ucompas.b6` (рабочая колода).
 - `tests/comtup_final_build.b6`, `tests/ucompas_build.b6`, `tests/ucompas_test.b6`: декы сборки и теста, скопированные из репозитория без изменений.
 - `logs/build-comtup.run/.err`, `logs/build-ucompas.run/.err`, `logs/tsspr-linked.run/.err`, `logs/tsspr-linked-ucompas.run/.err`, `logs/test-ucompas.run/.err`.
 - `logs/zone-check-*.txt`, `artifacts/*.exit`, `artifacts/DISKS.md5`, `artifacts/ORIGINALS.md5`.

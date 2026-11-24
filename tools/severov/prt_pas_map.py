@@ -2,7 +2,7 @@
 """Align TSSPPR.PRT (macros &&...&&) with TSSPPR.PAS (expanded TPCMP calls).
 
 Read-only study of the original listing.  Produces a macro -> call-sequence
-table under map/ so the W5a front-end can later be checked against the
+table under map/ so the W5a adapter can later be checked against the
 historical translation performed by the original preprocessor.
 """
 import difflib

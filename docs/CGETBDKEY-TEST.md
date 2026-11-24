@@ -109,7 +109,7 @@ SLOT29= 0000000000006000
 R= 3072 BDERRN= 0
 ```
 
-Тест проходит. Патч перенесён в `src/comtup.pas`; деки и эталоны: `tests/cgetbdkey_fixture.b6`, `tests/cgetbdkey.b6` и соответствующие `.expected.txt`.
+Тест проходит. Патч перенесён в `src/comtup.pas`; колоды и эталоны: `tests/cgetbdkey_fixture.b6`, `tests/cgetbdkey.b6` и соответствующие `.expected.txt`.
 
 ### Внешний COMTUP
 

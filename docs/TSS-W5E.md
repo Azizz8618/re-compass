@@ -1,4 +1,4 @@
-# W5e: доводка 11 прикладных программ дек 12-14 и `AMOMON`
+# W5e: доводка 11 прикладных программ колод 12-14 и `AMOMON`
 
 Scratch: `/home/azizz/.local/share/vifm/Trash/tss-w5e-fix/`. Репозиторий
 `/home/azizz/Yandex.Disk/re-compass` остался на HEAD `4e98a4e`; в него ничего не

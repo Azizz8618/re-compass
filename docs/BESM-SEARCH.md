@@ -8,7 +8,7 @@
 |---|---|---|
 | ядро МАРС (БАНДИТ) | зона 0657 диска 2348 | `besmtool search 2348 БАНДИТ` |
 | дамп ядра, 18 зон | md5 `1e0371b054f29adc7804d982bd8b3de6` | `besmtool dump 2348 --start=0657 --length=18 --to-file=...` |
-| код МАРС для исторических дек | зона 630₈ тома 2048, `лен 40(2048-630)^` | `besmtool view 2048 --start=408 --length=2` |
+| код МАРС для исторических колод | зона 630₈ тома 2048, `лен 40(2048-630)^` | `besmtool view 2048 --start=408 --length=2` |
 | таблица ключевых слов Pascal с `NEWD`/`GETD`/`PUTD` | зоны 0312, 2061, 2062, 2604 | `besmtool view 2348 --start=312 --length=1 --encoding=t` |
 | `PASBDI`, `PASBD`, `PASACD`, `PASSETAR`, `PASBDE` | зоны 1700, 1712, 2000, 2007 | `besmtool search 2348 PASBDI` |
 | самодостаточная Pascal-библиотека | зона 2570₈ | `besmtool view 2348 --start=1400 --length=2 --encoding=t` |

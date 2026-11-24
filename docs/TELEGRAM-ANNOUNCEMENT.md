@@ -32,3 +32,17 @@ make test-all WORK=<каталог>
 Если у кого-то сохранились носители КОМПАС 1989 года с областями SY-HAK, ИC-ЗAT, ЭT-ЗAT или том 1C, будем рады сигналу для уточнения исторических данных.
 
 #КОМПАС #БЭСМ6 #simh #ДИСПАК #ретроинформатика #восстановление
+
+## Прогон через редактор СИПРОД
+
+Объявление отформатировано редактором `re-siprod` (PERSO-зона 2100₈ тома 2348) на симуляторе dispak/simh:
+
+```
+cd ~/Yandex.Disk/re-siprod
+HOME=<каталог с пустым .besm6/input_queue> \
+  tests/siprod/run.sh ~/Yandex.Disk/re-compass/docs/siprod/announcement.siprod.txt
+```
+
+Вход с разметкой `*RED ... *E *END`: `docs/siprod/announcement.siprod.txt`.
+Вывод АЦПУ (128 позиций, две страницы на листе): `docs/siprod/announcement.siprod.out`, 1710 байт.
+Результат: `exit=0`, stderr пуст, ошибок СИПРОДа нет, заголовок выровнен по центру, абзацы разделены.

@@ -1,0 +1,49 @@
+# Поиск пользовательских area КОМПАС в доступном архиве
+
+Команда: unzip -l /home/azizz/.local/share/vifm/Trash/w7-data-src/AREAS-inner.zip
+Archive:  /home/azizz/.local/share/vifm/Trash/w7-data-src/AREAS-inner.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1953  1991-07-31 15:10   AREASR.SER
+    18432  1991-07-18 13:18   ADA.ARE
+        0  1991-03-13 18:11   SC.ARE
+        0  1991-09-17 14:28   ZPROC.ARE
+      565  1991-07-10 13:13   AREASE.SER
+        1  1991-03-20 18:38   OBPEM.ARE
+     2048  1991-07-10 11:50   MAG.ARE
+     4096  1991-06-18 18:05   CBIB.ARE
+     2048  1991-06-18 18:04   BPEMEH.ARE
+        0  1991-09-17 14:28   OUT.LST
+      608  1991-07-31 17:31   AREAS.CXE
+        0  1991-09-17 14:28   OUT.PRO
+       52  1991-03-11 17:03   AREAS.POD
+      572  1991-03-14 15:43   CXER.CXE
+       37  1991-03-11 17:04   CXER.POD
+      120  1991-03-13 18:07   CXER.SER
+      107  1991-06-18 18:03   COM.MAD
+       44  1991-03-11 17:23   DELMG.SER
+        0  1991-03-13 18:12   BIB.ARE
+      633  1991-06-18 18:03   KRUT.BAT
+    36864  1991-07-10 11:50   DOCER.ARE
+       20  1991-06-18 17:03   COMP.MAD
+    24855  1991-07-10 13:03   KHI71.MAD
+---------                     -------
+    93055                     23 files
+
+Команда: find .../data/areas -name "*.ARE" -printf "%f %s\n"
+ADA.ARE 18432
+BIB.ARE 0
+BPEMEH.ARE 2048
+CBIB.ARE 4096
+DOCER.ARE 36864
+MAG.ARE 2048
+OBPEM.ARE 1
+SC.ARE 0
+ZPROC.ARE 0
+
+Команда: поиск 14 имён area в 23 извлечённых файлах (utf-8, cp866, koi8-r)
+файлов просканировано: 23
+совпадений: 0
+
+Команда: grep имён area в сниппетах (только текст MAD, не данные)
+/home/azizz/Yandex.Disk/re-compass/docs/severov-apps/snippet-map.json

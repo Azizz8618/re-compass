@@ -100,6 +100,7 @@ make scan        # поиск маркеров в образах БЭСМ-6
 - `docs/TSS-W6A.md` - полный исполняемый порт `ZATTAB`.
 - `docs/TSS-W6B.md`, `docs/TSS-W6C.md` - восстановление и исполнение 19 `SELECT` в четырёх ZAT-программах.
 - `docs/TSS-W7.md` - реальная ADA-дека и исполнение 97/97 SELECT-ветвей.
+- `docs/TSS-W8.md` - keyed lookup, EX=0 во всех прогонах и реальные записи для ZATTAB.
 - `docs/TSS-W7C.md` - proof невлияния TSS/PIC-заглушек и замена `TPCMPAD1`.
 - `docs/PREDT-PORT.md` - порт предтранслятора ЯМД, 13 операций через `COMTUP`.
 - `docs/TTC-PORT.md` - порт транслятора схем CX-CK0.

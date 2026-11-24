@@ -181,8 +181,12 @@ var
     Qbf:array[1..8] of alfa;
     Qck:alfa; Qbv:array[1..8] of alfa;
     Qv8:Qv8t; Qcurbuf:integer;
+    W8V:array[1..8] of integer;
     QbufMode:boolean; Qbm:array[1..120] of char;
     Qbp,Qblen:integer;
+procedure PASACD(var i:integer); FORTRAN;
+procedure PASSETAR(i:integer); EXTERNAL;
+procedure pasbdi; external;
 function QEXN:integer;
 begin QEXN:=BDERRN end;
 procedure QClrErr;
@@ -257,10 +261,182 @@ begin if Qns>0 then exit; Qns:=8;
   Qsn[7]:='ИC-ЗAT';Qsp[7]:='A3    ';
   Qsn[8]:='ЗAT   ';Qsp[8]:='A4    ';
 end;
+procedure W8LOAD;
+var W8IX:integer;
+begin
+  W8IX:=20270001c; QClrErr; newd('ZGEN  ',W8IX);
+  pasbdi; BDERRN:=0;
+  QClrErr; opend('ZGEN  ');
+  writeln('W8-OPEN-BD36=',BDVECT[36].i,' EXN=',QEXN);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='HMOЭИ '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30001'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('AC0001',W8V);
+  Qw.a:='120048'; W8V[1]:=Qw.i;
+  Qw.a:='ОГИ   '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30003'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20002'; W8V[8]:=Qw.i;
+  QClrErr; putd('AC0002',W8V);
+  Qw.a:='121148'; W8V[1]:=Qw.i;
+  Qw.a:='ОГИ   '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30004'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20003'; W8V[8]:=Qw.i;
+  QClrErr; putd('AC0003',W8V);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('B10001',W8V);
+  Qw.a:='120048'; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20002'; W8V[8]:=Qw.i;
+  QClrErr; putd('B10002',W8V);
+  Qw.a:='121148'; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20003'; W8V[8]:=Qw.i;
+  QClrErr; putd('B10003',W8V);
+  Qw.a:='HMOЭИ '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='      '; W8V[8]:=Qw.i;
+  QClrErr; putd('B20001',W8V);
+  Qw.a:='ОГИ   '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='      '; W8V[8]:=Qw.i;
+  QClrErr; putd('B20002',W8V);
+  Qw.a:='OМATИ '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='      '; W8V[8]:=Qw.i;
+  QClrErr; putd('B20003',W8V);
+  Qw.a:='CO-1  '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='000001'; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('B30001',W8V);
+  Qw.a:='CO-2  '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='000002'; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20002'; W8V[8]:=Qw.i;
+  QClrErr; putd('B30002',W8V);
+  Qw.a:='CO-3  '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='000003'; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20002'; W8V[8]:=Qw.i;
+  QClrErr; putd('B30003',W8V);
+  Qw.a:='CO-4  '; W8V[1]:=Qw.i;
+  Qw.a:='      '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='000004'; W8V[5]:=Qw.i;
+  Qw.a:='      '; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20003'; W8V[8]:=Qw.i;
+  QClrErr; putd('B30004',W8V);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='HMOЭИ '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30001'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('A10001',W8V);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='HMOЭИ '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30001'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('A20001',W8V);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='HMOЭИ '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30001'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('A30001',W8V);
+  Qw.a:='102188'; W8V[1]:=Qw.i;
+  Qw.a:='HMOЭИ '; W8V[2]:=Qw.i;
+  Qw.a:='      '; W8V[3]:=Qw.i;
+  Qw.a:='      '; W8V[4]:=Qw.i;
+  Qw.a:='      '; W8V[5]:=Qw.i;
+  Qw.a:='B30001'; W8V[6]:=Qw.i;
+  Qw.a:='      '; W8V[7]:=Qw.i;
+  Qw.a:='B20001'; W8V[8]:=Qw.i;
+  QClrErr; putd('A40001',W8V);
+  writeln('W8-LOAD-EXN=',QEXN,' KEYS=',21);
+  Qsm[1]:=3; Qsc[1]:=1;
+  Qsm[2]:=3; Qsc[2]:=1;
+  Qsm[3]:=3; Qsc[3]:=1;
+  Qsm[4]:=4; Qsc[4]:=1;
+  Qsm[5]:=1; Qsc[5]:=1;
+  Qsm[6]:=1; Qsc[6]:=1;
+  Qsm[7]:=1; Qsc[7]:=1;
+  Qsm[8]:=1; Qsc[8]:=1;
+  ЦX:=1;
+end;
 procedure QLoadRec(bno:integer);
 var k:integer;
 begin
   QClrErr; getd(Qck,Qv8);
+  writeln('W8-GETD KEY=',Qck,' EXN=',QEXN);
   if BDERRN<>0 then Qcoc:=1 else begin
     Qcoc:=0;
     for k:=1 to 8 do begin Qw.i:=Qv8[k]; 
@@ -319,16 +495,30 @@ begin
     Qnm:=Qnm+1; Ql2[Qnm]:='      '; Qx2[Qnm]:='      ';
     if Qtok='HAЙTИ ' then begin
       QNext;
-      if Qtok='ПEPBYЮ' then Qo2[Qnm]:=1
-      else if Qtok='CЛEДYЮ' then Qo2[Qnm]:=2
-      else if Qtok='ПPEДЫД' then Qo2[Qnm]:=3
-      else if Qtok='ПOCЛEД' then Qo2[Qnm]:=4
-      else if Qtok='BЛAДEЛ' then Qo2[Qnm]:=5
-      else Qo2[Qnm]:=6;
-      QNext;
-      if Qtok='B     ' then QNext;  (* B = 'in' before a 
+      if (Qtok[1]='П') and (Qtok[3]='-') then begin
+        (* W8-BYKEY: keep the key variable and the set name 
+      separately. *)
+        Qo2[Qnm]:=24;
+        QNext;
+        if Qtok='B     ' then begin
+          Qx1[Qnm]:='      '; QNext
+        end else begin
+          Qx1[Qnm]:=Qtok; QNext;
+          if Qtok='B     ' then QNext
+        end;
+        Qx2[Qnm]:=Qtok
+      end else begin
+        if Qtok='ПEPBYЮ' then Qo2[Qnm]:=1
+        else if Qtok='CЛEДYЮ' then Qo2[Qnm]:=2
+        else if Qtok='ПPEДЫД' then Qo2[Qnm]:=3
+        else if Qtok='ПOCЛEД' then Qo2[Qnm]:=4
+        else if Qtok='BЛAДEЛ' then Qo2[Qnm]:=5
+        else Qo2[Qnm]:=6;
+        QNext;
+        if Qtok='B     ' then QNext;  (* B = 'in' before a 
       set name. *)
-      Qx1[Qnm]:=Qtok
+        Qx1[Qnm]:=Qtok
+      end
     end else if Qtok='BЗЯTЬ ' then begin
       QNext;
       if Qtok[1]='Б' then begin Qo2[Qnm]:=8; QNext; 
@@ -402,10 +592,29 @@ begin
       writeln('FIND OWNER ',Qsn[Qss],' Qkey=',Qck)
     end else if z=6 then begin
       Qss:=QFindSet(Qx1[Qpc]); if Qss=0 then Qss:=1;
-      Qck:=Qbf[(Qcurbuf-1)*8+8]; QNumKey; QLoadRec(1)
+      Qck:=Qbf[(Qcurbuf-1)*8+8]; QNumKey;
+      if Qck='      ' then QKeyAt(Qss,1);
+      QLoadRec(1)
+    end else if z=24 then begin
+      (* W8-BYKEY: key = set prefix + 4-digit value of MAD 
+      Ц!/A!. *)
+      Qss:=QFindSet(Qx2[Qpc]); if Qss=0 then Qss:=1;
+      if Qx1[Qpc]<>'      ' then QKeyAt(Qss,ЦX)
+      else begin
+        if Qsc[Qss]<1 then Qsc[Qss]:=1;
+        QKeyAt(Qss,Qsc[Qss])
+      end;
+      QLoadRec(1);
+      writeln('W8-BYKEY SET=',Qsn[Qss],' ARG=',Qx1[Qpc],
+              ' KEY=',Qck,' EXN=',QEXN)
     end else if z=7 then begin
       bno:=ord(Qx1[Qpc][1])-48; if (bno<1) or (bno>8) then bno:=1;
-      Qcurbuf:=bno; QLoadRec(bno)
+      Qcurbuf:=bno;
+      if Qck='      ' then begin
+        if Qss<1 then Qss:=1;
+        QKeyAt(Qss,1)
+      end;
+      QLoadRec(bno)
     end else if z=8 then begin
       bno:=ord(Qx1[Qpc][1])-48; if (bno<1) or (bno>8) then bno:=1;
       Qbv[bno]:=Qbf[(Qcurbuf-1)*8+6]
@@ -1334,5 +1543,10 @@ END;
 
 (* SECTION ? .B *)
 BEGIN
+  if BDVECT[36].i + 0 = 0 then begin
+    for i:=0 to 167 do BDVECT[i].i:=0;
+    i:=20270000c; PASACD(i); PASSETAR(270000c)
+  end;
+  W8LOAD;
 REGIS;
 WRITE(output,'РЕЖИМ: ');PUTT;DMLCALL(1);END.

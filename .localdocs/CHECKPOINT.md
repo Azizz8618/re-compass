@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `7d3253c`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `7d3253c`.
+- HEAD: `292dc78`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `292dc78`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -59,7 +59,9 @@ Scratch-каталоги: `tss-w1-linkage`, `tss-w2-gui`, `tss-w3-dml`, `tss-w3b
 
 W5b завершён и интегрирован (`c0dc1a3`): MADX в 3370, 18 дек/эталонов, полностью работают `AMOHED` и `ZATHED`, остальные 16 блокированы омоглифами и отсутствующими идентификаторами. Важно: изолированный `HOME` с пустым `.besm6/input_queue` обязателен для dispak.
 
-Активный субагент: W5c исправление 16 программ (`ses_df5117ac1ffek6EpNKGrBJdoic`), scratch `tss-w5c-fix`.
+W5c завершён (`292dc78`): 16 программ не удалось довести до выполнения; найдены точные GOST-написания и требование перевести `SELECT` в `IF`.
+
+Активный субагент: W5d (`ses_df4ee9326ffen5RNF0KT8bg85m`), scratch `tss-w5d-fix`: сначала SKLMON до 0 диагностик, затем остальные 15.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 

@@ -13,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path('/home/azizz/Yandex.Disk/re-compass')
 GOLD = REPO / ('gold/BESM-6 (Pavel Severov, NIS GIDROPROEKT) '
                'KOMPAS-based systems 1988-1989.txt')
 

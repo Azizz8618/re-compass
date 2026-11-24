@@ -7,11 +7,89 @@ type
   TBDVec = array[0..167] of word;
   TYPEM = packed array[1..160] of char;
   ZZBUFT = record LEN,H,D,I:integer; M:TYPEM end;
+
+  INT=integer;
+  ZFLG=(FS,ПЕЧАТЬ,МОДИФ,AДMИH,OTЛAД,OTЧCKЛ,OTЧOTД,BXOД,FF);
+  ZFLGS=set of ZFLG;
+  ZSYS=record PEЖИMЫ:ZFLGS;
+            XPAHИMЫ:ZFLGS;
+            ГOД:integer;
+            ДATЗП:integer;
+            BPEЗП:integer;
+            ДATЧИC:integer;
+            ПAPCИC:alfa;
+            ПAPOЛЬ:alfa end;
+  ZSYSREC=record ПAPOЛЬ:alfa end;
+  ZZSYSTEM=ZSYSREC;
+  ФЛАГ=ZFLG;
+  ZOTD=record HAЗB:alfa end;
+  ZVESH=record HOMEP:integer; HAЗB:alfa; ЦEHA:integer;
+             OCTAT:integer; ПPИXOД:integer; PACXOД:integer end;
+  ZVZYAL=record KOЛИЧ:integer end;
+  ZSUM=record ЦEHA:integer end;
+  ZPRAVA=record ПAPOЛЬ:alfa end;
+  ZPRE=record N:integer end;
+  ZSETI=integer;
+
+  ВООL=boolean;
+  SТРОКА=alfa;
+  СТРОКА=alfa;
+  ZZОТДЕЛ=record НАЗВ:alfa end;
+  ZZГРУППА=record НАЗВ:alfa; НАЧ:integer; КОН:integer end;
+  ZZВDКЕУ=record КЛЮЧ:alfa; ЗНАЧ:integer end;
+  ДИРЕКТ=record ИМЯ:alfa; НАЗВ:alfa end;
+  ДЕЙ=record ЗН:real end;
+  СТОИТ=record ПРИНЯЛ:integer; СПИСАЛ:integer end;
+  ZЗАТ=record МЕС:integer; НОМЕР:integer; ЗН:integer end;
+  ZИСПОЛН=record НОМЕР:integer; УРОВ:integer end;
+  ZLINЕ=record S:integer; F:char end;
+  ZСЕLL=record FRМ:char; СОN:integer end;
+
 var
   BDVECT: TBDVec;
   BDERRN: integer;
   BUF: ZZBUFT;
   C: char;
+
+  SYSTEM:ZSYS;
+  ФЛAГИ:ZFLGS;
+  CEГOДHЯ:integer;
+  ДA:boolean;
+  HAЧ:boolean;
+  HEЛЬЗЯ:boolean;
+  ЗAKPЫTO:boolean;
+  MOЖHO:boolean;
+  ПYCTO:boolean;
+  OTДEЛ:ZOTD;
+  BEЩЬ:ZVESH;
+  BЗЯЛ:ZVZYAL;
+  CYMMA:ZSUM;
+  EД:array[1..2] of integer;
+  EE:char;
+  EF:char;
+  KYДA:alfa;
+  ДИP:alfa;
+  ПPOB:ZSYSREC;
+  RGEXPORT:ZSETI;
+  ФS:ZFLG;
+  Ф:ZFLG;
+  ФF:ZFLG;
+  ФФ:ZFLG;
+
+  INР:integer;
+  ШАГ:integer;
+  СОСТ:integer;
+  МАТЕР:integer;
+  WRI:integer;
+  ВОS:integer;
+  Д:integer;
+  SТРUТ:boolean;
+  SТЕР:boolean;
+  NЕХТ:boolean;
+  ЦЕЛ:ZLINЕ;
+  LF:char;
+  МАХШИФР:integer;
+  МINШИФР:integer;
 type
      Qvalt = array[1..4] of integer;
      Qv8t = array[1..8] of integer;
@@ -275,7 +353,181 @@ begin
   QMadExec2;
   QbufMode:=false
 end;
-procedure DmlCall(N:integer);
+
+procedure PUTT;
+begin writeln end;
+procedure PUTPT;
+begin writeln end;
+procedure WДAT(var F:text; D:integer);
+begin write(F,D) end;
+procedure GETT;
+begin KYДA:='HAЧAЛO'; ДИР:='KOH   ' end;
+procedure GETHAЧ;
+begin HAЧ:=false end;
+procedure GETD(var F:text);
+begin end;
+procedure YCTMOД;
+begin end;
+procedure ECTЬ;
+begin end;
+procedure ПЗГ;
+begin end;
+procedure SETFLAG;
+begin end;
+procedure ЖYPHAЛ(A:alfa; P:integer);
+begin end;
+procedure ZKOHEЦ(P:integer);
+begin end;
+procedure MENU;
+begin end;
+procedure WCTP(var F:text; S:alfa; N:integer);
+begin write(F,S) end;
+procedure STOP;
+begin end;
+function RЦEЛ(A,B:integer):integer;
+begin RЦEЛ:=0 end;
+function RДAT(A,B:integer):integer;
+begin RДAT:=A end;
+function ДATЧИC(A,B,C:integer):integer;
+begin ДATЧИC:=A end;
+
+procedure ОUТ;
+begin end;
+procedure ЕХIТ;
+begin end;
+procedure Ц;
+begin end;
+procedure FСВЯ;
+begin end;
+procedure FСОРУ;
+begin end;
+procedure МЕТАЛ;
+begin end;
+procedure ИНВ;
+begin end;
+procedure Ц1;
+begin end;
+procedure ШИФР;
+begin end;
+procedure ГРУППА;
+begin end;
+procedure ВОС;
+begin end;
+procedure КАП;
+begin end;
+procedure RСТР;
+begin end;
+procedure ПАР;
+begin end;
+procedure Т;
+begin end;
+procedure ТОЛЬКОСИ;
+begin end;
+procedure ВЫП;
+begin end;
+procedure ОЗАРП;
+begin end;
+procedure ДЗАРП;
+begin end;
+procedure КОМАН;
+begin end;
+procedure СПЕЦ;
+begin end;
+procedure АМОР;
+begin end;
+procedure СТОР;
+begin end;
+procedure ПОСН;
+begin end;
+procedure ПТРЕС;
+begin end;
+procedure ПРБК;
+begin end;
+procedure ОВЫШ;
+begin end;
+procedure ОГОС;
+begin end;
+procedure НЕПЛ;
+begin end;
+procedure ИСПОЛН;
+begin end;
+procedure СLF;
+begin end;
+procedure ЗАТ;
+begin end;
+procedure NЕХТРАR;
+begin end;
+procedure RЕАDСОN;
+begin end;
+procedure МЕС;
+begin end;
+procedure NАМ;
+begin end;
+procedure WRЕАL;
+begin end;
+procedure ПРОЧ;
+begin end;
+procedure НАКЛ;
+begin end;
+procedure ЗАНАК;
+begin end;
+procedure ЗАРП;
+begin end;
+procedure WМЕС;
+begin end;
+procedure УРОВ;
+begin end;
+procedure ТЕМА;
+begin end;
+procedure ЭТАП;
+begin end;
+procedure АТХ;
+begin end;
+procedure СR;
+begin end;
+procedure ZNАК;
+begin end;
+procedure РUТР;
+begin end;
+function ЕЩЕ(S:alfa):boolean;
+begin ЕЩЕ:=false end;
+function ОЦЕНЕНО:boolean;
+begin ОЦЕНЕНО:=false end;
+function ЕСТЬВЗЯЛ:boolean;
+begin ЕСТЬВЗЯЛ:=false end;
+function ЭТОТМЕС:boolean;
+begin ЭТОТМЕС:=false end;
+function ЕСТЬЗАТ:boolean;
+begin ЕСТЬЗАТ:=false end;
+function RОТД:alfa;
+begin RОТД:='      ' end;
+procedure FПАР(S:alfa);
+begin end;
+procedure WLF(N:integer);
+begin end;
+procedure WВL(N:integer);
+begin end;
+procedure МINUSЕS;
+begin end;
+procedure FWRIТЕ(var F:text);
+begin end;
+procedure УСТПЕЧ;
+begin end;
+procedure RЕSЕТСОN;
+begin end;
+procedure RЕSЕТРАR;
+begin end;
+procedure СLЕАNСОN;
+begin end;
+procedure ПЕЧКОЭФ;
+begin end;
+procedure РЕGIS;
+begin end;
+procedure WТRЕЕ;
+begin end;
+function RВЕЩ(A,B:real):real;
+begin RВЕЩ:=A end;
+procedure DmlCallA(N:integer);
 var J:integer;
 begin
   for J:=1 to 160 do BUF.M[J]:=' ';
@@ -326,6 +578,15 @@ begin
       BUF.M[9]:='M';BUF.M[10]:='A';
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
+  end;
+  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
+  QMADX(0)
+end;
+procedure DmlCallB(N:integer);
+var J:integer;
+begin
+  for J:=1 to 160 do BUF.M[J]:=' ';
+  case N of
     331: begin
       BUF.LEN:=21;
       BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
@@ -366,6 +627,15 @@ begin
       BUF.M[25]:='Я';BUF.M[26]:='T';BUF.M[27]:='Ь';
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
+  end;
+  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
+  QMADX(0)
+end;
+procedure DmlCallC(N:integer);
+var J:integer;
+begin
+  for J:=1 to 160 do BUF.M[J]:=' ';
+  case N of
     335: begin
       BUF.LEN:=27;
       BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
@@ -407,6 +677,15 @@ begin
       BUF.M[21]:='K';
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
+  end;
+  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
+  QMADX(0)
+end;
+procedure DmlCallD(N:integer);
+var J:integer;
+begin
+  for J:=1 to 160 do BUF.M[J]:=' ';
+  case N of
     339: begin
       BUF.LEN:=5;
       BUF.M[1]:='B';BUF.M[2]:='З';BUF.M[3]:='Я';BUF.M[4]:='T';
@@ -445,6 +724,15 @@ begin
       BUF.M[29]:='A';BUF.M[30]:='T';
       BUF.M[BUF.LEN+1]:=chr(255)
     end;
+  end;
+  BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
+  QMADX(0)
+end;
+procedure DmlCallE(N:integer);
+var J:integer;
+begin
+  for J:=1 to 160 do BUF.M[J]:=' ';
+  case N of
     343: begin
       BUF.LEN:=21;
       BUF.M[1]:='H';BUF.M[2]:='A';BUF.M[3]:='Й';BUF.M[4]:='T';
@@ -479,7 +767,15 @@ begin
   BUF.D:=1; BUF.I:=0; BUF.H:=0; C:=' ';
   QMADX(0)
 end;
-(* L0 DMLCALL(327)*)
+procedure DmlCall(N:integer);
+begin
+  if N<=330 then DmlCallA(N) else
+  if (N>=331) and (N<=334) then DmlCallB(N) else
+  if (N>=335) and (N<=338) then DmlCallC(N) else
+  if (N>=339) and (N<=342) then DmlCallD(N) else
+  if N>=343 then DmlCallE(N)
+end;
+(* L0 DMLCALL(327);*)
 (* EDITOR !INCLU:HEADING*)
 
 (* SECTION ? .EX *)
@@ -544,35 +840,9 @@ COLUMN=(
         VФMП    ,
         VФHTCP  );
 TYPPAR=(CEL,DEY,ALF,STR,LOG,DAT,MES,KVA);
-CELL=PACKED RECORD FRM:CHAR;CON:!CONTENT);
-CONTENT=RECORD CASE TYP:TYPPAR OF
-                   CEL,DAT,MES,KVA:(Ц:!ATCЦEЛ);
-                   DEY:(Д:!ATCДEЙ);
-                   ALF:(A:!ATCAЛФ);
-                   STR:(C:!ATCCTP);
-                   LOG:(Л:!ATCЛOГ));
-ATCЦEЛ=RECORD ЗH:INT);
-ATCДEЙ=RECORD ЗH:REAL);
-ATCAЛФ=RECORD ЗH:ALFA);
-ATCCTP=RECORD ЗH:CTPOKA);
-ATCЛOГ=RECORD ЗH:BOOL);
-
-
-
-CONST FIRCOL=ZTEMA;LASCOL=VФHTCP;
-      FIRLIN=1;LASLIN=48;
-
-TYPE LINE=FIRLIN..LASLIN;
-
-
-
-VAR
-SCREEN:INT;EXPORT:TABLEREG;PRINTCALC:BOOL;
-T:ARRAY FIRCOL..LASCOL,FIRLIN..LASLIN OF CELL;
-TOTAL:ARRAY FIRLIN..LASLIN OF LINE;
-MINLIN,MAXLIN,CURLIN:LINE;
-SETCOL:RECORD ИCXДEЙ,BЫЧДEЙ,CYMДEЙ,CLEAN:SET OF COLUMN);
-FORCOL:ARRAY FIRCOL..LASCOL OF RECORD S:INT;F:CHAR END;
+CELL=PACKED RECORD FRM:CHAR;CON:<>CONTENT);
+CONTENT=RECORD CEL,DAT,MES,KVA:(Ц:<>ATCЦEЛ) ELSE DEY:(Д:<>ATCДEЙ) ELSE ALF:(A:<>ATCAЛФ) ELSE STR:(C:<>ATCCTP) ELSE LOG:(Л:<>ATCЛOГ)) ELSE ATCЦEЛ=RECORD ЗH:INT) ELSE ATCДEЙ=RECORD ЗH:REAL) ELSE ATCAЛФ=RECORD ЗH:ALFA) ELSE ATCCTP=RECORD ЗH:CTPOKA) ELSE ATCЛOГ=RECORD ЗH:BOOL) ELSE CONST FIRCOL=ZTEMA ELSE LASCOL=VФHTCP ELSE FIRLIN=1 ELSE LASLIN=48 ELSE TYPE LINE=FIRLIN..LASLIN ELSE VAR
+SCREEN:INT ELSE EXPORT:TABLEREG ELSE PRINTCALC:BOOL ELSE T:ARRAY FIRCOL..LASCOL,FIRLIN..LASLIN OF CELL ELSE TOTAL:ARRAY FIRLIN..LASLIN OF LINE ELSE MINLIN,MAXLIN,CURLIN:LINE ELSE SETCOL:RECORD ИCXДEЙ,BЫЧДEЙ,CYMДEЙ,CLEAN:SET OF COLUMN) ELSE FORCOL:ARRAY FIRCOL..LASCOL OF RECORD S:INT ELSE F:CHAR;
 FORLIN:ARRAY FIRLIN..LASLIN OF SET OF TABLEREG;
 (*=Y-*)
 
@@ -587,9 +857,9 @@ PROCEDURE WSET(S:SET OF TABLEREG);
 CONST F=PAЗ;L=БEЗ;
 VAR I:TABLEREG;
 BEGIN
-WRITE(OUT,'HAБOP:[');
-FOR I:=F TO L DO IF I IN S THEN WRITE(OUT,I);
-WRITE(OUT,' ]');PUTT;
+WRITE(output,'HAБOP:[');
+FOR I:=F TO L DO IF I IN S THEN WRITE(output,I);
+WRITE(output,' ]');PUTT;
 END;*)
 
 
@@ -598,7 +868,7 @@ END;*)
 (*TИПЫ: ПEPEЧИCЛИMЫЙ --> ALFA*)
 FUNCTION ИMЯ(И:COLUMN):ALFA;VAR F:TEXT;A:ALFA;
 BEGIN REWRITE(F);WRITE(F,И,'      ');RESET(F);
-WHILE F!=' ' DO GET(F);READ(F,A);ИMЯ:=A END;
+WHILE F<>=' ' DO GET(F);READ(F,A);ИMЯ:=A END;
 
 
 (* SECTION ? .IT *)
@@ -607,7 +877,7 @@ PROCEDURE INITTAB;
 VAR C:COLUMN;L:LINE;
 BEGIN
 PRINTCALC:=TRUE;
-WITH SETCOL DO(
+WITH SETCOL DO BEGIN 
   ИCXДEЙ:=[ZBЫП,ZOЗAPП,ZДЗAPП,ZMATEP,
            ZKOMAH,ZCПEЦ,ZAMOP,ZCTOP,
            ZПOCH,ZПTPEC,ZПPБK,ZOBЫШ,ZOГOC,ZHEПЛ];
@@ -615,7 +885,7 @@ WITH SETCOL DO(
            VЗAPП,VCTPAX,VCБC,VPACЧ,VЭФЗ,VOCT,VФPEЗ,VФMП,VФHTCP];
   CYMДEЙ:=ИCXДEЙ+BЫЧДEЙ;
   CLEAN:=[FIRCOL..LASCOL];
-);
+ END ;
 END;
 
 
@@ -623,7 +893,7 @@ END;
 (* SECTION ? .WCOL *)
 (*BЫBOД CTOЛБЦA*)
 PROCEDURE WCOL(C:COLUMN);
-BEGIN WRITE(OUT,C,'[',ORD(C)+1:0,']') END;
+BEGIN WRITE(output,C,'[',ORD(C)+1:0,']') END;
 
 
 
@@ -632,13 +902,13 @@ BEGIN WRITE(OUT,C,'[',ORD(C)+1:0,']') END;
 PROCEDURE BЫЧKOЭФ;
 VAR OБЩЗAPП:REAL;
 PROCEDURE PДEЙ(A:ALFA;I:REAL);
-BEGIN;DMLCALL(328)
+BEGIN;DMLCALL(328);
 END;
 BEGIN
-WITH HAKЛ DO(OБЩЗAPП:=ЗAPП;
+WITH HAKЛ DO BEGIN OБЩЗAPП:=ЗAPП;
 PДEЙ('ZKПPOЧ',ПPOЧ/OБЩЗAPП);
 PДEЙ('ZKHAKЛ',HAKЛ/OБЩЗAPП);
-PДEЙ('ZKЗAPH',ЗAHAK/OБЩЗAPП));
+PДEЙ('ZKЗAPH',ЗAHAK/OБЩЗAPП) END ;
 END;
 
 
@@ -648,11 +918,11 @@ END;
 PROCEDURE MUL(CR:COLUMN;A:ALFA);
 VAR L:LINE;R:REAL;
 BEGIN
-FПAP(A);DMLCALL(329)
+FПAP(A);DMLCALL(329);
 FOR L:=MINLIN TO MAXLIN DO
-  T[CR,L].CON!.Д!.ЗH:=T[CR,L].CON!.Д!.ЗH * R;
-IF PRINTCALC THEN(
-  WCOL(CR);WRITE(OUT,' * ',A,'(',R:0:23,') --> ');WCOL(CR);PUTP);
+  T[CR,L].CON_.Д_.ЗH:=T[CR,L].CON_.Д_.ЗH * R;
+IF PRINTCALC THEN BEGIN 
+  WCOL(CR);WRITE(output,' * ',A,'(',R:23,') --> ');WCOL(CR);PUTP END ;
 END;
 
 
@@ -662,16 +932,14 @@ END;
 PROCEDURE MOV(CR:COLUMN;ZNAK:CHAR;SC:SET OF COLUMN);
 VAR C:COLUMN;L:LINE;ПEPBЫЙ:BOOL;
 BEGIN
-IF PRINTCALC THEN(ПEPBЫЙ:=TRUE;WCOL(CR);WRITE(OUT,' ',ZNAK));
-FOR L:=MINLIN TO MAXLIN DO WITH T[CR,L].CON!.Д! DO(
-  FOR C:=FIRCOL TO LASCOL DO IF C IN SC THEN(
-    IF PRINTCALC AND (L=MINLIN) THEN(
-      IF ПEPBЫЙ THEN ПEPBЫЙ:=FALSE ELSE WRITE(OUT,' ',ZNAK);
-      WCOL(C);WRITE(OUT,CLF));
-    SELECT
-      ZNAK='+':ЗH:=ЗH+T[C,L].CON!.Д!.ЗH;
-      ZNAK='-':ЗH:=ЗH-T[C,L].CON!.Д!.ЗH)));
-IF PRINTCALC THEN(WRITE(OUT,' --> ');WCOL(CR);PUTP);
+IF PRINTCALC THEN BEGIN ПEPBЫЙ:=TRUE;WCOL(CR);WRITE(output,' ',ZNAK) END ;
+FOR L:=MINLIN TO MAXLIN DO WITH T[CR,L].CON_.Д_ DO BEGIN 
+  FOR C:=FIRCOL TO LASCOL DO IF C IN SC THEN BEGIN 
+    IF PRINTCALC AND (L=MINLIN) THEN BEGIN 
+      IF ПEPBЫЙ THEN ПEPBЫЙ:=FALSE ELSE WRITE(output,' ',ZNAK);
+      WCOL(C);WRITE(output,CLF) END ;
+    IF (ZNAK='+') THEN BEGIN ЗH:=ЗH+T[C,L].CON_.Д_.ЗH END ELSE IF (ZNAK='-') THEN BEGIN ЗH:=ЗH-T[C,L].CON_.Д_.ЗH END  END );
+IF PRINTCALC THEN BEGIN WRITE(output,' --> ');WCOL(CR);PUTP END ;
 END;
 
 
@@ -681,16 +949,11 @@ END;
 PROCEDURE FILL(TT:TYPPAR;CC:COLUMN;LL:LINE;FF:CHAR);
 VAR I:INT;
 BEGIN
-WITH T[CC,LL] DO(
+WITH T[CC,LL] DO BEGIN 
   NEW(CON);FRM:=FF;
-  WITH CON! DO(
+  WITH CON_ DO BEGIN 
     TYP:=TT;
-    CASE TYP OF
-      CEL,DAT,MES,KVA:(NEW(Ц);Ц!.ЗH:=ЦEЛ.ЗH);
-      DEY:(NEW(Д);Д!.ЗH:=ДEЙ.ЗH);
-      ALF:(NEW(A);A!.ЗH:=AЛФ.ЗH);
-      STR:(NEW(C);C!.ЗH:=CTP.ЗH);
-      LOG:(NEW(Л);Л!.ЗH:=ЛOГ.ЗH))));
+    CEL,DAT,MES,KVA:(NEW(Ц);Ц_.ЗH:=ЦEЛ.ЗH) ELSE DEY:(NEW(Д);Д_.ЗH:=ДEЙ.ЗH) ELSE ALF:(NEW(A);A_.ЗH:=AЛФ.ЗH) ELSE STR:(NEW(C);C_.ЗH:=CTP.ЗH) ELSE LOG:(NEW(Л);Л_.ЗH:=ЛOГ.ЗH)  END );
 END;
 
 
@@ -700,19 +963,19 @@ END;
 PROCEDURE SUM(LR,LASTOT:LINE;NNEEWW:BOOL);
 VAR C:COLUMN;L,NT:LINE;
 BEGIN
-FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.CYMДEЙ THEN(
-  IF NNEEWW THEN(ДEЙ.ЗH:=0.0;FILL(DEY,C,LR,'Ц'));
-  WITH T[C,LR].CON!.Д! DO(
+FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.CYMДEЙ THEN BEGIN 
+  IF NNEEWW THEN BEGIN ДEЙ.ЗH:=0.0;FILL(DEY,C,LR,'Ц') END ;
+  WITH T[C,LR].CON_.Д_ DO BEGIN 
     FOR NT TO LASTOT DO
-      ЗH:=ЗH+T[C,TOTAL[NT]].CON!.Д!.ЗH));
+      ЗH:=ЗH+T[C,TOTAL[NT]].CON_.Д_.ЗH END  END ;
 (**)
-IF NNEEWW THEN(
+IF NNEEWW THEN BEGIN 
 FORLIN[LR]:=[PAЗ,HAД,ПOД];
 AЛФ.ЗH:='ИTOГO ';FILL(ALF,ZTEMA,LR,'П');
 AЛФ.ЗH:='      ';FILL(ALF,ZMEC,LR,'Ц');
 AЛФ.ЗH:='      ';FILL(ALF,ZNOTД,LR,'Ц');
 AЛФ.ЗH:='      ';FILL(ALF,ZOTД,LR,'Ц');
-AЛФ.ЗH:='      ';FILL(ALF,ZЭTAП,LR,'Ц'));
+AЛФ.ЗH:='      ';FILL(ALF,ZЭTAП,LR,'Ц') END ;
 END;
 
 
@@ -720,16 +983,11 @@ END;
 (* SECTION ? .CA *)
 (*DISPOSE BCEЙ TAБЛИЦЫ*)
 PROCEDURE CLEAN(FIRLIN,MAXLIN:LINE);
-VAR C:COLUMN;L:LINE;CONT:!CONTENT;
+VAR C:COLUMN;L:LINE;CONT:<>CONTENT;
 BEGIN
 FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.CLEAN THEN
-  FOR L:=FIRLIN TO MAXLIN DO(
-    WITH T[C,L].CON! DO CASE TYP OF
-      CEL,DAT,MES,KVA:DISPOSE(Ц);
-      DEY:DISPOSE(Д);
-      ALF:DISPOSE(A);
-      STR:DISPOSE(C);
-      LOG:DISPOSE(Л));
+  FOR L:=FIRLIN TO MAXLIN DO BEGIN 
+    WITH T[C,L].CON_ DO CEL,DAT,MES,KVA:DISPOSE(Ц) ELSE DEY:DISPOSE(Д) ELSE ALF:DISPOSE(A) ELSE STR:DISPOSE(C) ELSE LOG:DISPOSE(Л) ;
     CONT:=T[C,L].CON;DISPOSE(CONT));
 END;
 
@@ -822,8 +1080,8 @@ Z(26,VФHTCP  ,'ФHTCP                                  ', 7);
 (* SECTION ? .ENDZ *)
 (**)
 L:=L+1;FORLIN[L]:=[PAЗ,ПOД];
-FOR C:=FIRCOL TO LASCOL DO(
-  ЦEЛ.ЗH:=ORD(C)+1;FILL(CEL,C,L,'Ц'));
+FOR C:=FIRCOL TO LASCOL DO BEGIN 
+  ЦEЛ.ЗH:=ORD(C)+1;FILL(CEL,C,L,'Ц') END ;
 CURLIN:=L;MINLIN:=L+1;MAXLIN:=CURLIN;
 END;
 
@@ -834,23 +1092,23 @@ END;
 PROCEDURE ЗAПTEM;
 VAR C:COLUMN;L,NT:LINE;
 BEGIN
-DMLCALL(330)
+DMLCALL(330);
 L:=CURLIN+1;NT:=1;
-DMLCALL(331)
-WHILE MOЖHO DO(
-  DMLCALL(332)
-  (W)WHILE MOЖHO DO(
-    DMLCALL(333);IF ЗAT.MEC!HAKЛ.MEC THEN EXIT W;
-    DMLCALL(334)
+DMLCALL(331);
+WHILE MOЖHO DO BEGIN 
+  DMLCALL(332);
+  (W)WHILE MOЖHO DO BEGIN 
+    DMLCALL(333);IF ЗAT.MEC<>HAKЛ.MEC THEN EXIT W;
+    DMLCALL(334);
     FORLIN[L]:=[PAЗ];TOTAL[NT]:=L;
-    DMLCALL(335)
+    DMLCALL(335);
     ЦEЛ.ЗH:=TEMA.HOMEP;FILL(CEL,ZTEMA,L,'Ц');
     ЦEЛ.ЗH:=HAKЛ.MEC;FILL(MES,ZMEC,L,'Ц');
     AЛФ.ЗH:=OTДEЛ.HAЗB;FILL(ALF,ZOTД,L,'Ц');
     ЦEЛ.ЗH:=ИCПOЛH.HOMEP;FILL(CEL,ZNOTД,L,'Ц');
     ЦEЛ.ЗH:=ЭTAП.HOMEP;FILL(CEL,ZЭTAП,L,'Ц');
     (**)
-    WITH ДEЙ DO WITH ЗAT DO(
+    WITH ДEЙ DO WITH ЗAT DO BEGIN 
       ЗH:=BЫП    ;FILL(DEY, ZBЫП    ,L,'Ц');
       ЗH:=OЗAPП  ;FILL(DEY, ZOЗAPП  ,L,'Ц');
       ЗH:=ДЗAPП  ;FILL(DEY, ZДЗAPП  ,L,'Ц');
@@ -864,14 +1122,14 @@ WHILE MOЖHO DO(
       ЗH:=ПPБK   ;FILL(DEY, ZПPБK   ,L,'Ц');
       ЗH:=OBЫШ   ;FILL(DEY, ZOBЫШ   ,L,'Ц');
       ЗH:=OГOC   ;FILL(DEY, ZOГOC   ,L,'Ц');
-      ЗH:=HEПЛ   ;FILL(DEY, ZHEПЛ   ,L,'Ц'));
+      ЗH:=HEПЛ   ;FILL(DEY, ZHEПЛ   ,L,'Ц') END ;
     (**)
-    FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.BЫЧДEЙ THEN(
-      ДEЙ.ЗH:=0.0;FILL(DEY,C,L,'Ц'));
+    FOR C:=FIRCOL TO LASCOL DO IF C IN SETCOL.BЫЧДEЙ THEN BEGIN 
+      ДEЙ.ЗH:=0.0;FILL(DEY,C,L,'Ц') END ;
     (**)
     L:=L+1;NT:=NT+1;
-    DMLCALL(336)); (*W*)
-  DMLCALL(337));
+    DMLCALL(336); END ; (*W*)
+  DMLCALL(337); END ;
 SUM(L,NT-1,TRUE);CURLIN:=L;MAXLIN:=CURLIN;
 END;
 
@@ -957,16 +1215,16 @@ PROCEDURE DIVIDE(FIRCOL,LASCOL:COLUMN);
 VAR N:INT;C:COLUMN;
 BEGIN
 N:=1;C:=FIRCOL;
-(W) WHILE C<LASCOL DO(
-  WITH INTERVAL[N] DO(
+(W) WHILE C<LASCOL DO BEGIN 
+  WITH INTERVAL[N] DO BEGIN 
     UP:=C;SIZ:=1;
     FOR C:=C TO LASCOL DO SIZ:=SIZ+FORCOL[C].S+1;
     C:=LASCOL;
-    WHILE SIZ>SCREEN DO(
-      SIZ:=SIZ-FORCOL[C].S-1;C:=PRED(C));
+    WHILE SIZ>SCREEN DO BEGIN 
+      SIZ:=SIZ-FORCOL[C].S-1;C:=PRED(C) END ;
     LOW:=C;
-    IF C=LASCOL THEN EXIT W);
-  N:=N+1;C:=SUCC(C));
+    IF C=LASCOL THEN EXIT W END ;
+  N:=N+1;C:=SUCC(C) END ;
 LASTINT:=N;
 END;
 
@@ -976,34 +1234,25 @@ END;
 (*ПEЧATЬ ЯЧEЙKИ TAБЛИЦЫ*)
 PROCEDURE WRITECELL(C:CELL);
 BEGIN
-(*WRITE(OUT,C.FRM,' ',C.CON!.TYP,'=');*)
-WITH C.CON! DO CASE TYP OF
-  CEL:WRITE(OUT,Ц!.ЗH:0);
-  DAT:WДAT(OUT,Ц!.ЗH);
-  MES:WMEC(OUT,Ц!.ЗH);
-  KVA:WKBA(OUT,Ц!.ЗH);
-  DEY:WREAL(Д!.ЗH,2);
-  ALF:WRITE(OUT,A!.ЗH);
-  STR:WCTP(OUT,C!.ЗH,0);
-  LOG:IF Л!.ЗH THEN WRITE(OUT,'ДA') ELSE WRITE(OUT,'HET'));
-END;
+(*WRITE(output,C.FRM,' ',C.CON!.TYP,'=');*)
+WITH C.CON_ DO CEL:WRITE(output,Ц_.ЗH:0) ELSE DAT:WДAT(output,Ц_.ЗH) ELSE MES:WMEC(output,Ц_.ЗH) ELSE KVA:WKBA(output,Ц_.ЗH) ELSE DEY:WREAL(Д_.ЗH,2) ELSE ALF:WRITE(output,A_.ЗH) ELSE STR:WCTP(output,C_.ЗH,0) ELSE LOG:IF Л_.ЗH THEN WRITE(output,'ДA') ELSE WRITE(output,'HET'));
 
 
 
 (* SECTION ? .ПT *)
 BEGIN
 DIVIDE(FIRCOL,VCБC);
-FOR I TO LASTINT DO WITH INTERVAL[I] DO(
-  FOR L:=FIRLIN TO MAXLIN DO(
+FOR I TO LASTINT DO WITH INTERVAL[I] DO BEGIN 
+  FOR L:=FIRLIN TO MAXLIN DO BEGIN 
     J:=1;
-    FOR C:=UP TO LOW DO(
+    FOR C:=UP TO LOW DO BEGIN 
       TABLE[J].S:=FORCOL[C].S;
       TABLE[J].F:=T[C,L].FRM;
-      WRITECELL(T[C,L]);WRITE(OUT,'!');
-      J:=J+1);
+      WRITECELL(T[C,L]);WRITE(output,'!');
+      J:=J+1 END ;
     TABLE[J].S:=BCE;
-    TPUT(FORLIN[L]+[EXPORT]));
-  IF EXPORT=ЭKP THEN PUTT);
+    TPUT(FORLIN[L]+[EXPORT]) END ;
+  IF EXPORT=ЭKP THEN PUTT END ;
 END;
 
 
@@ -1017,14 +1266,14 @@ DMLCALL(338);IF ПYCTO THEN EXIT;DMLCALL(339);BЫЧKOЭФ;
 ЗAПШAП;
 SUM(LASLIN,0,TRUE);
 (**)
-DMLCALL(340)
+DMLCALL(340);
 (R)REPEAT
-  (W)WHILE TRUE DO(
+  (W)WHILE TRUE DO BEGIN 
     IF ПYCTO THEN EXIT R;DMLCALL(341);
-    WHILE MOЖHO DO(
+    WHILE MOЖHO DO BEGIN 
       DMLCALL(342);IF NOT ПYCTO THEN EXIT W;
-      DMLCALL(343));
-    DMLCALL(344));(*W*)
+      DMLCALL(343); END ;
+    DMLCALL(344); END ;(*W*)
   (**)
   ЗAПTEM;BЫЧTEM;
   IF PRINTCALC THEN ПEЧTAБ(FIRLIN,MAXLIN)
@@ -1033,7 +1282,7 @@ DMLCALL(340)
   TOTAL[1]:=MAXLIN;SUM(LASLIN,1,FALSE);
   CLEAN(MINLIN,MAXLIN);
   CURLIN:=MINLIN-1;
-  DMLCALL(345)
+  DMLCALL(345);
 UNTIL FALSE;
 (**)
 ПEЧTAБ(LASLIN,LASLIN);WLF(3);
@@ -1044,18 +1293,18 @@ END;
 
 (* SECTION ? .TЗB *)
 BEGIN
-INITTAB;SCREEN:=126;EXPORT:=ПEЧ;ПOCЛEД;ДИP:='BЫX';
+INITTAB;SCREEN:=126;EXPORT:=ПEЧ;ПOCЛEД;ДИP:='BЫX   ';
 (*INITTAB;
-WRITE(OUT,'      ...BЫ B БЛOKE OTЧETA ПO ЗATPATAM...');PUTT;
-WHILE TRUE DO(
-WRITE(OUT,'ПEЧ - BЫДAЧA OTЧETA HA ПEЧATЬ/',
+WRITE(output,'      ...BЫ B БЛOKE OTЧETA ПO ЗATPATAM...');PUTT;
+DMLCALL(1);WRITE(output,'PEЖИM: ');PUTT; WHILE FALSE DO(
+WRITE(output,'ПEЧ - BЫДAЧA OTЧETA HA ПEЧATЬ/',
           'ЭKP - BЫДAЧA OTЧETA HA ЭKPAH/');
-MENU;
-SELECT
-  'ПEЧ'=ДИP:(SCREEN:=124;EXPORT:=ПEЧ;ПOCЛEД);
-  'ЭKP'=ДИP:(SCREEN:=77;EXPORT:=ЭKP;ПOCЛEД);
-  'KOH'=ДИP:(KYДA:='HAPYЖY';EXIT);
-  'BЫX'=ДИP:EXIT);
+MENU; ДИP:='KOH   ';
+ДИP:='KOH   '; SELECT
+  'ПEЧ   '=ДИP:(SCREEN:=124;EXPORT:=ПEЧ;ПOCЛEД);
+  'ЭKP   '=ДИP:(SCREEN:=77;EXPORT:=ЭKP;ПOCЛEД);
+  'KOH   '=ДИP:(KYДA:='HAPYЖY';EXIT);
+  'BЫX   '=ДИP:EXIT);
 );*)
 END;
 

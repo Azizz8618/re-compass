@@ -13,8 +13,8 @@
 ## Owner / Status
 
 - Owner: основной агент (OpenCode).
-- HEAD: `cc93c05`, ветка `main`.
-- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `cc93c05`.
+- HEAD: `074cba0`, ветка `main`.
+- Remotes: `origin` (GitHub) и `sourcecraft`, оба на `074cba0`.
 - Рабочее дерево чисто.
 
 ## Done
@@ -69,7 +69,8 @@ W5e завершён и интегрирован (`cc93c05`): **18/18 прило
 
 Активные субагенты:
 1. W6a `ZATTAB` по gold 4791-5392 (`ses_df48b3a1effeC2CD59237n7mwY`), scratch `w6a-zattab`.
-2. W6b SELECT-ветвления четырёх ZAT-программ (`ses_df48ab8e7ffezF2mU1xfL3OJ3Q`), scratch `w6b-selects`.
+2. W6b SELECT-ветвления четырёх ZAT-программ - интегрированы (`074cba0`): 19 SELECT/97 ветвей восстановлены в исходниках, но цикл меню пока выключен.
+3. W6c исполнение восстановленных ветвей (`ses_df47a08b5ffe0QAxnHTNAa3yVg`), scratch `w6c-select-run`.
 
 GOSTLIB проверена: md5 оригиналов 2348 `b287267f...`, зона 2560 нетронута; UCOMPAS использует свободную зону 3350.
 
